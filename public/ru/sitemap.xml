@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://snakeword.ru/ru/categories/</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://snakeword.ru/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="http://snakeword.ru/ru/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://snakeword.ru/ru/tags/</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://snakeword.ru/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="http://snakeword.ru/ru/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://snakeword.ru/ru/</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://snakeword.ru/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="http://snakeword.ru/ru/"
+                />
+  </url>
+  
+</urlset>

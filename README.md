@@ -1,2 +1,0 @@
-# snakeword
-word search game

@@ -53,22 +53,21 @@ function checkCookie(key) {
        }
     }
 }
-//checkCookie("username")
+checkCookie("username")
 ///  
-function startmultiplayer(){
-		var s = new WebSocket("wss://snakeword.ru/ws/:9898");
-		s.onopen = function(e) {
-		  console.info("ws opened");
-		  s.send(JSON.stringify({"field":letters.join(''), "word": [0],"user": getCookie("username")}));
-		}
-		s.onclose = function(e) { console.info("ws closed"); }
-		s.onmessage = function(e) { 
-		  var message = JSON.parse(e.data)
-		  if (message.field ==  letters.join('') && message.user != getCookie("username")){
-		   BorderfromFindWord(message.word);
-		   shownotify (message.user+" +"+message.word.length)
-        }
+
+var s = new WebSocket("wss://boggle.space:8080");
+s.onopen = function(e) {
+  console.info("ws opened");
+  s.send(JSON.stringify({"field":letters.join(''), "word": [0],"user": getCookie("username")}));
 }
+s.onclose = function(e) { console.info("ws closed"); }
+s.onmessage = function(e) { 
+  var message = JSON.parse(e.data)
+  if (message.field ==  letters.join('') && message.user != getCookie("username")){
+   BorderfromFindWord(message.word);
+   shownotify (message.user+" +"+message.word.length)
+  }
 }
 function BorderfromFindWord(arr){
   for (var i = 0; i < arr.length; i++) {
@@ -122,8 +121,6 @@ nearCheck(id,ids);
       && word.length>=3
       && nearCheck(id,ids))
       {
-      getTranslate('en','ru',word);
-
       if(isFinded(word)>=0 && findwords.indexOf(word) ){
           findwords.splice(findwords.indexOf(word),1);
           findwords.push(word);
@@ -134,7 +131,8 @@ nearCheck(id,ids);
         moreletter();
         findwordids.push(ids);
         timeout0 = setTimeout(clear, 2500);
-//        s.send(JSON.stringify({"field":letters.join(''), "word": ids,"user": getCookie("username")}));
+        scriptRequest(wikiurl(word),ok,fail); 
+        s.send(JSON.stringify({"field":letters.join(''), "word": ids,"user": getCookie("username")}));
         ids=[] 
           } 
       listfindedwords(word,isFinded(word)); 
@@ -197,10 +195,98 @@ document.getElementById('clear').onclick = function(){clear()};
 
 
 function SaveGame(){
-var link = "https://snakeword.ru/url"
+var link = "https://boggle.space/url"
                +'?'+"edge="+edge
                +"&letters="+letters.join('')
                +'&userwordsids='+JSON.stringify(findwordids);
 location = link;
 }
 
+//wiki CAllback stuff
+var CallbackRegistry = {}; // реестр
+
+// при успехе вызовет onSuccess, при ошибке onError
+function scriptRequest(url, onSuccess, onError) {
+
+  var scriptOk = false; // флаг, что вызов прошел успешно
+
+  // сгенерировать имя JSONP-функции для запроса
+  var callbackName = 'cb' + String(Math.random()).slice(-6);
+
+  // укажем это имя в URL запроса
+  url += ~url.indexOf('?') ? '&' : '?';
+  url += 'callback=CallbackRegistry.' + callbackName;
+
+  // ..и создадим саму функцию в реестре
+  CallbackRegistry[callbackName] = function(data) {
+    scriptOk = true; // обработчик вызвался, указать что всё ок
+    delete CallbackRegistry[callbackName]; // можно очистить реестр
+    onSuccess(data); // и вызвать onSuccess
+  };
+
+  // эта функция сработает при любом результате запроса
+  // важно: при успешном результате - всегда после JSONP-обработчика
+  function checkCallback() {
+    if (scriptOk) return; // сработал обработчик?
+    delete CallbackRegistry[callbackName];
+    onError(url); // нет - вызвать onError
+  }
+
+  var script = document.createElement('script');
+
+  // в старых IE поддерживается только событие, а не onload/onerror
+  // в теории 'readyState=loaded' означает "скрипт загрузился",
+  // а 'readyState=complete' -- "скрипт выполнился", но иногда
+  // почему-то случается только одно из них, поэтому проверяем оба
+  script.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      this.onreadystatechange = null;
+      setTimeout(checkCallback, 0); // Вызвать checkCallback - после скрипта
+    }
+  }
+
+  // события script.onload/onerror срабатывают всегда после выполнения скрипта
+  script.onload = script.onerror = checkCallback;
+  script.src = url;
+
+  document.body.appendChild(script);
+}
+function ok(data) {
+  var pageId = Object.keys(data["query"]["pages"]);
+  if (data["query"]["pages"][pageId[0]]['images']){
+    var picName =  data["query"]["pages"][pageId[0]]['images'][0]['title'].substring(5)
+    if (picName ==  "Commons-logo.svg" || picName =="Disambig.svg"){ console.log("default"); data["query"]["pages"][pageId[0]]['images'].splice(0,1); var picName =  data["query"]["pages"][pageId[0]]['images'][0]['title'].substring(5)}
+    console.info(data["query"]["pages"])
+    scriptRequest(wikiPicurl(picName ),Picok,fail);
+  }
+}
+function Picok(data) {
+
+    var pageId = Object.keys(data["query"]["pages"]);
+//   console.info(data["query"]["pages"][pageId[0]]['imageinfo'][0]['thumburl'])
+var block=document.getElementById("game");
+while (block.firstChild) {
+    block.removeChild(block.firstChild);
+}
+var img=document.createElement('img');
+img.src=data["query"]["pages"][pageId[0]]['imageinfo'][0]['thumburl'];
+block.appendChild(img);
+shownotify("test","game")
+
+}
+
+function fail(url) {
+  alert( 'Ошибка при запросе ' + url );
+}
+
+function wikiurl(word){return "https://ru.wikipedia.org/w/api.php?format=json&prop=images&action=query&titles="+word}
+//function wikiPicurl(word){return "https://commons.wikimedia.org/w/api.php?action=query&prop=imageinfo&&iiprop=url&iiurlwidth=110&format=json&ailimit=2&titles=File:"+ encodeURIComponent(word)}
+function wikiPicurl(word){return "https://commons.wikimedia.org/w/api.php?action=query&prop=imageinfo&&iiprop=url&iiurlwidth=220&format=json&titles=File:"+ encodeURIComponent(word)}
+
+
+
+//scriptRequest(wikiurl('насос'),ok,fail);
+//scriptRequest("https://en.wikipedia.org/w/api.php?action=query&titles=Albert%20Einstein&prop=images&format=json",ok,fail);
+
+
+//https://commons.wikimedia.org/w/api.php?action=query&titles=File:Albert%20Einstein%20(Nobel).png&prop=imageinfo&&iiprop=url&iiurlwidth=110&format=json&callback=?

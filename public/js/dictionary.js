@@ -24,8 +24,9 @@ var langs=
       "la":{"Allletters": 8525945,"Alphabet":['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'v', 'x', 'y', 'z'], "Rangs":[866192,129803,386618,216233,885734,86277,114190,94125,978425,3179,10515,309673,425295,590387,500492,232155,64254,548327,624609,677502,605525,109025,6430,34883,19348,6749]},
       "en":{"Allletters":99999,"Alphabet":['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'],"Rangs":[8167,1492,2782,4254,12702,2228,2015,6094,6966,153,772,4025,2406,6749,7507,1929,95,5987,6327,9054,2758,978,2360,150,1947,74]}
        };                                   
-var language = window.navigator.userLanguage || window.navigator.language
-console.log(language)
+//var language = window.navigator.userLanguage || window.navigator.language || document.documentElement.lang // || getCookie('lang') 
+var language = getCookie('lang')  || document.documentElement.lang 
+
 var namedict;
 if (language=="en" || language=="en-US"|| language=="en-us") { language ="en"; namedict = "English"}
 

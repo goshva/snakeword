@@ -1,0 +1,46 @@
+DefaultContentLanguage = "en"
+copyright = "Everything is mine"
+baseURL = "http://snakeword.ru/"
+languageCode = "en-us"
+title = "My snakeword game"
+theme = ["snakeword"]
+
+[Languages]
+[Languages.en]
+  Languagename =  "English"
+
+  title = "My blog"
+  weight = 1
+  author = "Nikola Tesla"
+  Ddescription = "Tesla's Awesome Hugo Site"
+  keywords = "Tesla's Awesome Hugo Site"
+  fbAppid = "Tesla's Awesome Hugo Site"
+  Fullurl = "Tesla's Awesome Hugo Site"
+  Points = "0"
+  MyRecord = "0"
+  Game_Mode = "game mode"
+  Random = "random"
+  Set = "set"
+  Save = "Save"
+
+
+[Languages.ru]
+  Languagename =  "Русский"
+  title = "Змееслов"
+  weight = 2
+  author = "Егор Ша"
+  Ddescription = "Игра собери слово"
+  keywords = "Tesla's Awesome Hugo Site"
+  fbAppid = "Tesla's Awesome Hugo Site"
+  Fullurl = "Tesla's Awesome Hugo Site"
+  Points = "0"
+  MyRecord = "0"
+  Game_Mode = "Вид игры"
+  Random = "Хаос"
+  Set = "Набор"
+  Save = "Сохранить"
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
