@@ -9,10 +9,10 @@ theme = ["snakeword"]
 [Languages.en]
   Languagename =  "English"
 
-  title = "My blog"
+  title = "Snakeword"
   weight = 1
-  author = "Nikola Tesla"
-  Ddescription = "Tesla's Awesome Hugo Site"
+  author = "Sha. Egor"
+  Description = "Take a word by side by side letters"
   keywords = "Tesla's Awesome Hugo Site"
   fbAppid = "Tesla's Awesome Hugo Site"
   Fullurl = "Tesla's Awesome Hugo Site"
@@ -28,8 +28,8 @@ theme = ["snakeword"]
   Languagename =  "Русский"
   title = "Змееслов"
   weight = 2
-  author = "Егор Ша"
-  Ddescription = "Игра собери слово"
+  author = "Егор Ша."
+  Description = "Игра собери слово"
   keywords = "Tesla's Awesome Hugo Site"
   fbAppid = "Tesla's Awesome Hugo Site"
   Fullurl = "Tesla's Awesome Hugo Site"
