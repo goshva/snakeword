@@ -40,6 +40,22 @@ theme = ["snakeword"]
   Set = "Набор"
   Save = "Сохранить"
 
+[Languages.de]
+  Languagename =  "Немецкий"
+  title = "Змееслов"
+  weight = 2
+  author = "Егор Ша."
+  Description = "Игра собери слово"
+  keywords = "Tesla's Awesome Hugo Site"
+  fbAppid = "Tesla's Awesome Hugo Site"
+  Fullurl = "Tesla's Awesome Hugo Site"
+  Points = "0"
+  MyRecord = "0"
+  Game_Mode = "Вид игры"
+  Random = "Хаос"
+  Set = "Набор"
+  Save = "Сохранить"
+
 [taxonomies]
   category = "categories"
   tag = "tags"
