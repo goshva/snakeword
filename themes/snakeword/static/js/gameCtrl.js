@@ -207,6 +207,11 @@ function SaveGame(){
 localStorage.setItem('edge', edge);
 localStorage.setItem('letters', letters.join(''));
 localStorage.setItem('userwordsids', JSON.stringify(findwordids));
+var link = "/url"
+               +'?'+"edge="+edge
+               +"&letters="+letters.join('')
+               +'&userwordsids='+JSON.stringify(findwordids);
+location = link;
 }
 
 

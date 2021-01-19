@@ -18,7 +18,27 @@ function parseWordsfromUrl(){
 //         clear();
 }
    }
+//  http://localhost:1313/url?edge=9&letters=araattantrnertnpteopefhnnttieltlsoahkleispthepoonilelmnrtnohuphlacshddprflioewnrr&userwordsids=[[37,46,47],[56,47,46],[56,47,46,37]]
+   /* Get save data from localstorage
 
+var edge = []
+var letters = []
+var userwordsids= []
+function parseWordsfromLocalStorage(){
+edge = localStorage.getItem('edge');
+letters = localStorage.getItem('letters');//.split('');
+userwordsids= JSON.parse(localStorage.getItem('userwordsids'));
+if (userwordsids != null){
+    for (var i = 0; i< userwordsids.length; i++){
+         var iTem = userwordsids[i];         
+         for (var j = 0; j< iTem.length; j++){
+         var id = iTem[j];
+         collectWord(letters[id],id)
+         };
+    word= "";
+    }
+}
+*/
 function getParameterByName(name, url) {
     if (!url) url = window.location.href;
     name = name.replace(/[\[\]]/g, "\\$&");
