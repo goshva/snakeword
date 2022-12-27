@@ -5,8 +5,18 @@
     <loc>https://goshva.github.io/ru/categories/</loc>
     <xhtml:link
                 rel="alternate"
+                hreflang="ab"
+                href="https://goshva.github.io/ab/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="en"
                 href="https://goshva.github.io/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://goshva.github.io/fr/categories/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -22,8 +32,18 @@
     <loc>https://goshva.github.io/ru/tags/</loc>
     <xhtml:link
                 rel="alternate"
+                hreflang="ab"
+                href="https://goshva.github.io/ab/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="en"
                 href="https://goshva.github.io/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://goshva.github.io/fr/tags/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -39,8 +59,18 @@
     <loc>https://goshva.github.io/ru/</loc>
     <xhtml:link
                 rel="alternate"
+                hreflang="ab"
+                href="https://goshva.github.io/ab/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="en"
                 href="https://goshva.github.io/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://goshva.github.io/fr/"
                 />
     <xhtml:link
                 rel="alternate"

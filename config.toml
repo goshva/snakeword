@@ -46,17 +46,50 @@ theme = ["snakeword"]
   title = "Змееслов"
   weight = 2
   author = "Егор Ша."
-  Description = "Игра собери слово"
+  Description = "Nehmen Sie ein Wort nebeneinander Buchstaben"
   keywords = "Tesla's Awesome Hugo Site"
   fbAppid = "Tesla's Awesome Hugo Site"
   Fullurl = "Tesla's Awesome Hugo Site"
   Points = "0"
   MyRecord = "0"
   Game_Mode = "Вид игры"
-  Random = "Хаос"
-  Setings = "Набор"
-  Save = "Сохранить"
+  Random = "Chaos"
+  Setings = "Bausatz"
+  Save = "Speichern"
 
+[Languages.fr]
+  Languagename =  "French"
+
+  title = "Snakeword"
+  weight = 1
+  author = "Sha. Egor"
+  Description = "Prendre un mot à côté des lettres côte à côte"
+  keywords = "Tesla's Awesome Hugo Site"
+  fbAppid = "Tesla's Awesome Hugo Site"
+  Fullurl = "Tesla's Awesome Hugo Site"
+  Points = "0"
+  MyRecord = "0"
+  Game_Mode = "game mode"
+  Random = "le chaos"
+  Setings = "set"
+  Save = "Sauver"
+
+[Languages.ab]
+  Languagename =  "Arabian"
+
+  title = "Snakeword"
+  weight = 1
+  author = "Sha. Egor"
+  Description = "خذ كلمة جنبًا إلى جنب"
+  keywords = "Tesla's Awesome Hugo Site"
+  fbAppid = "Tesla's Awesome Hugo Site"
+  Fullurl = "Tesla's Awesome Hugo Site"
+  Points = "0"
+  MyRecord = "0"
+  Game_Mode = "game mode"
+  Random = "فوضى"
+  Setings = "set"
+  Save = "يحفظ"  
 [taxonomies]
   category = "categories"
   tag = "tags"

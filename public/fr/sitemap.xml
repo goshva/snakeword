@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://goshva.github.io/de/categories/</loc>
+    <loc>https://goshva.github.io/fr/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="ab"
@@ -15,8 +15,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="fr"
-                href="https://goshva.github.io/fr/categories/"
+                hreflang="de"
+                href="https://goshva.github.io/de/categories/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -25,38 +25,11 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="de"
-                href="https://goshva.github.io/de/categories/"
-                />
-  </url><url>
-    <loc>https://goshva.github.io/de/tags/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ab"
-                href="https://goshva.github.io/ab/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://goshva.github.io/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
                 hreflang="fr"
-                href="https://goshva.github.io/fr/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ru"
-                href="https://goshva.github.io/ru/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://goshva.github.io/de/tags/"
+                href="https://goshva.github.io/fr/categories/"
                 />
   </url><url>
-    <loc>https://goshva.github.io/de/</loc>
+    <loc>https://goshva.github.io/fr/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="ab"
@@ -69,8 +42,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="fr"
-                href="https://goshva.github.io/fr/"
+                hreflang="de"
+                href="https://goshva.github.io/de/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -79,8 +52,35 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="fr"
+                href="https://goshva.github.io/fr/"
+                />
+  </url><url>
+    <loc>https://goshva.github.io/fr/tags/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ab"
+                href="https://goshva.github.io/ab/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://goshva.github.io/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="de"
-                href="https://goshva.github.io/de/"
+                href="https://goshva.github.io/de/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="https://goshva.github.io/ru/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://goshva.github.io/fr/tags/"
                 />
   </url>
 </urlset>
