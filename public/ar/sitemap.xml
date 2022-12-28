@@ -2,12 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://goshva.github.io/ru/categories/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ar"
-                href="https://goshva.github.io/ar/categories/"
-                />
+    <loc>https://goshva.github.io/ar/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -28,13 +23,40 @@
                 hreflang="ru"
                 href="https://goshva.github.io/ru/categories/"
                 />
-  </url><url>
-    <loc>https://goshva.github.io/ru/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://goshva.github.io/ar/tags/"
+                href="https://goshva.github.io/ar/categories/"
                 />
+  </url><url>
+    <loc>https://goshva.github.io/ar/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://goshva.github.io/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://goshva.github.io/fr/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://goshva.github.io/de/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="https://goshva.github.io/ru/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ar"
+                href="https://goshva.github.io/ar/"
+                />
+  </url><url>
+    <loc>https://goshva.github.io/ar/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -55,32 +77,10 @@
                 hreflang="ru"
                 href="https://goshva.github.io/ru/tags/"
                 />
-  </url><url>
-    <loc>https://goshva.github.io/ru/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://goshva.github.io/ar/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://goshva.github.io/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://goshva.github.io/fr/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://goshva.github.io/de/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ru"
-                href="https://goshva.github.io/ru/"
+                href="https://goshva.github.io/ar/tags/"
                 />
   </url>
 </urlset>

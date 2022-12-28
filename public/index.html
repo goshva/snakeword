@@ -2,7 +2,7 @@
 <html><!DOCTYPE html>
 <html lang="en">
   <head>
-	<meta name="generator" content="Hugo 0.105.0">
+	<meta name="generator" content="Hugo 0.88.1" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Take a word by side by side letters" />
@@ -30,7 +30,7 @@
          fjs.parentNode.insertBefore(js, fjs);
          }(document, 'script', 'facebook-jssdk'));
       </script>
-
+      
       <div id="layout">
          
          <a href="#menu" id="menuLink" class="menu-link  tada">
@@ -50,7 +50,7 @@
 <ul>
 
   <li class="pure-menu-item">
-    <a  class="pure-menu-link" href="https://goshva.github.io/ab/">Arabian</a>
+    <a  class="pure-menu-link" href="https://goshva.github.io/ar/">Arabian</a>
   </li>
 
   <li class="pure-menu-item">
@@ -78,26 +78,30 @@
             </div>
          </div>
 <div id="content">
-<div id="main">
-        <div class="header">
-            <div class="pure-form"     style="display: flex; justify-content: center">
-		    <span class="pure-button pure-button-active" id="points" title="0">...
-                </span>
-                <select id="word" class="pure-input-3-5">
-			<option></option>
-                </select>
+        <div id="main">
+                <div class="header">
+                        <div class="pure-form" style="display: flex; justify-content: center">
+                                <span class="pure-button pure-button-active" id="points"
+                                        title="0">...
+                                </span>
+                                <select id="word" class="pure-input-3-5">
+                                        <option></option>
+                                </select>
 
-		<span class="pure-button pure-button-active" id="clear" title="">&#9003;✗</span>
-            </div>
+                                <span class="pure-button pure-button-active" id="clear"
+                                        title="">&#9003;✗</span>
+                        </div>
+                </div>
+                <hr>
+                <div class="content">
+                        <div id="gameplace"></div>
+                        <ul class="pure-menu-list" id="gametally"></ul>
+                        <div id="result"></div>
+                </div>
         </div>
-        <hr>
-        <div class="content">
-            <div id="gameplace" ></div>
-            <ul class="pure-menu-list" id="gametally"></ul>
-	    <div id="result"></div>
-        </div>
- </div>      </div>
- 
+        <div class="gallery pure-form" style="  position: fixed; top: 50%; left: 50%;"></div>
+
+        
         </div>      
       <script src="/js/classes.js"></script>
       <script src="/js/gameCtrl.js"></script>

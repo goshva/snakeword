@@ -364,7 +364,7 @@ var langs = {
       74,
     ],
   },
-  ab: {
+  ar: {
     Allletters: 9133,
     Alphabet: [
       "ء",
