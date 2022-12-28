@@ -527,7 +527,7 @@ var GameDictCount = 333; //wtf?
 
 function loadJSON(callback, namedict) {
   var xobj = new XMLHttpRequest();
-  xobj.open("GET", "/js/dicts/" + namedict + ".json", true);
+  xobj.open("GET", "./js/dicts/" + namedict + ".json", true);
   xobj.onreadystatechange = function () {
     if (xobj.readyState == 4 && xobj.status == "200") {
       callback(xobj.responseText);
