@@ -515,7 +515,6 @@ if (language == "it" || language == "it-IT" || language == "it-it") {
 }
 
 //else { language ="en"; namedict = "English"}
-
 var Allletters = langs[language]["Allletters"];
 var Alphabet = langs[language]["Alphabet"];
 var Rangs = langs[language]["Rangs"];
