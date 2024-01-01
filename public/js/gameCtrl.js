@@ -256,7 +256,7 @@ function scriptRequest(url, onSuccess, onError) {
 
   // сгенерировать имя JSONP-функции для запроса
   var callbackName = "cb" + String(Math.random()).slice(-6);
-
+  console.log(url)
   // укажем это имя в URL запроса
   url += ~url.indexOf("?") ? "&" : "?";
   url += "callback=CallbackRegistry." + callbackName;
@@ -329,20 +329,23 @@ function fail(url) {
   alert("Ошибка при запросе " + url);
 }
 
+
+//вывод слов
 function wikiurl(word) {
 
   return (
-    "https://"+language+".wikipedia.org/w/api.php?format=json&prop=images&action=query&titles=" +
-    word
-  );
-}
-//function wikiPicurl(word){return "https://commons.wikimedia.org/w/api.php?action=query&prop=imageinfo&&iiprop=url&iiurlwidth=110&format=json&ailimit=2&titles=File:"+ encodeURIComponent(word)}
-function wikiPicurl(word) {
-  return (
-    "https://commons.wikimedia.org/w/api.php?action=query&prop=imageinfo&&iiprop=url&iiurlwidth=220&format=json&titles=File:" +
-    encodeURIComponent(word)
+    "https://"+language+".wikipedia.org/w/api.php?format=json&prop=images&action=query&titles=" + word
   );
 }
 
+function wikiPicurl(word){
+  fetch("https://api.giphy.com/v1/gifs/search?api_key=y3Zyc2M9Wgks54unRGbVJxzWoaIR0Vs8&q=cat&limit=1&offset=0&rating=g&lang=en&bundle=messaging_non_clips")
+  .then(response => response.json())
+  .then(url => {const image = document.createElement("img");
+        image.src = url.data[0].images.fixed_height_small.url;
+        document.body.appendChild(image)});
+    ;}
+  
+   
 //scriptRequest(wikiurl('насос'),ok,fail);
 //scriptRequest("https://en.wikipedia.org/w/api.php?action=query&titles=Albert%20Einstein&prop=images&format=json",ok,fail);

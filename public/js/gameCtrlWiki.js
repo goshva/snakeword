@@ -279,11 +279,9 @@ function fail(url) {
   alert( 'Ошибка при запросе ' + url );
 }
 
-function wikiurl(word){return "https://ru.wikipedia.org/w/api.php?format=json&prop=images&action=query&titles="+word}
+// function wikiurl(word){return "https://ru.wikipedia.org/w/api.php?format=json&prop=images&action=query&titles="+word}
 //function wikiPicurl(word){return "https://commons.wikimedia.org/w/api.php?action=query&prop=imageinfo&&iiprop=url&iiurlwidth=110&format=json&ailimit=2&titles=File:"+ encodeURIComponent(word)}
-function wikiPicurl(word){return "https://commons.wikimedia.org/w/api.php?action=query&prop=imageinfo&&iiprop=url&iiurlwidth=220&format=json&titles=File:"+ encodeURIComponent(word)}
-
-
+//function wikiPicurl(word){return "https://commons.wikimedia.org/w/api.php?action=query&prop=imageinfo&&iiprop=url&iiurlwidth=220&format=json&titles=File:"+ encodeURIComponent(word)}
 
 //scriptRequest(wikiurl('насос'),ok,fail);
 //scriptRequest("https://en.wikipedia.org/w/api.php?action=query&titles=Albert%20Einstein&prop=images&format=json",ok,fail);
