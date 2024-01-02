@@ -157,7 +157,7 @@ function collectWord(Id, id) {
     if (isFinded(word) < 0) {
       moreletter();
       findwordids.push(ids);
-      scriptRequest(wikiurl(word),ok,fail);
+      wikiPicurl(wikiurl(word));
       timeout0 = setTimeout(clear, 2500);
       //        s.send(JSON.stringify({"field":letters.join(''), "word": ids,"user": getCookie("username")}));
       ids = [];
@@ -247,105 +247,34 @@ function SaveGame() {
   location = link;
 }
 
-//wiki CAllback stuff
-var CallbackRegistry = {}; // реестр
-
-// при успехе вызовет onSuccess, при ошибке onError
-function scriptRequest(url, onSuccess, onError) {
-  var scriptOk = false; // флаг, что вызов прошел успешно
-
-  // сгенерировать имя JSONP-функции для запроса
-  var callbackName = "cb" + String(Math.random()).slice(-6);
-  console.log(url)
-  // укажем это имя в URL запроса
-  url += ~url.indexOf("?") ? "&" : "?";
-  url += "callback=CallbackRegistry." + callbackName;
-
-  // ..и создадим саму функцию в реестре
-  CallbackRegistry[callbackName] = function (data) {
-    scriptOk = true; // обработчик вызвался, указать что всё ок
-    delete CallbackRegistry[callbackName]; // можно очистить реестр
-    onSuccess(data); // и вызвать onSuccess
-  };
-
-  // эта функция сработает при любом результате запроса
-  // важно: при успешном результате - всегда после JSONP-обработчика
-  function checkCallback() {
-    if (scriptOk) return; // сработал обработчик?
-    delete CallbackRegistry[callbackName];
-    onError(url); // нет - вызвать onError
-  }
-
-  var script = document.createElement("script");
-
-  // в старых IE поддерживается только событие, а не onload/onerror
-  // в теории 'readyState=loaded' означает "скрипт загрузился",
-  // а 'readyState=complete' -- "скрипт выполнился", но иногда
-  // почему-то случается только одно из них, поэтому проверяем оба
-  script.onreadystatechange = function () {
-    if (this.readyState == "complete" || this.readyState == "loaded") {
-      this.onreadystatechange = null;
-      setTimeout(checkCallback, 0); // Вызвать checkCallback - после скрипта
-    }
-  };
-
-  // события script.onload/onerror срабатывают всегда после выполнения скрипта
-  script.onload = script.onerror = checkCallback;
-  script.src = url;
-
-  document.body.appendChild(script);
-}
-function ok(data) {
-  var pageId = Object.keys(data["query"]["pages"]);
-  if (data["query"]["pages"][pageId[0]]["images"]) {
-    var picName =
-      data["query"]["pages"][pageId[0]]["images"][0]["title"].substring(5);
-    if (picName == "Commons-logo.svg" || picName == "Disambig.svg") {
-      console.log("default");
-      data["query"]["pages"][pageId[0]]["images"].splice(0, 1);
-      var picName =
-        data["query"]["pages"][pageId[0]]["images"][0]["title"].substring(5);
-    }
-    console.info(data["query"]["pages"]);
-    scriptRequest(wikiPicurl(picName), Picok, fail);
-  }
-}
-function Picok(data) {
-  var pageId = Object.keys(data["query"]["pages"]);
-  //   console.info(data["query"]["pages"][pageId[0]]['imageinfo'][0]['thumburl'])
-  var block = document.getElementsByClassName("gallery");
-  /*while (block.firstChild) {
-    block.removeChild(block.firstChild);
-  }
-  */
-  var img = document.createElement("img");
-  console.log(word)
-  img.src = data["query"]["pages"][pageId[0]]["imageinfo"][0]["thumburl"];
-  block[0].appendChild(img);
-  //shownotify("test", "game");
-}
-
-function fail(url) {
-  alert("Ошибка при запросе " + url);
-}
 
 
 //вывод слов
 function wikiurl(word) {
-
+  const giphyApiKey = "y3Zyc2M9Wgks54unRGbVJxzWoaIR0Vs8"
+  const giphyApiURI = "https://api.giphy.com/v1/gifs/search"
+  const giphyApiQuery = {
+    api_key: giphyApiKey,
+    q: word,
+    limit: 1,
+    offset: 0,
+    rating: "g",
+    lang: language,
+    bundle: "messaging_non_clips"
+  };
+  const searchParams = new URLSearchParams(giphyApiQuery);
   return (
-    "https://"+language+".wikipedia.org/w/api.php?format=json&prop=images&action=query&titles=" + word
+    `${giphyApiURI}?${searchParams.toString()}`
   );
 }
 
-function wikiPicurl(word){
-  fetch("https://api.giphy.com/v1/gifs/search?api_key=y3Zyc2M9Wgks54unRGbVJxzWoaIR0Vs8&q=cat&limit=1&offset=0&rating=g&lang=en&bundle=messaging_non_clips")
-  .then(response => response.json())
-  .then(url => {const image = document.createElement("img");
-        image.src = url.data[0].images.fixed_height_small.url;
-        document.body.appendChild(image)});
-    ;}
-  
-   
-//scriptRequest(wikiurl('насос'),ok,fail);
-//scriptRequest("https://en.wikipedia.org/w/api.php?action=query&titles=Albert%20Einstein&prop=images&format=json",ok,fail);
+function wikiPicurl(imgUrl) {
+  fetch(imgUrl)
+    .then(response => response.json())
+    .then(url => {
+      const image = document.createElement("img");
+      image.src = url.data[0].images.fixed_height_small.url;
+      document.body.appendChild(image)
+    });
+  ;
+}
