@@ -272,9 +272,31 @@ function wikiPicurl(imgUrl) {
   fetch(imgUrl)
     .then(response => response.json())
     .then(url => {
-      const image = document.createElement("img");
+      const dialog = document.createElement("dialog");
+      const image = document.createElement("img");  
+      const btn = document.createElement("button")
+      
+      //стилизация кнопки
+      btn.style.width = 'max-content'
+      btn.style.height = '20px'
+      btn.style.margin = 'auto'
+      btn.innerHTML = 'ОК'
+
+      //стилизация диалога
+      dialog.style.display = 'flex'
+      dialog.style.flexDirection = 'column'
+
       image.src = url.data[0].images.fixed_height_small.url;
-      document.body.appendChild(image)
+      dialog.id = 'dialog_image'
+      dialog.appendChild(image)
+      dialog.appendChild(btn)
+
+      document.body.appendChild(dialog)
+      dialog.show()
+
+      document.querySelector('#dialog_image').onclick = function () {
+        document.body.removeChild(dialog)
+      }
+
     });
-  ;
 }

@@ -272,9 +272,15 @@ function wikiPicurl(imgUrl) {
   fetch(imgUrl)
     .then(response => response.json())
     .then(url => {
+
+      console.log("asd")
+      const dialog = document.getElementById("dialogwin");
       const image = document.createElement("img");
       image.src = url.data[0].images.fixed_height_small.url;
-      document.body.appendChild(image)
+      dialog.innerHTML = image
+      dialog.show()
+
+      
     });
   ;
 }
