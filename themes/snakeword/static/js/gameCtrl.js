@@ -274,13 +274,13 @@ function wikiPicurl(imgUrl) {
     .then(url => {
       const dialog = document.createElement("dialog");
       const image = document.createElement("img");  
-      const btn = document.createElement("button")
+      // const btn = document.createElement("button")
       
       //стилизация кнопки
-      btn.style.width = 'max-content'
-      btn.style.height = '20px'
-      btn.style.margin = 'auto'
-      btn.innerHTML = 'ОК'
+      // btn.style.width = 'max-content'
+      // btn.style.height = '20px'
+      // btn.style.margin = 'auto'
+      // btn.innerHTML = 'ОК'
 
       //стилизация диалога
       dialog.style.display = 'flex'
@@ -289,14 +289,14 @@ function wikiPicurl(imgUrl) {
       image.src = url.data[0].images.fixed_height_small.url;
       dialog.id = 'dialog_image'
       dialog.appendChild(image)
-      dialog.appendChild(btn)
+      // dialog.appendChild(btn)
 
       document.body.appendChild(dialog)
       dialog.show()
 
-      document.querySelector('#dialog_image').onclick = function () {
+      setTimeout(() => {      
         document.body.removeChild(dialog)
-      }
+      }, 3000)
 
     });
 }
