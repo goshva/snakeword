@@ -2,10 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Snakeword</title>
-    <link>https://goshva.github.io/snakeword/categories/</link>
+    <link>http://snakeword.ru/categories/</link>
     <description>Recent content in Categories on Snakeword</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>Everything is mine</copyright><atom:link href="https://goshva.github.io/snakeword/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <copyright>Everything is mine</copyright>
+    <atom:link href="http://snakeword.ru/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

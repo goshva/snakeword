@@ -158,6 +158,10 @@ function collectWord(Id, id) {
       moreletter();
       findwordids.push(ids);
       wikiPicurl(wikiurl(word));
+
+      var userLang = navigator.language || navigator.userLanguage;
+      getTranslate(language,userLang,word)
+
       timeout0 = setTimeout(clear, 2500);
       //        s.send(JSON.stringify({"field":letters.join(''), "word": ids,"user": getCookie("username")}));
       ids = [];

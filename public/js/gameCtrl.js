@@ -158,6 +158,10 @@ function collectWord(Id, id) {
       moreletter();
       findwordids.push(ids);
       wikiPicurl(wikiurl(word));
+
+      var userLang = navigator.language || navigator.userLanguage;
+      getTranslate(language,userLang,word)
+
       timeout0 = setTimeout(clear, 2500);
       //        s.send(JSON.stringify({"field":letters.join(''), "word": ids,"user": getCookie("username")}));
       ids = [];
@@ -272,15 +276,31 @@ function wikiPicurl(imgUrl) {
   fetch(imgUrl)
     .then(response => response.json())
     .then(url => {
+      const dialog = document.createElement("dialog");
+      const image = document.createElement("img");  
+      // const btn = document.createElement("button")
+      
+      //стилизация кнопки
+      // btn.style.width = 'max-content'
+      // btn.style.height = '20px'
+      // btn.style.margin = 'auto'
+      // btn.innerHTML = 'ОК'
 
-      console.log("asd")
-      const dialog = document.getElementById("dialogwin");
-      const image = document.createElement("img");
+      //стилизация диалога
+      dialog.style.display = 'flex'
+      dialog.style.flexDirection = 'column'
+
       image.src = url.data[0].images.fixed_height_small.url;
-      dialog.innerHTML = image
+      dialog.id = 'dialog_image'
+      dialog.appendChild(image)
+      // dialog.appendChild(btn)
+
+      document.body.appendChild(dialog)
       dialog.show()
 
-      
+      setTimeout(() => {      
+        document.body.removeChild(dialog)
+      }, 3000)
+
     });
-  ;
 }

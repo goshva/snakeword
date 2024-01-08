@@ -2,85 +2,85 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://goshva.github.io/snakeword/ar/categories/</loc>
+    <loc>http://snakeword.ru/ar/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://goshva.github.io/snakeword/categories/"
+                href="http://snakeword.ru/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://goshva.github.io/snakeword/fr/categories/"
+                href="http://snakeword.ru/fr/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
-                href="https://goshva.github.io/snakeword/de/categories/"
+                href="http://snakeword.ru/de/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="https://goshva.github.io/snakeword/ru/categories/"
+                href="http://snakeword.ru/ru/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://goshva.github.io/snakeword/ar/categories/"
+                href="http://snakeword.ru/ar/categories/"
                 />
   </url><url>
-    <loc>https://goshva.github.io/snakeword/ar/</loc>
+    <loc>http://snakeword.ru/ar/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://goshva.github.io/snakeword/"
+                href="http://snakeword.ru/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://goshva.github.io/snakeword/fr/"
+                href="http://snakeword.ru/fr/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
-                href="https://goshva.github.io/snakeword/de/"
+                href="http://snakeword.ru/de/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="https://goshva.github.io/snakeword/ru/"
+                href="http://snakeword.ru/ru/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://goshva.github.io/snakeword/ar/"
+                href="http://snakeword.ru/ar/"
                 />
   </url><url>
-    <loc>https://goshva.github.io/snakeword/ar/tags/</loc>
+    <loc>http://snakeword.ru/ar/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://goshva.github.io/snakeword/tags/"
+                href="http://snakeword.ru/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://goshva.github.io/snakeword/fr/tags/"
+                href="http://snakeword.ru/fr/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
-                href="https://goshva.github.io/snakeword/de/tags/"
+                href="http://snakeword.ru/de/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="https://goshva.github.io/snakeword/ru/tags/"
+                href="http://snakeword.ru/ru/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://goshva.github.io/snakeword/ar/tags/"
+                href="http://snakeword.ru/ar/tags/"
                 />
   </url>
 </urlset>
