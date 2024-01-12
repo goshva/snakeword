@@ -134,6 +134,31 @@ function nearCheck(id, ids) {
 }
 
 var timeout0 = setTimeout(clear, 2500);
+async function getTranslate (lang,toLang, word) {
+	const url = 'https://google-translate1.p.rapidapi.com/language/translate/v2';
+	const options = {
+		method: 'POST',
+		headers: {
+			'content-type': 'application/x-www-form-urlencoded',
+			'Accept-Encoding': 'application/gzip',
+			'X-RapidAPI-Key': '9f6d76d654mshc03275bb0602cf5p1795bajsn9af24f9361fe',
+			'X-RapidAPI-Host': 'google-translate1.p.rapidapi.com'
+		},
+		body: new URLSearchParams({
+			q: word,
+			target: toLang,
+			source: lang
+		})
+	};
+
+	try {
+		const response = await fetch(url, options);
+		const result = await response.text();
+		console.log(result);
+	} catch (error) {
+		console.error(error);
+	}
+}
 
 function collectWord(Id, id) {
   clearTimeout(timeout0);
@@ -293,6 +318,7 @@ function wikiPicurl(imgUrl) {
       image.src = url.data[0].images.fixed_height_small.url;
       dialog.id = 'dialog_image'
       dialog.appendChild(image)
+      
       // dialog.appendChild(btn)
 
       document.body.appendChild(dialog)
