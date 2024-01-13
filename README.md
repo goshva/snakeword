@@ -10,11 +10,12 @@ for mac:
   2. ```brew install hugo ```
 
 
+
 3. after do:
 ```git clone git@github.com:goshva/snakeword.git```
 
 4. go to folder snakeword and:
-``` ../hugo.exe server```
+``` ../hugo.exe server``` for mac: ``` hugo server```
 
 final. for build run
 ``` ../hugo.exe  (withouut server)``` 
