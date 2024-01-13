@@ -182,8 +182,7 @@ function collectWord(Id, id) {
     if (isFinded(word) < 0) {
       moreletter();
       findwordids.push(ids);
-      wikiPicurl(wikiurl(word));
-
+      createImgDialog(constructorSearchUrl(word));
       var userLang = navigator.language || navigator.userLanguage;
       getTranslate(language,userLang,word)
 
@@ -279,7 +278,7 @@ function SaveGame() {
 
 
 //вывод слов
-function wikiurl(word) {
+function constructorSearchUrl(word) {
   const giphyApiKey = "y3Zyc2M9Wgks54unRGbVJxzWoaIR0Vs8"
   const giphyApiURI = "https://api.giphy.com/v1/gifs/search"
   const giphyApiQuery = {
@@ -297,7 +296,7 @@ function wikiurl(word) {
   );
 }
 
-function wikiPicurl(imgUrl) {
+function createImgDialog(imgUrl) {
   fetch(imgUrl)
     .then(response => response.json())
     .then(url => {
