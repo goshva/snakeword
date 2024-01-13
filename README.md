@@ -6,8 +6,8 @@ download last hugo [static site generator for windows](https://github.com/gohugo
 unpuck zip (you will see hugo.exe file)
 
 for mac:
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" 
-  brew install hugo
+    1. ```/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" ``` 
+    2. ```brew install hugo ```
 
 
 after do:
