@@ -95,7 +95,7 @@ var gameplace = document.getElementById('gameplace');
 
 function genArea(){
       for (var L= 0; L< letters.length; L++){
-	var divbtn = document.createElement("DIV");        
+	var divbtn = document.createElement("DIV");    
         divbtn.className= "cell";
         divbtn.id= "C"+L;
         divbtn.style.zIndex = '10';
@@ -104,7 +104,7 @@ function genArea(){
         divbtn.onclick= function (){  collectWord(this.Letter,this.LetterCount); this.className += " activeCell";}
 	var t = document.createTextNode(letters[L]);       
 	divbtn.appendChild(t);                       
-	gameplace.appendChild(divbtn);               
+	gameplace.appendChild(divbtn);          
      }
 }
 
