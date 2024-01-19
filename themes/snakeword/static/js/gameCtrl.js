@@ -2,6 +2,7 @@ var points = 0;
 var word = "";
 var ids = [];
 var findwords = [];
+var translatedwords = [];
 var findwordids = [];
 var opponentfindwords = [];
 //
@@ -153,14 +154,17 @@ async function getTranslate(lang, toLang, word) {
 
   try {
     const response = await fetch(url, options);
-    const result = await response.text();
-    console.log(result);
+    const result = await response.json();
+
+    return result.data.translations[0].translatedText;
   } catch (error) {
     console.error(error);
   }
 }
 
-function collectWord(Id, id) {
+async function collectWord(Id, id) {
+  let translate = "";
+
   clearTimeout(timeout0);
   ids.push(id);
   word = word + Id;
@@ -184,12 +188,13 @@ function collectWord(Id, id) {
       findwordids.push(ids);
       createImgDialog(constructorSearchUrl(word));
       var userLang = navigator.language || navigator.userLanguage;
-      getTranslate(language, userLang, word);
-
+      translate = await getTranslate(language, userLang, word);
+      translatedwords.push(translate);
       timeout0 = setTimeout(clear, 2500);
       //        s.send(JSON.stringify({"field":letters.join(''), "word": ids,"user": getCookie("username")}));
       ids = [];
     }
+    console.log(word);
     listfindedwords(word, isFinded(word));
   } else timeout0 = setTimeout(clear, 2500);
 }
@@ -201,7 +206,7 @@ function listfindedwords(word, findindex) {
   }
   for (var i = 0; i < findwords.length; i++) {
     var newWord = document.createElement("li");
-    newWord.innerText = findwords[i];
+    newWord.innerText = `${findwords[i]} - ${translatedwords[i]}`;
     newWord.className = "pure-menu-iTem";
     //
     tally.insertBefore(
