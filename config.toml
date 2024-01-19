@@ -74,6 +74,23 @@ theme = ["snakeword"]
   Setings = "set"
   Save = "Sauver"
 
+[Languages.la]  
+  Languagename =  "Latin"
+
+  title = "Anguis"
+  weight = 1
+  author = "Sha. Egor"
+  Description = "Accipe verbum iuxta litteras iuxta"
+  keywords = "Tesla's Awesome Hugo Site"
+  fbAppid = "Tesla's Awesome Hugo Site"
+  Fullurl = "Tesla's Awesome Hugo Site"
+  Points = "0"
+  MyRecord = "0"
+  Game_Mode = "game mode"
+  Random = "chaos"
+  Setings = "set"
+  Save = "salvare"
+
 [Languages.ar]
   Languagename =  "Arabian"
 

@@ -83,7 +83,6 @@ function startmultiplayer() {
 }
 function BorderfromFindWord(arr) {
   for (var i = 0; i < arr.length; i++) {
-    console.log(arr[i]);
     document.getElementById("C" + arr[i]).style.border = "thin solid #1f8dd6";
   }
 }
@@ -136,6 +135,7 @@ function nearCheck(id, ids) {
 
 var timeout0 = setTimeout(clear, 2500);
 async function getTranslate(lang, toLang, word) {
+  console.log(lang);
   const url = "https://google-translate1.p.rapidapi.com/language/translate/v2";
   const options = {
     method: "POST",
@@ -174,9 +174,11 @@ async function collectWord(Id, id) {
 
   nearCheck(id, ids);
 
+  console.log(nearCheck(id, ids));
+  console.log(isDict(word));
+
   if (isDict(word) > 0 && word.length >= 3 && nearCheck(id, ids)) {
     //    getTranslate('en','ru',word);
-
     if (isFinded(word) >= 0 && findwords.indexOf(word)) {
       findwords.splice(findwords.indexOf(word), 1);
       findwords.push(word);
@@ -187,6 +189,7 @@ async function collectWord(Id, id) {
       moreletter();
       findwordids.push(ids);
       createImgDialog(constructorSearchUrl(word));
+
       var userLang = navigator.language || navigator.userLanguage;
       translate = await getTranslate(language, userLang, word);
       translatedwords.push(translate);
@@ -194,10 +197,11 @@ async function collectWord(Id, id) {
       //        s.send(JSON.stringify({"field":letters.join(''), "word": ids,"user": getCookie("username")}));
       ids = [];
     }
-    console.log(word);
+
     listfindedwords(word, isFinded(word));
   } else timeout0 = setTimeout(clear, 2500);
 }
+
 function listfindedwords(word, findindex) {
   var tally = document.getElementById("gametally");
 

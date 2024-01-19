@@ -109,6 +109,7 @@ function genArray(testwords) {
 var gameplace = document.getElementById("gameplace");
 
 function genArea() {
+  console.log(letters);
   for (var L = 0; L < letters.length; L++) {
     var divbtn = document.createElement("DIV");
     divbtn.className = "cell";
