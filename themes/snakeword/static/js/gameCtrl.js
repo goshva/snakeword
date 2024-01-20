@@ -128,7 +128,7 @@ function nearCheck(id, ids) {
     console.info(id, iTem);
   }
   if (ids.length == 2) {
-    console.log(2);
+    console.log(2);// TODO: case for 2 to letters words  
   }
   return near;
 }
@@ -174,8 +174,7 @@ async function collectWord(Id, id) {
 
   nearCheck(id, ids);
 
-  console.log(nearCheck(id, ids));
-  console.log(isDict(word));
+
 
   if (isDict(word) > 0 && word.length >= 3 && nearCheck(id, ids)) {
     //    getTranslate('en','ru',word);
