@@ -142,7 +142,7 @@ async function getTranslate(lang, toLang, word) {
     headers: {
       "content-type": "application/x-www-form-urlencoded",
       "Accept-Encoding": "application/gzip",
-      "X-RapidAPI-Key": "9f6d76d654mshc03275bb0602cf5p1795bajsn9af24f9361fe",
+      "X-RapidAPI-Key": "f4ffc995bbmsh2dcd715d97d7aefp1e0515jsnd23015a25d64",
       "X-RapidAPI-Host": "google-translate1.p.rapidapi.com",
     },
     body: new URLSearchParams({
@@ -173,9 +173,6 @@ async function collectWord(Id, id) {
   document.getElementById("word").options[0].selected = true;
 
   nearCheck(id, ids);
-
-  console.log(nearCheck(id, ids));
-  console.log(isDict(word));
 
   if (isDict(word) > 0 && word.length >= 3 && nearCheck(id, ids)) {
     //    getTranslate('en','ru',word);
