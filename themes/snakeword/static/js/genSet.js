@@ -61,7 +61,7 @@ function snakeWord(position, i, word, track) {
       snakeWord(position, i, word, track);
     }
     if (i == word.length) {
-      genwords.push(word); /*console.log(track)*/
+      genwords.push(word); 
     }
   } else {
     //letters[position] = track[i];
@@ -101,7 +101,7 @@ function genArray(testwords) {
       snakeWord(track[0], 0, testwords[i], track);
     }
   }
-  console.log("allwords tryed!");
+  console.log(genwords)
   insertRandomLetters();
   genArea();
 }
@@ -109,7 +109,6 @@ function genArray(testwords) {
 var gameplace = document.getElementById("gameplace");
 
 function genArea() {
-  console.log(letters);
   for (var L = 0; L < letters.length; L++) {
     var divbtn = document.createElement("DIV");
     divbtn.className = "cell";

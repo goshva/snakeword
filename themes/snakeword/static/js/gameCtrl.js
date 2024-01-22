@@ -128,7 +128,7 @@ function nearCheck(id, ids) {
     console.info(id, iTem);
   }
   if (ids.length == 2) {
-    console.log(2);
+    console.log(2); // TODO: case for 2 to letters words
   }
   return near;
 }
