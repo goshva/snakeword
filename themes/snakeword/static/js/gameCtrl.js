@@ -162,7 +162,7 @@ async function getTranslate(lang, toLang, word) {
   }
 }
 
-async function collectWord(Id, id) {
+async function collectWord(Id, id, ...args) {
   let translate = "";
 
   clearTimeout(timeout0);
@@ -174,6 +174,8 @@ async function collectWord(Id, id) {
 
   nearCheck(id, ids);
 
+  console.log(word);
+
   if (isDict(word) > 0 && word.length >= 3 && nearCheck(id, ids)) {
     //    getTranslate('en','ru',word);
     if (isFinded(word) >= 0 && findwords.indexOf(word)) {
@@ -184,13 +186,16 @@ async function collectWord(Id, id) {
     //stop dubles
     if (isFinded(word) < 0) {
       moreletter();
-      findwordids.push(ids);
-      createImgDialog(constructorSearchUrl(word));
+      if (!args.length > 1 && !args[0]) {
+        findwordids.push(ids);
+        createImgDialog(constructorSearchUrl(word));
+      }
 
       var userLang = navigator.language || navigator.userLanguage;
+
       translate = await getTranslate(language, userLang, word);
       translatedwords.push(translate);
-      timeout0 = setTimeout(clear, 2500);
+      // timeout0 = setTimeout(clear, 2500);
       //        s.send(JSON.stringify({"field":letters.join(''), "word": ids,"user": getCookie("username")}));
       ids = [];
     }
@@ -266,16 +271,16 @@ function SaveGame_old() {
   location = link;
 }
 function SaveGame() {
+  console.log(123);
   localStorage.setItem("edge", edge);
   localStorage.setItem("letters", letters.join(""));
   localStorage.setItem("userwordsids", JSON.stringify(findwordids));
   var link =
-    "/url" +
     "?" +
     "edge=" +
     edge +
     "&letters=" +
-    letters.join("") +
+    encodeURIComponent(letters.join("")) +
     "&userwordsids=" +
     JSON.stringify(findwordids);
   location = link;

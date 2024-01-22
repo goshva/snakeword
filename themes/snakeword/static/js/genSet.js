@@ -6,6 +6,7 @@ var lettersFree = [];
 for (var i = 0; i < edge * edge; i++) {
   letters[i] = i;
 }
+
 var genwords = [];
 
 function getFreePosition() {
@@ -61,7 +62,7 @@ function snakeWord(position, i, word, track) {
       snakeWord(position, i, word, track);
     }
     if (i == word.length) {
-      genwords.push(word); 
+      genwords.push(word);
     }
   } else {
     //letters[position] = track[i];
@@ -101,7 +102,7 @@ function genArray(testwords) {
       snakeWord(track[0], 0, testwords[i], track);
     }
   }
-  console.log(genwords)
+  console.log(genwords);
   insertRandomLetters();
   genArea();
 }
@@ -109,6 +110,18 @@ function genArray(testwords) {
 var gameplace = document.getElementById("gameplace");
 
 function genArea() {
+  let [ed, lettersStr, userwordids] = location.search
+    .replace("?", "")
+    .split("&");
+
+  edge = ed;
+
+  letters = lettersStr
+    ? decodeURIComponent(lettersStr.split("=")[1]).split("")
+    : letters;
+
+  findwordids = userwordids ? JSON.parse(userwordids.split("=")[1]) : [];
+
   for (var L = 0; L < letters.length; L++) {
     var divbtn = document.createElement("DIV");
     divbtn.className = "cell";
@@ -123,5 +136,15 @@ function genArea() {
     var t = document.createTextNode(letters[L]);
     divbtn.appendChild(t);
     gameplace.appendChild(divbtn);
+  }
+
+  if (Array.isArray(findwordids) && Array.isArray(findwordids[0])) {
+    for (var i = 0; i < findwordids.length; i++) {
+      for (var j = 0; j < findwordids[i].length; j++) {
+        collectWord(letters[findwordids[i][j]], findwordids[i][j], true);
+      }
+
+      word = "";
+    }
   }
 }
