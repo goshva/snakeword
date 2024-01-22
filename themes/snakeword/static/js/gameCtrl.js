@@ -172,11 +172,15 @@ async function collectWord(Id, id, ...args) {
   document.getElementById("word").options[0].text = word;
   document.getElementById("word").options[0].selected = true;
 
+  console.log(word);
+  console.log(nearCheck(id, ids));
+  console.log(isDict(word));
+
   nearCheck(id, ids);
 
-  console.log(word);
-
   if (isDict(word) > 0 && word.length >= 3 && nearCheck(id, ids)) {
+    console.log(789);
+
     //    getTranslate('en','ru',word);
     if (isFinded(word) >= 0 && findwords.indexOf(word)) {
       findwords.splice(findwords.indexOf(word), 1);
@@ -186,7 +190,9 @@ async function collectWord(Id, id, ...args) {
     //stop dubles
     if (isFinded(word) < 0) {
       moreletter();
-      if (!args.length > 1 && !args[0]) {
+      console.log(123);
+
+      if (args.length === 0) {
         findwordids.push(ids);
         createImgDialog(constructorSearchUrl(word));
       }
@@ -195,7 +201,7 @@ async function collectWord(Id, id, ...args) {
 
       translate = await getTranslate(language, userLang, word);
       translatedwords.push(translate);
-      // timeout0 = setTimeout(clear, 2500);
+      timeout0 = setTimeout(clear, 2500);
       //        s.send(JSON.stringify({"field":letters.join(''), "word": ids,"user": getCookie("username")}));
       ids = [];
     }

@@ -143,8 +143,7 @@ function genArea() {
       for (var j = 0; j < findwordids[i].length; j++) {
         collectWord(letters[findwordids[i][j]], findwordids[i][j], true);
       }
-
-      word = "";
+      clear();
     }
   }
 }
