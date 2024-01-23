@@ -2,8 +2,10 @@ var points = 0;
 var word = "";
 var ids = [];
 var findwords = [];
+var translatedwords = [];
 var findwordids = [];
 var opponentfindwords = [];
+var socket = null;
 //
 function shownotify(text, Noteclass) {
   var notify = document.getElementById(Noteclass);
@@ -55,34 +57,38 @@ function checkCookie(key) {
 //checkCookie("username")
 ///
 function startmultiplayer() {
-  var s = new WebSocket("wss://snakeword.ru/ws/:9898");
+  var s = new WebSocket(
+    `ws://localhost:8765/${encodeURIComponent(letters.join(""))}`
+  );
   s.onopen = function (e) {
     console.info("ws opened");
     s.send(
       JSON.stringify({
         field: letters.join(""),
-        word: [0],
-        user: getCookie("username"),
+        findwordids,
       })
     );
   };
   s.onclose = function (e) {
     console.info("ws closed");
   };
-  s.onmessage = function (e) {
-    var message = JSON.parse(e.data);
-    if (
-      message.field == letters.join("") &&
-      message.user != getCookie("username")
-    ) {
-      BorderfromFindWord(message.word);
-      shownotify(message.user + " +" + message.word.length);
-    }
-  };
+  // s.onmessage = function (e) {
+  //   var message = JSON.parse(e.data);
+
+  //   console.log(message);
+  //   // if (
+  //   //   message.field == letters.join("") &&
+  //   //   message.user != getCookie("username")
+  //   // ) {
+  //   //   BorderfromFindWord(message.word);
+  //   //   shownotify(message.user + " +" + message.word.length);
+  //   // }
+  // };
+
+  return s;
 }
 function BorderfromFindWord(arr) {
   for (var i = 0; i < arr.length; i++) {
-    console.log(arr[i]);
     document.getElementById("C" + arr[i]).style.border = "thin solid #1f8dd6";
   }
 }
@@ -128,39 +134,42 @@ function nearCheck(id, ids) {
     console.info(id, iTem);
   }
   if (ids.length == 2) {
-    console.log(2);
+    console.log(2); // TODO: case for 2 to letters words
   }
   return near;
 }
 
 var timeout0 = setTimeout(clear, 2500);
-async function getTranslate (lang,toLang, word) {
-	const url = 'https://google-translate1.p.rapidapi.com/language/translate/v2';
-	const options = {
-		method: 'POST',
-		headers: {
-			'content-type': 'application/x-www-form-urlencoded',
-			'Accept-Encoding': 'application/gzip',
-			'X-RapidAPI-Key': '9f6d76d654mshc03275bb0602cf5p1795bajsn9af24f9361fe',
-			'X-RapidAPI-Host': 'google-translate1.p.rapidapi.com'
-		},
-		body: new URLSearchParams({
-			q: word,
-			target: toLang,
-			source: lang
-		})
-	};
+async function getTranslate(lang, toLang, word) {
+  const url = "https://google-translate1.p.rapidapi.com/language/translate/v2";
+  const options = {
+    method: "POST",
+    headers: {
+      "content-type": "application/x-www-form-urlencoded",
+      "Accept-Encoding": "application/gzip",
+      "X-RapidAPI-Key": "f4ffc995bbmsh2dcd715d97d7aefp1e0515jsnd23015a25d64",
+      "X-RapidAPI-Host": "google-translate1.p.rapidapi.com",
+    },
+    body: new URLSearchParams({
+      q: word,
+      target: toLang,
+      source: lang,
+    }),
+  };
 
-	try {
-		const response = await fetch(url, options);
-		const result = await response.text();
-		console.log(result);
-	} catch (error) {
-		console.error(error);
-	}
+  try {
+    const response = await fetch(url, options);
+    const result = await response.json();
+
+    return result.data.translations[0].translatedText;
+  } catch (error) {
+    console.error(error);
+  }
 }
 
-function collectWord(Id, id) {
+async function collectWord(Id, id, ...args) {
+  let translate = "";
+
   clearTimeout(timeout0);
   ids.push(id);
   word = word + Id;
@@ -172,7 +181,6 @@ function collectWord(Id, id) {
 
   if (isDict(word) > 0 && word.length >= 3 && nearCheck(id, ids)) {
     //    getTranslate('en','ru',word);
-
     if (isFinded(word) >= 0 && findwords.indexOf(word)) {
       findwords.splice(findwords.indexOf(word), 1);
       findwords.push(word);
@@ -181,18 +189,30 @@ function collectWord(Id, id) {
     //stop dubles
     if (isFinded(word) < 0) {
       moreletter();
-      findwordids.push(ids);
-      createImgDialog(constructorSearchUrl(word));
-      var userLang = navigator.language || navigator.userLanguage;
-      getTranslate(language,userLang,word)
+      if (args.length === 0) {
+        findwordids.push(ids);
+        createImgDialog(constructorSearchUrl(word));
+      }
 
+      var userLang = navigator.language || navigator.userLanguage;
+
+      socket.send(
+        JSON.stringify({
+          field: letters.join(""),
+          findwordids,
+        })
+      );
+      translate = await getTranslate(language, userLang, word);
+      translatedwords.push(translate);
       timeout0 = setTimeout(clear, 2500);
       //        s.send(JSON.stringify({"field":letters.join(''), "word": ids,"user": getCookie("username")}));
       ids = [];
     }
+
     listfindedwords(word, isFinded(word));
   } else timeout0 = setTimeout(clear, 2500);
 }
+
 function listfindedwords(word, findindex) {
   var tally = document.getElementById("gametally");
 
@@ -201,7 +221,7 @@ function listfindedwords(word, findindex) {
   }
   for (var i = 0; i < findwords.length; i++) {
     var newWord = document.createElement("li");
-    newWord.innerText = findwords[i];
+    newWord.innerText = `${findwords[i]} - ${translatedwords[i]}`;
     newWord.className = "pure-menu-iTem";
     //
     tally.insertBefore(
@@ -264,23 +284,18 @@ function SaveGame() {
   localStorage.setItem("letters", letters.join(""));
   localStorage.setItem("userwordsids", JSON.stringify(findwordids));
   var link =
-    "/url" +
     "?" +
-    "edge=" +
-    edge +
-    "&letters=" +
-    letters.join("") +
+    "letters=" +
+    encodeURIComponent(letters.join("")) +
     "&userwordsids=" +
     JSON.stringify(findwordids);
   location = link;
 }
 
-
-
 //вывод слов
 function constructorSearchUrl(word) {
-  const giphyApiKey = "y3Zyc2M9Wgks54unRGbVJxzWoaIR0Vs8"
-  const giphyApiURI = "https://api.giphy.com/v1/gifs/search"
+  const giphyApiKey = "y3Zyc2M9Wgks54unRGbVJxzWoaIR0Vs8";
+  const giphyApiURI = "https://api.giphy.com/v1/gifs/search";
   const giphyApiQuery = {
     api_key: giphyApiKey,
     q: word,
@@ -288,26 +303,34 @@ function constructorSearchUrl(word) {
     offset: 0,
     rating: "g",
     lang: language,
-    bundle: "messaging_non_clips"
+    bundle: "messaging_non_clips",
   };
   const searchParams = new URLSearchParams(giphyApiQuery);
-  return (
-    `${giphyApiURI}?${searchParams.toString()}`
-  );
+  return `${giphyApiURI}?${searchParams.toString()}`;
 }
 
 function createImgDialog(imgUrl) {
   fetch(imgUrl)
-    .then(response => response.json())
-    .then(url => {
+    .then((response) => response.json())
+    .then((url) => {
       const dialog = document.createElement("dialog");
-      const image = document.createElement("img");  
+      const image = document.createElement("img");
       image.src = url.data[0].images.fixed_height_small.url;
+<<<<<<< HEAD
       dialog.appendChild(image)
       document.body.appendChild(dialog)
       dialog.show()
       setTimeout(() => {        
         document.body.removeChild(dialog)
       }, 3000)
+=======
+      dialog.appendChild(image);
+
+      document.body.appendChild(dialog);
+      dialog.show();
+      setTimeout(() => {
+        document.body.removeChild(dialog);
+      }, 3000);
+>>>>>>> 757006b601f6962ab8fd7545c503553c70eeb49d
     });
 }
