@@ -283,9 +283,7 @@ function SaveGame() {
   localStorage.setItem("userwordsids", JSON.stringify(findwordids));
   var link =
     "?" +
-    "edge=" +
-    edge +
-    "&letters=" +
+    "letters=" +
     encodeURIComponent(letters.join("")) +
     "&userwordsids=" +
     JSON.stringify(findwordids);

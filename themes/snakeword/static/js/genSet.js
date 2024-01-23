@@ -110,11 +110,7 @@ function genArray(testwords) {
 var gameplace = document.getElementById("gameplace");
 
 function genArea() {
-  let [ed, lettersStr, userwordids] = location.search
-    .replace("?", "")
-    .split("&");
-
-  edge = ed;
+  let [lettersStr, userwordids] = location.search.replace("?", "").split("&");
 
   letters = lettersStr
     ? decodeURIComponent(lettersStr.split("=")[1]).split("")
