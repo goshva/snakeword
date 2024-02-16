@@ -110,17 +110,31 @@ function genArray(testwords) {
 var gameplace = document.getElementById("gameplace");
 
 function genArea() {
-  let [ed, lettersStr, userwordids] = location.search
-    .replace("?", "")
-    .split("&");
-
-  edge = ed;
+  let [lettersStr, userwordids] = location.search.replace("?", "").split("&");
 
   letters = lettersStr
     ? decodeURIComponent(lettersStr.split("=")[1]).split("")
     : letters;
 
   findwordids = userwordids ? JSON.parse(userwordids.split("=")[1]) : [];
+
+  socket = startmultiplayer();
+
+  socket.onmessage = function (e) {
+    var message = JSON.parse(e.data);
+
+    findwordids = message.findwordids;
+    letters = message.field.split(" ");
+
+    if (Array.isArray(findwordids) && Array.isArray(findwordids[0])) {
+      for (var i = 0; i < findwordids.length; i++) {
+        for (var j = 0; j < findwordids[i].length; j++) {
+          collectWord(letters[findwordids[i][j]], findwordids[i][j], true);
+        }
+        clear();
+      }
+    }
+  };
 
   for (var L = 0; L < letters.length; L++) {
     var divbtn = document.createElement("DIV");
