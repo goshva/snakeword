@@ -1,0 +1,1 @@
+after parse dictionary remove this stuff from *.json: "VOCAB","-с","-с","-тка","-то","-то","а","а","а","а","а","а","а","а","а...",
