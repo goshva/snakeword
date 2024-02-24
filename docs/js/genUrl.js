@@ -57,7 +57,6 @@ function genArray() {
 var gameplace = document.getElementById("gameplace");
 
 function genArea() {
-  console.log(456);
   for (var L = 0; L < letters.length; L++) {
     var divbtn = document.createElement("DIV");
     divbtn.className = "cell";

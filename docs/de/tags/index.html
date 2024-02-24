@@ -19,7 +19,33 @@
     <link rel="stylesheet" href="/css/game.css" />
   </head>
 </html>
-<body><body>
+<body>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+   <body>
+      <div id="fb-root"></div>
+      <script>(function(d, s, id) {
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) return;
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.8&appId=215324895555689";
+         fjs.parentNode.insertBefore(js, fjs);
+         }(document, 'script', 'facebook-jssdk'));
+      </script>
+      
+      <div id="layout">
+         
+         <a href="#menu" id="menuLink" class="menu-link  tada">
+            
+            <span></span>
+         </a>
+         <div id="menu">
+            <div class="pure-menu">
+		    
+               <ul class="pure-menu-list">
+		       <li class="pure-menu-item"><a href="/random" class="pure-menu-link">Chaos</a></li>
+		       <li class="pure-menu-item"><a href="/set" class="pure-menu-link">Bausatz</a></li>
+		       <li class="pure-menu-item"><span onclick="SaveGame()" class="pure-button" >💾 Speichern</span></li>
+=======
+<body>
   <div id="fb-root"></div>
   <script>
     (function (d, s, id) {
@@ -33,6 +59,7 @@
       fjs.parentNode.insertBefore(js, fjs);
     })(document, "script", "facebook-jssdk");
   </script>
+>>>>>>> 757006b601f6962ab8fd7545c503553c70eeb49d
 
   <div id="layout">
     

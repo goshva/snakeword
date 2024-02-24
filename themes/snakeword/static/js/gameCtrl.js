@@ -316,21 +316,11 @@ function createImgDialog(imgUrl) {
       const dialog = document.createElement("dialog");
       const image = document.createElement("img");
       image.src = url.data[0].images.fixed_height_small.url;
-<<<<<<< HEAD
       dialog.appendChild(image)
       document.body.appendChild(dialog)
       dialog.show()
       setTimeout(() => {        
         document.body.removeChild(dialog)
       }, 3000)
-=======
-      dialog.appendChild(image);
-
-      document.body.appendChild(dialog);
-      dialog.show();
-      setTimeout(() => {
-        document.body.removeChild(dialog);
-      }, 3000);
->>>>>>> 757006b601f6962ab8fd7545c503553c70eeb49d
-    });
+ });
 }

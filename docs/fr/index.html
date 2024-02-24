@@ -5,11 +5,11 @@
 	<meta name="generator" content="Hugo 0.120.4">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Prendre un mot à côté des lettres côte à côte" />
-    <meta property="og:description" content="Prendre un mot à côté des lettres côte à côte" />
+    <meta name="description" content="" />
+    <meta property="og:description" content="" />
     <meta property="og:url" content="http://snakeword.vit.ooo/fr/fr" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="0" />
+    <meta property="og:title" content="" />
     <meta property="og:image" content="/img/soc.jpg" />
     <meta property="og:image:width" content="400" />
     <meta property="og:image:height" content="300" />
@@ -20,7 +20,33 @@
     <link rel="stylesheet" href="/css/game.css" />
   </head>
 </html>
-<body><body>
+<body>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+   <body>
+      <div id="fb-root"></div>
+      <script>(function(d, s, id) {
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) return;
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.8&appId=215324895555689";
+         fjs.parentNode.insertBefore(js, fjs);
+         }(document, 'script', 'facebook-jssdk'));
+      </script>
+      
+      <div id="layout">
+         
+         <a href="#menu" id="menuLink" class="menu-link  tada">
+            
+            <span></span>
+         </a>
+         <div id="menu">
+            <div class="pure-menu">
+		    
+               <ul class="pure-menu-list">
+		       <li class="pure-menu-item"><a href="/random" class="pure-menu-link"></a></li>
+		       <li class="pure-menu-item"><a href="/set" class="pure-menu-link"></a></li>
+		       <li class="pure-menu-item"><span onclick="SaveGame()" class="pure-button" >💾 </span></li>
+=======
+<body>
   <div id="fb-root"></div>
   <script>
     (function (d, s, id) {
@@ -34,6 +60,7 @@
       fjs.parentNode.insertBefore(js, fjs);
     })(document, "script", "facebook-jssdk");
   </script>
+>>>>>>> 757006b601f6962ab8fd7545c503553c70eeb49d
 
   <div id="layout">
     
@@ -47,15 +74,15 @@
         <ul class="pure-menu-list">
           <li class="pure-menu-item">
             <a href="/random" class="pure-menu-link"
-              >le chaos</a
+              ></a
             >
           </li>
           <li class="pure-menu-item">
-            <a href="/set" class="pure-menu-link">set</a>
+            <a href="/set" class="pure-menu-link"></a>
           </li>
           <li class="pure-menu-item">
             <span onclick="SaveGame()" class="pure-button"
-              >💾 Sauver</span
+              >💾 </span
             >
           </li>
 
@@ -129,14 +156,14 @@
         <div id="main">
                 <div class="header">
                         <div class="pure-form" style="display: flex; justify-content: center">
-                                <span class="pure-button pure-button-active" id="points"
-                                        title="0">...
+                                <span class="point-button pure-button-active" id="points"
+                                        title="">...
                                 </span>
-                                <select id="word" class="pure-input-3-5">
+                                <select id="word-input" class="pure-input-3-5">
                                         <option></option>
                                 </select>
 
-                                <span class="pure-button pure-button-active" id="clear"
+                                <span class="clear-button pure-button-active" id="clear"
                                         title="">&#9003;✗</span>
                         </div>
                 </div>
