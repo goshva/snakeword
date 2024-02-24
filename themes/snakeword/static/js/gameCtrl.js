@@ -174,8 +174,8 @@ async function collectWord(Id, id, ...args) {
   ids.push(id);
   word = word + Id;
 
-  document.getElementById("word").options[0].text = word;
-  document.getElementById("word").options[0].selected = true;
+  document.getElementById("word-input").options[0].text = word;
+  document.getElementById("word-input").options[0].selected = true;
 
   nearCheck(id, ids);
 
@@ -259,7 +259,7 @@ function clear() {
   opt.value = "";
   opt.innerHTML = "";
   opt.selected = true;
-  Select.appendChild(opt);
+  //Select.appendChild(opt);
   //
 }
 
