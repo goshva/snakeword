@@ -1,24 +1,33 @@
-        {{ define "main" }}
-        <div id="main">
-                <div class="header">
-                        <div class="pure-form" style="display: flex; justify-content: center">
-                                <span class="point-button pure-button-active" id="points"
-                                        title="{{ .Site.Params.Points}}">...
-                                </span>
-                                <select id="word-input" class="pure-input-3-5">
-                                        <option>{{ .Site.Params.Lets}}</option>
-                                </select>
+{{ define "main" }}
+<div id="main">
+  <div class="header">
+    <div class="pure-form" style="display: flex; justify-content: center">
+      <span
+        class="point-button pure-button-active"
+        id="points"
+        title="{{ .Site.Params.Points}}"
+        >...
+      </span>
+      <select id="word-input" class="pure-input-3-5">
+        <option>{{ .Site.Params.Lets}}</option>
+      </select>
 
-                                <span class="clear-button pure-button-active" id="clear"
-                                        title="{{ .Site.Params.Cut}}">&#9003;✗</span>
-                        </div>
-                </div>
-                <hr>
-                <div class="content">
-                        <div id="gameplace"></div>
-                        <ul class="pure-menu-list" id="gametally"></ul>
-                        <div id="result"></div>
-                </div>
-        </div>
-        <div class="gallery pure-form" style="  position: fixed; top: 50%; left: 50%;"></div>
-        {{ end }}
+      <span
+        class="clear-button pure-button-active"
+        id="clear"
+        title="{{ .Site.Params.Cut}}"
+        ><i class="fa-solid fa-delete-left"></i>
+      </span>
+    </div>
+  </div>
+  <div class="content">
+    <div id=""></div>
+    <div id="gameplace"></div>
+    <div id="result"></div>
+  </div>
+</div>
+<div
+  class="gallery pure-form"
+  style="position: fixed; top: 50%; left: 50%"
+></div>
+{{ end }}

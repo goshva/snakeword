@@ -1,41 +1,48 @@
-
 #gameplace{
    width: 324px;
-   margin-left: auto;
-   margin-right: auto;
    display:flex;
    flex-wrap:wrap;
-   background:#911e03;
-   border:.2em solid #f96800;
+   background-image: url('./../img/wood.jpg');
+   block-size: cover;
+   justify-content: center;
+   border: 1px solid black;
    font-size:1.6em;
    border-radius: 0.7em;
    box-shadow:-5px 5px 5px rgb(0 0 0 / 20%);
-   padding:5px;
+   padding: 5px;
 }
 #gametally {z-index:-1; color: #ccc;}
 #gametally li {font-size: small;  line-height: 1em;}
 #word {width: 9em;}
 
 
-.content { padding:0;}
+.content {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
 .cell{
     margin: 0.1ex;
     text-align: center;
     text-transform: uppercase;
     float: left;
-    width: 30px;
-    height: 30px;
-    padding: 5px 1px 0px 1px;
+    width: 1.2em;
+    padding: 2px 0;
     border: 1px solid #ccc;
     background:#f1e9d3;
     border-radius:.3em;
-    font-size: 19px;
+    font-size: 1em;
     border-top: 2px solid #fff;
     border-right:1px solid #fff;
     border-left: 1px solid #cbc2aa;
     border-bottom: 2px solid #cbc2aa;
     color:#000;
     box-shadow:-1px 1px 1px rgb(0 0 0 / 15%);
+}
+
+.header {
+   margin-bottom: 20px;
 }
 
 .wordCell { background-color:#FF8;}
@@ -98,7 +105,7 @@
     font-family: inherit;
     text-decoration: none;
     padding: 0.5em 1em;
-    border:.2em solid #911e03;
+    border: 3px solid #5B5A37;
 }
 .clear-button{
    font-family: inherit;
@@ -112,21 +119,18 @@
    border-left: 1px solid #cbc2aa;
    border-bottom: 2px solid #cbc2aa;
    text-decoration: none;
-   border:.2em solid #911e03;
+   border: 3px solid #5B5A37;
 }
 
 #word-input{
    width: 11em;
    height: auto;
-   vertical-align: middle;
-   display: inline-block;
-   margin-left: 1px;
-   margin-right: 1px;
+   margin: 0 2px;
    background:#f1e9d3;
    border-radius:.4em;
    border-top: 2px solid #fff;
    border-right:1px solid #fff;
    border-left: 1px solid #cbc2aa;
    border-bottom: 2px solid #cbc2aa;
-   border:.2em solid #911e03;
+   border: 3px solid #5B5A37;
 }
