@@ -40,31 +40,19 @@
           </li>
           <li class="top-menu-item">
             <a href="#" class="top-menu-link">
-              <i class="fa-solid fa-bars"></i>
+              {{.Site.Params.Language}}
+              <i class="fa-solid fa-caret-down"></i>
             </a>
             <ul class="top-menu-list">
               <li class="top-menu-item">
-                <a href="/random" class="top-menu-link"
-                  >{{ .Site.Params.Random}}</a>
-              </li>
-              <li class="top-menu-item">
-                <a href="/set" class="top-menu-link">
-                  {{.Site.Params.Settings}}
-                </a>
-              </li>
-              <li class="top-menu-item">
-                <a href="#" class="top-menu-link">
-                  {{.Site.Params.Language}}
-                </a>
-                <ul class="top-menu-list">
-                  {{ range $.Site.Home.AllTranslations }}
-                  <li class="top-menu-item">
-                    <a class="top-menu-link" href="{{ .Permalink }}"
-                      >{{ .Language.LanguageName }}</a
-                    >
-                  </li>
-                  {{ end }}
-                </ul>
+                {{ range $.Site.Home.AllTranslations }}
+                <li class="top-menu-item">
+                  <a class="top-menu-link" href="{{ .Permalink }}"
+                    >{{ .Language.LanguageName }}</a
+                  >
+                </li>
+                {{ end }}
+
               </li>
             </ul>
           </li>

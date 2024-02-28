@@ -317,7 +317,7 @@ function createImgDialog(imgUrl) {
       const image = document.createElement("img");
       image.src = url.data[0].images.fixed_height_small.url;
       dialog.appendChild(image)
-      document.body.prepend(dialog)
+      document.body.appendChild(dialog)
       dialog.show()
       setTimeout(() => {        
         document.body.removeChild(dialog)

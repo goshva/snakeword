@@ -17,7 +17,9 @@
       src="https://kit.fontawesome.com/4e72f7ce5d.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="/css/layouts/top-menu.css" />
-    <link rel="stylesheet" href="/css/game.css" />
+    {{ $css := resources.Get "/css/top-menu.css" | minify }}
+    <link href="{{ $css.RelPermalink }}" rel="stylesheet">
+    {{ $css := resources.Get "/css/game.css" | minify }}
+    <link href="{{ $css.RelPermalink }}" rel="stylesheet">
   </head>
 </html>
