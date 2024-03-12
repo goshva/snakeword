@@ -1,6 +1,5 @@
 var edge = 9;
 var track = [];
-
 var letters = [];
 var lettersFree = [];
 for (var i = 0; i < edge * edge; i++) {
