@@ -1,12 +1,38 @@
+:root {
+   --letter-block-length: calc(100vw / 30);
+   --letter-block-length-1400: calc(100vw / 20);
+   --letter-block-length-768: calc(100vw / 15);
+ }
+
+html {
+   box-sizing: border-box;
+   font-family: 'Josefin', sans-serif;
+}
+
+*,
+*::after,
+*::before {
+   box-sizing: inherit;
+}
+
+body {
+   height: 100vh;
+   margin: 0;
+   background-image: url("./../../img/bcg.jpg");
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+}
+
+ 
 #gameplace{
-    width: 324px;
     display:flex;
     flex-wrap:wrap;
     background-image: url('./../img/wood.jpg');
     block-size: cover;
     justify-content: center;
     border: 1px solid black;
-    font-size:1.6em;
+    font-size: 1.6em;
     border-radius: 0.7em;
     box-shadow:-5px 5px 5px rgb(0 0 0 / 20%);
     padding: 5px;
@@ -14,31 +40,50 @@
  #gametally {z-index:-1; color: #ccc;}
  #gametally li {font-size: small;  line-height: 1em;}
  #word {width: 9em;}
- 
- 
- .content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+ #content {
+   height: calc(100% - var(--header-height));
+   display: flex;
+   justify-content: center;
+   align-items: center;
  }
+
+ #main {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+ }
+
+ 
+.wrapper {
+   display: grid;
+   grid-template-columns: repeat(9, var(--letter-block-length));
+   grid-auto-rows: var(--letter-block-length);
+   gap: calc(var(--letter-block-length) / 10)
+}
  
  .cell{
-     margin: 0.1ex;
      text-align: center;
      text-transform: uppercase;
      float: left;
-     width: 1.2em;
-     padding: 2px 0;
+     padding-top: 0.07em;
      border: 1px solid #ccc;
      background:#f1e9d3;
      border-radius:.3em;
-     font-size: 1em;
+     font-size: calc(100vw / 40);
      border-top: 2px solid #fff;
      border-right:1px solid #fff;
      border-left: 1px solid #cbc2aa;
      border-bottom: 2px solid #cbc2aa;
      color:#000;
      box-shadow:-1px 1px 1px rgb(0 0 0 / 15%);
+     cursor: pointer;
+ }
+
+ .cell:hover {
+   background:#bfbfb8;
+   border: 1px solid #bfbfb8;
  }
  
  .header {
@@ -134,3 +179,25 @@
     border-bottom: 2px solid #cbc2aa;
     border: 3px solid #5B5A37;
  }
+
+@media (max-width: 1400px) {
+   .wrapper {
+      grid-template-columns: repeat(9, var(--letter-block-length-1400));
+      grid-auto-rows: var(--letter-block-length-1400);
+      gap: calc(var(--letter-block-length-1400) / 10)
+   }
+   .cell {
+      font-size: calc(100vw / 30);
+   }
+ }
+
+@media (max-width: 768px) {
+   .wrapper {
+      grid-template-columns: repeat(9, var(--letter-block-length-768));
+      grid-auto-rows: var(--letter-block-length-768);
+      gap: calc(var(--letter-block-length-768) / 10)
+   }
+   .cell {
+      font-size: calc(100vw / 25);
+   }
+}
