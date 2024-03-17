@@ -26,6 +26,18 @@ font-weight: 700;
 src: url("../../public/fonts/rubik/JosefinSans-Bold.ttf");
 }
 
+@font-face {
+  font-family: "El Missiri";
+  font-weight: 400;
+  src: url("../../public/fonts/el_missiri/ElMessiri-Regular.ttf");
+  }
+
+@font-face {
+  font-family: "Mirza";
+  font-weight: 400;
+  src: url("../../public/fonts/mirza/Mirza-Regular.ttf");
+  }
+
 header {
   height: var(--header-height);
 }

@@ -137,6 +137,11 @@ function genArea() {
 
   for (var L = 0; L < letters.length; L++) {
     var divbtn = document.createElement("DIV");
+    // arabic language font
+    var language = getCookie("lang") || document.documentElement.lang;
+    if (language == "ar" || language == "ar-AR" || language == "ar-ar") {
+      divbtn.style.lineHeight = "0.8"
+    }
     divbtn.className = "cell";
     divbtn.id = "C" + L;
     divbtn.style.zIndex = "10";

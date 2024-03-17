@@ -1,13 +1,13 @@
 :root {
    --letter-block-length: calc(100vw / 30);
-   --letter-block-length-1400: calc(100vw / 20);
+   --letter-block-length-1400: calc(100vw / 25);
    --letter-block-length-768: calc(100vw / 15);
    --gif-margin: calc(100vw / 4);
  }
 
 html {
    box-sizing: border-box;
-   font-family: 'Josefin', sans-serif;
+   font-family: 'Rubik', sans-serif;
 }
 
 *,
@@ -68,10 +68,10 @@ body {
      text-align: center;
      text-transform: uppercase;
      float: left;
-     padding-top: 0.07em;
+     padding-top: 0.1em;
      border: 1px solid #ccc;
      background:#f1e9d3;
-     border-radius:.3em;
+     border-radius: 0.3em;
      font-size: calc(100vw / 40);
      border-top: 2px solid #fff;
      border-right:1px solid #fff;
@@ -257,7 +257,7 @@ body {
       gap: calc(var(--letter-block-length-1400) / 10)
    }
    .cell {
-      font-size: calc(100vw / 30);
+      font-size: calc(100vw / 35);
    }
    .pop-up_img {
       width: 300px;
@@ -280,7 +280,8 @@ body {
       gap: calc(var(--letter-block-length-768) / 10)
    }
    .cell {
-      font-size: calc(100vw / 25);
+      font-size: calc(100vw / 20);
+      padding-top: 0.07em;
    }
    .pop-up_img {
       width: 200px;
