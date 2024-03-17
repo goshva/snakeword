@@ -106,7 +106,7 @@ function genArray(testwords) {
   genArea();
 }
 
-var gameplace = document.querySelector(".wrapper");
+var gameplace = document.getElementById("gameplace");
 
 function genArea() {
   let [lettersStr, userwordids] = location.search.replace("?", "").split("&");

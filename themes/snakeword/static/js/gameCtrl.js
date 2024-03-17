@@ -103,21 +103,13 @@ function moreletter() {
   points += word.length;
   document.getElementById("points").innerText = points;
 }
-
 function nearCheck(id, ids) {
   var near = false;
   edge = parseInt(edge);
-  console.log(edge)
-  console.log(id)
-  console.log(ids)
 
   id = parseInt(id);
   iTem = ids[ids.length - 2];
   if (iTem + 1 == id) {
-    near = true;
-    console.info(id, iTem);
-  }
-  if (ids.length === 1) {
     near = true;
     console.info(id, iTem);
   }
@@ -218,10 +210,7 @@ async function collectWord(Id, id, ...args) {
     }
 
     listfindedwords(word, isFinded(word));
-  } else if (!nearCheck(id, ids)) {
-    timeout0 = setTimeout(clear, 100);
-  }
-  else timeout0 = setTimeout(clear, 2500);
+  } else timeout0 = setTimeout(clear, 2500);
 }
 
 function listfindedwords(word, findindex) {
