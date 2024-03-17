@@ -107,9 +107,6 @@ function moreletter() {
 function nearCheck(id, ids) {
   var near = false;
   edge = parseInt(edge);
-  console.log(edge)
-  console.log(id)
-  console.log(ids)
 
   id = parseInt(id);
   iTem = ids[ids.length - 2];

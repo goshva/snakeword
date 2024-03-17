@@ -2,6 +2,7 @@
    --letter-block-length: calc(100vw / 30);
    --letter-block-length-1400: calc(100vw / 20);
    --letter-block-length-768: calc(100vw / 15);
+   --gif-margin: calc(100vw / 4);
  }
 
 html {
@@ -180,7 +181,76 @@ body {
     border: 3px solid #5B5A37;
  }
 
-@media (max-width: 1400px) {
+/* pop-up styles */
+.b-popup {
+   width:100%;
+   height: 2000px;
+   background-color: rgba(0,0,0,0.9);
+   overflow: hidden;
+   position: fixed;
+   top: 0px;
+   z-index: 50;
+   visibility: hidden;
+   opacity: 0;
+   transition: opacity 1000ms ease-in-out;
+   text-align: center;
+   display: flex;
+   justify-content: center;
+}
+
+.b-popup-content {
+   z-index: -5;
+   position: relative;
+}
+
+.pop-up_img {
+   width: 400px;
+}
+
+/* gif styles */
+.cracker_gif-left {
+   z-index: -5;
+   position: absolute;
+   transform: rotate(-40deg);
+   left: -250px;
+}
+
+.cracker_gif-right {
+   z-index: -5;
+   position: absolute;
+   transform: rotate(40deg);
+   right: -250px;
+}
+
+/* timer styles */
+.timer__items {
+   display: flex;
+   font-size: 48px;
+ }
+ .timer__item {
+   position: relative;
+   min-width: 60px;
+   margin-left: 10px;
+   margin-right: 10px;
+   padding-bottom: 15px;
+   text-align: center;
+ }
+ .timer__item::before {
+   content: attr(data-title);
+   display: block;
+   position: absolute;
+   left: 50%;
+   bottom: 0;
+   transform: translateX(-50%);
+   font-size: 14px;
+ }
+ .timer__item:not(:last-child)::after {
+   content: ':';
+   position: absolute;
+   right: -15px;
+ }
+
+ @media (max-width: 1400px) {
    .wrapper {
       grid-template-columns: repeat(9, var(--letter-block-length-1400));
       grid-auto-rows: var(--letter-block-length-1400);
@@ -188,6 +258,18 @@ body {
    }
    .cell {
       font-size: calc(100vw / 30);
+   }
+   .pop-up_img {
+      width: 300px;
+   }
+   .cracker_gif-left, .cracker_gif-right {
+      width: 400px;
+   }
+   .cracker_gif-left {
+      left: -200px;
+   }
+   .cracker_gif-right {
+      right: -200px;
    }
  }
 
@@ -199,5 +281,17 @@ body {
    }
    .cell {
       font-size: calc(100vw / 25);
+   }
+   .pop-up_img {
+      width: 200px;
+   }
+   .cracker_gif-left, .cracker_gif-right {
+      width: 300px;
+   }
+   .cracker_gif-left {
+      left: -150px;
+   }
+   .cracker_gif-right {
+      right: -150px;
    }
 }
