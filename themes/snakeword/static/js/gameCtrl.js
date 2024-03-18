@@ -99,6 +99,14 @@ function isFinded(word) {
 
 function moreletter() {
   findwords.push(word);
+  // show modal if we get all the words on playfield
+  const set = new Set(wordsInGame);
+  const uniqueWords = Array.from(set)
+  if (findwords.length === uniqueWords) {
+    const popup = document.querySelector('.b-popup');
+    popup.style.visibility = 'visible';
+    popup.style.opacity = 1;
+  }
   //findwordids.push(ids);//////////////////////////////////
   points += word.length;
   document.getElementById("points").innerText = points;
@@ -110,7 +118,11 @@ function nearCheck(id, ids) {
 
   id = parseInt(id);
   iTem = ids[ids.length - 2];
-  if (iTem + 1 == id) {
+  if (iTem === id) {
+    near = false;
+    console.info(id, iTem);
+  }
+  if (iTem + 1 === id) {
     near = true;
     console.info(id, iTem);
   }
@@ -262,7 +274,6 @@ function clear() {
   }
   word = "";
   ids = [];
-  var Select = document.getElementById("word");
   var opt = document.createElement("option");
   opt.value = "";
   opt.innerHTML = "";
