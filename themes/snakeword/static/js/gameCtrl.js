@@ -103,7 +103,6 @@ function moreletter() {
   points += word.length;
   document.getElementById("points").innerText = points;
 }
-
 function nearCheck(id, ids) {
   var near = false;
   edge = parseInt(edge);
@@ -111,10 +110,6 @@ function nearCheck(id, ids) {
   id = parseInt(id);
   iTem = ids[ids.length - 2];
   if (iTem + 1 == id) {
-    near = true;
-    console.info(id, iTem);
-  }
-  if (ids.length === 1) {
     near = true;
     console.info(id, iTem);
   }
@@ -215,10 +210,7 @@ async function collectWord(Id, id, ...args) {
     }
 
     listfindedwords(word, isFinded(word));
-  } else if (!nearCheck(id, ids)) {
-    timeout0 = setTimeout(clear, 100);
-  }
-  else timeout0 = setTimeout(clear, 2500);
+  } else timeout0 = setTimeout(clear, 2500);
 }
 
 function listfindedwords(word, findindex) {
@@ -267,13 +259,18 @@ function clear() {
   opt.value = "";
   opt.innerHTML = "";
   opt.selected = true;
-  //Select.appendChild(opt);
+  //Selectq.appendChild(opt);
   //
 }
+function cutWord() {
 
-document.getElementById("clear").onclick = function () {
-  clear();
-};
+  word = "";
+  document.getElementById("word-input").options[0].text = word;
+  clear()
+}
+
+const cutButton = document.getElementById("cut-btn");
+cutButton.addEventListener("click", cutWord);
 
 function SaveGame_old() {
   var link =
