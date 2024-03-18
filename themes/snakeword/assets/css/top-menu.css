@@ -139,7 +139,7 @@ i {
 .top-menu li:hover > ul {
   display: block;
 }
-@media(max-width:425px){
+@media(max-width:535px){
   
 .top-menu-link-languages {
   display: block;

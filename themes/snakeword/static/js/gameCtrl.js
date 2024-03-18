@@ -259,13 +259,18 @@ function clear() {
   opt.value = "";
   opt.innerHTML = "";
   opt.selected = true;
-  //Select.appendChild(opt);
+  //Selectq.appendChild(opt);
   //
 }
+function cutWord() {
 
-document.getElementById("clear").onclick = function () {
-  clear();
-};
+  word = "";
+  document.getElementById("word-input").options[0].text = word;
+  clear()
+}
+
+const cutButton = document.getElementById("cut-btn");
+cutButton.addEventListener("click", cutWord);
 
 function SaveGame_old() {
   var link =
