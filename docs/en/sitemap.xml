@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://snakeword.vit.ooo/categories/</loc>
+    <loc>http://snakeword.vit.ooo/en/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
@@ -31,10 +31,10 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://snakeword.vit.ooo/categories/"
+                href="http://snakeword.vit.ooo/en/categories/"
                 />
   </url><url>
-    <loc>http://snakeword.vit.ooo/</loc>
+    <loc>http://snakeword.vit.ooo/en/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="la"
@@ -63,10 +63,10 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://snakeword.vit.ooo/"
+                href="http://snakeword.vit.ooo/en/"
                 />
   </url><url>
-    <loc>http://snakeword.vit.ooo/tags/</loc>
+    <loc>http://snakeword.vit.ooo/en/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
@@ -95,7 +95,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://snakeword.vit.ooo/tags/"
+                href="http://snakeword.vit.ooo/en/tags/"
                 />
   </url>
 </urlset>

@@ -117,8 +117,9 @@ function genArea() {
 
   findwordids = userwordids ? JSON.parse(userwordids.split("=")[1]) : [];
 
-  socket = startmultiplayer();
-
+  socket = setTimeout(function(){
+    startmultiplayer();
+  }, 2000);
   socket.onmessage = function (e) {
     var message = JSON.parse(e.data);
 
