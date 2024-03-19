@@ -72,18 +72,18 @@ function startmultiplayer() {
   s.onclose = function (e) {
     console.info("ws closed");
   };
-  // s.onmessage = function (e) {
-  //   var message = JSON.parse(e.data);
-
-  //   console.log(message);
-  //   // if (
-  //   //   message.field == letters.join("") &&
-  //   //   message.user != getCookie("username")
-  //   // ) {
-  //   //   BorderfromFindWord(message.word);
-  //   //   shownotify(message.user + " +" + message.word.length);
-  //   // }
-  // };
+   s.onmessage = function (e) {
+     var message = JSON.parse(e.data);
+     console.log('MASSmessage')
+     console.log(message)
+     // if (
+     //   message.field == letters.join("") &&
+     //   message.user != getCookie("username")
+     // ) {
+     //   BorderfromFindWord(message.word);
+     //   shownotify(message.user + " +" + message.word.length);
+     // }
+   };
 
   return s;
 }
