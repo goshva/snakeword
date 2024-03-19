@@ -7,11 +7,13 @@ document.addEventListener('DOMContentLoaded', function () {
   // last value can be easily changed, depends on how many minutes you need
   let deadline = 1000 * 60 * 10;
 
+
+
   // set remaining time as content of elements
   function countdownTimer() {
     if (deadline === 0) {
       const popup = document.querySelector('.b-popup');
-      popup.style.visibility = 'visible';
+      popup.style.display = 'block';
       popup.style.opacity = 1;
     }
     const minutes = deadline > 0 ? Math.floor(deadline / 1000 / 60) % 60 : 0;
