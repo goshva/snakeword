@@ -134,3 +134,8 @@
     border-bottom: 2px solid #cbc2aa;
     border: 3px solid #5B5A37;
  }
+
+ 
+.b-popup {
+   display: none;
+}
