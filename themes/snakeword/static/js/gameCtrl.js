@@ -58,7 +58,7 @@ function checkCookie(key) {
 ///
 function startmultiplayer() {
   var s = new WebSocket(
-    `ws://localhost:8765/${encodeURIComponent(letters.join(""))}`
+    `ws://snakeword.vit.ooo/ws/${encodeURIComponent(letters.join(""))}`
   );
   s.onopen = function (e) {
     console.info("ws opened");
