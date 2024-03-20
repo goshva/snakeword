@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html><!DOCTYPE html>
+<html><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><!DOCTYPE html>
 <html lang="la">
   <head>
-	<meta name="generator" content="Hugo 0.120.4">
+	<meta name="generator" content="Hugo 0.123.0">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Accipe verbum iuxta litteras iuxta" />
     <meta property="og:description" content="Accipe verbum iuxta litteras iuxta" />
-    <meta property="og:url" content="http://snakeword.vit.ooo/la/la" />
+    <meta property="og:url" content="http://localhost:1313/la/la" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="0" />
     <meta property="og:image" content="/img/soc.jpg" />
@@ -36,12 +36,28 @@
          fjs.parentNode.insertBefore(js, fjs);
          }(document, 'script', 'facebook-jssdk'));
       </script>
-        <div class="b-popup">
-          <div class="b-popup-content">
-            <img src="./img/cracker.gif" alt="cracker" class="cracker_gif-left">
-            <img src="./img/victory.png" alt="" class="pop-up_img">
-            <img src="./img/cracker.gif" alt="cracker" class="cracker_gif-right">
+        <div class="popup">
+          <div class="popup-content">
+            <img src="./../img/cracker.gif" alt="cracker" class="cracker_gif-left cracker">
+            <img src="./../img/victory.png" alt="" class="pop-up_img">
+            <img src="./../img/cracker.gif" alt="cracker" class="cracker_gif-right cracker">
+            <div class="result_container">
+              <div class="result_inner">
+                <div class="result_plaque result_text stars mb-25">
+                  Ваш результат:
+                  <span class="my_result text-light">500</span>
+                </div>
+                <div class="result_plaque result_text trofy mb-25">
+                  Рекорд дня: <span class="record text-light">1000</span>
+                </div>
+                <div class="result_button_container">
+                  <button class="result_button prev_button result_text">Назад</button>
+                  <button class="result_button next_button result_text">Играть</button>
+                </div>
+              </div>
+            </div>
           </div>
+          
         </div>
         <div class="top-menu">
   
@@ -80,37 +96,37 @@
               <li class="top-menu-item">
                 
                 <li class="top-menu-item">
-                  <a class="top-menu-link-languages" href="http://snakeword.vit.ooo/la/"
+                  <a class="top-menu-link-languages" href="http://localhost:1313/la/"
                     >Latin</a
                   >
                 </li>
                 
                 <li class="top-menu-item">
-                  <a class="top-menu-link-languages" href="http://snakeword.vit.ooo/ar/"
-                    >Arabian</a
-                  >
-                </li>
-                
-                <li class="top-menu-item">
-                  <a class="top-menu-link-languages" href="http://snakeword.vit.ooo/en/"
+                  <a class="top-menu-link-languages" href="http://localhost:1313/en/"
                     >English</a
                   >
                 </li>
                 
                 <li class="top-menu-item">
-                  <a class="top-menu-link-languages" href="http://snakeword.vit.ooo/fr/"
+                  <a class="top-menu-link-languages" href="http://localhost:1313/ar/"
+                    >Arabian</a
+                  >
+                </li>
+                
+                <li class="top-menu-item">
+                  <a class="top-menu-link-languages" href="http://localhost:1313/fr/"
                     >French</a
                   >
                 </li>
                 
                 <li class="top-menu-item">
-                  <a class="top-menu-link-languages" href="http://snakeword.vit.ooo/de/"
+                  <a class="top-menu-link-languages" href="http://localhost:1313/de/"
                     >Немецкий</a
                   >
                 </li>
                 
                 <li class="top-menu-item">
-                  <a class="top-menu-link-languages" href="http://snakeword.vit.ooo/ru/"
+                  <a class="top-menu-link-languages" href="http://localhost:1313/ru/"
                     >Русский</a
                   >
                 </li>
@@ -128,26 +144,27 @@
 </body>
 <div id="content">
 <div id="main">
-  <div class="timer">
-    <div class="timer__items">
-      <div class="timer__item timer__minutes">00</div>
-      <div class="timer__item timer__seconds">00</div>
-    </div>
-  </div>
   <div class="header">
-    <div class="pure-form" style="display: flex; justify-content: center">
+    <div class="game_params_container">
+      <span class="timer game_params timer__items" id="timer">
+        <div class="timer__item timer__minutes"></div>
+        :
+        <div class="timer__item timer__seconds"></div>
+      </span>
+
       <span
-        class="point-button pure-button-active"
+        class="point-button game_params"
         id="points"
         title="0"
         >...
       </span>
-      <select id="word-input" class="pure-input-3-5">
+
+      <select id="word-input" class="word-input game_params">
         <option></option>
       </select>
 
       <span
-        class="clear-button pure-button-active"
+        class="clear-button game_params"
         id="cut-btn"
         title=""
         ><i class="fa-solid fa-delete-left"></i>
@@ -156,7 +173,9 @@
   </div>
   <div class="content">
     <div id=""></div>
-    <div id="gameplace"></div>
+    <div id="gameplace">
+      <div class="wrapper"></div>
+    </div>
     <div id="result"></div>
   </div>
 </div>

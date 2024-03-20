@@ -100,11 +100,9 @@ function isFinded(word) {
 function moreletter() {
   findwords.push(word);
   // show modal if we get all the words on playfield
-  const set = new Set(wordsInGame);
-  const uniqueWords = Array.from(set)
   if (findwords.length === uniqueWords) {
-    const popup = document.querySelector('.b-popup');
-    popup.style.visibility = 'visible';
+    const popup = document.querySelector('.popup');
+    popup.style.display = 'block';
     popup.style.opacity = 1;
   }
   //findwordids.push(ids);//////////////////////////////////
