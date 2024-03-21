@@ -1,22 +1,57 @@
 const wordsInGame = [];
-//timer
+let uniqueWords = [];
+const languages = {
+  en: 'English',
+  ru: 'Русский',
+  la: 'Latin',
+  ar: 'عربي',
+  fr: 'Français',
+  de: 'Deutsch',
+}
 
+function closePopup() {
+  const popup = document.querySelector('.popup');
+  popup.style.display = 'none';
+  popup.style.opacity = 0;
+}
+
+function openPopup() {
+  const popup = document.querySelector('.popup');
+  popup.style.display = 'block';
+  popup.style.opacity = 1;
+}
+
+//current language
+const origLang = document.getElementById('orig-language');
+origLang.textContent = languages[language];
+
+//language we want translate found words to
+const transLanguage = document.getElementById('trans-language');
+Object.values(languages).forEach((lang) => {
+  const option = document.createElement('option');
+  option.textContent = lang;
+  transLanguage.appendChild(option);
+})
+
+//timer
 document.addEventListener('DOMContentLoaded', function runTimer() {
   // timer id
   let timerId = null;
   // 1 minute timer
   // last value can be easily changed, depends on how many minutes you need
   let deadline = 1000 * 60 * 1;
-
-
-
   // set remaining time as content of elements
   function countdownTimer() {
     if (deadline === 0) {
-      const popup = document.querySelector('.popup');
-      popup.style.display = 'block';
-      popup.style.opacity = 1;
+      const foundWords = document.getElementById('found-words');
+      findwords.forEach((word) => {
+        const wordDiv = document.createElement('div');
+        wordDiv.textContent = word;
+        foundWords.appendChild(wordDiv)
+      })
+      openPopup();
     }
+// 
     const minutes = deadline > 0 ? Math.floor(deadline / 1000 / 60) % 60 : 0;
     const seconds = deadline > 0 ? Math.floor(deadline / 1000) % 60 : 0;
     $minutes.textContent = minutes < 10 ? '0' + minutes : minutes;
@@ -100,23 +135,11 @@ function getWordsinGame() {
     checkLetter(cell, Dict, edge, wordsInGame);
   })
   const set = new Set(wordsInGame);
-  const uniqueWords = Array.from(set)
+  uniqueWords = Array.from(set);
   console.log(uniqueWords);
 }
 
 setTimeout(getWordsinGame, 1000);
-
-function closePopup() {
-  const popup = document.querySelector('.popup');
-  popup.style.display = 'none';
-  popup.style.opacity = 0;
-}
-
-function openPopup() {
-  const popup = document.querySelector('.popup');
-  popup.style.display = 'block';
-  popup.style.opacity = 1;
-}
 
 //кнопка назад
 const prevButton = document.querySelector('.prev_button');

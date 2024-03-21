@@ -57,7 +57,7 @@ function checkCookie(key) {
 //checkCookie("username")
 ///
 function startmultiplayer() {
-  var s = new WebSocket(
+  s = new WebSocket(
     `ws://snakeword.vit.ooo/ws/${encodeURIComponent(letters.join(""))}`
   );
   s.onopen = function (e) {
@@ -99,15 +99,14 @@ function isFinded(word) {
 
 function moreletter() {
   findwords.push(word);
-  // show modal if we get all the words on playfield
+  // show popup if we get all the words on playfield
   if (findwords.length === uniqueWords) {
-    const popup = document.querySelector('.popup');
-    popup.style.display = 'block';
-    popup.style.opacity = 1;
+    openPopup()
   }
   //findwordids.push(ids);//////////////////////////////////
   points += word.length;
   document.getElementById("points").innerText = points;
+  document.querySelector(".my_result ").innerText = points;
 }
 function nearCheck(id, ids) {
   var near = false;
@@ -115,6 +114,9 @@ function nearCheck(id, ids) {
 
   id = parseInt(id);
   iTem = ids[ids.length - 2];
+  if (ids.length <= 1) {
+    near = true;
+  }
   if (iTem === id) {
     near = false;
     console.info(id, iTem);
@@ -135,11 +137,11 @@ function nearCheck(id, ids) {
     near = true;
     console.info(id, iTem);
   }
-  if ((iTem + 1) % edge == 0 && id % edge == 0) {
+  if (((iTem + 1) % edge == 0) && (id % edge == 0)) {
     near = false;
     console.info(id, iTem);
   }
-  if (iTem % edge == 0 && (id + 1) % edge == 0) {
+  if ((iTem % edge == 0) && ((id + 1) % edge == 0)) {
     near = false;
     console.info(id, iTem);
   }
@@ -170,10 +172,8 @@ async function getTranslate(lang, toLang, word) {
   try {
     const response = await fetch(url, options);
     const result = await response.json();
-
     return result.data.translations[0].translatedText;
   } catch (error) {
-    console.error(error);
   }
 }
 
@@ -206,7 +206,7 @@ async function collectWord(Id, id, ...args) {
 
       var userLang = navigator.language || navigator.userLanguage;
 
-      socket.send(
+      s.send(
         JSON.stringify({
           field: letters.join(""),
           findwordids,
@@ -219,7 +219,8 @@ async function collectWord(Id, id, ...args) {
       ids = [];
     }
 
-    listfindedwords(word, isFinded(word));
+  } else if (!nearCheck(id, ids)) {
+    timeout0 = setTimeout(clear, 100);
   } else timeout0 = setTimeout(clear, 2500);
 }
 

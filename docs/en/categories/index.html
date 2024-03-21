@@ -35,11 +35,34 @@
          fjs.parentNode.insertBefore(js, fjs);
          }(document, 'script', 'facebook-jssdk'));
       </script>
-        <div class="b-popup">
-          <div class="b-popup-content">
-            <img src="./img/cracker.gif" alt="cracker" class="cracker_gif-left">
-            <img src="./img/victory.png" alt="" class="pop-up_img">
-            <img src="./img/cracker.gif" alt="cracker" class="cracker_gif-right">
+        <div class="popup">
+          <div class="popup-content">
+            
+            <div class="result_container">
+              <div class="result_inner">
+                <div class="result_plaque result_text stars mb-25">
+                  Ваш результат:
+                  <span class="my_result text-light">0</span>
+                </div>
+                <div class="result_plaque result_text trofy mb-25">
+                  Рекорд дня: <span class="record text-light">1000</span>
+                </div>
+                <div class="result_button_container">
+                  <button class="result_button prev_button result_text">Назад</button>
+                  <button class="result_button next_button result_text">Играть</button>
+                </div>
+              </div>
+            </div>
+            <div class="word-list_container result_container">
+              <div class="word-list_inner result_inner">
+                Список отгаданных слов:
+                <div id="found-words" class="found-words-grid mt-10">
+                  <div id="orig-language" class="language-input result_plaque"></div>
+                  <select id="trans-language" class="language-input result_plaque">
+                  </select>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="top-menu">
@@ -79,26 +102,26 @@
               <li class="top-menu-item">
                 
                 <li class="top-menu-item">
-                  <a class="top-menu-link-languages" href="http://localhost:1313/la/"
-                    >Latin</a
-                  >
-                </li>
-                
-                <li class="top-menu-item">
                   <a class="top-menu-link-languages" href="http://localhost:1313/en/"
                     >English</a
                   >
                 </li>
                 
                 <li class="top-menu-item">
-                  <a class="top-menu-link-languages" href="http://localhost:1313/ar/"
-                    >Arabian</a
+                  <a class="top-menu-link-languages" href="http://localhost:1313/fr/"
+                    >French</a
                   >
                 </li>
                 
                 <li class="top-menu-item">
-                  <a class="top-menu-link-languages" href="http://localhost:1313/fr/"
-                    >French</a
+                  <a class="top-menu-link-languages" href="http://localhost:1313/la/"
+                    >Latin</a
+                  >
+                </li>
+                
+                <li class="top-menu-item">
+                  <a class="top-menu-link-languages" href="http://localhost:1313/ar/"
+                    >Arabian</a
                   >
                 </li>
                 

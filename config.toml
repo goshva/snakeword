@@ -63,7 +63,6 @@ publishDir ="docs"
 
 [Languages.fr]
   Languagename =  "French"
-
   title = "Snakeword"
   weight = 1
   author = "Sha. Egor"
@@ -73,7 +72,7 @@ publishDir ="docs"
   Fullurl = "Tesla's Awesome Hugo Site"
   Points = "0"
   MyRecord = "0"
-  Game_Mode = "game mode"
+  Game_Mode = "Game mode"
   Random = "Le chaos"
   Settings = "Set"
   Save = "Sauver"
@@ -95,7 +94,7 @@ publishDir ="docs"
   Random = "Chaos"
   Settings = "Set"
   Save = "salvare"
-  Languege = "Lingua"
+  Language = "Lingua"
 
 [Languages.ar]
   Languagename =  "Arabian"

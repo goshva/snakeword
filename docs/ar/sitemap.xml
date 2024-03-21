@@ -42,13 +42,13 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="la"
-                href="http://localhost:1313/la/"
+                hreflang="fr"
+                href="http://localhost:1313/fr/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="fr"
-                href="http://localhost:1313/fr/"
+                hreflang="la"
+                href="http://localhost:1313/la/"
                 />
     <xhtml:link
                 rel="alternate"
