@@ -1,4 +1,31 @@
-   <body>
+<!DOCTYPE html>
+<html><!DOCTYPE html>
+<html lang="ls">
+  <head>
+	<meta name="generator" content="Hugo 0.124.1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Accipe verbum iuxta litteras iuxta" />
+    <meta property="og:description" content="Accipe verbum iuxta litteras iuxta" />
+    <meta property="og:url" content="http://snakeword.vit.ooo/ls/ls" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="0" />
+    <meta property="og:image" content="/img/soc.jpg" />
+    <meta property="og:image:width" content="400" />
+    <meta property="og:image:height" content="300" />
+    <meta property="fb:app_id" content=".Site.Params.FbAppId" />
+    <title>My snakeword game</title>
+    <script
+      src="https://kit.fontawesome.com/4e72f7ce5d.js"
+      crossorigin="anonymous"
+    ></script>
+    
+    <link href="/css/top-menu.min.css" rel="stylesheet">
+    
+    <link href="/css/game.min.css" rel="stylesheet">
+  </head>
+</html>
+<body>   <body>
     <header>
       <div id="fb-root"></div>
       <script>(function(d, s, id) {
@@ -11,9 +38,7 @@
       </script>
         <div class="popup">
           <div class="popup-content">
-            <!-- <img src="./../img/cracker.gif" alt="cracker" class="cracker_gif-left cracker">
-            <img src="./../img/victory.png" alt="" class="pop-up_img">
-            <img src="./../img/cracker.gif" alt="cracker" class="cracker_gif-right cracker"> -->
+            
             <div class="result_container">
               <div class="result_inner">
                 <div class="result_plaque result_text stars mb-25">
@@ -71,18 +96,54 @@
           </li>
           <li class="top-menu-item">
             <a href="#" class="top-menu-link-language-selected">
-              {{.Site.Params.LanguageName}}
+              Latin
               <i class="fa-solid fa-caret-down"></i>
             </a>
             <ul class="top-menu-list">
               <li class="top-menu-item">
-                {{ range $.Site.Home.AllTranslations }}
+                
                 <li class="top-menu-item">
-                  <a class="top-menu-link-languages" href="{{ .Permalink }}"
-                    >{{ .Language.Params.LanguageName }}</a
+                  <a class="top-menu-link-languages" href="http://snakeword.vit.ooo/en/"
+                    >English</a
                   >
                 </li>
-                {{ end }}
+                
+                <li class="top-menu-item">
+                  <a class="top-menu-link-languages" href="http://snakeword.vit.ooo/de/"
+                    >Немецкий</a
+                  >
+                </li>
+                
+                <li class="top-menu-item">
+                  <a class="top-menu-link-languages" href="http://snakeword.vit.ooo/fr/"
+                    >French</a
+                  >
+                </li>
+                
+                <li class="top-menu-item">
+                  <a class="top-menu-link-languages" href="http://snakeword.vit.ooo/ru/"
+                    >Русский</a
+                  >
+                </li>
+                
+                <li class="top-menu-item">
+                  <a class="top-menu-link-languages" href="http://snakeword.vit.ooo/ar/"
+                    >Arabian</a
+                  >
+                </li>
+                
+                <li class="top-menu-item">
+                  <a class="top-menu-link-languages" href="http://snakeword.vit.ooo/la/"
+                    ></a
+                  >
+                </li>
+                
+                <li class="top-menu-item">
+                  <a class="top-menu-link-languages" href="http://snakeword.vit.ooo/ls/"
+                    >Latin</a
+                  >
+                </li>
+                
 
               </li>
             </ul>
@@ -94,3 +155,55 @@
   </header>
       
 </body>
+<div id="content">
+<div id="main">
+  <div class="header">
+    <div class="game_params_container">
+      <span class="timer game_params timer__items" id="timer">
+        <div class="timer__item timer__minutes"></div>
+        :
+        <div class="timer__item timer__seconds"></div>
+      </span>
+
+      <span
+        class="point-button game_params"
+        id="points"
+        title="0"
+        >...
+      </span>
+
+      <select id="word-input" class="word-input game_params">
+        <option></option>
+      </select>
+
+      <span
+        class="clear-button game_params"
+        id="cut-btn"
+        title=""
+        ><i class="fa-solid fa-delete-left"></i>
+      </span>
+    </div>
+  </div>
+  <div class="content">
+    <div id=""></div>
+    <div id="gameplace">
+      <div class="wrapper"></div>
+    </div>
+    <div id="result"></div>
+  </div>
+</div>
+<div
+  class="gallery pure-form"
+  style="position: fixed; top: 50%; left: 50%"
+></div>
+
+        </div>      
+      <script src="/js/classes.js"></script>
+      <script src="/js/gameCtrl.js"></script>
+      <script src="/js/genSet.js"></script>
+      <script src="/js/dictionary.js"></script>
+      <script src="/js/victory.js"></script>
+   </body>
+</html>
+</body>
+</html>

@@ -7,8 +7,10 @@ languageCode = "en-us"
 title = "My snakeword game"
 theme = ["snakeword"]
 publishDir ="docs"
-[Languages]
-[Languages.en]
+[languages]
+[languages.en]
+[languages.en.params]
+
   Languagename =  "English"
 
   title = "Snakeword"
@@ -27,7 +29,8 @@ publishDir ="docs"
   Language = "Language"
 
 
-[Languages.ru]
+[languages.ru]
+[languages.ru.params]
   Languagename =  "Русский"
   title = "Змееслов"
   weight = 2
@@ -44,7 +47,8 @@ publishDir ="docs"
   Save = "Сохранить"
   Language = "Язык"
 
-[Languages.de]
+[languages.de]
+[languages.de.params]
   Languagename =  "Немецкий"
   title = "Змееслов"
   weight = 2
@@ -61,7 +65,8 @@ publishDir ="docs"
   Save = "Speichern"
   Language = " Sprache"
 
-[Languages.fr]
+[languages.fr]
+[languages.fr.params]
   Languagename =  "French"
   title = "Snakeword"
   weight = 1
@@ -78,7 +83,8 @@ publishDir ="docs"
   Save = "Sauver"
   Language = "Langue"
 
-[Languages.la]  
+[languages.la]  
+[languages.la.params]
   Languagename =  "Latin"
 
   title = "Anguis"
@@ -96,7 +102,8 @@ publishDir ="docs"
   Save = "salvare"
   Language = "Lingua"
 
-[Languages.ar]
+[languages.ar]
+[languages.ar.params]
   Languagename =  "Arabian"
 
   title = "Snakeword"

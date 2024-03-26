@@ -2,8 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://snakeword.vit.ooo/fr/</loc>
-    <lastmod>2020-04-17T15:06:40+03:00</lastmod>
+    <loc>http://snakeword.vit.ooo/ls/categories/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://snakeword.vit.ooo/en/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ar"
+                href="http://snakeword.vit.ooo/ar/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="http://snakeword.vit.ooo/de/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://snakeword.vit.ooo/fr/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="la"
+                href="http://snakeword.vit.ooo/la/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="http://snakeword.vit.ooo/ru/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ls"
+                href="http://snakeword.vit.ooo/ls/categories/"
+                />
+  </url><url>
+    <loc>http://snakeword.vit.ooo/ls/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -13,6 +49,11 @@
                 rel="alternate"
                 hreflang="de"
                 href="http://snakeword.vit.ooo/de/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://snakeword.vit.ooo/fr/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -31,43 +72,11 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="fr"
-                href="http://snakeword.vit.ooo/fr/"
+                hreflang="ls"
+                href="http://snakeword.vit.ooo/ls/"
                 />
   </url><url>
-    <loc>http://snakeword.vit.ooo/fr/categories/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://snakeword.vit.ooo/en/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ar"
-                href="http://snakeword.vit.ooo/ar/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="http://snakeword.vit.ooo/de/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="la"
-                href="http://snakeword.vit.ooo/la/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ru"
-                href="http://snakeword.vit.ooo/ru/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="http://snakeword.vit.ooo/fr/categories/"
-                />
-  </url><url>
-    <loc>http://snakeword.vit.ooo/fr/tags/</loc>
+    <loc>http://snakeword.vit.ooo/ls/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -85,6 +94,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="fr"
+                href="http://snakeword.vit.ooo/fr/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="la"
                 href="http://snakeword.vit.ooo/la/tags/"
                 />
@@ -95,8 +109,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="fr"
-                href="http://snakeword.vit.ooo/fr/tags/"
+                hreflang="ls"
+                href="http://snakeword.vit.ooo/ls/tags/"
                 />
   </url>
 </urlset>
