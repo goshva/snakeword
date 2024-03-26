@@ -138,10 +138,9 @@ function genArea() {
 
   for (var L = 0; L < letters.length; L++) {
     var divbtn = document.createElement("DIV");
-    // arabic language font
     var language = getCookie("lang") || document.documentElement.lang;
     if (language == "ar" || language == "ar-AR" || language == "ar-ar") {
-      divbtn.style.lineHeight = "0.8"
+      divbtn.style.lineHeight = "0.8";
     }
     divbtn.className = "cell";
     divbtn.id = "C" + L;
@@ -151,10 +150,17 @@ function genArea() {
     divbtn.onclick = function () {
       collectWord(this.Letter, this.LetterCount);
       this.className += " activeCell";
+      playSound(this.Letter);
     };
     var t = document.createTextNode(letters[L]);
     divbtn.appendChild(t);
     gameplace.appendChild(divbtn);
+  }
+  
+  function playSound() {
+
+    var audio = new Audio("../sounds/click.mp3");
+    audio.play();
   }
 
   if (Array.isArray(findwordids) && Array.isArray(findwordids[0])) {

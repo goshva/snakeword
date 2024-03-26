@@ -61,7 +61,7 @@ function startmultiplayer() {
     `ws://snakeword.vit.ooo/ws/${encodeURIComponent(letters.join(""))}`
   );
   s.onopen = function (e) {
-    console.info("ws opened");
+    console.info("wssss opened");
     s.send(
       JSON.stringify({
         field: letters.join(""),
@@ -87,6 +87,7 @@ function startmultiplayer() {
 
   return s;
 }
+
 function BorderfromFindWord(arr) {
   for (var i = 0; i < arr.length; i++) {
     document.getElementById("C" + arr[i]).style.border = "thin solid #1f8dd6";
@@ -340,3 +341,9 @@ function createImgDialog(imgUrl) {
       }, 3000)
  });
 }
+function sound(sound){
+  var snd = new Audio(`../sound/clik.mp3`)
+  snd.play()
+}
+
+
