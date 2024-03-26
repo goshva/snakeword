@@ -106,7 +106,7 @@ function genArray(testwords) {
   genArea();
 }
 
-var gameplace = document.querySelector(".wrapper");
+var gameplace = document.getElementById("gameplace");
 
 function genArea() {
   let [lettersStr, userwordids] = location.search.replace("?", "").split("&");
@@ -143,14 +143,14 @@ function genArea() {
     if (language == "ar" || language == "ar-AR" || language == "ar-ar") {
       divbtn.style.lineHeight = "0.8"
     }
-    divbtn.className = "cell";
+    divbtn.className = "game__cell";
     divbtn.id = "C" + L;
     divbtn.style.zIndex = "10";
     divbtn.Letter = letters[L];
     divbtn.LetterCount = L;
     divbtn.onclick = function () {
       collectWord(this.Letter, this.LetterCount);
-      this.className += " activeCell";
+      this.className += " game__active-cell";
     };
     var t = document.createTextNode(letters[L]);
     divbtn.appendChild(t);

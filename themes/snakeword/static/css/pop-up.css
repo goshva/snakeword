@@ -1,0 +1,222 @@
+/* pop-up styles */
+:root {
+    --dark-brown: #5c4603;
+    --green: rgba(7,233,33,1);
+    --red: rgba(233,7,53,1);
+ }
+
+.pop-up {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.9);
+    opacity: 0;
+    transition: 0.5s all;
+    z-index: 50;
+}
+ 
+ .pop-up__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+ }
+
+ .pop-up__content:before {
+    content: '';
+    background-image: url('./../img/victory_plaque.png');
+    background-repeat: no-repeat;
+    background-size: 200px;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 50;
+ }
+
+ .pop-up__container * {
+    font-size: 20px;
+    color: var(--dark-brown);
+    font-family: 'Rubik';
+    font-weight: 700;
+ }
+ 
+ .pop-up__container {
+    width: 400px;
+    background-image: url('./../img/wood.png');
+    background-size: cover;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow:
+    0px 0px 0px 2px var(--dark-brown);
+    /* 0px 0px 20px 5px yellow; */
+    /* 2px 1px 2px 0px #cd9c04,
+    inset 2px 2px 0px 0px #f3d26c; */
+    position: relative;
+    margin-top: 20px;
+ }
+ 
+ .pop-up__container-inner {
+    border: 5px double var(--dark-brown);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px 20px 20px;
+ }
+ 
+ .pop-up__container-inner-pt-40 {
+    padding-top: 40px;
+ }
+ 
+ .pop-up__text {
+    width: 250px;
+    background: #fcda74;
+    box-shadow:
+    0px 0px 0px 1px #c39612,
+    0px 0px 10px 2px #fcda74;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+ }
+
+ .pop-up__text-mb-25 {
+    margin-bottom: 25px;
+ }
+
+ .pop-up__text-light {
+    color: #a38107;
+ }
+
+ .pop-up__text-size-s {
+    width: 100px;
+    border: none;
+    font-size: 16px;
+    padding: 5px;
+  }
+ 
+ .pop-up__stars::before {
+    content: '';
+    background-image: url('./../img/star.png');
+    background-repeat: no-repeat;
+    background-size: 50px;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: -3px;
+    left: -23px;
+ }
+ 
+ .pop-up__stars::after {
+    content: '';
+    background-image: url('./../img/star.png');
+    background-repeat: no-repeat;
+    background-size: 50px;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: -3px;
+    right: -23px;
+ }
+ 
+ .pop-up__trophies::before {
+    content: '';
+    background-image: url('./../img/trofy.png');
+    background-repeat: no-repeat;
+    background-size: 50px;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0px;
+    left: -25px;
+    transform: rotate(-10deg);
+ }
+ 
+ .pop-up__trophies::after {
+    content: '';
+    background-image: url('./../img/trofy.png');
+    background-repeat: no-repeat;
+    background-size: 50px;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0px;
+    right: -25px;
+    transform: rotate(10deg);
+ }
+ 
+ .pop-up__btn-container {
+    display: flex;
+    width: 250px;
+    justify-content: space-between;
+ }
+ 
+ .pop-up__btn {
+    color: rgba(0, 0, 0, 0.847);
+    box-shadow: none;
+    border-radius: 5px;
+    width: 100px;
+    font-size: 14px;
+    font-weight: 500px;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    font-family: 'Rubik', sans-serif;
+ }
+ 
+ .pop-up__btn-next {
+    background: linear-gradient(0deg, rgba(7,233,33,1) 0%, rgba(142,237,143,1) 50%, rgba(209,245,213,1) 100%);
+    border: none;
+    box-shadow: 0px 1px 1px 1px #426b42;
+ }
+ 
+ .pop-up__btn-next:hover {
+    box-shadow: 0 0 2px 2px white, 0 0 0 4px var(--green);
+ }
+ 
+ .pop-up__btn-next:active {
+    background: rgb(10, 181, 30);
+    box-shadow: none;
+ }
+ 
+ .pop-up__btn-prev {
+    background: linear-gradient(0deg, rgba(233,7,53,1) 0%, rgba(237,142,145,1) 50%, rgba(245,209,209,1) 100%);
+    border: none;
+    box-shadow: 0px 1px 1px 1px #6b4243;
+ }
+ 
+ .pop-up__btn-prev:hover {
+    box-shadow: 0 0 2px 2px white, 0 0 0 4px var(--red);
+ }
+ 
+ .pop-up__btn-prev:active {
+    background: rgb(153, 4, 34);
+    box-shadow: none;
+ }
+ 
+ .pop-up__found-words-list {
+    width: 100%;
+    display: grid;
+    gap: 7px;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    margin-top: 10px;
+ }
+
+ .pop-up__language-option {
+
+ }
+
+ @media (max-width: 768px) {
+    .pop-up__container {
+       width: 300px;
+    }
+ }

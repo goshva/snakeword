@@ -1,42 +1,38 @@
 {{ define "main" }}
-<div id="main">
-  <div class="header">
+<div id="main" class="game">
+  <div class="game__header">
     <div class="game_params_container">
-      <span class="timer game_params timer__items" id="timer">
-        <div class="timer__item timer__minutes"></div>
+      <span class="game__timer game__params-item" id="timer">
+        <div id="timer-min"></div>
         :
-        <div class="timer__item timer__seconds"></div>
+        <div id="timer-sec"></div>
       </span>
 
       <span
-        class="point-button game_params"
+        class="game__points game__params-item"
         id="points"
         title="{{ .Site.Params.Points}}"
         >...
       </span>
 
-      <select id="word-input" class="word-input game_params">
+      <select id="word-input" class="game__word-input game__params-item">
         <option>{{ .Site.Params.Lets}}</option>
       </select>
 
       <span
-        class="clear-button game_params"
+        class="game__clear-button game__params-item"
         id="cut-btn"
         title="{{ .Site.Params.Cut}}"
         ><i class="fa-solid fa-delete-left"></i>
       </span>
     </div>
   </div>
-  <div class="content">
-    <div id=""></div>
-    <div id="gameplace">
-      <div class="wrapper"></div>
+  <div class="game__content">
+    <div class="game__gameplace">
+      <div id="gameplace" class="game__gameplace-wrapper"></div>
     </div>
     <div id="result"></div>
   </div>
 </div>
-<div
-  class="gallery pure-form"
-  style="position: fixed; top: 50%; left: 50%"
-></div>
 {{ end }}
+

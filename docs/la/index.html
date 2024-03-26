@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html><!DOCTYPE html>
+<html><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><!DOCTYPE html>
 <html lang="la">
   <head>
-	<meta name="generator" content="Hugo 0.124.1">
+	<meta name="generator" content="Hugo 0.123.0">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Accipe verbum iuxta litteras iuxta" />
     <meta property="og:description" content="Accipe verbum iuxta litteras iuxta" />
-    <meta property="og:url" content="http://snakeword.vit.ooo/la/la" />
+    <meta property="og:url" content="http://localhost:1313/la/la" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="0" />
     <meta property="og:image" content="/img/soc.jpg" />
@@ -25,171 +25,167 @@
     <link href="/css/game.min.css" rel="stylesheet">
   </head>
 </html>
-<body>   <body>
-    <header>
-      <div id="fb-root"></div>
-      <script>(function(d, s, id) {
-         var js, fjs = d.getElementsByTagName(s)[0];
-         if (d.getElementById(id)) return;
-         js = d.createElement(s); js.id = id;
-         js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.8&appId=215324895555689";
-         fjs.parentNode.insertBefore(js, fjs);
-         }(document, 'script', 'facebook-jssdk'));
-      </script>
-        <div class="popup">
-          <div class="popup-content">
-            
-            <div class="result_container">
-              <div class="result_inner">
-                <div class="result_plaque result_text stars mb-25">
-                  Ваш результат:
-                  <span class="my_result text-light">0</span>
-                </div>
-                <div class="result_plaque result_text trofy mb-25">
-                  Рекорд дня: <span class="record text-light">1000</span>
-                </div>
-                <div class="result_button_container">
-                  <button class="result_button prev_button result_text">Назад</button>
-                  <button class="result_button next_button result_text">Играть</button>
-                </div>
+<body><body>
+  <header>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) return;
+       js = d.createElement(s); js.id = id;
+       js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.8&appId=215324895555689";
+       fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
+      <div class="game__tally"></div>
+      <div class="pop-up">
+        <div class="pop-up__content">
+          <div class="pop-up__container">
+            <div class="pop-up__container-inner pop-up__container-inner-pt-40">
+              <div class="pop-up__text pop-up__stars pop-up__text-mb-25">
+                Ваш результат:
+                <span id="my-result" class="pop-up__text-light">0</span>
+              </div>
+              <div class="pop-up__text pop-up__trophies pop-up__text-mb-25">
+                Рекорд дня: <span id="day-record" class="pop-up__text-light">1000</span>
+              </div>
+              <div class="pop-up__btn-container">
+                <button class="pop-up__btn pop-up__btn-prev">Назад</button>
+                <button class="pop-up__btn pop-up__btn-next">Играть</button>
               </div>
             </div>
-            <div class="word-list_container result_container">
-              <div class="word-list_inner result_inner">
-                Список отгаданных слов:
-                <div id="found-words" class="found-words-grid mt-10">
-                  <div id="orig-language" class="language-input result_plaque"></div>
-                  <select id="trans-language" class="language-input result_plaque">
-                  </select>
-                </div>
+          </div>
+          <div class="pop-up__container">
+            <div class="pop-up__container-inner">
+              Список отгаданных слов:
+              <div id="found-words" class="pop-up__found-words-list">
+                <div id="orig-language" class="pop-up__text pop-up__text-size-s"></div>
+                <select id="trans-language" class="pop-up__text pop-up__text-size-s">
+                </select>
               </div>
             </div>
           </div>
         </div>
-        <div class="top-menu">
-  
-        <ul class="top-menu-list">
-          <li class="top-menu-item">
-            <div
-            class="fb-share-button"
-            data-href="https://boggle.space/url?edge=9&amp;letters=[%22%D0%BE%22,%22%D1%86%22,%22%D1%82%22,%22%D1%83%22,%22%D0%B6%22,%22%D0%B0%22,%22%D0%B7%22,%22%D0%B0%22,%22%D1%81%22,%22%D0%BC%22,%22%D0%B5%22,%22%D0%BD%22,%22%D0%B4%22,%22%D0%B8%22,%22%D0%B3%22,%22%D1%81%22,%22%D0%BA%22,%22%D0%B2%22,%22%D0%BE%22,%22%D0%BE%22,%22%D0%B2%22,%22%D0%BE%22,%22%D1%8C%22,%22%D0%B0%22,%22%D0%BE%22,%22%D1%8D%22,%22%D0%BE%22,%22%D1%82%22,%22%D1%80%22,%22%D0%BF%22,%22%D0%B5%22,%22%D0%BB%22,%22%D0%BB%22,%22%D0%BA%22,%22%D0%B0%22,%22%D1%85%22,%22%D0%B8%22,%22%D0%BF%22,%22%D0%B0%22,%22%D0%BD%22,%22%D1%8C%22,%22%D0%BF%22,%22%D0%B3%22,%22%D0%BF%22,%22%D1%83%22,%22%D0%BF%22,%22%D0%B8%22,%22%D0%BA%22,%22%D0%B8%22,%22%D1%89%22,%22%D0%B8%22,%22%D0%BC%22,%22%D1%8F%22,%22%D0%B4%22,%22%D0%B0%22,%22%D0%B9%22,%22%D0%B0%22,%22%D0%BA%22,%22%D0%BE%22,%22%D0%BD%22,%22%D0%B0%22,%22%D1%81%22,%22%D0%B7%22,%22%D0%B3%22,%22%D1%8B%22,%22%D0%BD%22,%22%D1%82%22,%22%D0%BE%22,%22%D0%B0%22,%22%D1%82%22,%22%D1%8C%22,%22%D0%B7%22,%22%D0%B8%22,%22%D0%BC%22,%22%D0%B5%22,%22%D0%BB%22,%22%D0%BF%22,%22%D1%82%22,%22%D0%B8%22,%22%D1%87%22,%22%D0%B0%22]&amp;userwordsids=[[32,23,14],[14,23,32,33,34],[15,24,33],[24,33,24]]"
-            data-layout="button_count"
-            data-size="large"
-            data-mobile-iframe="true">
-            <a
-              class="fb-xfbml-parse-ignore top-menu-link"
-              target="_blank"
-              href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fboggle.space%2Furl%3Fedge%3D9%26letters%3D%255B%2522%25D0%25BE%2522%252C%2522%25D1%2586%2522%252C%2522%25D1%2582%2522%252C%2522%25D1%2583%2522%252C%2522%25D0%25B6%2522%252C%2522%25D0%25B0%2522%252C%2522%25D0%25B7%2522%252C%2522%25D0%25B0%2522%252C%2522%25D1%2581%2522%252C%2522%25D0%25BC%2522%252C%2522%25D0%25B5%2522%252C%2522%25D0%25BD%2522%252C%2522%25D0%25B4%2522%252C%2522%25D0%25B8%2522%252C%2522%25D0%25B3%2522%252C%2522%25D1%2581%2522%252C%2522%25D0%25BA%2522%252C%2522%25D0%25B2%2522%252C%2522%25D0%25BE%2522%252C%2522%25D0%25BE%2522%252C%2522%25D0%25B2%2522%252C%2522%25D0%25BE%2522%252C%2522%25D1%258C%2522%252C%2522%25D0%25B0%2522%252C%2522%25D0%25BE%2522%252C%2522%25D1%258D%2522%252C%2522%25D0%25BE%2522%252C%2522%25D1%2582%2522%252C%2522%25D1%2580%2522%252C%2522%25D0%25BF%2522%252C%2522%25D0%25B5%2522%252C%2522%25D0%25BB%2522%252C%2522%25D0%25BB%2522%252C%2522%25D0%25BA%2522%252C%2522%25D0%25B0%2522%252C%2522%25D1%2585%2522%252C%2522%25D0%25B8%2522%252C%2522%25D0%25BF%2522%252C%2522%25D0%25B0%2522%252C%2522%25D0%25BD%2522%252C%2522%25D1%258C%2522%252C%2522%25D0%25BF%2522%252C%2522%25D0%25B3%2522%252C%2522%25D0%25BF%2522%252C%2522%25D1%2583%2522%252C%2522%25D0%25BF%2522%252C%2522%25D0%25B8%2522%252C%2522%25D0%25BA%2522%252C%2522%25D0%25B8%2522%252C%2522%25D1%2589%2522%252C%2522%25D0%25B8%2522%252C%2522%25D0%25BC%2522%252C%2522%25D1%258F%2522%252C%2522%25D0%25B4%2522%252C%2522%25D0%25B0%2522%252C%2522%25D0%25B9%2522%252C%2522%25D0%25B0%2522%252C%2522%25D0%25BA%2522%252C%2522%25D0%25BE%2522%252C%2522%25D0%25BD%2522%252C%2522%25D0%25B0%2522%252C%2522%25D1%2581%2522%252C%2522%25D0%25B7%2522%252C%2522%25D0%25B3%2522%252C%2522%25D1%258B%2522%252C%2522%25D0%25BD%2522%252C%2522%25D1%2582%2522%252C%2522%25D0%25BE%2522%252C%2522%25D0%25B0%2522%252C%2522%25D1%2582%2522%252C%2522%25D1%258C%2522%252C%2522%25D0%25B7%2522%252C%2522%25D0%25B8%2522%252C%2522%25D0%25BC%2522%252C%2522%25D0%25B5%2522%252C%2522%25D0%25BB%2522%252C%2522%25D0%25BF%2522%252C%2522%25D1%2582%2522%252C%2522%25D0%25B8%2522%252C%2522%25D1%2587%2522%252C%2522%25D0%25B0%2522%255D%26userwordsids%3D%255B%255B32%252C23%252C14%255D%252C%255B14%252C23%252C32%252C33%252C34%255D%252C%255B15%252C24%252C33%255D%252C%255B24%252C33%252C24%255D%255D&amp;src=sdkpreparse">
-              <i class="fa-brands fa-facebook"></i>
-              </a>
-            </div>
-          </li>
-          <li class="top-menu-item">
-            <a href="mailto:sha.egor@gmail.com" class="top-menu-link">
-              <i class="fa-regular fa-envelope" ></i>
-            </a>
-          </li>
-          <li class="top-menu-item">
-            <button class="top-menu-link">
-              <i onclick="SaveGame()" class="far fa-save top-menu-link"></i>
-            </button>
-          </li>
-          <li class="top-menu-item">
-            <a href="#" class="top-menu-link-language-selected">
-              Latin
-              <i class="fa-solid fa-caret-down"></i>
-            </a>
-            <ul class="top-menu-list">
-              <li class="top-menu-item">
-                
-                <li class="top-menu-item">
-                  <a class="top-menu-link-languages" href="http://snakeword.vit.ooo/en/"
-                    >English</a
-                  >
-                </li>
-                
-                <li class="top-menu-item">
-                  <a class="top-menu-link-languages" href="http://snakeword.vit.ooo/de/"
-                    >Немецкий</a
-                  >
-                </li>
-                
-                <li class="top-menu-item">
-                  <a class="top-menu-link-languages" href="http://snakeword.vit.ooo/fr/"
-                    >French</a
-                  >
-                </li>
-                
-                <li class="top-menu-item">
-                  <a class="top-menu-link-languages" href="http://snakeword.vit.ooo/ru/"
-                    >Русский</a
-                  >
-                </li>
-                
-                <li class="top-menu-item">
-                  <a class="top-menu-link-languages" href="http://snakeword.vit.ooo/ar/"
-                    >Arabian</a
-                  >
-                </li>
-                
-                <li class="top-menu-item">
-                  <a class="top-menu-link-languages" href="http://snakeword.vit.ooo/la/"
-                    >Latin</a
-                  >
-                </li>
-                
-
-              </li>
-            </ul>
-          </li>
-        </ul>
       </div>
+
+      <div class="top-menu">
+      <ul class="top-menu__list">
+        <li class="top-menu__list-item">
+          <div
+          class="fb-share-button"
+          data-href="https://boggle.space/url?edge=9&amp;letters=[%22%D0%BE%22,%22%D1%86%22,%22%D1%82%22,%22%D1%83%22,%22%D0%B6%22,%22%D0%B0%22,%22%D0%B7%22,%22%D0%B0%22,%22%D1%81%22,%22%D0%BC%22,%22%D0%B5%22,%22%D0%BD%22,%22%D0%B4%22,%22%D0%B8%22,%22%D0%B3%22,%22%D1%81%22,%22%D0%BA%22,%22%D0%B2%22,%22%D0%BE%22,%22%D0%BE%22,%22%D0%B2%22,%22%D0%BE%22,%22%D1%8C%22,%22%D0%B0%22,%22%D0%BE%22,%22%D1%8D%22,%22%D0%BE%22,%22%D1%82%22,%22%D1%80%22,%22%D0%BF%22,%22%D0%B5%22,%22%D0%BB%22,%22%D0%BB%22,%22%D0%BA%22,%22%D0%B0%22,%22%D1%85%22,%22%D0%B8%22,%22%D0%BF%22,%22%D0%B0%22,%22%D0%BD%22,%22%D1%8C%22,%22%D0%BF%22,%22%D0%B3%22,%22%D0%BF%22,%22%D1%83%22,%22%D0%BF%22,%22%D0%B8%22,%22%D0%BA%22,%22%D0%B8%22,%22%D1%89%22,%22%D0%B8%22,%22%D0%BC%22,%22%D1%8F%22,%22%D0%B4%22,%22%D0%B0%22,%22%D0%B9%22,%22%D0%B0%22,%22%D0%BA%22,%22%D0%BE%22,%22%D0%BD%22,%22%D0%B0%22,%22%D1%81%22,%22%D0%B7%22,%22%D0%B3%22,%22%D1%8B%22,%22%D0%BD%22,%22%D1%82%22,%22%D0%BE%22,%22%D0%B0%22,%22%D1%82%22,%22%D1%8C%22,%22%D0%B7%22,%22%D0%B8%22,%22%D0%BC%22,%22%D0%B5%22,%22%D0%BB%22,%22%D0%BF%22,%22%D1%82%22,%22%D0%B8%22,%22%D1%87%22,%22%D0%B0%22]&amp;userwordsids=[[32,23,14],[14,23,32,33,34],[15,24,33],[24,33,24]]"
+          data-layout="button_count"
+          data-size="large"
+          data-mobile-iframe="true">
+          <a
+            class="fb-xfbml-parse-ignore top-menu__link"
+            target="_blank"
+            href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fboggle.space%2Furl%3Fedge%3D9%26letters%3D%255B%2522%25D0%25BE%2522%252C%2522%25D1%2586%2522%252C%2522%25D1%2582%2522%252C%2522%25D1%2583%2522%252C%2522%25D0%25B6%2522%252C%2522%25D0%25B0%2522%252C%2522%25D0%25B7%2522%252C%2522%25D0%25B0%2522%252C%2522%25D1%2581%2522%252C%2522%25D0%25BC%2522%252C%2522%25D0%25B5%2522%252C%2522%25D0%25BD%2522%252C%2522%25D0%25B4%2522%252C%2522%25D0%25B8%2522%252C%2522%25D0%25B3%2522%252C%2522%25D1%2581%2522%252C%2522%25D0%25BA%2522%252C%2522%25D0%25B2%2522%252C%2522%25D0%25BE%2522%252C%2522%25D0%25BE%2522%252C%2522%25D0%25B2%2522%252C%2522%25D0%25BE%2522%252C%2522%25D1%258C%2522%252C%2522%25D0%25B0%2522%252C%2522%25D0%25BE%2522%252C%2522%25D1%258D%2522%252C%2522%25D0%25BE%2522%252C%2522%25D1%2582%2522%252C%2522%25D1%2580%2522%252C%2522%25D0%25BF%2522%252C%2522%25D0%25B5%2522%252C%2522%25D0%25BB%2522%252C%2522%25D0%25BB%2522%252C%2522%25D0%25BA%2522%252C%2522%25D0%25B0%2522%252C%2522%25D1%2585%2522%252C%2522%25D0%25B8%2522%252C%2522%25D0%25BF%2522%252C%2522%25D0%25B0%2522%252C%2522%25D0%25BD%2522%252C%2522%25D1%258C%2522%252C%2522%25D0%25BF%2522%252C%2522%25D0%25B3%2522%252C%2522%25D0%25BF%2522%252C%2522%25D1%2583%2522%252C%2522%25D0%25BF%2522%252C%2522%25D0%25B8%2522%252C%2522%25D0%25BA%2522%252C%2522%25D0%25B8%2522%252C%2522%25D1%2589%2522%252C%2522%25D0%25B8%2522%252C%2522%25D0%25BC%2522%252C%2522%25D1%258F%2522%252C%2522%25D0%25B4%2522%252C%2522%25D0%25B0%2522%252C%2522%25D0%25B9%2522%252C%2522%25D0%25B0%2522%252C%2522%25D0%25BA%2522%252C%2522%25D0%25BE%2522%252C%2522%25D0%25BD%2522%252C%2522%25D0%25B0%2522%252C%2522%25D1%2581%2522%252C%2522%25D0%25B7%2522%252C%2522%25D0%25B3%2522%252C%2522%25D1%258B%2522%252C%2522%25D0%25BD%2522%252C%2522%25D1%2582%2522%252C%2522%25D0%25BE%2522%252C%2522%25D0%25B0%2522%252C%2522%25D1%2582%2522%252C%2522%25D1%258C%2522%252C%2522%25D0%25B7%2522%252C%2522%25D0%25B8%2522%252C%2522%25D0%25BC%2522%252C%2522%25D0%25B5%2522%252C%2522%25D0%25BB%2522%252C%2522%25D0%25BF%2522%252C%2522%25D1%2582%2522%252C%2522%25D0%25B8%2522%252C%2522%25D1%2587%2522%252C%2522%25D0%25B0%2522%255D%26userwordsids%3D%255B%255B32%252C23%252C14%255D%252C%255B14%252C23%252C32%252C33%252C34%255D%252C%255B15%252C24%252C33%255D%252C%255B24%252C33%252C24%255D%255D&amp;src=sdkpreparse">
+            <i class="fa-brands fa-facebook"></i>
+            </a>
+          </div>
+        </li>
+        <li class="top-menu__list-item">
+          <a href="mailto:sha.egor@gmail.com" class="top-menu__link">
+            <i class="fa-regular fa-envelope" ></i>
+          </a>
+        </li>
+        <li class="top-menu__list-item">
+          <button class="top-menu__link">
+            <i onclick="SaveGame()" class="far fa-save top-menu__link"></i>
+          </button>
+        </li>
+        <li class="top-menu__list-item">
+          <a href="#" class="top-menu__link-language-selected">
+            Lingua
+            <i class="fa-solid fa-caret-down"></i>
+          </a>
+          <ul class="top-menu__list">
+            <li class="top-menu__list-item">
+              
+              <li class="top-menu__list-item">
+                <a class="top-menu__link-languages" href="http://localhost:1313/en/"
+                  ></a
+                >
+              </li>
+              
+              <li class="top-menu__list-item">
+                <a class="top-menu__link-languages" href="http://localhost:1313/de/"
+                  ></a
+                >
+              </li>
+              
+              <li class="top-menu__list-item">
+                <a class="top-menu__link-languages" href="http://localhost:1313/fr/"
+                  ></a
+                >
+              </li>
+              
+              <li class="top-menu__list-item">
+                <a class="top-menu__link-languages" href="http://localhost:1313/ru/"
+                  ></a
+                >
+              </li>
+              
+              <li class="top-menu__list-item">
+                <a class="top-menu__link-languages" href="http://localhost:1313/ar/"
+                  ></a
+                >
+              </li>
+              
+              <li class="top-menu__list-item">
+                <a class="top-menu__link-languages" href="http://localhost:1313/la/"
+                  ></a
+                >
+              </li>
+              
+
+            </li>
+          </ul>
+        </li>
+      </ul>
     </div>
   </div>
-  </header>
-      
+</div>
+</header>
+    
 </body>
+
 <div id="content">
-<div id="main">
-  <div class="header">
+<div id="main" class="game">
+  <div class="game__header">
     <div class="game_params_container">
-      <span class="timer game_params timer__items" id="timer">
-        <div class="timer__item timer__minutes"></div>
+      <span class="game__timer game__params-item" id="timer">
+        <div id="timer-min"></div>
         :
-        <div class="timer__item timer__seconds"></div>
+        <div id="timer-sec"></div>
       </span>
 
       <span
-        class="point-button game_params"
+        class="game__points game__params-item"
         id="points"
         title="0"
         >...
       </span>
 
-      <select id="word-input" class="word-input game_params">
+      <select id="word-input" class="game__word-input game__params-item">
         <option></option>
       </select>
 
       <span
-        class="clear-button game_params"
+        class="game__clear-button game__params-item"
         id="cut-btn"
         title=""
         ><i class="fa-solid fa-delete-left"></i>
       </span>
     </div>
   </div>
-  <div class="content">
-    <div id=""></div>
-    <div id="gameplace">
-      <div class="wrapper"></div>
+  <div class="game__content">
+    <div class="game__gameplace">
+      <div id="gameplace" class="game__gameplace-wrapper"></div>
     </div>
     <div id="result"></div>
   </div>
 </div>
-<div
-  class="gallery pure-form"
-  style="position: fixed; top: 50%; left: 50%"
-></div>
 
         </div>      
       <script src="/js/classes.js"></script>

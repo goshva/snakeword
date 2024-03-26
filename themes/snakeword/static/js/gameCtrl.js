@@ -224,44 +224,44 @@ async function collectWord(Id, id, ...args) {
   } else timeout0 = setTimeout(clear, 2500);
 }
 
-function listfindedwords(word, findindex) {
-  var tally = document.getElementById("gametally");
+// function listfindedwords(word, findindex) {
+//   var tally = document.getElementById("gametally");
 
-  while (tally.hasChildNodes()) {
-    tally.removeChild(tally.lastChild);
-  }
-  for (var i = 0; i < findwords.length; i++) {
-    var newWord = document.createElement("li");
-    newWord.innerText = `${findwords[i]} - ${translatedwords[i]}`;
-    newWord.className = "pure-menu-iTem";
-    //
-    tally.insertBefore(
-      newWord,
-      tally.hasChildNodes() ? tally.childNodes[0] : null
-    );
-  }
+//   while (tally.hasChildNodes()) {
+//     tally.removeChild(tally.lastChild);
+//   }
+//   for (var i = 0; i < findwords.length; i++) {
+//     var newWord = document.createElement("li");
+//     newWord.innerText = `${findwords[i]} - ${translatedwords[i]}`;
+//     newWord.className = "pure-menu-iTem";
+//     //
+//     tally.insertBefore(
+//       newWord,
+//       tally.hasChildNodes() ? tally.childNodes[0] : null
+//     );
+//   }
 
-  var WordsSelect = document.getElementById("word");
+//   var WordsSelect = document.getElementById("word");
 
-  while (WordsSelect.hasChildNodes()) {
-    WordsSelect.removeChild(WordsSelect.lastChild);
-  }
+//   while (WordsSelect.hasChildNodes()) {
+//     WordsSelect.removeChild(WordsSelect.lastChild);
+//   }
 
-  for (var i = 0; i < findwords.length; i++) {
-    var newWord = document.createElement("option");
-    newWord.innerText = findwords[i];
-    WordsSelect.insertBefore(
-      newWord,
-      WordsSelect.hasChildNodes() ? WordsSelect.childNodes[0] : null
-    );
-    WordsSelect.selectedIndex = 0;
-  }
-}
+//   for (var i = 0; i < findwords.length; i++) {
+//     var newWord = document.createElement("option");
+//     newWord.innerText = findwords[i];
+//     WordsSelect.insertBefore(
+//       newWord,
+//       WordsSelect.hasChildNodes() ? WordsSelect.childNodes[0] : null
+//     );
+//     WordsSelect.selectedIndex = 0;
+//   }
+// }
 
 function clear() {
-  var Cells = document.getElementsByClassName("cell");
+  var Cells = document.getElementsByClassName("game__cell");
   for (var i = 0; i < Cells.length; i++) {
-    Cells[i].className = "cell";
+    Cells[i].className = "game__cell";
   }
   word = "";
   ids = [];
@@ -329,6 +329,7 @@ function createImgDialog(imgUrl) {
     .then((response) => response.json())
     .then((url) => {
       const dialog = document.createElement("dialog");
+      dialog.classList.add("dilalog-found-word")
       const image = document.createElement("img");
       image.src = url.data[0].images.fixed_height_small.url;
       dialog.appendChild(image)

@@ -1,96 +1,95 @@
-   <body>
-    <header>
-      <div id="fb-root"></div>
-      <script>(function(d, s, id) {
-         var js, fjs = d.getElementsByTagName(s)[0];
-         if (d.getElementById(id)) return;
-         js = d.createElement(s); js.id = id;
-         js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.8&appId=215324895555689";
-         fjs.parentNode.insertBefore(js, fjs);
-         }(document, 'script', 'facebook-jssdk'));
-      </script>
-        <div class="popup">
-          <div class="popup-content">
-            <!-- <img src="./../img/cracker.gif" alt="cracker" class="cracker_gif-left cracker">
-            <img src="./../img/victory.png" alt="" class="pop-up_img">
-            <img src="./../img/cracker.gif" alt="cracker" class="cracker_gif-right cracker"> -->
-            <div class="result_container">
-              <div class="result_inner">
-                <div class="result_plaque result_text stars mb-25">
-                  Ваш результат:
-                  <span class="my_result text-light">0</span>
-                </div>
-                <div class="result_plaque result_text trofy mb-25">
-                  Рекорд дня: <span class="record text-light">1000</span>
-                </div>
-                <div class="result_button_container">
-                  <button class="result_button prev_button result_text">Назад</button>
-                  <button class="result_button next_button result_text">Играть</button>
-                </div>
+<body>
+  <header>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) return;
+       js = d.createElement(s); js.id = id;
+       js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.8&appId=215324895555689";
+       fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
+      <div class="game__tally"></div>
+      <div class="pop-up">
+        <div class="pop-up__content">
+          <div class="pop-up__container">
+            <div class="pop-up__container-inner pop-up__container-inner-pt-40">
+              <div class="pop-up__text pop-up__stars pop-up__text-mb-25">
+                Ваш результат:
+                <span id="my-result" class="pop-up__text-light">0</span>
+              </div>
+              <div class="pop-up__text pop-up__trophies pop-up__text-mb-25">
+                Рекорд дня: <span id="day-record" class="pop-up__text-light">1000</span>
+              </div>
+              <div class="pop-up__btn-container">
+                <button id="btn-prev" class="pop-up__btn pop-up__btn-prev">Назад</button>
+                <button id="btn-next" class="pop-up__btn pop-up__btn-next">Играть</button>
               </div>
             </div>
-            <div class="word-list_container result_container">
-              <div class="word-list_inner result_inner">
-                Список отгаданных слов:
-                <div id="found-words" class="found-words-grid mt-10">
-                  <div id="orig-language" class="language-input result_plaque"></div>
-                  <select id="trans-language" class="language-input result_plaque">
-                  </select>
-                </div>
+          </div>
+          <div class="pop-up__container">
+            <div class="pop-up__container-inner">
+              Список отгаданных слов:
+              <div id="found-words" class="pop-up__found-words-list">
+                <div id="orig-language" class="pop-up__text pop-up__text-size-s"></div>
+                <select id="trans-language" class="pop-up__text pop-up__text-size-s">
+                </select>
               </div>
             </div>
           </div>
         </div>
-        <div class="top-menu">
-  
-        <ul class="top-menu-list">
-          <li class="top-menu-item">
-            <div
-            class="fb-share-button"
-            data-href="https://boggle.space/url?edge=9&amp;letters=[%22%D0%BE%22,%22%D1%86%22,%22%D1%82%22,%22%D1%83%22,%22%D0%B6%22,%22%D0%B0%22,%22%D0%B7%22,%22%D0%B0%22,%22%D1%81%22,%22%D0%BC%22,%22%D0%B5%22,%22%D0%BD%22,%22%D0%B4%22,%22%D0%B8%22,%22%D0%B3%22,%22%D1%81%22,%22%D0%BA%22,%22%D0%B2%22,%22%D0%BE%22,%22%D0%BE%22,%22%D0%B2%22,%22%D0%BE%22,%22%D1%8C%22,%22%D0%B0%22,%22%D0%BE%22,%22%D1%8D%22,%22%D0%BE%22,%22%D1%82%22,%22%D1%80%22,%22%D0%BF%22,%22%D0%B5%22,%22%D0%BB%22,%22%D0%BB%22,%22%D0%BA%22,%22%D0%B0%22,%22%D1%85%22,%22%D0%B8%22,%22%D0%BF%22,%22%D0%B0%22,%22%D0%BD%22,%22%D1%8C%22,%22%D0%BF%22,%22%D0%B3%22,%22%D0%BF%22,%22%D1%83%22,%22%D0%BF%22,%22%D0%B8%22,%22%D0%BA%22,%22%D0%B8%22,%22%D1%89%22,%22%D0%B8%22,%22%D0%BC%22,%22%D1%8F%22,%22%D0%B4%22,%22%D0%B0%22,%22%D0%B9%22,%22%D0%B0%22,%22%D0%BA%22,%22%D0%BE%22,%22%D0%BD%22,%22%D0%B0%22,%22%D1%81%22,%22%D0%B7%22,%22%D0%B3%22,%22%D1%8B%22,%22%D0%BD%22,%22%D1%82%22,%22%D0%BE%22,%22%D0%B0%22,%22%D1%82%22,%22%D1%8C%22,%22%D0%B7%22,%22%D0%B8%22,%22%D0%BC%22,%22%D0%B5%22,%22%D0%BB%22,%22%D0%BF%22,%22%D1%82%22,%22%D0%B8%22,%22%D1%87%22,%22%D0%B0%22]&amp;userwordsids=[[32,23,14],[14,23,32,33,34],[15,24,33],[24,33,24]]"
-            data-layout="button_count"
-            data-size="large"
-            data-mobile-iframe="true">
-            <a
-              class="fb-xfbml-parse-ignore top-menu-link"
-              target="_blank"
-              href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fboggle.space%2Furl%3Fedge%3D9%26letters%3D%255B%2522%25D0%25BE%2522%252C%2522%25D1%2586%2522%252C%2522%25D1%2582%2522%252C%2522%25D1%2583%2522%252C%2522%25D0%25B6%2522%252C%2522%25D0%25B0%2522%252C%2522%25D0%25B7%2522%252C%2522%25D0%25B0%2522%252C%2522%25D1%2581%2522%252C%2522%25D0%25BC%2522%252C%2522%25D0%25B5%2522%252C%2522%25D0%25BD%2522%252C%2522%25D0%25B4%2522%252C%2522%25D0%25B8%2522%252C%2522%25D0%25B3%2522%252C%2522%25D1%2581%2522%252C%2522%25D0%25BA%2522%252C%2522%25D0%25B2%2522%252C%2522%25D0%25BE%2522%252C%2522%25D0%25BE%2522%252C%2522%25D0%25B2%2522%252C%2522%25D0%25BE%2522%252C%2522%25D1%258C%2522%252C%2522%25D0%25B0%2522%252C%2522%25D0%25BE%2522%252C%2522%25D1%258D%2522%252C%2522%25D0%25BE%2522%252C%2522%25D1%2582%2522%252C%2522%25D1%2580%2522%252C%2522%25D0%25BF%2522%252C%2522%25D0%25B5%2522%252C%2522%25D0%25BB%2522%252C%2522%25D0%25BB%2522%252C%2522%25D0%25BA%2522%252C%2522%25D0%25B0%2522%252C%2522%25D1%2585%2522%252C%2522%25D0%25B8%2522%252C%2522%25D0%25BF%2522%252C%2522%25D0%25B0%2522%252C%2522%25D0%25BD%2522%252C%2522%25D1%258C%2522%252C%2522%25D0%25BF%2522%252C%2522%25D0%25B3%2522%252C%2522%25D0%25BF%2522%252C%2522%25D1%2583%2522%252C%2522%25D0%25BF%2522%252C%2522%25D0%25B8%2522%252C%2522%25D0%25BA%2522%252C%2522%25D0%25B8%2522%252C%2522%25D1%2589%2522%252C%2522%25D0%25B8%2522%252C%2522%25D0%25BC%2522%252C%2522%25D1%258F%2522%252C%2522%25D0%25B4%2522%252C%2522%25D0%25B0%2522%252C%2522%25D0%25B9%2522%252C%2522%25D0%25B0%2522%252C%2522%25D0%25BA%2522%252C%2522%25D0%25BE%2522%252C%2522%25D0%25BD%2522%252C%2522%25D0%25B0%2522%252C%2522%25D1%2581%2522%252C%2522%25D0%25B7%2522%252C%2522%25D0%25B3%2522%252C%2522%25D1%258B%2522%252C%2522%25D0%25BD%2522%252C%2522%25D1%2582%2522%252C%2522%25D0%25BE%2522%252C%2522%25D0%25B0%2522%252C%2522%25D1%2582%2522%252C%2522%25D1%258C%2522%252C%2522%25D0%25B7%2522%252C%2522%25D0%25B8%2522%252C%2522%25D0%25BC%2522%252C%2522%25D0%25B5%2522%252C%2522%25D0%25BB%2522%252C%2522%25D0%25BF%2522%252C%2522%25D1%2582%2522%252C%2522%25D0%25B8%2522%252C%2522%25D1%2587%2522%252C%2522%25D0%25B0%2522%255D%26userwordsids%3D%255B%255B32%252C23%252C14%255D%252C%255B14%252C23%252C32%252C33%252C34%255D%252C%255B15%252C24%252C33%255D%252C%255B24%252C33%252C24%255D%255D&amp;src=sdkpreparse">
-              <i class="fa-brands fa-facebook"></i>
-              </a>
-            </div>
-          </li>
-          <li class="top-menu-item">
-            <a href="mailto:sha.egor@gmail.com" class="top-menu-link">
-              <i class="fa-regular fa-envelope" ></i>
-            </a>
-          </li>
-          <li class="top-menu-item">
-            <button class="top-menu-link">
-              <i onclick="SaveGame()" class="far fa-save top-menu-link"></i>
-            </button>
-          </li>
-          <li class="top-menu-item">
-            <a href="#" class="top-menu-link-language-selected">
-              {{.Site.Params.LanguageName}}
-              <i class="fa-solid fa-caret-down"></i>
-            </a>
-            <ul class="top-menu-list">
-              <li class="top-menu-item">
-                {{ range $.Site.Home.AllTranslations }}
-                <li class="top-menu-item">
-                  <a class="top-menu-link-languages" href="{{ .Permalink }}"
-                    >{{ .Language.Params.LanguageName }}</a
-                  >
-                </li>
-                {{ end }}
-
-              </li>
-            </ul>
-          </li>
-        </ul>
       </div>
+
+      <div class="top-menu">
+      <ul class="top-menu__list">
+        <li class="top-menu__list-item">
+          <div
+          class="fb-share-button"
+          data-href="https://boggle.space/url?edge=9&amp;letters=[%22%D0%BE%22,%22%D1%86%22,%22%D1%82%22,%22%D1%83%22,%22%D0%B6%22,%22%D0%B0%22,%22%D0%B7%22,%22%D0%B0%22,%22%D1%81%22,%22%D0%BC%22,%22%D0%B5%22,%22%D0%BD%22,%22%D0%B4%22,%22%D0%B8%22,%22%D0%B3%22,%22%D1%81%22,%22%D0%BA%22,%22%D0%B2%22,%22%D0%BE%22,%22%D0%BE%22,%22%D0%B2%22,%22%D0%BE%22,%22%D1%8C%22,%22%D0%B0%22,%22%D0%BE%22,%22%D1%8D%22,%22%D0%BE%22,%22%D1%82%22,%22%D1%80%22,%22%D0%BF%22,%22%D0%B5%22,%22%D0%BB%22,%22%D0%BB%22,%22%D0%BA%22,%22%D0%B0%22,%22%D1%85%22,%22%D0%B8%22,%22%D0%BF%22,%22%D0%B0%22,%22%D0%BD%22,%22%D1%8C%22,%22%D0%BF%22,%22%D0%B3%22,%22%D0%BF%22,%22%D1%83%22,%22%D0%BF%22,%22%D0%B8%22,%22%D0%BA%22,%22%D0%B8%22,%22%D1%89%22,%22%D0%B8%22,%22%D0%BC%22,%22%D1%8F%22,%22%D0%B4%22,%22%D0%B0%22,%22%D0%B9%22,%22%D0%B0%22,%22%D0%BA%22,%22%D0%BE%22,%22%D0%BD%22,%22%D0%B0%22,%22%D1%81%22,%22%D0%B7%22,%22%D0%B3%22,%22%D1%8B%22,%22%D0%BD%22,%22%D1%82%22,%22%D0%BE%22,%22%D0%B0%22,%22%D1%82%22,%22%D1%8C%22,%22%D0%B7%22,%22%D0%B8%22,%22%D0%BC%22,%22%D0%B5%22,%22%D0%BB%22,%22%D0%BF%22,%22%D1%82%22,%22%D0%B8%22,%22%D1%87%22,%22%D0%B0%22]&amp;userwordsids=[[32,23,14],[14,23,32,33,34],[15,24,33],[24,33,24]]"
+          data-layout="button_count"
+          data-size="large"
+          data-mobile-iframe="true">
+          <a
+            class="fb-xfbml-parse-ignore top-menu__link"
+            target="_blank"
+            href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fboggle.space%2Furl%3Fedge%3D9%26letters%3D%255B%2522%25D0%25BE%2522%252C%2522%25D1%2586%2522%252C%2522%25D1%2582%2522%252C%2522%25D1%2583%2522%252C%2522%25D0%25B6%2522%252C%2522%25D0%25B0%2522%252C%2522%25D0%25B7%2522%252C%2522%25D0%25B0%2522%252C%2522%25D1%2581%2522%252C%2522%25D0%25BC%2522%252C%2522%25D0%25B5%2522%252C%2522%25D0%25BD%2522%252C%2522%25D0%25B4%2522%252C%2522%25D0%25B8%2522%252C%2522%25D0%25B3%2522%252C%2522%25D1%2581%2522%252C%2522%25D0%25BA%2522%252C%2522%25D0%25B2%2522%252C%2522%25D0%25BE%2522%252C%2522%25D0%25BE%2522%252C%2522%25D0%25B2%2522%252C%2522%25D0%25BE%2522%252C%2522%25D1%258C%2522%252C%2522%25D0%25B0%2522%252C%2522%25D0%25BE%2522%252C%2522%25D1%258D%2522%252C%2522%25D0%25BE%2522%252C%2522%25D1%2582%2522%252C%2522%25D1%2580%2522%252C%2522%25D0%25BF%2522%252C%2522%25D0%25B5%2522%252C%2522%25D0%25BB%2522%252C%2522%25D0%25BB%2522%252C%2522%25D0%25BA%2522%252C%2522%25D0%25B0%2522%252C%2522%25D1%2585%2522%252C%2522%25D0%25B8%2522%252C%2522%25D0%25BF%2522%252C%2522%25D0%25B0%2522%252C%2522%25D0%25BD%2522%252C%2522%25D1%258C%2522%252C%2522%25D0%25BF%2522%252C%2522%25D0%25B3%2522%252C%2522%25D0%25BF%2522%252C%2522%25D1%2583%2522%252C%2522%25D0%25BF%2522%252C%2522%25D0%25B8%2522%252C%2522%25D0%25BA%2522%252C%2522%25D0%25B8%2522%252C%2522%25D1%2589%2522%252C%2522%25D0%25B8%2522%252C%2522%25D0%25BC%2522%252C%2522%25D1%258F%2522%252C%2522%25D0%25B4%2522%252C%2522%25D0%25B0%2522%252C%2522%25D0%25B9%2522%252C%2522%25D0%25B0%2522%252C%2522%25D0%25BA%2522%252C%2522%25D0%25BE%2522%252C%2522%25D0%25BD%2522%252C%2522%25D0%25B0%2522%252C%2522%25D1%2581%2522%252C%2522%25D0%25B7%2522%252C%2522%25D0%25B3%2522%252C%2522%25D1%258B%2522%252C%2522%25D0%25BD%2522%252C%2522%25D1%2582%2522%252C%2522%25D0%25BE%2522%252C%2522%25D0%25B0%2522%252C%2522%25D1%2582%2522%252C%2522%25D1%258C%2522%252C%2522%25D0%25B7%2522%252C%2522%25D0%25B8%2522%252C%2522%25D0%25BC%2522%252C%2522%25D0%25B5%2522%252C%2522%25D0%25BB%2522%252C%2522%25D0%25BF%2522%252C%2522%25D1%2582%2522%252C%2522%25D0%25B8%2522%252C%2522%25D1%2587%2522%252C%2522%25D0%25B0%2522%255D%26userwordsids%3D%255B%255B32%252C23%252C14%255D%252C%255B14%252C23%252C32%252C33%252C34%255D%252C%255B15%252C24%252C33%255D%252C%255B24%252C33%252C24%255D%255D&amp;src=sdkpreparse">
+            <i class="fa-brands fa-facebook"></i>
+            </a>
+          </div>
+        </li>
+        <li class="top-menu__list-item">
+          <a href="mailto:sha.egor@gmail.com" class="top-menu__link">
+            <i class="fa-regular fa-envelope" ></i>
+          </a>
+        </li>
+        <li class="top-menu__list-item">
+          <button class="top-menu__link">
+            <i onclick="SaveGame()" class="far fa-save top-menu__link"></i>
+          </button>
+        </li>
+        <li class="top-menu__list-item">
+          <a href="#" class="top-menu__link-language-selected">
+            {{.Site.Params.Language}}
+            <i class="fa-solid fa-caret-down"></i>
+          </a>
+          <ul class="top-menu__list">
+            <li class="top-menu__list-item">
+              {{ range $.Site.Home.AllTranslations }}
+              <li class="top-menu__list-item">
+                <a class="top-menu__link-languages" href="{{ .Permalink }}"
+                  >{{ .Language.LanguageName }}</a
+                >
+              </li>
+              {{ end }}
+
+            </li>
+          </ul>
+        </li>
+      </ul>
     </div>
   </div>
-  </header>
-      
+</div>
+</header>
+    
 </body>
+

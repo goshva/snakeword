@@ -10,13 +10,13 @@ const languages = {
 }
 
 function closePopup() {
-  const popup = document.querySelector('.popup');
+  const popup = document.querySelector('.pop-up');
   popup.style.display = 'none';
   popup.style.opacity = 0;
 }
 
 function openPopup() {
-  const popup = document.querySelector('.popup');
+  const popup = document.querySelector('.pop-up');
   popup.style.display = 'block';
   popup.style.opacity = 1;
 }
@@ -39,9 +39,13 @@ document.addEventListener('DOMContentLoaded', function runTimer() {
   let timerId = null;
   // 1 minute timer
   // last value can be easily changed, depends on how many minutes you need
-  let deadline = 1000 * 60 * 1;
+  let deadline = 1000 * 60 * 1.5;
   // set remaining time as content of elements
   function countdownTimer() {
+    if (deadline < 60000) {
+      const timer = document.getElementById("timer");
+      timer.style.color = "red";
+    }
     if (deadline === 0) {
       const foundWords = document.getElementById('found-words');
       findwords.forEach((word) => {
@@ -61,8 +65,8 @@ document.addEventListener('DOMContentLoaded', function runTimer() {
   }
   // get elememts, containing time components
 
-  const $minutes = document.querySelector('.timer__minutes');
-  const $seconds = document.querySelector('.timer__seconds');
+  const $minutes = document.getElementById('timer-min');
+  const $seconds = document.getElementById('timer-sec');
   // call countdownTimer function
   countdownTimer();
   // set countdownTimer function every second
@@ -129,7 +133,7 @@ function checkLetter(cell, dictionary, edge, wordsInGame) {
 }
 
 function getWordsinGame() {
-  const cells = document.querySelectorAll('.cell');
+  const cells = document.querySelectorAll('.game__cell');
 
   cells.forEach((cell) => {
     checkLetter(cell, Dict, edge, wordsInGame);
@@ -142,13 +146,13 @@ function getWordsinGame() {
 setTimeout(getWordsinGame, 1000);
 
 //кнопка назад
-const prevButton = document.querySelector('.prev_button');
+const prevButton = document.getElementById('btn-prev');
 prevButton.addEventListener('click', () => {
   closePopup();
 });
 
 //кнопка играть
-const nextButton = document.querySelector('.next_button');
+const nextButton = document.getElementById('btn-next');
 nextButton.addEventListener('click', () => {
   location.reload();
   closePopup();
