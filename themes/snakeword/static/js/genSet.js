@@ -147,10 +147,13 @@ function genArea() {
     divbtn.style.zIndex = "10";
     divbtn.Letter = letters[L];
     divbtn.LetterCount = L;
-    divbtn.onclick = function () {
-      collectWord(this.Letter, this.LetterCount);
-      this.className += " activeCell";
-      playSound(this.Letter);
+    divbtn.onclick = function (e) {
+      const noClass = () => {
+        collectWord(this.Letter, this.LetterCount);
+        this.className += " activeCell";
+        playSound(this.Letter);
+      }
+      e.target.classList.contains('activeCell') === false ? noClass() : true;
     };
     var t = document.createTextNode(letters[L]);
     divbtn.appendChild(t);

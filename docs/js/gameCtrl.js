@@ -116,6 +116,7 @@ function moreletter() {
   points += 1;
   document.getElementById('points').innerText = points;
 }
+
 function nearCheck(id, findIds) {
   let near = false;
   edge = parseInt(edge, 10);
@@ -154,6 +155,21 @@ function nearCheck(id, findIds) {
     console.log(2); // TODO: case for 2 to letters words
   }
   return near;
+}
+
+function clear() {
+  const Cells = document.getElementsByClassName('cell');
+  for (let i = 0; i < Cells.length; i += 1) {
+    Cells[i].className = 'cell';
+  }
+  word = '';
+  ids = [];
+  const opt = document.createElement('option');
+  opt.value = '';
+  opt.innerHTML = '';
+  opt.selected = true;
+  // Selectq.appendChild(opt);
+  //
 }
 
 const timeout0 = setTimeout(clear, 2500);
@@ -217,20 +233,6 @@ function listfindedwords() {
   }
 }
 
-function clear() {
-  const Cells = document.getElementsByClassName('cell');
-  for (let i = 0; i < Cells.length; i += 1) {
-    Cells[i].className = 'cell';
-  }
-  word = '';
-  ids = [];
-  const opt = document.createElement('option');
-  opt.value = '';
-  opt.innerHTML = '';
-  opt.selected = true;
-  // Selectq.appendChild(opt);
-  //
-}
 function cutWord() {
   word = '';
   document.getElementById('word-input').options[0].text = word;
