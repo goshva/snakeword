@@ -1,6 +1,5 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
-let points = 0;
 let word = '';
 let ids = [];
 const findwords = [];
@@ -113,8 +112,7 @@ function moreletter() {
     popup.style.opacity = 1;
   }
   // findwordids.push(ids);//////////////////////////////////
-  points += 1;
-  document.getElementById('points').innerText = points;
+  document.getElementById('points').innerText = findwordids.length + 1;
 }
 
 function nearCheck(id, findIds) {
@@ -158,10 +156,13 @@ function nearCheck(id, findIds) {
 }
 
 function clear() {
-  const Cells = document.getElementsByClassName('cell');
-  for (let i = 0; i < Cells.length; i += 1) {
-    Cells[i].className = 'cell';
-  }
+  Array.from(document.getElementsByClassName('cell'))
+  .map((cell) => {
+    findwordids.flat()
+    .map((id) => `C${id}`)
+    .includes(cell.id) ? cell.className = 'cell activeCell' : cell.className = 'cell';
+  });
+  
   word = '';
   ids = [];
   const opt = document.createElement('option');
