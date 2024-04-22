@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>oձի բառ</title>
+    <link>http://localhost:1313/arm/</link>
+    <description>Recent content on Օձի Բառ</description>
+    <generator>Hugo 0.125.2</generator>
+    <language>arm</language>
+    <copyright>Everything is mine</copyright>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/arm/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
