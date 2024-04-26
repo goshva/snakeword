@@ -160,6 +160,55 @@ var langs = {
       1573696, 3044673, 9528713,
     ],
   },
+    hy: {
+    Allletters: 1200,
+    Alphabet: [
+      "ա",
+      "բ",
+      "գ",
+      "դ",
+      "ե",
+      "զ",
+      "է",
+      "ը",
+      "թ",
+      "ժ",
+      "ի",
+      "լ",
+      "խ",
+      "ծ",
+      "կ",
+      "հ",
+      "ձ",
+      "ղ",
+      "ճ",
+      "մ",
+      "յ",
+      "ն",
+      "շ",
+      "ո",
+      "չ",
+      "պ",
+      "ջ",
+      "ռ",
+      "ս",
+      "վ",
+      "տ",
+      "ր",
+      "ց",
+      "ու",
+      "փ",
+      "ք",
+      "և",
+      "օ",
+      "ֆ",
+    ],
+    Rangs: [
+      20, 5, 18, 1250, 10, 300, 100, 450, 320, 80, 110, 180, 80, 90, 250, 80,
+      410, 40, 230, 70, 90, 40, 50, 10, 390, 30, 270, 260, 190, 1200, 630, 640,
+      500, 580, 100, 60,
+    ],
+  },
   la: {
     Allletters: 8525945,
     Alphabet: [
@@ -351,7 +400,10 @@ if (language == "it" || language == "it-IT" || language == "it-it") {
   language = "it";
   namedict = "Italian";
 }
-
+if (language == "hy" || language == "hy-HY" || language == "hy-hy") {
+  language = "it";
+  namedict = "Italian";
+}
 //else { language ="en"; namedict = "English"}
 var Allletters = langs[language]["Allletters"];
 var Alphabet = langs[language]["Alphabet"];
