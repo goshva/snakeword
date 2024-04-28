@@ -139,3 +139,11 @@
 .b-popup {
    display: none;
 }
+
+.modalBlock{
+   width: 600px;
+   height: 450px;
+   background-color: #fff;
+   position: absolute;
+   z-index: 12;
+}

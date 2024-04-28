@@ -4,7 +4,7 @@
     <title>Categories on Змееслов</title>
     <link>http://localhost:1313/de/categories/</link>
     <description>Recent content in Categories on Змееслов</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo 0.125.2</generator>
     <language>de</language>
     <copyright>Everything is mine</copyright>
     <atom:link href="http://localhost:1313/de/categories/index.xml" rel="self" type="application/rss+xml" />

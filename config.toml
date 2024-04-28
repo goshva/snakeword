@@ -44,6 +44,24 @@ publishDir ="docs"
   Save = "Сохранить"
   Language = "Язык"
 
+
+[Languages.hy]
+  Languagename =  "Հայերեն"
+  title = "Օձի Բառ"
+  weight = 2
+  author = "Егор Ша."
+  Description = "Игра собери слово"
+  keywords = "Tesla's Awesome Hugo Site"
+  fbAppid = "Tesla's Awesome Hugo Site"
+  Fullurl = "Tesla's Awesome Hugo Site"
+  Points = "0"
+  MyRecord = "0"
+  Game_Mode = "Вид игры"
+  Random = "Хаос"
+  Settings = "Набор"
+  Save = "Պահպանել"
+  Language = "Լեզու"
+
 [Languages.de]
   Languagename =  "Немецкий"
   title = "Змееслов"

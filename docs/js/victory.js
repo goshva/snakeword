@@ -1,3 +1,8 @@
+
+
+
+
+
 const wordsInGame = [];
 //timer
 document.addEventListener('DOMContentLoaded', function () {
