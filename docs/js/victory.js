@@ -1,4 +1,9 @@
 
+const StartBtn = document.querySelector(".StartBtn");
+StartBtn.addEventListener("click",()=>{
+  alert("")
+});
+
 
 
 

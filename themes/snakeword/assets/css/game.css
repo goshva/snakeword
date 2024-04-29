@@ -158,3 +158,9 @@ width: 100%;
 height: 100px;
 background-color: #f00
 }
+
+.modalBlock .buttonsBlock>button{
+   padding: 15px 30px;
+   background-color: #1f8dd6;
+   cursor: pointer;
+}
