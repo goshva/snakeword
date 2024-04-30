@@ -149,6 +149,14 @@
    display: flex;
    justify-content: center;
    align-items: center;
+   transition: all 0.5s ease;
+}
+
+
+.modalBlock.active{
+   transform: translateX(-50px);
+   opacity: 0;
+   visibility: hidden;
 }
 .modalBlock .buttonsBlock{
    display: flex;
@@ -156,7 +164,6 @@ justify-content: center;
 align-items: center;
 width: 100%;
 height: 100px;
-background-color: #f00;
 gap: 15px;
 }
 
@@ -173,10 +180,33 @@ gap: 15px;
    content: "";
 position: absolute;
 top: 0;
-left: 0;
+left: -100%;
 width: 10px;
 height: 100%;
 background-color: #5B5A37;
 transform: skewX(-45deg);
+transition: all 1s ease;
+}
+.modalBlock .buttonsBlock>button:hover::before{
+   left: 200px;
+}
 
+.modalBlock .buttonsBlock .StartBtn.active{
+   opacity: 0;
+   pointer-events: none;
+}
+
+.timer{
+   background-color: #fff;
+   display: flex;
+   justify-content: center;
+   align-items: center; 
+}
+
+.timer .timer__items{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 15px;
+   font-size: 25px;
 }

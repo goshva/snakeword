@@ -1,8 +1,6 @@
 
-const StartBtn = document.querySelector(".StartBtn");
-StartBtn.addEventListener("click",()=>{
-  alert("")
-});
+
+
 
 
 
@@ -11,6 +9,8 @@ StartBtn.addEventListener("click",()=>{
 const wordsInGame = [];
 //timer
 document.addEventListener('DOMContentLoaded', function () {
+    const modalBlock = document.querySelector(".modalBlock")
+    const StartBtn = document.querySelector(".StartBtn");
   // timer id
   let timerId = null;
   // 1 minute timer
@@ -18,29 +18,34 @@ document.addEventListener('DOMContentLoaded', function () {
   let deadline = 1000 * 60 * 10;
 
 
-
+  StartBtn.addEventListener("click",countdownTimer);
   // set remaining time as content of elements
   function countdownTimer() {
-    if (deadline === 0) {
-      const popup = document.querySelector('.b-popup');
-      popup.style.display = 'block';
-      popup.style.opacity = 1;
-    }
-    const minutes = deadline > 0 ? Math.floor(deadline / 1000 / 60) % 60 : 0;
-    const seconds = deadline > 0 ? Math.floor(deadline / 1000) % 60 : 0;
-    $minutes.textContent = minutes < 10 ? '0' + minutes : minutes;
-    $seconds.textContent = seconds < 10 ? '0' + seconds : seconds;
-    // decrease remaining time by one second
-    deadline -= 1000;
+    const $minutes = document.querySelector('.timer__minutes');
+    const $seconds = document.querySelector('.timer__seconds');
+        if (deadline === 0) {
+            const popup = document.querySelector('.b-popup');
+            popup.style.display = 'block';
+            popup.style.opacity = 1;
+          }else{
+            modalBlock.classList.add("active")
+            StartBtn.classList.add("active")
+            timerId  = setInterval(()=>{
+                const minutes = deadline > 0 ? parseInt(deadline / 1000 / 60) % 60 : 0;
+                const seconds = deadline > 0 ? parseInt(deadline / 1000) % 60 : 0;
+                $minutes.textContent = minutes < 10 ? '0' + minutes : minutes;
+                $seconds.textContent = seconds < 10 ? '0' + seconds : seconds;
+                deadline -= 1000;
+            },1000)
+          }
+          
+ 
+         
+        
+        
   }
-  // get elememts, containing time components
-
-  const $minutes = document.querySelector('.timer__minutes');
-  const $seconds = document.querySelector('.timer__seconds');
-  // call countdownTimer function
-  countdownTimer();
-  // set countdownTimer function every second
-  timerId = setInterval(countdownTimer, 1000);
+  
+  
 });
 
 //counting how many words are there on gamespace
