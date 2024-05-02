@@ -210,3 +210,20 @@ transition: all 1s ease;
    gap: 15px;
    font-size: 25px;
 }
+.modalSlider{
+   width: 300px;
+   height: 450px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   opacity: 0;
+   visibility: hidden;
+   transition: all 0.5s ease;
+   transform: translateY(-15px);
+}
+
+.modalSlider.active{
+   transform: translateY(-15px);
+   opacity: 1;
+   visibility: hidden;
+}
