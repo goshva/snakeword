@@ -6,7 +6,7 @@ modalSlider.className = "modalSlider";
 const rulesBtn = document.querySelector(".RulesBtn");
 rulesBtn.addEventListener("click",()=>{
 modalSlider.classList.add("active");
-modalSlider.innerHTML = `
+modalSlider.innerHTML += `
 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
