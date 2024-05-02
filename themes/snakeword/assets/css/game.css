@@ -197,7 +197,7 @@ transition: all 1s ease;
 }
 
 .timer{
-   background-color: #fff;
+
    display: flex;
    justify-content: center;
    align-items: center; 

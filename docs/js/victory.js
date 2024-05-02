@@ -2,13 +2,18 @@
 
 
 
-
+const rulesBtn = document.querySelector(".RulesBtn");
+rulesBtn.addEventListener("click",()=>{
+ let modalSlider = document.createElement("div");
+ modalSlider.className = "modalSlider";
+})
 
 
 
 const wordsInGame = [];
 //timer
 document.addEventListener('DOMContentLoaded', function () {
+
     const modalBlock = document.querySelector(".modalBlock")
     const StartBtn = document.querySelector(".StartBtn");
   // timer id
