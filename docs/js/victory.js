@@ -1,40 +1,10 @@
 
 
-
-let modalSlider = document.createElement("div");
-modalSlider.className = "modalSlider";
+let content = document.querySelector(".content")
+let modalSlider = document.querySelector(".modalSlider");
 const rulesBtn = document.querySelector(".RulesBtn");
 rulesBtn.addEventListener("click",()=>{
 modalSlider.classList.add("active");
-modalSlider.innerHTML = `
-<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="..." class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-
-`
 })
 
 
@@ -61,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const popup = document.querySelector('.b-popup');
             popup.style.display = 'block';
             popup.style.opacity = 1;
-          }else{
+          }
             modalBlock.classList.add("active")
             StartBtn.classList.add("active")
             timerId  = setInterval(()=>{
@@ -71,8 +41,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 $seconds.textContent = seconds < 10 ? '0' + seconds : seconds;
                 deadline -= 1000;
             },1000)
-          }
           
+        
  
          
         
