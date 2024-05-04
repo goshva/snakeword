@@ -1,10 +1,14 @@
 
-
+const closeBtn = document.querySelector(".closeBtn")
 let content = document.querySelector(".content")
 let modalSlider = document.querySelector(".modalSlider");
 const rulesBtn = document.querySelector(".RulesBtn");
 rulesBtn.addEventListener("click",()=>{
 modalSlider.classList.add("active");
+})
+
+closeBtn.addEventListener("click",()=>{
+  modalSlider.classList.remove("active")
 })
 
 

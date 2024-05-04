@@ -231,3 +231,24 @@ transition: all 1s ease;
    visibility: visible;
    z-index: 16;
 }
+
+.modalSlider .closeBtn{
+   position: absolute;
+   top: 10px;
+   right: 15px;
+   font-size: 24px;
+   font-weight: 700;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #e7e3e3;
+   transition: all .5s ease;
+   padding: 3px 15px;
+}
+
+
+.modalSlider .closeBtn:hover{
+background-color: #f00;
+color: #fff;
+cursor: pointer;
+}
