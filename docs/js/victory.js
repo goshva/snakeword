@@ -31,11 +31,15 @@ document.addEventListener('DOMContentLoaded', function () {
   function countdownTimer() {
     const $minutes = document.querySelector('.timer__minutes');
     const $seconds = document.querySelector('.timer__seconds');
-
     let timerId = null;
+    let deadline = 1000 * 60 * 10;
 
 
-      
+        if (deadline === 0) {
+            const popup = document.querySelector('.b-popup');
+            popup.style.display = 'block';
+            popup.style.opacity = 1;
+          }
             modalBlock.classList.add("active")
             StartBtn.classList.add("active")
             timerId  = setInterval(()=>{
@@ -48,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 deadline -= 1000;
 
 
-                if (minutes=== 0 && seconds < 10) {
+                if (minutes === 0 && seconds < 10) {
                      $minutes.style.color = "red";
                      $seconds.style.color = "red"
                 }
