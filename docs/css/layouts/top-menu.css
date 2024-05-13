@@ -116,3 +116,53 @@ i {
 }
 
 
+.image-list{
+    height: 300px;
+   width: 250px;
+   display: flex;
+   justify-content: center;    
+   align-items: center;
+   flex-wrap: wrap;
+   position: absolute;
+   top: 50px;
+   right: 135px;
+transition: all 0.5s ease;
+gap: 15px;
+background: #fff;
+overflow: hidden;
+opacity: 0;
+visibility: hidden;
+transform: translateY(-15px);
+}
+
+
+ .image-list .image-list-item{
+   width: 100px;
+   height: 100px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+border: 1px solid black;
+}
+
+ .image-list .image-list-item>img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+
+ .imageBtn{
+    padding: 10px;
+    transition: all 0.5s ease;
+}
+ .imageBtn:hover{
+    background: #f00;
+    color: #fff;
+}
+.image-list.active{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+}
