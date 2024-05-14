@@ -4,11 +4,12 @@ const imageList = document.querySelector(".image-list");
 const body = document.querySelector("body")
 imageBtn.addEventListener("click",()=>{
     imageList.classList.toggle("active");
-    imageBtn.classList.add("active")
+    imageBtn.classList.toggle("active")
 })
 
 imageItems.forEach((item,index)=>{
     item.addEventListener("click",()=>{
-        alert(`index is${index}`)
+        body.style.backgroundImage = `url(/backgroundImages/${item})`
+        alert(index)
     })
 })
