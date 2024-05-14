@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const popup = document.querySelector('.b-popup');
             popup.style.display = 'block';
             popup.style.opacity = 1;
-          }
+          }else{
             modalBlock.classList.add("active")
             StartBtn.classList.add("active")
             timerId  = setInterval(()=>{
@@ -57,6 +57,8 @@ document.addEventListener('DOMContentLoaded', function () {
                      $seconds.style.color = "red"
                 }
             },1000)
+          }
+      
           
             
  
