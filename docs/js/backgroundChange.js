@@ -7,9 +7,30 @@ imageBtn.addEventListener("click",()=>{
     imageBtn.classList.toggle("active")
 })
 
-imageItems.forEach((item,index)=>{
-    item.addEventListener("click",()=>{
-        alert(index)
-        item.src =  backgoundImage.src
-    })
+
+let imagesData = [
+    {
+        id:1,
+        image:"/backgroundImages/zakat-i-rassvet-1200x801px.jpg",
+       
+    }, 
+    {
+        id:2,
+        image:"/backgroundImages/zakat-i-rassvet-1280x853px.jpg",
+      
+    },
+    {
+        id:3,
+        image:"/backgroundImages/zakat-i-rassvet-2000x1333px.jpg",
+        
+    },
+    {
+        id:4,
+        image:"/backgroundImages/zakat-i-rassvet-2056x1365px.jpg",
+    },
+]
+
+imagesData.forEach((imgData,index)=>{
+     imageItems[index].getAttribute("src",imgData.image)
+     console.log(imageItems);
 })
