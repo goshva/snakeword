@@ -1,7 +1,7 @@
-const imageBtn = document.querySelector(".imageBtn");
-const imageItems = document.querySelectorAll(".image-list-item > img");
-const imageList = document.querySelector(".image-list");
-const body = document.querySelector("body")
+let imageBtn = document.querySelector(".imageBtn");
+let imageItems = document.querySelectorAll(".image_item");
+let imageList = document.querySelector(".image-list");
+let backgoundImage = document.querySelector(".backgoundImage")
 imageBtn.addEventListener("click",()=>{
     imageList.classList.toggle("active");
     imageBtn.classList.toggle("active")
@@ -9,7 +9,7 @@ imageBtn.addEventListener("click",()=>{
 
 imageItems.forEach((item,index)=>{
     item.addEventListener("click",()=>{
-        body.style.backgroundImage = `url(/backgroundImages/${item})`
         alert(index)
+        item.src =  backgoundImage.src
     })
 })
