@@ -1,5 +1,5 @@
 let imageBtn = document.querySelector(".imageBtn");
-let imageItems = document.querySelectorAll(".image_item");
+
 let imageList = document.querySelector(".image-list");
 let backgoundImage = document.querySelector(".backgoundImage")
 imageBtn.addEventListener("click",()=>{
@@ -31,6 +31,9 @@ let imagesData = [
 ]
 
 imagesData.forEach((imgData,index)=>{
-     imageItems[index].getAttribute("src",imgData.image)
-     console.log(imageItems);
+// let imageItems = document.querySelectorAll(".image_item");
+let imageItems = document.createElement("img");
+imageItems.classList.add ("image_item");
+imageItems.src = imgData.image
+imageList.appendChild(imageItems) 
 })
