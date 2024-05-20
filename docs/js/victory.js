@@ -52,10 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 deadline -= 1000;
 
 
-                if (minutes === 0 && seconds < 10) {
-                     $minutes.style.color = "red";
-                     $seconds.style.color = "red"
-                }
+               
             },1000)
           }
       

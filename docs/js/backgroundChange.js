@@ -35,5 +35,10 @@ imagesData.forEach((imgData,index)=>{
 let imageItems = document.createElement("img");
 imageItems.classList.add ("image_item");
 imageItems.src = imgData.image
-imageList.appendChild(imageItems) 
+imageList.appendChild(imageItems)
+
+
+imageItems.addEventListener("click",()=>{
+    alert("a")
+})
 })
