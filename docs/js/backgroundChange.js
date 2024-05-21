@@ -1,6 +1,8 @@
 let imageBtn = document.querySelector(".imageBtn");
 let imageList = document.querySelector(".image-list");
-let backgoundImage = document.querySelector(".backgoundImage")
+let backgoundImage = document.createElement("img");
+backgoundImage.classList.add("backgoundImage");
+
 imageBtn.addEventListener("click",()=>{
     imageList.classList.toggle("active");
     imageBtn.classList.toggle("active")
@@ -39,7 +41,7 @@ imageList.appendChild(imageItems)
 
 imageItems.addEventListener("click",()=>{
     alert(imgData.image);
-    backgoundImage.src = imageItems.src
-   
+
+   backgoundImage.src = imageItems.src
 })
 })
