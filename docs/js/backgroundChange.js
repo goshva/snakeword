@@ -40,7 +40,6 @@ imageList.appendChild(imageItems)
 
 
 imageItems.addEventListener("click",()=>{
-    alert(imgData.image);
     body.appendChild(backgoundImage)
    backgoundImage.src = imageItems.src
 })
