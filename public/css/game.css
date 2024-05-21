@@ -1,5 +1,5 @@
 
-#gameplace{width: 300px;margin: 0 auto;}
+#gameplace{width: 300px;position: relative;margin: 0 auto;}
 #gametally {z-index:-1; color: #ccc;}
 #gametally li {font-size: small;  line-height: 1em;}
 #word {width: 9em;}
