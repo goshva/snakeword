@@ -32,7 +32,7 @@ let imagesData = [
 ]
 
 imagesData.forEach((imgData,index)=>{
-// let imageItems = document.querySelectorAll(".image_item");
+
 let imageItems = document.createElement("img");
 imageItems.classList.add ("image_item");
 imageItems.src = imgData.image
