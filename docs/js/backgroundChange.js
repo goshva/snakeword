@@ -1,5 +1,4 @@
 let imageBtn = document.querySelector(".imageBtn");
-
 let imageList = document.querySelector(".image-list");
 let backgoundImage = document.querySelector(".backgoundImage")
 imageBtn.addEventListener("click",()=>{
@@ -39,6 +38,8 @@ imageList.appendChild(imageItems)
 
 
 imageItems.addEventListener("click",()=>{
-    alert("a")
+    alert("a");
+    backgoundImage.src = imageItems.src
+   
 })
 })
