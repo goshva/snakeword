@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function countdownTimer() {
     const $minutes = document.querySelector('.timer__minutes');
     const $seconds = document.querySelector('.timer__seconds');
-
+    let deadline = 1000 * 60 * 10;
     let timerId = null;
 
     if (deadline === 0) {
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
       modalBlock.classList.add("active")
       StartBtn.classList.add("active")
       timerId  = setInterval(()=>{
-        let deadline = 1000 * 60 * 10;
+     
         
           const minutes = deadline > 0 ? parseInt(deadline / 1000 / 60) % 60 : 0;
           const seconds = deadline > 0 ? parseInt(deadline / 1000) % 60 : 0;
@@ -51,10 +51,6 @@ document.addEventListener('DOMContentLoaded', function () {
           deadline -= 1000;
 
 
-          if (minutes=== 0 && seconds < 10) {
-               $minutes.style.color = "red";
-               $seconds.style.color = "red"
-          }
       },1000)
     }
 
