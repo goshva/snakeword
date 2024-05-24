@@ -49,7 +49,11 @@ document.addEventListener('DOMContentLoaded', function () {
           $minutes.textContent = minutes < 10 ? '0' + minutes : minutes;
           $seconds.textContent = seconds < 10 ? '0' + seconds : seconds;
           deadline -= 1000;
+       if (minutes <= 1) {
+        $minutes.style.color = "red";
+        $seconds.style.color = "red"
 
+       }
 
       },1000)
     }
