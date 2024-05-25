@@ -38,7 +38,13 @@ document.addEventListener('DOMContentLoaded', function () {
       const popup = document.querySelector('.b-popup');
       popup.style.display = 'block';
       popup.style.opacity = 1;
+      let timeOverAudio = document.createElement("audio");
+      timeOverAudio.src = "./../audios/mixkit-arcade-retro-game-over-213.wav"
+      timeOverAudio.play()
     }else{
+let audioStart = document.createElement("audio");
+audioStart.src = "./../audios/mixkit-fast-small-sweep-transition-166.wav"
+audioStart.play()
       modalBlock.classList.add("active")
       StartBtn.classList.add("active")
       timerId  = setInterval(()=>{
