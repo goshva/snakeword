@@ -24,15 +24,15 @@ document.addEventListener('DOMContentLoaded', function () {
   // 1 minute timer
   // last value can be easily changed, depends on how many minutes you need
   
-
+  let deadline = 1000 * 60 * 10;
+  let timerId = null;
 
   StartBtn.addEventListener("click",countdownTimer);
   // set remaining time as content of elements
   function countdownTimer() {
     const $minutes = document.querySelector('.timer__minutes');
     const $seconds = document.querySelector('.timer__seconds');
-    let deadline = 1000 * 60 * 10;
-    let timerId = null;
+
 
     if (deadline === 0) {
       const popup = document.querySelector('.b-popup');
@@ -49,11 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
           $minutes.textContent = minutes < 10 ? '0' + minutes : minutes;
           $seconds.textContent = seconds < 10 ? '0' + seconds : seconds;
           deadline -= 1000;
-       if (seconds < 30 && minutes < 1) {
-        $minutes.style.color = "red";
-        $seconds.style.color = "red"
-
-       }
+    
 
       },1000)
     }
