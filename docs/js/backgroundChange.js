@@ -8,7 +8,6 @@ imageBtn.addEventListener("click",()=>{
     imageBtn.classList.toggle("active")
 })
 
-backgoundImage.src = "./../img/bcg.jpg"
 let imagesData = [
     {
         id:1,
