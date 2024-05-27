@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const $seconds = document.querySelector('.timer__seconds');
     let audioStart = document.createElement("audio");
     audioStart.src = "./../audios/mixkit-fast-small-sweep-transition-166.wav"
-    audioStart.played()
+    audioStart.play()
   document.body.appendChild(audioStart)
     if (deadline === 0) {
       const popup = document.querySelector('.b-popup');
