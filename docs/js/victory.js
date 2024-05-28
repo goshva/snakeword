@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const $seconds = document.querySelector('.timer__seconds');
     let audioStart = document.createElement("audio");
     let audioSrc = document.createElement("source")
-    audioSrc.src = "/audios/mixkit-fast-small-sweep-transition-166.wav"
+    audioSrc.src = "./../audios/mixkit-fast-small-sweep-transition-166.wav"
     audioStart.appendChild(audioSrc)
     audioStart.play()
   document.body.appendChild(audioStart)
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
       popup.style.opacity = 1;
       let timeOverAudio = document.createElement("audio");
       let timeOverAudioSrc = document.createElement("source");
-      timeOverAudioSrc.src = "/audios/mixkit-arcade-retro-game-over-213.wav";
+      timeOverAudioSrc.src = "./../audios/mixkit-arcade-retro-game-over-213.wav";
       timeOverAudio.appendChild(timeOverAudioSrc)
       timeOverAudio.play()
       document.body.appendChild(timeOverAudio)
