@@ -30,16 +30,6 @@ let imagesData = [
     },
 ]
 
-imagesData.forEach((imgData,index)=>{
-
-let imageItems = document.createElement("img");
-imageItems.classList.add ("image_item");
-imageItems.src = imgData.image
-imageList.appendChild(imageItems)
-
-
-imageItems.addEventListener("click",()=>{
-    body.appendChild(backgoundImage)
-   backgoundImage.src = imageItems.src
-})
-})
+const randomIndex = Math.floor(Math.random() * imagesData.length);
+backgoundImage.src = imagesData[randomIndex];
+body.appendChild(backgoundImage)
