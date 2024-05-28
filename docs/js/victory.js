@@ -32,12 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function countdownTimer() {
     const $minutes = document.querySelector('.timer__minutes');
     const $seconds = document.querySelector('.timer__seconds');
-    let audioStart = document.createElement("audio");
-    let audioSrc = document.createElement("source")
-    audioSrc.src = "./../audios/mixkit-fast-small-sweep-transition-166.wav"
-    audioStart.appendChild(audioSrc)
-    audioStart.play()
-  document.body.appendChild(audioStart)
+
     if (deadline === 0) {
       const popup = document.querySelector('.b-popup');
       popup.style.display = 'block';
@@ -52,6 +47,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }else{      
       modalBlock.classList.add("active")
       StartBtn.classList.add("active")
+      let audioStart = document.createElement("audio");
+      let audioSrc = document.createElement("source")
+      audioSrc.src = "./../audios/mixkit-fast-small-sweep-transition-166.wav"
+      audioStart.appendChild(audioSrc)
+      audioStart.play()
+    document.body.appendChild(audioStart)
       timerId  = setInterval(()=>{
      
         
