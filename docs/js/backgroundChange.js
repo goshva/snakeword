@@ -9,7 +9,8 @@ let imagesData = [
     "/backgroundImages/zakat-i-rassvet-1200x801px.jpg",
     "/backgroundImages/zakat-i-rassvet-1280x853px.jpg",
     "/backgroundImages/zakat-i-rassvet-2000x1333px.jpg",
-        "/backgroundImages/zakat-i-rassvet-2056x1365px.jpg",
+    "/backgroundImages/zakat-i-rassvet-2056x1365px.jpg",
+    "../../img/bcg.jpg"
 ]
 
 const randomIndex = Math.floor(Math.random() * imagesData.length);

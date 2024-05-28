@@ -15,60 +15,96 @@ closeBtn.addEventListener("click",()=>{
 
 const wordsInGame = [];
 //timer
+// document.addEventListener('DOMContentLoaded', function () {
+
+//     const modalBlock = document.querySelector(".modalBlock")
+//     const StartBtn = document.querySelector(".StartBtn");
+//   // timer id
+
+//   // 1 minute timer
+//   // last value can be easily changed, depends on how many minutes you need
+  
+//   let deadline = 1000 * 60 * 10;
+//   let timerId = null;
+
+//   StartBtn.addEventListener("click",countdownTimer);
+//   // set remaining time as content of elements
+//   function countdownTimer() {
+//     const $minutes = document.querySelector('.timer__minutes');
+//     const $seconds = document.querySelector('.timer__seconds');
+//     let audio = document.createElement("audio");
+//     let audioSrc = document.createElement("source");
+// audio.setAttribute("type","audio/wav")
+//     if (deadline === 0) {
+//       const popup = document.querySelector('.b-popup');
+//       popup.style.display = 'block';
+//       popup.style.opacity = 1;
+   
+
+//       audioSrc.src = "/audios/mixkit-arcade-retro-game-over-213.wav";
+//       audio.appendChild(audioSrc)
+//       audio.play()
+
+
+//     } 
+//       modalBlock.classList.add("active")
+//       StartBtn.classList.add("active")
+//       audioSrc.src = "/audios/mixkit-fast-small-sweep-transition-166.wav";
+//       audio.appendChild(audioSrc)
+//       audio.play()
+//       document.body.appendChild(audio)
+
+//       timerId  = setInterval(()=>{
+     
+        
+//           const minutes = deadline > 0 ? parseInt(deadline / 1000 / 60) % 60 : 0;
+//           const seconds = deadline > 0 ? parseInt(deadline / 1000) % 60 : 0;
+//           $minutes.textContent = minutes < 10 ? '0' + minutes : minutes;
+//           $seconds.textContent = seconds < 10 ? '0' + seconds : seconds;
+//           deadline -= 1000;
+    
+
+//       },1000)   
+//   }
+  
+  
+// });
+
 document.addEventListener('DOMContentLoaded', function () {
-
-    const modalBlock = document.querySelector(".modalBlock")
-    const StartBtn = document.querySelector(".StartBtn");
   // timer id
-
+  let timerId = null;
   // 1 minute timer
   // last value can be easily changed, depends on how many minutes you need
-  
   let deadline = 1000 * 60 * 10;
-  let timerId = null;
 
-  StartBtn.addEventListener("click",countdownTimer);
+
+
   // set remaining time as content of elements
   function countdownTimer() {
-    const $minutes = document.querySelector('.timer__minutes');
-    const $seconds = document.querySelector('.timer__seconds');
-    let audio = document.createElement("audio");
-    let audioSrc = document.createElement("source");
-audio.setAttribute("type","audio/wav")
     if (deadline === 0) {
       const popup = document.querySelector('.b-popup');
       popup.style.display = 'block';
       popup.style.opacity = 1;
-   
-
-      audioSrc.src = "/audios/mixkit-arcade-retro-game-over-213.wav";
-      audio.appendChild(audioSrc)
-      audio.play()
-   popup.appendChild(audio)
-
-    } 
-      modalBlock.classList.add("active")
-      StartBtn.classList.add("active")
-      audioSrc.src = "/audios/mixkit-fast-small-sweep-transition-166.wav";
-      audio.appendChild(audioSrc)
-      audio.play()
-      document.body.appendChild(audio)
-
-      timerId  = setInterval(()=>{
-     
-        
-          const minutes = deadline > 0 ? parseInt(deadline / 1000 / 60) % 60 : 0;
-          const seconds = deadline > 0 ? parseInt(deadline / 1000) % 60 : 0;
-          $minutes.textContent = minutes < 10 ? '0' + minutes : minutes;
-          $seconds.textContent = seconds < 10 ? '0' + seconds : seconds;
-          deadline -= 1000;
-    
-
-      },1000)   
+    }
+    const minutes = deadline > 0 ? Math.floor(deadline / 1000 / 60) % 60 : 0;
+    const seconds = deadline > 0 ? Math.floor(deadline / 1000) % 60 : 0;
+    $minutes.textContent = minutes < 10 ? '0' + minutes : minutes;
+    $seconds.textContent = seconds < 10 ? '0' + seconds : seconds;
+    // decrease remaining time by one second
+    deadline -= 1000;
   }
-  
-  
+  // get elememts, containing time components
+
+  const $minutes = document.querySelector('.timer__minutes');
+  const $seconds = document.querySelector('.timer__seconds');
+  // call countdownTimer function
+  countdownTimer();
+  // set countdownTimer function every second
+  timerId = setInterval(countdownTimer, 1000);
 });
+
+
+
 
 //counting how many words are there on gamespace
 function checkLetter(cell, dictionary, edge, wordsInGame) {
