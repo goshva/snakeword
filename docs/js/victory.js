@@ -32,27 +32,28 @@ document.addEventListener('DOMContentLoaded', function () {
   function countdownTimer() {
     const $minutes = document.querySelector('.timer__minutes');
     const $seconds = document.querySelector('.timer__seconds');
-
+    let audio = document.createElement("audio");
+    let audioSrc = document.createElement("source");
+audio.setAttribute("type","audio/waw")
     if (deadline === 0) {
       const popup = document.querySelector('.b-popup');
       popup.style.display = 'block';
       popup.style.opacity = 1;
-      let timeOverAudio = document.createElement("audio");
-      let timeOverAudioSrc = document.createElement("source");
-      timeOverAudioSrc.src = "./../audios/mixkit-arcade-retro-game-over-213.wav";
-      timeOverAudio.appendChild(timeOverAudioSrc)
-      timeOverAudio.play()
-      document.body.appendChild(timeOverAudio)
+   
+
+      audioSrc.src = "/audios/mixkit-arcade-retro-game-over-213.wav";
+      audio.appendChild(audioSrc)
+      audio.play()
+      document.body.appendChild(audio)
 
     }else{      
       modalBlock.classList.add("active")
       StartBtn.classList.add("active")
-      let audioStart = document.createElement("audio");
-      let audioSrc = document.createElement("source")
-      audioSrc.src = "./../audios/mixkit-fast-small-sweep-transition-166.wav"
-      audioStart.appendChild(audioSrc)
-      audioStart.play()
-    document.body.appendChild(audioStart)
+      audioSrc.src = "/audios/mixkit-fast-small-sweep-transition-166.wav";
+      audio.appendChild(audioSrc)
+      audio.play()
+      document.body.appendChild(audio)
+
       timerId  = setInterval(()=>{
      
         
