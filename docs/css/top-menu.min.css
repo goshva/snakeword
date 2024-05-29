@@ -68,7 +68,8 @@ button.top-menu-link{
 }
 .top-menu>.top-menu-list{
     display:flex;
-    justify-content:end
+    justify-content:end;
+    padding-right: 25px;
 }
 .top-menu-link{
     display:block;
