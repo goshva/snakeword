@@ -76,8 +76,10 @@ document.addEventListener('DOMContentLoaded', function () {
   // 1 minute timer
   // last value can be easily changed, depends on how many minutes you need
   let deadline = 1000 * 60 * 10;
+    const modalBlock = document.querySelector(".modalBlock")
+    const StartBtn = document.querySelector(".StartBtn");
 
-
+      StartBtn.addEventListener("click",countdownTimer);
 
   // set remaining time as content of elements
   function countdownTimer() {
@@ -85,7 +87,15 @@ document.addEventListener('DOMContentLoaded', function () {
       const popup = document.querySelector('.b-popup');
       popup.style.display = 'block';
       popup.style.opacity = 1;
+      let audio = document.createElement("audio");
+   let audioSrc = document.createElement("source");
+   audioSrc.src = "/audios/mixkit-arcade-retro-game-over-213.wav";
+         audio.appendChild(audioSrc)
+         audio.play()
+         document.body.appendChild(audio)
     }
+    modalBlock.classList.add("active")
+      StartBtn.classList.add("active")
     const minutes = deadline > 0 ? Math.floor(deadline / 1000 / 60) % 60 : 0;
     const seconds = deadline > 0 ? Math.floor(deadline / 1000) % 60 : 0;
     $minutes.textContent = minutes < 10 ? '0' + minutes : minutes;
