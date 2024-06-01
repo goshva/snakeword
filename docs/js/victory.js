@@ -94,7 +94,8 @@ document.addEventListener('DOMContentLoaded', function () {
          audio.play()
          document.body.appendChild(audio)
     }
-    modalBlock.classList.add("active")
+    else{
+      modalBlock.classList.add("active")
       StartBtn.classList.add("active")
     const minutes = deadline > 0 ? Math.floor(deadline / 1000 / 60) % 60 : 0;
     const seconds = deadline > 0 ? Math.floor(deadline / 1000) % 60 : 0;
@@ -111,6 +112,8 @@ document.addEventListener('DOMContentLoaded', function () {
   countdownTimer();
   // set countdownTimer function every second
   timerId = setInterval(countdownTimer, 1000);
+    }
+    
 });
 
 
