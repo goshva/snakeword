@@ -94,7 +94,10 @@ document.addEventListener('DOMContentLoaded', function () {
          audio.play()
          document.body.appendChild(audio)
     }
+    
     else{
+      const $minutes = document.querySelector('.timer__minutes');
+      const $seconds = document.querySelector('.timer__seconds');
       modalBlock.classList.add("active")
       StartBtn.classList.add("active")
     const minutes = deadline > 0 ? Math.floor(deadline / 1000 / 60) % 60 : 0;
@@ -103,15 +106,21 @@ document.addEventListener('DOMContentLoaded', function () {
     $seconds.textContent = seconds < 10 ? '0' + seconds : seconds;
     // decrease remaining time by one second
     deadline -= 1000;
+    timerId = setInterval(countdownTimer, 1000);
+    let audio = document.createElement("audio");
+    let audioSrc = document.createElement("source");
+    audioSrc.src = "/audios/mixkit-fast-small-sweep-transition-166.wav";
+          audio.appendChild(audioSrc)
+          audio.play()
+          document.body.appendChild(audio)
   }
   // get elememts, containing time components
 
-  const $minutes = document.querySelector('.timer__minutes');
-  const $seconds = document.querySelector('.timer__seconds');
+  
   // call countdownTimer function
   countdownTimer();
   // set countdownTimer function every second
-  timerId = setInterval(countdownTimer, 1000);
+
     }
     
 });
