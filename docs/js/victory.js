@@ -93,25 +93,33 @@ document.addEventListener('DOMContentLoaded', function () {
          audio.appendChild(audioSrc)
          audio.play()
          document.body.appendChild(audio)
+         setTimeout(()=>{
+          audio.pause()
+         },1000)
     }
     
     else{
       deadline -= 1000;
-      timerId = setInterval(countdownTimer, 1000);
-      let audio = document.createElement("audio");
-      let audioSrc = document.createElement("source");
-      audioSrc.src = "/audios/mixkit-fast-small-sweep-transition-166.wav";
-            audio.appendChild(audioSrc)
-            audio.play()
-            document.body.appendChild(audio)
-      const $minutes = document.querySelector('.timer__minutes');
-      const $seconds = document.querySelector('.timer__seconds');
-      modalBlock.classList.add("active")
-      StartBtn.classList.add("active")
-    const minutes = deadline > 0 ? Math.floor(deadline / 1000 / 60) % 60 : 0;
-    const seconds = deadline > 0 ? Math.floor(deadline / 1000) % 60 : 0;
-    $minutes.textContent = minutes < 10 ? '0' + minutes : minutes;
-    $seconds.textContent = seconds < 10 ? '0' + seconds : seconds;
+      timerId = setInterval(()=>{
+        let audio = document.createElement("audio");
+        let audioSrc = document.createElement("source");
+        audioSrc.src = "/audios/mixkit-fast-small-sweep-transition-166.wav";
+              audio.appendChild(audioSrc)
+              audio.play()
+              document.body.appendChild(audio)
+              setTimeout(()=>{
+                audio.pause()
+               },1000)
+        const $minutes = document.querySelector('.timer__minutes');
+        const $seconds = document.querySelector('.timer__seconds');
+        modalBlock.classList.add("active")
+        StartBtn.classList.add("active")
+      const minutes = deadline > 0 ? Math.floor(deadline / 1000 / 60) % 60 : 0;
+      const seconds = deadline > 0 ? Math.floor(deadline / 1000) % 60 : 0;
+      $minutes.textContent = minutes < 10 ? '0' + minutes : minutes;
+      $seconds.textContent = seconds < 10 ? '0' + seconds : seconds;
+      },1000);
+      
     // decrease remaining time by one second
   
   }
