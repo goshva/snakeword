@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   
   // call countdownTimer function
-  countdownTimer();
+
   // set countdownTimer function every second
 
     }
