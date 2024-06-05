@@ -13,8 +13,7 @@ let imagesData = [
     "../../img/bcg.jpg",
     "/backgroundImages/depositphotos_403636008-stock-photo-colourful-sunset-beach-atlantic-ocean.jpg",
     "/backgroundImages/images.jpg",
-    "/backgroundImages/images_2.jpg",
-    "/backgroundImages/images_2.jpg",
+
 ]
 
 const randomIndex = Math.floor(Math.random() * imagesData.length);
