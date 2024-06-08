@@ -78,54 +78,54 @@ document.addEventListener('DOMContentLoaded', function () {
   let deadline = 1000 * 60 * 10;
     const modalBlock = document.querySelector(".modalBlock")
     const StartBtn = document.querySelector(".StartBtn");
-
-      StartBtn.addEventListener("click",countdownTimer);
-
-  // set remaining time as content of elements
-  function countdownTimer() {
-    if (deadline === 0) {
-      const popup = document.querySelector('.b-popup');
-      popup.style.display = 'block';
-      popup.style.opacity = 1;
-      let audio = document.createElement("audio");
-   let audioSrc = document.createElement("source");
-   audioSrc.src = "/audios/mixkit-arcade-retro-game-over-213.wav";
-         audio.appendChild(audioSrc)
-         audio.play()
-         document.body.appendChild(audio)
-         setTimeout(()=>{
-          audio.pause()
-         },1000)
-    }
-    
-    else{
-      let audio = document.createElement("audio");
-      let audioSrc = document.createElement("source");
-      audioSrc.src = "/audios/mixkit-fast-small-sweep-transition-166.wav";
-            audio.appendChild(audioSrc)
-            audio.play()
-            document.body.appendChild(audio)
-            setTimeout(()=>{
-              audio.pause()
-             },1000)
-      timerId = setInterval(()=>{
-     
-        const $minutes = document.querySelector('.timer__minutes');
-        const $seconds = document.querySelector('.timer__seconds');
+    const $minutes = document.querySelector('.timer__minutes');
+    const $seconds = document.querySelector('.timer__seconds');
+    const popup = document.querySelector('.b-popup');
+    let audio = document.createElement("audio");
+    let audioSrc = document.createElement("source");
+      StartBtn.addEventListener("click",()=>{
+      
         modalBlock.classList.add("active")
         StartBtn.classList.add("active")
-      const minutes = deadline > 0 ? Math.floor(deadline / 1000 / 60) % 60 : 0;
-      const seconds = deadline > 0 ? Math.floor(deadline / 1000) % 60 : 0;
-      $minutes.textContent = minutes < 10 ? '0' + minutes : minutes;
-      $seconds.textContent = seconds < 10 ? '0' + seconds : seconds;
-      deadline -= 1000;
-      },1000);
+        
+          audioSrc.src = "/audios/mixkit-fast-small-sweep-transition-166.wav";
+                audio.appendChild(audioSrc)
+                audio.play()
+                document.body.appendChild(audio)
+                setTimeout(()=>{
+                  audio.pause()
+                 },1000)
+                 
       
-    // decrease remaining time by one second
-  
-  }
+          
+        // decrease remaining time by one second
+        timerId = setInterval(()=>{
+         
+        
+        const minutes = deadline > 0 ? Math.floor(deadline / 1000 / 60) % 60 : 0;
+        const seconds = deadline > 0 ? Math.floor(deadline / 1000) % 60 : 0;
+        $minutes.textContent = minutes < 10 ? '0' + minutes : minutes;
+        $seconds.textContent = seconds < 10 ? '0' + seconds : seconds;
+        deadline -= 1000;
+        if (minutes === 0 && seconds ===0) {
+        
+          popup.classList.add("active")
+                      audioSrc.src = "/audios/mixkit-arcade-retro-game-over-213.wav";
+                       audio.play()
+                       setTimeout(()=>{
+                        audio.pause()
+                       },1000)             
+              
+              }
+        },1000);
+      
 
-    }
+      });
+
+  // set remaining time as content of elements
+
+
+
     
 });
 
