@@ -66,7 +66,7 @@
        visibility: hidden;
        transform: translateY(41px)
        }
-       .restartBtn:hover{
+       .b-popup .restartBtn:hover{
         transform: scale(1.1);
        }
     
