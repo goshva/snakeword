@@ -138,6 +138,13 @@
       <script defer src="/js/genSet.js"></script>
       <script defer src="/js/dictionary.js"></script>
       <script defer src="/js/victory.js"></script>
+      <script>
+        let language_selected = document.querySelector(".top-menu-link-language-selected")
+        let for_language = document.querySelector(".for_language");
+        language_selected.addEventListener("click",()=>{
+          for_language.classList.toggle("active")
+        })
+      </script>
    </body>
 </html>
 </body>
