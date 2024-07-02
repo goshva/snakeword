@@ -27,7 +27,9 @@
         justify-content: center;
         align-items: center;
         position: absolute;
+        flex-direction: column;
         z-index: 14;
+        gap: 15px;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -52,10 +54,28 @@
            height: 100%;
            object-fit: cover;
        }
+
+
+       .b-popup .restartBtn{
+        padding: 15px 10px;
+        border: none;
+        background-color: #5b5a37;
+        color: #fff;
+        transition: all 0.5s ease;
+       opacity: 0;
+       visibility: hidden;
+       transform: translateY(41px)
+       }
+       .restartBtn:hover{
+        transform: scale(1.1);
+       }
     
     
-    
-    
+       .b-popup .restartBtn.active{
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(1px)
+       }
     
     .modalBlock{width:600px;height:450px;background-color:#5b5;position:absolute;z-index:12;display:flex;justify-content:center;align-items:center;transition:all .5s ease}.modalBlock.active{transform:translateX(-50px);opacity:0;visibility:hidden}.modalBlock .buttonsBlock{display:flex;justify-content:center;align-items:center;width:100%;height:100px;gap:15px}.modalBlock .buttonsBlock>button{padding:15px 30px;background-color:#ccc;cursor:pointer;border:none;position:relative;overflow:hidden}.modalBlock .buttonsBlock>button::before{content:"";position:absolute;top:0;left:-100%;width:10px;height:100%;background-color:#5b5a37;transform:skewX(-45deg);transition:all 1s ease}.modalBlock .buttonsBlock>button:hover::before{left:200px}.modalBlock .buttonsBlock .StartBtn.active{opacity:0;pointer-events:none}
     .timer{

@@ -3,6 +3,8 @@ const closeBtn = document.querySelector(".closeBtn")
 let content = document.querySelector(".content")
 let modalSlider = document.querySelector(".modalSlider");
 const rulesBtn = document.querySelector(".RulesBtn");
+
+
 rulesBtn.addEventListener("click",()=>{
 modalSlider.classList.add("active");
 })
@@ -17,6 +19,8 @@ const wordsInGame = [];
 
 
 document.addEventListener('DOMContentLoaded', function () {
+
+  
   // timer id
   let timerId = null;
   // 1 minute timer
@@ -53,16 +57,10 @@ document.addEventListener('DOMContentLoaded', function () {
         $minutes.textContent = minutes < 10 ? '0' + minutes : minutes;
         $seconds.textContent = seconds < 10 ? '0' + seconds : seconds;
         deadline -= 1000;
-        if (minutes === 0 && seconds === 0) {
-        let endTimeAudio = document.createElement("audio")
-        endTimeAudio.src = "/audios/mixkit-arcade-retro-game-over-213" ;
-        endTimeAudio.play();
-        setTimeout(()=>{
-          endTimeAudio.pause()
-        })
-        popup.appendChild(endTimeAudio)
+        if (minutes === 0 && seconds === 0) {  
+          const restartBtn = document.querySelector(".restartBtn")      
           popup.classList.add("active")
-              
+             restartBtn.classList.add("active") 
               }
         },1000);
       
