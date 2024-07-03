@@ -16,14 +16,15 @@ closeBtn.addEventListener("click",()=>{
 
 
 const wordsInGame = [];
-  const restartBtn = document.querySelector(".restartBtn")      
+const restartBtn = document.querySelector(".restartBtn")      
   
 
- restartBtn.addEventListener("click",()=>{
-console.log("ds")
+restartBtn.addEventListener("click", actionButton)
 
- })
 
+function actionButton(){
+console.log("kdjs");
+}
 document.addEventListener('DOMContentLoaded', function () {
 
 
