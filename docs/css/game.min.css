@@ -67,12 +67,25 @@
         transition: all 0.5s ease;
        opacity: 0;
        visibility: hidden;
-       transform: translateY(41px)
+       transform: translateY(41px);
+       position: relative;
+       overflow: hidden;
        }
 
        
+       .b-popup .restartBtn::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 10px;
+        height: 100%;
+        background-color: #7fffd41a;
+        transform: skewX(-45deg)
+       }
+
        .b-popup .restartBtn:hover{
-       letter-spacing:  3px;
+       letter-spacing:  2px;
        }
     
     
