@@ -16,16 +16,16 @@ closeBtn.addEventListener("click",()=>{
 
 
 const wordsInGame = [];
-
-
-document.addEventListener('DOMContentLoaded', function () {
-  const restartBtn = document.querySelector(".b-popup  .restartBtn")      
+  const restartBtn = document.querySelector(".restartBtn")      
   
 
  restartBtn.addEventListener("click",()=>{
-alert("ds")
+console.log("ds")
 
  })
+
+document.addEventListener('DOMContentLoaded', function () {
+
 
 
 
