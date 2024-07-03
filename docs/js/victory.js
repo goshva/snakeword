@@ -19,8 +19,17 @@ const wordsInGame = [];
 
 
 document.addEventListener('DOMContentLoaded', function () {
-
+  const restartBtn = document.querySelector(".b-popup  .restartBtn")      
   
+
+ restartBtn.addEventListener("click",()=>{
+alert("ds")
+
+ })
+
+
+
+
   // timer id
   let timerId = null;
   // 1 minute timer
@@ -58,9 +67,10 @@ document.addEventListener('DOMContentLoaded', function () {
         $seconds.textContent = seconds < 10 ? '0' + seconds : seconds;
         deadline -= 1000;
         if (minutes === 0 && seconds === 0) {  
-          const restartBtn = document.querySelector(".restartBtn")      
+          
+       
           popup.classList.add("active")
-             restartBtn.classList.add("active") 
+            restartBtn.classList.add("active") 
               }
         },1000);
       
