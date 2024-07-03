@@ -67,6 +67,8 @@ alert("ds")
         $seconds.textContent = seconds < 10 ? '0' + seconds : seconds;
         deadline -= 1000;
         if (minutes === 0 && seconds === 0) {  
+          
+
           popup.classList.add("active")
             restartBtn.classList.add("active") 
               }
