@@ -77,13 +77,17 @@
         content: "";
         position: absolute;
         top: 0;
-        left: 0;
+        left: -40px;
         width: 10px;
         height: 100%;
         background-color: #7fffd41a;
-        transform: skewX(-45deg)
+        transform: skewX(-45deg);
+        transition: all 0.5s ease;
+        overflow: hidden;
        }
-
+       .b-popup .restartBtn:hover::before{
+        left: 200px;
+       }
        .b-popup .restartBtn:hover{
        letter-spacing:  2px;
        }
