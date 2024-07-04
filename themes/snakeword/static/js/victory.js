@@ -7,47 +7,64 @@ rulesBtn.addEventListener("click",()=>{
 modalSlider.classList.add("active");
 })
 
+const restartBtn = document.querySelector(".restartBtn") 
+restartBtn.addEventListener("click", actionButton)
 
 
+function actionButton(){
+console.log("kdjs");
+}
 const wordsInGame = [];
 //timer
 document.addEventListener('DOMContentLoaded', function () {
 
-    const modalBlock = document.querySelector(".modalBlock")
-    const StartBtn = document.querySelector(".StartBtn");
-  // timer id
-  let timerId = null;
-  // 1 minute timer
-  // last value can be easily changed, depends on how many minutes you need
-  let deadline = 1000 * 60 * 10;
-
-
-  StartBtn.addEventListener("click",countdownTimer);
-  // set remaining time as content of elements
-  function countdownTimer() {
-    const $minutes = document.querySelector('.timer__minutes');
-    const $seconds = document.querySelector('.timer__seconds');
-        if (deadline === 0) {
-            const popup = document.querySelector('.b-popup');
-            popup.style.display = 'block';
-            popup.style.opacity = 1;
-          }
-            modalBlock.classList.add("active")
-            StartBtn.classList.add("active")
-            timerId  = setInterval(()=>{
-                const minutes = deadline > 0 ? parseInt(deadline / 1000 / 60) % 60 : 0;
-                const seconds = deadline > 0 ? parseInt(deadline / 1000) % 60 : 0;
-                $minutes.textContent = minutes < 10 ? '0' + minutes : minutes;
-                $seconds.textContent = seconds < 10 ? '0' + seconds : seconds;
-                deadline -= 1000;
-            },1000)
-          
-        
- 
+ // timer id
+ let timerId = null;
+ // 1 minute timer
+ // last value can be easily changed, depends on how many minutes you need
+ let deadline = 1000 * 60 * 10;
+   const modalBlock = document.querySelector(".modalBlock")
+   const StartBtn = document.querySelector(".StartBtn");
+   const $minutes = document.querySelector('.timer__minutes');
+   const $seconds = document.querySelector('.timer__seconds');
+   const popup = document.querySelector('.b-popup');
+   let audio = document.createElement("audio");
+   let audioSrc = document.createElement("source");
+     StartBtn.addEventListener("click",()=>{
+     
+       modalBlock.classList.add("active")
+       StartBtn.classList.add("active")
+       
+         audioSrc.src = "/audios/mixkit-fast-small-sweep-transition-166.wav";
+               audio.appendChild(audioSrc)
+               audio.play()
+               document.body.appendChild(audio)
+               setTimeout(()=>{
+                 audio.pause()
+                },1000)
+                
+     
          
+       // decrease remaining time by one second
+       timerId = setInterval(()=>{
         
-        
-  }
+       
+       const minutes = deadline > 0 ? Math.floor(deadline / 1000 / 60) % 60 : 0;
+       const seconds = deadline > 0 ? Math.floor(deadline / 1000) % 60 : 0;
+       $minutes.textContent = minutes < 10 ? '0' + minutes : minutes;
+       $seconds.textContent = seconds < 10 ? '0' + seconds : seconds;
+       deadline -= 1000;
+       if (minutes === 0 && seconds === 0) {  
+         
+
+         popup.classList.add("active")
+           restartBtn.classList.add("active") 
+             }
+       },1000);
+     
+
+     });
+
   
   
 });
