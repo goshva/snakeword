@@ -1,4 +1,4 @@
-
+const restartBtn = document.querySelector(".restartBtn")
 const closeBtn = document.querySelector(".closeBtn")
 let content = document.querySelector(".content")
 let modalSlider = document.querySelector(".modalSlider");
@@ -12,21 +12,14 @@ modalSlider.classList.add("active");
 closeBtn.addEventListener("click",()=>{
   modalSlider.classList.remove("active")
 })
-
-
-
+ 
+restartBtn.addEventListener("click", actionButton())
+function actionButton(){
+alert("kdjs");
+}
 const wordsInGame = [];
 
 document.addEventListener('DOMContentLoaded', function () {
-
-  const restartBtn = document.querySelector(".restartBtn")      
-  restartBtn.addEventListener("click", actionButton)
-  function actionButton(){
-  console.log("kdjs");
-  }
-  
-
-
 
   // timer id
   let timerId = null;

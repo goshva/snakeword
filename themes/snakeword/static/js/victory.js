@@ -1,5 +1,5 @@
-
-
+const restartBtn = document.querySelector(".restartBtn")
+const closeBtn = document.querySelector(".closeBtn")
 let content = document.querySelector(".content")
 let modalSlider = document.querySelector(".modalSlider");
 const rulesBtn = document.querySelector(".RulesBtn");
@@ -7,12 +7,17 @@ rulesBtn.addEventListener("click",()=>{
 modalSlider.classList.add("active");
 })
 
-const restartBtn = document.querySelector(".restartBtn") 
-restartBtn.addEventListener("click", actionButton)
+ 
 
 
+
+closeBtn.addEventListener("click",()=>{
+  modalSlider.classList.remove("active")
+})
+ 
+restartBtn.addEventListener("click", actionButton())
 function actionButton(){
-console.log("kdjs");
+alert("kdjs");
 }
 const wordsInGame = [];
 //timer
