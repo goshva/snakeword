@@ -5,6 +5,13 @@ let modalSlider = document.querySelector(".modalSlider");
 const rulesBtn = document.querySelector(".RulesBtn");
 rulesBtn.addEventListener("click",()=>{
 modalSlider.classList.add("active");
+let selectAudio = document.createElement("audio");
+selectAudio.src = "/audios/mixkit-select-click-1109.wav";
+selectAudio.play();
+setTimeout(()=>{
+  selectAudio.pause()
+},1000);
+modalSlider.appendChild(selectAudio)
 })
 
 
@@ -21,8 +28,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
   restartBtn.addEventListener("click", actionButton)
   function actionButton(){
-  window.location.pathname
-    popup.classList.remove("active")
+  window.location.reload()
+    popup.classList.remove("active");
+    
   }
 
 
@@ -37,21 +45,19 @@ document.addEventListener('DOMContentLoaded', function () {
    const $minutes = document.querySelector('.timer__minutes');
    const $seconds = document.querySelector('.timer__seconds');
    const popup = document.querySelector('.b-popup');
-   let audio = document.createElement("audio");
-   let audioSrc = document.createElement("source");
+   const audio = document.createElement("audio");
+   const timeAudio = document.createElement("audio");
      StartBtn.addEventListener("click",()=>{
-     countDownTime()
        modalBlock.classList.add("active")
        StartBtn.classList.add("active")
-       
-         audioSrc.src = "/audios/mixkit-fast-small-sweep-transition-166.wav";
-               audio.appendChild(audioSrc)
+       audio.src = "/audios/mixkit-fast-small-sweep-transition-166.wav";
+               
                audio.play()
                document.body.appendChild(audio)
                setTimeout(()=>{
                  audio.pause()
                 },1000)
-
+                countDownTime()
      });
      
      function countDownTime(){
@@ -63,12 +69,35 @@ document.addEventListener('DOMContentLoaded', function () {
         $minutes.textContent = minutes < 10 ? '0' + minutes : minutes;
         $seconds.textContent = seconds < 10 ? '0' + seconds : seconds;
         deadline -= 1000;
-        if (minutes === 0 && seconds === 0) {  
-          popup.classList.add("active")
-          clearInterval(timerId)
+      
+
+              if (minutes === 0 && seconds <=59) {
+                 $minutes.style.color ="#f96800";
+                $seconds.style.color = "#f96800"
               }
+
+              if (minutes === 0 && seconds <=10) {
+                $minutes.style.color ="red";
+                $seconds.style.color = "red" 
+                timeAudio.src = "/audios/mixkit-classic-alarm-995.wav";
+                document.body.appendChild(timeAudio)
+                timeAudio.play();
               
-        },1000);
+              }
+
+              if (minutes === 0 && seconds === 0) {  
+                popup.classList.add("active")
+                clearInterval(timerId);
+                const endAudio = document.createElement("audio");
+               
+                endAudio.src = "/audios/mixkit-video-game-win-2016.wav";
+                
+                popup.appendChild(endAudio)
+                endAudio.play()
+             
+                    }
+              
+        },500);
      }
   
   
