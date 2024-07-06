@@ -7,21 +7,25 @@ rulesBtn.addEventListener("click",()=>{
 modalSlider.classList.add("active");
 })
 
- 
-
-
 
 closeBtn.addEventListener("click",()=>{
   modalSlider.classList.remove("active")
 })
  
-restartBtn.addEventListener("click", actionButton())
-function actionButton(){
-alert("kdjs");
-}
+
+
 const wordsInGame = [];
 //timer
 document.addEventListener('DOMContentLoaded', function () {
+
+
+  restartBtn.addEventListener("click", actionButton)
+  function actionButton(){
+  window.location.pathname
+    popup.classList.remove("active")
+  }
+
+
 
  // timer id
  let timerId = null;
@@ -36,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
    let audio = document.createElement("audio");
    let audioSrc = document.createElement("source");
      StartBtn.addEventListener("click",()=>{
-     
+     countDownTime()
        modalBlock.classList.add("active")
        StartBtn.classList.add("active")
        
@@ -47,29 +51,25 @@ document.addEventListener('DOMContentLoaded', function () {
                setTimeout(()=>{
                  audio.pause()
                 },1000)
-                
-     
-         
-       // decrease remaining time by one second
-       timerId = setInterval(()=>{
-        
-       
-       const minutes = deadline > 0 ? Math.floor(deadline / 1000 / 60) % 60 : 0;
-       const seconds = deadline > 0 ? Math.floor(deadline / 1000) % 60 : 0;
-       $minutes.textContent = minutes < 10 ? '0' + minutes : minutes;
-       $seconds.textContent = seconds < 10 ? '0' + seconds : seconds;
-       deadline -= 1000;
-       if (minutes === 0 && seconds === 0) {  
-         
-
-         popup.classList.add("active")
-           restartBtn.classList.add("active") 
-             }
-       },1000);
-     
 
      });
-
+     
+     function countDownTime(){
+      timerId = setInterval(()=>{
+    
+   
+        const minutes = deadline > 0 ? Math.floor(deadline / 1000 / 60) % 60 : 0;
+        const seconds = deadline > 0 ? Math.floor(deadline / 1000) % 60 : 0;
+        $minutes.textContent = minutes < 10 ? '0' + minutes : minutes;
+        $seconds.textContent = seconds < 10 ? '0' + seconds : seconds;
+        deadline -= 1000;
+        if (minutes === 0 && seconds === 0) {  
+          popup.classList.add("active")
+          clearInterval(timerId)
+              }
+              
+        },1000);
+     }
   
   
 });
