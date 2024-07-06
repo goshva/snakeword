@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   restartBtn.addEventListener("click", actionButton)
   function actionButton(){
-  window.location.pathname
+    location.reload();
     popup.classList.remove("active")
   }
 
@@ -68,6 +68,13 @@ document.addEventListener('DOMContentLoaded', function () {
         if (minutes === 0 && seconds === 0) {  
           popup.classList.add("active")
           clearInterval(timerId)
+          audioSrc.src = "/audios/mixkit-arcade-retro-game-over-213.wav";
+          audio.appendChild(audioSrc)
+          popup.appendChild(audio)
+          audio.play()
+          setTimeout(()=>{
+audio.pause()
+          },1000)
               }
               
         },1000);
