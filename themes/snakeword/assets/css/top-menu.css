@@ -29,14 +29,13 @@ html {
 }
 
 body {
-  width: 100%;
-  margin: 0;
-  background-color: #fff;
-  background-image: url("./../../img/bcg.jpg");
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: cover;
-  background-attachment: fixed;
+  width:100%;
+  margin:0;
+  background-color:#fff;
+  background-repeat:no-repeat;
+  background-position:50% 0;
+  background-size:cover;
+  background-attachment:fixed;
 }
 
 a {
@@ -92,7 +91,10 @@ i {
   position: absolute;
   right: 0;
   min-width: 100px;
-  display: none;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
 }
 .top-menu-link-language-selected{
   width: 80px; 
@@ -139,9 +141,7 @@ i {
   min-width: 100px;
 }
 
-.top-menu li:hover > ul {
-  display: block;
-}
+
 @media(max-width:535px){
   
 .top-menu-link-languages {

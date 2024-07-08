@@ -119,3 +119,12 @@
     padding-left: 12px;
     background-color: #fff;
     padding-right: 12px}.modalSlider{width:650px;height:450px;display:flex;justify-content:center;align-items:center;opacity:0;visibility:hidden;transition:all .5s ease;transform:translateY(-15px);position:absolute;background-color:#ccc}.modalSlider.active{transform:translateY(0);opacity:1;visibility:visible;z-index:16}.modalSlider .closeBtn{position:absolute;top:10px;right:15px;font-size:24px;font-weight:700;display:flex;justify-content:center;align-items:center;background-color:#e7e3e3;transition:all .5s ease;padding:3px 15px}.modalSlider .closeBtn:hover{background-color:red;color:#fff;cursor:pointer}
+
+    .backgoundImage{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+    }
