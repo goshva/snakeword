@@ -82,7 +82,8 @@ button.top-menu-link{
     .top-menu-item>ul{background-color:#000;position:absolute;right:0;min-width:100px;display:none}
 
     .top-menu-item>ul.active{
-        display:block
+        visibility: visible;
+        opacity: 1;
     }
     .top-menu-link-language-selected{width:80px;display:block;display:flex;gap:5px;padding:10px;color:#fff}
     .top-menu-link-language-selected:hover{background:#fff;color:#000}
