@@ -88,7 +88,22 @@ button.top-menu-link{
 
 
 
-    .top-menu-item>ul{background-color:#000;position:absolute;right:0;min-width:100px;display:flex;justify-content: center; align-items: flex-start; flex-direction: column; transition: all 0.5s ease; opacity: 0; visibility: hidden; z-index: 1; gap: 15px; overflow: hidden;} 
+    .top-menu-item>ul{
+        background-color:#000;
+        position:absolute;
+        right:0;
+        min-width:100px;
+        display:flex;
+        justify-content: center; 
+        align-items: flex-start; 
+        flex-direction: column; 
+        transition: all 0.5s ease; 
+        opacity: 0; 
+        visibility: hidden; 
+        z-index: 1; 
+        gap: 15px; 
+        overflow: hidden;
+    } 
 
     .top-menu-item>ul.active{
         visibility: visible;
@@ -97,9 +112,40 @@ button.top-menu-link{
 
 
   
-    .top-menu-link-language-selected{width:80px;display:block;display:flex;gap:5px;padding:10px;color:#fff}
-    .top-menu-link-language-selected:hover{background:#fff;color:#000}
-    .top-menu-link-languages{display:block;padding:10px;color:#fff; transition: all 0.5s ease;}
+    .top-menu > .top-menu-list > .top-menu-item .top-menu-link-language-selected{
+        width:80px;
+       
+        display:flex;
+        gap:5px;
+        padding:
+        10px;
+        color:#fff;
+        text-decoration: none;
+    }
+    
+    
+    
+    .top-menu > .top-menu-list > .top-menu-item >.top-menu-link-language-selected.active{
+        background:#fff;
+        color:#000
+    }
+
+
+   .top-menu .top-menu-list .top-menu-item  .top-menu-link-language-selected .fa-caret-down{
+        transition: all 0.5s ease;
+    }
+
+    .top-menu .top-menu-list > .top-menu-item > .top-menu-link-language-selected.active>.fa-caret-down{
+        transform: rotate(-180deg);
+        color: #fff;
+    }
+    .top-menu-link-languages{
+        display:block;
+        padding:10px;
+        color:#fff; 
+        transition: all 0.5s ease;
+        text-decoration: none;
+    }
 
 
     .top-menu-link-languages:hover{
