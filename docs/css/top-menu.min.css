@@ -113,13 +113,15 @@ button.top-menu-link{
 
   
      .top-menu-link-language-selected{
-        display:flex;
-        gap:5px;
-        padding:
-        10px;
-        color:#fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        padding: 10px;
+        color: #fff;
         text-decoration: none;
         transition: all 0.5s ease;
+       
     }
     
    .top-menu-item .top-menu-link-language-selected:hover{
@@ -144,11 +146,12 @@ button.top-menu-link{
 
    .top-menu .top-menu-list .top-menu-item  .top-menu-link-language-selected .fa-caret-down{
         transition: all 0.5s ease;
+        
     }
 
     .top-menu .top-menu-list > .top-menu-item > .top-menu-link-language-selected.active>.fa-caret-down{
         transform: rotate(-180deg);
-        color: #fff;
+        color: #ccc;
     }
 
     .top-menu-link-languages{

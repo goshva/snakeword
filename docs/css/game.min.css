@@ -108,6 +108,7 @@
     z-index: 1;
     position: relative;
     padding-left: 10%;
+    top: -15px;
 }
 
 .timer .timer__items{display: flex;
