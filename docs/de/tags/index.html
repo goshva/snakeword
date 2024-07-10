@@ -142,11 +142,12 @@
       <script defer src="/js/dictionary.js"></script>
       <script defer src="/js/victory.js"></script>
       <script>
-        let language_selected = document.querySelector(".top-menu-link-language-selected")
-        let for_language = document.querySelector(".for_language");
-        language_selected.addEventListener("click",()=>{
-          for_language.classList.toggle("active")
-        })
+    let language_selected = document.querySelector(".top-menu-link-language-selected")
+  let for_language = document.querySelector(".for_language");
+  language_selected.addEventListener("click",()=>{
+    language_selected.classList.toggle("active")
+    for_language.classList.toggle("active")
+  })
       </script>
    </body>
 </html>

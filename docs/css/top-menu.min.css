@@ -112,7 +112,7 @@ button.top-menu-link{
 
 
   
-    .top-menu > .top-menu-list > .top-menu-item .top-menu-link-language-selected{
+     .top-menu-link-language-selected{
         width:80px;
        
         display:flex;
@@ -125,7 +125,7 @@ button.top-menu-link{
     
     
     
-    .top-menu > .top-menu-list > .top-menu-item >.top-menu-link-language-selected.active{
+.top-menu-link-language-selected.active{
         background:#fff;
         color:#000
     }
@@ -139,6 +139,7 @@ button.top-menu-link{
         transform: rotate(-180deg);
         color: #fff;
     }
+
     .top-menu-link-languages{
         display:block;
         padding:10px;
