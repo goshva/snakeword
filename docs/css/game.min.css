@@ -130,7 +130,7 @@
         object-fit: cover;
     }
 
-    dialog{
+    .dialog{
         width: 600px;
         height: 450px;
         display: flex;
@@ -145,12 +145,12 @@
         transition: all 0.5s ease;
     }
 
-    dialog.active{
+    .dialog.active{
         opacity: 1;
         visibility: visible;
     }
 
-    dialog>img{
+    .dialog>img{
         width: 100%;
         height: 100%;
         object-fit: cover;
