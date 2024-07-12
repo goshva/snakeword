@@ -288,13 +288,13 @@ function createImgDialog(imgUrl) {
     .then((response) => response.json())
     .then((url) => {
 
-      const dialog = document.createElement('dialog');
+      const dialog = document.createElement('div');
       const image = document.createElement('img');
       image.src = url.data[0].images.fixed_height_small.url;
       dialog.appendChild(image);
-      dialog.classList.add("active")
+      dialog.className = "dialog"
       document.body.appendChild(dialog);
-      dialog.show();
+      dialog.classList.add("active")
       setTimeout(() => {
         dialog.classList.remove("active")
         document.body.removeChild(dialog);
