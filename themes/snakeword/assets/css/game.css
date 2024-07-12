@@ -252,3 +252,31 @@ background-color: #f00;
 color: #fff;
 cursor: pointer;
 }
+
+
+.dialog{
+   width: 600px;
+   height: 450px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%); 
+   opacity: 0;
+   visibility: hidden;
+   transition: all 0.5s ease;
+   z-index: 1;
+}
+
+.dialog.active{
+   opacity: 1;
+   visibility: visible;
+}
+
+.dialog>img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
