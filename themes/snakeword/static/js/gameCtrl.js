@@ -287,13 +287,16 @@ function createImgDialog(imgUrl) {
   fetch(imgUrl)
     .then((response) => response.json())
     .then((url) => {
-      const dialog = document.createElement('dialog');
+      const dialog = document.createElement('div');
       const image = document.createElement('img');
       image.src = url.data[0].images.fixed_height_small.url;
+      dialog.className = "dialog";
       dialog.appendChild(image);
+      dialog.classList.add("active");
       document.body.appendChild(dialog);
-      dialog.show();
+     
       setTimeout(() => {
+        dialog.classList.remove("active");
         document.body.removeChild(dialog);
       }, 3000);
     });
