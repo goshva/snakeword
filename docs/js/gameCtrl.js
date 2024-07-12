@@ -287,7 +287,6 @@ function createImgDialog(imgUrl) {
   fetch(imgUrl)
     .then((response) => response.json())
     .then((url) => {
-
       const dialog = document.createElement('div');
       const image = document.createElement('img');
       image.src = url.data[0].images.fixed_height_small.url;
