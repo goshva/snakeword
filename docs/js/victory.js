@@ -89,9 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 popup.classList.add("active")
                 clearInterval(timerId);
                 const endAudio = document.createElement("audio");
-               
                 endAudio.src = "/audios/mixkit-video-game-win-2016.wav";
-                
                 popup.appendChild(endAudio)
                 endAudio.play()
              
