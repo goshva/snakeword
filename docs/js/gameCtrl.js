@@ -293,8 +293,8 @@ function createImgDialog(imgUrl) {
       dialog.className = "dialog";
       dialog.appendChild(image);
       dialog.classList.add("active");
+
       document.body.appendChild(dialog);
-     
       setTimeout(() => {
         dialog.classList.remove("active");
         document.body.removeChild(dialog);
