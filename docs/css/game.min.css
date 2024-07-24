@@ -83,11 +83,14 @@
     visibility:hidden
 }.modalBlock .buttonsBlock{display:flex;justify-content:center;align-items:center;width:100%;height:100px;gap:15px}.modalBlock .buttonsBlock>button{padding:15px 30px;background-color:#ccc;cursor:pointer;border:none;position:relative;overflow:hidden}.modalBlock .buttonsBlock>button::before{content:"";position:absolute;top:0;left:-100%;width:10px;height:100%;background-color:#5b5a37;transform:skewX(-45deg);transition:all 1s ease}.modalBlock .buttonsBlock>button:hover::before{left:200px}.modalBlock .buttonsBlock .StartBtn.active{opacity:0;pointer-events:none}
 .timer{
-    display:flex;
-    justify-content:center;
-    align-items:center; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 19%;
     z-index: 1;
     position: relative;
+    width: 80%;
+
 }
 
 
