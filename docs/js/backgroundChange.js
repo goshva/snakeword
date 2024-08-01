@@ -13,6 +13,8 @@ let imagesData = [
     "../../img/bcg.jpg",
     "https://s11.stc.yc.kpcdn.net/share/i/12/11500660/wr-960.webp",
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT97cyPnK7jDF1IFtxH-jMYSa6elpZJJ0nx2ECsIlxWLTqUtPhujzc4et2fvmKSM6oDt2o&usqp=CAU",
+    "https://corporate.walmart.com/content/corporate/en_us/purpose/sustainability/planet/nature/jcr:content/par/image_2_0.img.png/1693432526985.png",
+    "https://images.squarespace-cdn.com/content/v1/5d777de8109c315fd22faf3a/1693407136044-G90XQURX1GABMYGAS8K1/shutterstock_1288634614.jpg?format=2500w"
 
 ]
 
