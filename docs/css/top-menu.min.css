@@ -20,6 +20,11 @@
     src:url(../../public/fonts/rubik/JosefinSans-Bold.ttf)
 }
 
+@font-face {
+    font-family: gameFont;
+    src: url(../Font/Parasite\ Game\ -\ Personal\ Use.ttf);
+}
+
 html{
     width:100%;
     height:100%;
@@ -65,7 +70,38 @@ button.top-menu-link{
     margin-bottom:72px;
     position: relative;
     z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 25px;
 }
+
+.top-menu .headerBlock{
+    width: 250px;
+    height: auto;
+
+}
+
+.top-menu .headerBlock >a{
+    text-transform: uppercase;
+    font-size: 35px;
+    text-decoration: none;
+    font-family: gameFont;
+    color: transparent;
+    background-image: linear-gradient(45deg, #ccc 50%, #000 50%);
+    background-clip: text;
+
+    animation: changeBackground 0.5s alternate linear infinite;
+}
+
+@keyframes changeBackground {
+    0%{
+        background-image: linear-gradient(45deg, #ccc 50%, #000 50%);
+    }
+    100%{
+        background-image: linear-gradient(45deg, #000 50%, #ccc 50%);
+    }
+}
+
 .top-menu>.top-menu-list{
     display:flex;
     justify-content:end;
