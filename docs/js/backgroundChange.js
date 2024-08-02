@@ -20,4 +20,16 @@ let imagesData = [
 
 const randomIndex = Math.floor(Math.random() * imagesData.length);
 backgoundImage.src = imagesData[randomIndex];
-body.appendChild(backgoundImage)
+body.appendChild(backgoundImage);
+
+
+
+// change toggle icons 
+
+
+const hamburgerBlockBtn = document.querySelector(".hamburgerBlockBtn");
+const iconBlock = document.querySelector(".iconBlock");
+
+hamburgerBlockBtn.addEventListener("click",()=>{
+    iconBlock.classList.add("active")
+})
