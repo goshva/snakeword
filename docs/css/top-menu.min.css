@@ -55,16 +55,63 @@ a{
  
 }
 .navigationBar{
-    width: 250px;
+    width: 0px;
+    left: -45px;
     height: 100vh;
     position: fixed;
     background-color: #4c4c4c;
     z-index: 1;
+    display: none;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+    gap: 15px;
+    top: 53px;
+    overflow: hidden;
+
+    transition: all 0.5s ease;
 }
+
+.navigationBar.active{
+    width: 250px;
+    left: 0px;
+}
+
+.navigationBar .headerBlock{
+    width: 250px;
+    height: auto;
+ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.navigationBar .headerBlock >a{
+    text-transform: uppercase;
+    font-size: 35px;
+    text-decoration: none;
+    font-family: gameFont;
+    color: transparent;
+    background-image: linear-gradient(45deg, #ccc 50%, #000 50%);
+    background-clip: text;
+
+    animation: changeBackground 0.5s alternate linear infinite;
+}
+
+.navigationBar> .top-menu-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
 .hamburgerBlockBtn{
     width: 45px;
     height: 45px;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     border: 2px solid black;
@@ -79,13 +126,13 @@ cursor: pointer;
 display: flex;justify-content: center;
 align-items: center;
 gap: 15px;
-transform: translateX(-34px);
+transform: translateX(20px);
 position: absolute;
 transition: all 0.5s ease;
 }
 
 .hamburgerBlockBtn .iconBlock.active{
-    transform: translateX(-76px);
+    transform: translateX(-23px);
 }
 
 .hamburgerBlockBtn .iconBlock>i{
@@ -257,8 +304,24 @@ button.top-menu-link{
         opacity: 1;
     }  
     @media(max-width:535px){
-        .top-menu-link-languages{display:block;padding:5px;color:#fff}
-    }.top-menu-item>ul>li .imgBlock{width:25px;height:25px;display:flex;justify-content:center;align-items:center}.top-menu-item>ul>li .imgBlock>img{width:100%;height:100%;object-fit:cover}
+        .top-menu-link-languages{
+            display:block;padding:5px;color:#fff}
+            .hamburgerBlockBtn{
+                display: flex;
+            }
+            .headerBlock{
+                display: none;
+            }
+            .navigationBar{
+                display: flex;
+            }
+    }
+    
+    
+    
+    
+    
+    .top-menu-item>ul>li .imgBlock{width:25px;height:25px;display:flex;justify-content:center;align-items:center}.top-menu-item>ul>li .imgBlock>img{width:100%;height:100%;object-fit:cover}
 
 .top-menu-item{
     z-index: 1;
