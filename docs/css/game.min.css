@@ -91,14 +91,17 @@
 }
 .restartBtn:hover::before{left:250px}
 .modalBlock{
-    width:600px;
-    height:450px;
-    background-color:#5b5;
-    position:absolute;
-    z-index:12;display:flex;
-    justify-content:center;
-    align-items:center;
-    transition:all .5s ease
+    width: 600px;
+    height: 450px;
+    background-color: #5b5;
+    position: absolute;
+    z-index: 12;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 38%;
+    transition: all .5s ease;
+    left: 31%;
 }
 
 

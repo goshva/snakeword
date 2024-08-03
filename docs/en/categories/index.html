@@ -20,11 +20,12 @@
     ></script>
     
     <link href="/css/top-menu.min.css" rel="stylesheet">
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="/css/game.min.css" rel="stylesheet">
   </head>
 </html>
-<body>   <body>
+<body>
+
     <header>
       <div id="fb-root"></div>
       <script>(function(d, s, id) {
@@ -37,10 +38,11 @@
       </script>
         <div class="b-popup">
           <div class="b-popup-content">
-            <img src="./img/cracker.gif" alt="cracker" class="cracker_gif-left">
-            <img src="./img/victory.png" alt="" class="pop-up_img">
-            <img src="./img/cracker.gif" alt="cracker" class="cracker_gif-right">
+            <img src="../img/cracker.gif" alt="cracker" class="cracker_gif-left">
+            <img src="../img/victory.png" alt="" class="pop-up_img">
+            <img src="../img/cracker.gif" alt="cracker" class="cracker_gif-right">
           </div>
+          <button class="restartBtn">Restart the Game</button>
         </div>
         <div class="top-menu">
           <div class="headerBlock">
@@ -83,6 +85,7 @@
           </li>
           <li class="top-menu-item">
             <a href="#" class="top-menu-link-language-selected">
+              <div class="imgBlock"><img src="flag/Flag_of_United_States_Flat_Round_Corner-64x64.png" alt=""></div>
               Language
               <i class="fa-solid fa-caret-down"></i>
             </a>
@@ -148,29 +151,46 @@
   </div>
   </header>
       
-<!-- navigation block start -->
-
-<div class="navigationBar">
-  <div class="headerBlock">
-    <a href="#" class="logo">
-      snakeword
-    </a>
+</body>
+<div id="content">
+  <div class="modalBlock">
+    <div class="buttonsBlock">
+      <button class="StartBtn">Start the Game</button>
+      
+      <button class="RulesBtn">Game Rules</button>
+    </div>
   </div>
 
-  <ul class="top-menu-list">
-    <li class="top-menu-item">
-      <div
-      class="fb-share-button"
-      data-href="https://boggle.space/url?edge=9&amp;letters=[%22%D0%BE%22,%22%D1%86%22,%22%D1%82%22,%22%D1%83%22,%22%D0%B6%22,%22%D0%B0%22,%22%D0%B7%22,%22%D0%B0%22,%22%D1%81%22,%22%D0%BC%22,%22%D0%B5%22,%22%D0%BD%22,%22%D0%B4%22,%22%D0%B8%22,%22%D0%B3%22,%22%D1%81%22,%22%D0%BA%22,%22%D0%B2%22,%22%D0%BE%22,%22%D0%BE%22,%22%D0%B2%22,%22%D0%BE%22,%22%D1%8C%22,%22%D0%B0%22,%22%D0%BE%22,%22%D1%8D%22,%22%D0%BE%22,%22%D1%82%22,%22%D1%80%22,%22%D0%BF%22,%22%D0%B5%22,%22%D0%BB%22,%22%D0%BB%22,%22%D0%BA%22,%22%D0%B0%22,%22%D1%85%22,%22%D0%B8%22,%22%D0%BF%22,%22%D0%B0%22,%22%D0%BD%22,%22%D1%8C%22,%22%D0%BF%22,%22%D0%B3%22,%22%D0%BF%22,%22%D1%83%22,%22%D0%BF%22,%22%D0%B8%22,%22%D0%BA%22,%22%D0%B8%22,%22%D1%89%22,%22%D0%B8%22,%22%D0%BC%22,%22%D1%8F%22,%22%D0%B4%22,%22%D0%B0%22,%22%D0%B9%22,%22%D0%B0%22,%22%D0%BA%22,%22%D0%BE%22,%22%D0%BD%22,%22%D0%B0%22,%22%D1%81%22,%22%D0%B7%22,%22%D0%B3%22,%22%D1%8B%22,%22%D0%BD%22,%22%D1%82%22,%22%D0%BE%22,%22%D0%B0%22,%22%D1%82%22,%22%D1%8C%22,%22%D0%B7%22,%22%D0%B8%22,%22%D0%BC%22,%22%D0%B5%22,%22%D0%BB%22,%22%D0%BF%22,%22%D1%82%22,%22%D0%B8%22,%22%D1%87%22,%22%D0%B0%22]&amp;userwordsids=[[32,23,14],[14,23,32,33,34],[15,24,33],[24,33,24]]"
-      data-layout="button_count"
-      data-size="large"
-      data-mobile-iframe="true">
-      <a
-        class="fb-xfbml-parse-ignore top-menu-link"
-        target="_blank"
-        href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fboggle.space%2Furl%3Fedge%3D9%26letters%3D%255B%2522%25D0%25BE%2522%252C%2522%25D1%2586%2522%252C%2522%25D1%2582%2522%252C%2522%25D1%2583%2522%252C%2522%25D0%25B6%2522%252C%2522%25D0%25B0%2522%252C%2522%25D0%25B7%2522%252C%2522%25D0%25B0%2522%252C%2522%25D1%2581%2522%252C%2522%25D0%25BC%2522%252C%2522%25D0%25B5%2522%252C%2522%25D0%25BD%2522%252C%2522%25D0%25B4%2522%252C%2522%25D0%25B8%2522%252C%2522%25D0%25B3%2522%252C%2522%25D1%2581%2522%252C%2522%25D0%25BA%2522%252C%2522%25D0%25B2%2522%252C%2522%25D0%25BE%2522%252C%2522%25D0%25BE%2522%252C%2522%25D0%25B2%2522%252C%2522%25D0%25BE%2522%252C%2522%25D1%258C%2522%252C%2522%25D0%25B0%2522%252C%2522%25D0%25BE%2522%252C%2522%25D1%258D%2522%252C%2522%25D0%25BE%2522%252C%2522%25D1%2582%2522%252C%2522%25D1%2580%2522%252C%2522%25D0%25BF%2522%252C%2522%25D0%25B5%2522%252C%2522%25D0%25BB%2522%252C%2522%25D0%25BB%2522%252C%2522%25D0%25BA%2522%252C%2522%25D0%25B0%2522%252C%2522%25D1%2585%2522%252C%2522%25D0%25B8%2522%252C%2522%25D0%25BF%2522%252C%2522%25D0%25B0%2522%252C%2522%25D0%25BD%2522%252C%2522%25D1%258C%2522%252C%2522%25D0%25BF%2522%252C%2522%25D0%25B3%2522%252C%2522%25D0%25BF%2522%252C%2522%25D1%2583%2522%252C%2522%25D0%25BF%2522%252C%2522%25D0%25B8%2522%252C%2522%25D0%25BA%2522%252C%2522%25D0%25B8%2522%252C%2522%25D1%2589%2522%252C%2522%25D0%25B8%2522%252C%2522%25D0%25BC%2522%252C%2522%25D1%258F%2522%252C%2522%25D0%25B4%2522%252C%2522%25D0%25B0%2522%252C%2522%25D0%25B9%2522%252C%2522%25D0%25B0%2522%252C%2522%25D0%25BA%2522%252C%2522%25D0%25BE%2522%252C%2522%25D0%25BD%2522%252C%2522%25D0%25B0%2522%252C%2522%25D1%2581%2522%252C%2522%25D0%25B7%2522%252C%2522%25D0%25B3%2522%252C%2522%25D1%258B%2522%252C%2522%25D0%25BD%2522%252C%2522%25D1%2582%2522%252C%2522%25D0%25BE%2522%252C%2522%25D0%25B0%2522%252C%2522%25D1%2582%2522%252C%2522%25D1%258C%2522%252C%2522%25D0%25B7%2522%252C%2522%25D0%25B8%2522%252C%2522%25D0%25BC%2522%252C%2522%25D0%25B5%2522%252C%2522%25D0%25BB%2522%252C%2522%25D0%25BF%2522%252C%2522%25D1%2582%2522%252C%2522%25D0%25B8%2522%252C%2522%25D1%2587%2522%252C%2522%25D0%25B0%2522%255D%26userwordsids%3D%255B%255B32%252C23%252C14%255D%252C%255B14%252C23%252C32%252C33%252C34%255D%252C%255B15%252C24%252C33%255D%252C%255B24%252C33%252C24%255D%255D&amp;src=sdkpreparse">
-        <i class="fa-brands fa-facebook"></i>
-        </a>
+  <div class="modalSlider">
+    <div class="closeBtn">X</div>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./../exampleImages/exampleone.png" class="d-block w-100" alt="image">
+          <div class="carousel-caption d-none d-md-block bg-secondary">
+            <h5 class="text-white">Time:</h5>
+            <p class="text-white">After pressing the "Start Game" button, the allotted time for the game starts to run out.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./../exampleImages/exampletwo.png" class="d-block w-100" alt="image">
+          <div class="carousel-caption d-none d-md-block bg-secondary">
+            <h5 class="text-white">Unit</h5>
+            <p class="text-white">There are hidden words in this Game Board. <br> For each correct word you get one point</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./../exampleImages/exampleone.png" class="d-block w-100" alt="image">
+          <div class="carousel-caption d-none d-md-block bg-secondary">
+            <h5 class="text-white">Delete Word</h5>
+            <p class="text-white">If you got the wrong word, you can delete it with the button <i class="fa-solid fa-delete-left"></i></p>
+          </div>
+        </div>
       </div>
     </li>
     <li class="top-menu-item">
@@ -248,12 +268,70 @@
   </div>
   <!-- navigation block end -->
 <div id="content">
+  <div class="modalBlock">
+    <div class="buttonsBlock">
+      <button class="StartBtn">Start the Game</button>
+      
+      <button class="RulesBtn">Game Rules</button>
+    </div>
+  </div>
+  <div class="modalSlider">
+    <div class="closeBtn">X</div>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./../exampleImages/exampleone.png" class="d-block w-100" alt="image">
+          <div class="carousel-caption d-none d-md-block bg-secondary">
+            <h5 class="text-white">Zeit:</h5>
+            <p class="text-white">Nachdem Sie auf die Schaltfläche „Starte das Spiel“ geklickt haben, beginnt die für das Spiel vorgesehene Zeit abzulaufen.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./../exampleImages/exampletwo.png" class="d-block w-100" alt="image">
+          <div class="carousel-caption d-none d-md-block bg-secondary">
+            <h5 class="text-white">Einheit</h5>
+            <p class="text-white">Auf diesem Spielbrett gibt es versteckte Wörter. Für jedes richtige Wort erhältst du einen Punkt</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./../exampleImages/exampleone.png" class="d-block w-100" alt="image">
+          <div class="carousel-caption d-none d-md-block bg-secondary">
+            <h5 class="text-white">Word löschen</h5>
+            <p class="text-white">Wenn Sie das falsche Wort eingegeben haben, können Sie es mit der Schaltfläche <i class="fa-solid fa-delete-left"></i> löschen</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
         </div>      
-      <script defer src="/js/classes.js"></script>
+        <script defer src="/js/backgroundChange.js"></script> 
       <script defer src="/js/gameCtrl.js"></script>
       <script defer src="/js/genSet.js"></script>
       <script defer src="/js/dictionary.js"></script>
       <script defer src="/js/victory.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+<script>
+  let language_selected = document.querySelector(".top-menu-link-language-selected");
+  let for_language = document.querySelector(".for_language");
+  language_selected.addEventListener("click",()=>{
+    language_selected.classList.toggle("active")
+    for_language.classList.toggle("active")
+  })
+</script>
    </body>
 </html>
 </body>
