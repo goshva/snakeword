@@ -54,7 +54,13 @@ a{
     object-fit: cover;
  
 }
-
+.navigationBar{
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    background-color: #4c4c4c;
+    z-index: 1;
+}
 .hamburgerBlockBtn{
     width: 45px;
     height: 45px;
