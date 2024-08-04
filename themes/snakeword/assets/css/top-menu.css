@@ -163,3 +163,21 @@ flex-direction: column;
   height: 100%;
   object-fit: cover;
 }
+
+@media(max-width:535px){
+  .top-menu-link-languages{
+      display:block;padding:5px;color:#fff}
+      .hamburgerBlockBtn{
+          display: flex;
+      }
+      .headerBlock{
+          display: none;
+      }
+      .navigationBar{
+          display: flex;
+          z-index: 13;
+      }
+      .top-menu>.top-menu-list{
+          display: none;
+      }
+}
