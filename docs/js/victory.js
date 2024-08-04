@@ -47,7 +47,9 @@ document.addEventListener('DOMContentLoaded', function () {
    const popup = document.querySelector('.b-popup');
    const audio = document.createElement("audio");
    const timeAudio = document.createElement("audio");
+   const gameplace = document.querySelector("#gameplace")
      StartBtn.addEventListener("click",()=>{
+      gameplace.classList.add("active")
        modalBlock.classList.add("active")
        StartBtn.classList.add("active")
        audio.src = "/audios/mixkit-fast-small-sweep-transition-166.wav";

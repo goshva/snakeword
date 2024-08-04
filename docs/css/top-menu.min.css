@@ -314,6 +314,10 @@ button.top-menu-link{
             }
             .navigationBar{
                 display: flex;
+                z-index: 13;
+            }
+            .top-menu>.top-menu-list{
+                display: none;
             }
     }
     
