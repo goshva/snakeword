@@ -1,3 +1,40 @@
+
+// toggling sound settings
+let toggleBool = true
+const selectAudio = document.createElement("audio");
+const audio = document.createElement("audio");
+const timeAudio = document.createElement("audio");
+const endAudio = document.createElement("audio");
+const cogToggle = document.querySelector(".setting-link") 
+const settingList = document.querySelector(".setting-list");
+const mutedBtn = document.querySelector(".mutedBtn")
+cogToggle.addEventListener("click",()=>{
+  cogToggle.classList.toggle("active")
+  settingList.classList.toggle("active")
+})
+mutedBtn.addEventListener("click",()=>{
+if (toggleBool) {
+  mutedBtn.classList.add("muted");
+  audio.muted = true;
+  timeAudio.muted = true;
+  endAudio.muted = true;
+  selectAudio.muted = true
+  toggleBool = false
+}else{
+  mutedBtn.classList.remove("muted");
+  audio.muted = false;
+  timeAudio.muted = false;
+  endAudio.muted = false;
+  selectAudio.muted = false
+  toggleBool = true
+}
+})
+
+
+
+
+
+// toggling sound settings end
 const restartBtn = document.querySelector(".restartBtn")
 const closeBtn = document.querySelector(".closeBtn")
 let content = document.querySelector(".content")
@@ -5,12 +42,9 @@ let modalSlider = document.querySelector(".modalSlider");
 const rulesBtn = document.querySelector(".RulesBtn");
 rulesBtn.addEventListener("click",()=>{
 modalSlider.classList.add("active");
-let selectAudio = document.createElement("audio");
 selectAudio.src = "/audios/mixkit-select-click-1109.wav";
 selectAudio.play();
-setTimeout(()=>{
-  selectAudio.pause()
-},1000);
+
 modalSlider.appendChild(selectAudio)
 })
 
@@ -45,8 +79,7 @@ document.addEventListener('DOMContentLoaded', function () {
    const $minutes = document.querySelector('.timer__minutes');
    const $seconds = document.querySelector('.timer__seconds');
    const popup = document.querySelector('.b-popup');
-   const audio = document.createElement("audio");
-   const timeAudio = document.createElement("audio");
+  
    const gameplace = document.querySelector("#gameplace")
      StartBtn.addEventListener("click",()=>{
       gameplace.classList.add("active")
@@ -90,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function () {
               if (minutes === 0 && seconds === 0) {  
                 popup.classList.add("active")
                 clearInterval(timerId);
-                const endAudio = document.createElement("audio");
+           
                 endAudio.src = "/audios/mixkit-video-game-win-2016.wav";
                 popup.appendChild(endAudio)
                 endAudio.play()

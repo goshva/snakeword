@@ -1,6 +1,8 @@
+
+
 #gameplace{
     width:324px;
-    display:none;
+    display:flex;
     flex-wrap:wrap;
     background-image:url(./../img/wood.jpg);
     background-size:cover;
@@ -20,7 +22,7 @@
 #gameplace.active{
     opacity: 1;
     visibility: visible;
-    transform: scale(1.2);
+    transform: scale(1.0);
 }
 
 #gametally{z-index:-1;color:#ccc}#gametally li{font-size:small;line-height:1em}#word{width:9em}.content{display:flex;justify-content:center;align-items:center}.cell{margin:.1ex;text-align:center;text-transform:uppercase;float:left;width:1.2em;padding:2px 0;border:1px solid #ccc;background:#f1e9d3;border-radius:.3em;font-size:1em;border-top:2px solid #fff;border-right:1px solid #fff;border-left:1px solid #cbc2aa;border-bottom:2px solid #cbc2aa;color:#000;box-shadow:-1px 1px 1px rgb(0 0 0/15%)}
@@ -30,6 +32,9 @@
     z-index: 1;
     width: 80%;
     padding-left: 19%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }.wordCell{background-color:#ff8}.activeCell{background-color:#d8d0bd;font-weight:700}@-webkit-keyframes tada{10%{-webkit-transform:scale(1.2)}15%,20%{-webkit-transform:scale(1)rotate(-4deg)}25%,50%,70%,90%{-webkit-transform:scale(1)rotate(3deg)}40%,60%,80%{-webkit-transform:scale(1)rotate(-1deg)}100%{-webkit-transform:scale(1)rotate(0)}}@keyframes tada{10%{transform:scale(1.2)}15%,20%{transform:scale(1)rotate(-10deg)}25%,50%,75%,90%{transform:scale(1)rotate(3deg)}40%,60%,80%{transform:scale(1)rotate(-2deg)}100%{transform:scale(1)rotate(0)}}.tada{-webkit-animation-duration:1s;animation-duration:1 s;-webkit-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-name:tada;animation-name:tada}.notify{position:absolute;z-index:101;top:0;left:0;right:0;text-align:center;line-height:2.7;overflow:hidden;-webkit-box-shadow:0 0 5px black;-moz-box-shadow:0 0 5px black;box-shadow:0 0 5px black;display:none}#note{background:#1f8dd6;color:#fff}#game{background:#e6e6e6;color:#1f8dd6}.point-button{border:1px solid #ccc;background:#f1e9d3;border-radius:.4em;border-top:2px solid #fff;border-right:1px solid #fff;border-left:1px solid #cbc2aa;border-bottom:2px solid #cbc2aa;color:#000;box-shadow:-1px 1px 1px rgb(0 0 0/15%);font-size:100%;font-family:inherit;text-decoration:none;padding:.5em 1em;border:3px solid #5b5a37}.clear-button{font-family:inherit;font-size:100%;padding:.5em 1em;border:1px solid #ccc;background:#f1e9d3;border-radius:.4em;border-top:2px solid #fff;border-right:1px solid #fff;border-left:1px solid #cbc2aa;border-bottom:2px solid #cbc2aa;text-decoration:none;border:3px solid #5b5a37}#word-input{width:11em;height:auto;margin:0 2px;background:#f1e9d3;border-radius:.4em;border-top:2px solid #fff;border-right:1px solid #fff;border-left:1px solid #cbc2aa;border-bottom:2px solid #cbc2aa;border:3px solid #5b5a37}
 @font-face {
     font-family: Digital;
@@ -144,7 +149,6 @@
 }
     .modalSlider{
         width:650px;
-        height:450px;
         display:flex;
         justify-content:center;
         align-items:center;
@@ -154,8 +158,14 @@
         position:absolute;
         background-color:#ccc;
         top: 31%;
-        height: 31%;
-    }.modalSlider.active{transform:translateY(0);opacity:1;visibility:visible;z-index:16}.modalSlider .closeBtn{position:absolute;top:10px;right:15px;font-size:24px;font-weight:700;display:flex;justify-content:center;align-items:center;background-color:#e7e3e3;transition:all .5s ease;padding:3px 15px}.modalSlider .closeBtn:hover{background-color:red;color:#fff;cursor:pointer}
+        left: 29%;
+    }
+    .modalSlider.active{
+        transform:translateY(0);
+        opacity:1;visibility:visible;
+        z-index:16;
+        height:450px;
+    }.modalSlider .closeBtn{position:absolute;top:10px;right:15px;font-size:24px;font-weight:700;display:flex;justify-content:center;align-items:center;background-color:#e7e3e3;transition:all .5s ease;padding:3px 15px}.modalSlider .closeBtn:hover{background-color:red;color:#fff;cursor:pointer}
     
     .dialog{
         width:600px;
@@ -176,8 +186,15 @@
 
 
         @media(max-width:535px) {
+         
                .modalBlock{
                 width: 350px;
                 height: 250px;
+                left: 61px;
+                top: 40%;
+        
+            }
+            .modalBlock .buttonsBlock>button{
+                padding:10px 25px
             }
         }
