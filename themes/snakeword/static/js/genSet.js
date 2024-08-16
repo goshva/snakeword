@@ -1,3 +1,23 @@
+const mutedBoll = true
+const letterSoundBtn = document.querySelectorAll(".letterSoundBtn")
+const clickAudio = document.createElement("audio");
+clickAudio.src = "../sounds/click.mp3"
+letterSoundBtn.forEach((item)=>{
+  item.addEventListener("click",()=>{
+    alert("")
+    //  if (mutedBoll) {
+    //   item.classList.add("active")
+    //   clickAudio.muted = true;
+    //   mutedBoll = false
+    //   return false
+    //  }else{
+    //   clickAudio.muted = false;
+    //   mutedBoll = true;
+    //  }
+  })
+})
+
+
 var edge = 9;
 var track = [];
 var letters = [];
