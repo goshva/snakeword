@@ -136,6 +136,8 @@ transform: translateX(0px);
     padding: 5px 30px;
     background: none;
     cursor: pointer;
+    border: none;
+    color: #fff;
 }
 
 .setting-item> .setting-list>.letterSoundBtn.active{
