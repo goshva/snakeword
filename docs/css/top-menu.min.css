@@ -132,6 +132,10 @@ transform: translateX(0px);
     letter-spacing: 12px;
     transition: all 0.5s ease;
 }
+
+.setting-item> .setting-list>.letterSoundBtn.active{
+    background-color: #d35400;
+}
 .setting-item> .setting-list>a.muted{
     background-color: #f00;
     color: #fff;
