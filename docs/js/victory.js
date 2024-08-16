@@ -5,30 +5,35 @@ const selectAudio = document.createElement("audio");
 const audio = document.createElement("audio");
 const timeAudio = document.createElement("audio");
 const endAudio = document.createElement("audio");
-const cogToggle = document.querySelector(".setting-link") 
-const settingList = document.querySelector(".setting-list");
-const mutedBtn = document.querySelector(".mutedBtn")
-cogToggle.addEventListener("click",()=>{
-  cogToggle.classList.toggle("active")
-  settingList.classList.toggle("active")
+const cogToggle = document.querySelectorAll(".setting-link") 
+const settingList = document.querySelectorAll(".setting-list");
+const mutedBtn = document.querySelectorAll(".mutedBtn")
+cogToggle.forEach((items,index)=>{
+  items.addEventListener("click",()=>{
+    items.classList.toggle("active")
+    settingList[index].classList.toggle("active")
+  })
+  mutedBtn[index].addEventListener("click",()=>{
+    if (toggleBool) {
+      mutedBtn[index].classList.add("muted");
+      mutedBtn[index].innerHTML = '<i class="fa-solid fa-volume-high"></i> ON' 
+      audio.muted = true;
+      timeAudio.muted = true;
+      endAudio.muted = true;
+      selectAudio.muted = true
+      toggleBool = false
+    }else{
+      mutedBtn[index].classList.remove("muted");
+      mutedBtn[index].innerHTML = '<i class="fa-solid fa-volume-xmark"></i> OFF' 
+      audio.muted = false;
+      timeAudio.muted = false;
+      endAudio.muted = false;
+      selectAudio.muted = false
+      toggleBool = true
+    }
+    })
 })
-mutedBtn.addEventListener("click",()=>{
-if (toggleBool) {
-  mutedBtn.classList.add("muted");
-  audio.muted = true;
-  timeAudio.muted = true;
-  endAudio.muted = true;
-  selectAudio.muted = true
-  toggleBool = false
-}else{
-  mutedBtn.classList.remove("muted");
-  audio.muted = false;
-  timeAudio.muted = false;
-  endAudio.muted = false;
-  selectAudio.muted = false
-  toggleBool = true
-}
-})
+
 
 
 
@@ -80,9 +85,9 @@ document.addEventListener('DOMContentLoaded', function () {
    const $seconds = document.querySelector('.timer__seconds');
    const popup = document.querySelector('.b-popup');
   
-   const gameplace = document.querySelector("#gameplace")
+   const main = document.querySelector("#main")
      StartBtn.addEventListener("click",()=>{
-      gameplace.classList.add("active")
+      main.classList.add("active")
        modalBlock.classList.add("active")
        StartBtn.classList.add("active")
        audio.src = "/audios/mixkit-fast-small-sweep-transition-166.wav";
