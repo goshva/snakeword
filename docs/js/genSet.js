@@ -1,3 +1,21 @@
+
+const mutedBoll = true
+const mutedBtn = document.querySelectorAll(".mutedBtn")
+
+mutedBtn.forEach((item)=>{
+  item.addEventListener("click",()=>{
+     if (mutedBoll) {
+      audio.muted = true;
+      mutedBoll = false
+      return false
+     }else{
+      audio.muted = false;
+      mutedBoll = true
+      return true
+     }
+  })
+})
+
 var edge = 9;
 var track = [];
 var letters = [];
