@@ -1,4 +1,3 @@
-
 const mutedBoll = true
 const letterSoundBtn = document.querySelectorAll(".letterSoundBtn")
 const clickAudio = document.createElement("audio");
@@ -13,11 +12,11 @@ letterSoundBtn.forEach((item)=>{
     //   return false
     //  }else{
     //   clickAudio.muted = false;
-    //   mutedBoll = true
-     
+    //   mutedBoll = true;
     //  }
   })
 })
+
 
 var edge = 9;
 var track = [];
@@ -183,8 +182,8 @@ function genArea() {
   
   function playSound() {
 
-    
-    clickAudio.play();
+    var audio = new Audio("../sounds/click.mp3");
+    audio.play();
   }
 
   if (Array.isArray(findwordids) && Array.isArray(findwordids[0])) {
