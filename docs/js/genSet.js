@@ -1,18 +1,21 @@
 
 const mutedBoll = true
-const mutedBtn = document.querySelectorAll(".mutedBtn")
-
-mutedBtn.forEach((item)=>{
+const letterSoundBtn = document.querySelectorAll(".letterSoundBtn")
+const clickAudio = document.createElement("audio");
+clickAudio.src = "../sounds/click.mp3"
+letterSoundBtn.forEach((item)=>{
   item.addEventListener("click",()=>{
-     if (mutedBoll) {
-      audio.muted = true;
-      mutedBoll = false
-      return false
-     }else{
-      audio.muted = false;
-      mutedBoll = true
-      return true
-     }
+    alert("")
+    //  if (mutedBoll) {
+    //   item.classList.add("active")
+    //   clickAudio.muted = true;
+    //   mutedBoll = false
+    //   return false
+    //  }else{
+    //   clickAudio.muted = false;
+    //   mutedBoll = true
+     
+    //  }
   })
 })
 
@@ -180,8 +183,8 @@ function genArea() {
   
   function playSound() {
 
-    var audio = new Audio("../sounds/click.mp3");
-    audio.play();
+    
+    clickAudio.play();
   }
 
   if (Array.isArray(findwordids) && Array.isArray(findwordids[0])) {
