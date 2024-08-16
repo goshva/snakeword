@@ -13,13 +13,24 @@
     box-shadow:-5px 5px 5px rgb(0 0 0/.2);
     padding:5px;
     z-index: 1;
-    transition: all 0.5s ease;
-    opacity: 0;
-    visibility: hidden;
+transition: all 0.5s;
     transform: scale(0);
 }
 
-#gameplace.active{
+
+
+#main{
+    transition: all 0.5s ease;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+}
+#main.active{
+    opacity: 1;
+    visibility: visible; 
+}
+
+#main.active #gameplace{
     opacity: 1;
     visibility: visible;
     transform: scale(1.0);
