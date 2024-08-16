@@ -91,8 +91,8 @@
               <i class="fa-solid fa-gear"></i>
             </a>
             <div class="setting-list">
-            <a href="#" class="mutedBtn"> <i class="fa-solid fa-music"></i> muted</a>           
-           </div>
+              <a href="#" class="mutedBtn"> <i class="fa-solid fa-volume-xmark"></i> OFF</a>
+            </div>
           </div>
           <li class="top-menu-item">
             <button class="top-menu-link">
@@ -208,8 +208,8 @@
         <i class="fa-solid fa-gear"></i>
       </a>
       <div class="setting-list">
-      <a href="#" class="mutedBtn"> <i class="fa-solid fa-music"></i> muted</a>           
-     </div>
+        <a href="#" class="mutedBtn"> <i class="fa-solid fa-volume-xmark"></i> OFF</a>
+      </div>
     </div>
     <li class="top-menu-item">
       <button class="top-menu-link">
@@ -283,6 +283,56 @@
   </div>
   <!-- Navigation bar end -->
 <div id="content">
+  <div class="modalBlock">
+    <div class="buttonsBlock">
+      <button class="StartBtn">Начать Игру</button>
+      
+      <button class="RulesBtn">Правила Игры</button>
+    </div>
+  </div>
+     
+  <div class="modalSlider">
+    <div class="closeBtn">X</div>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./../exampleImages/exampleone.png" class="d-block w-100" alt="image">
+          <div class="carousel-caption d-none d-md-block bg-secondary">
+            <h5 class="text-white">Таймер</h5>
+            <p class="text-white">После нажатия кнопки "Начать игру" время, отведенное на игру, начинает истекать,
+              На игру дается 10 минут</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./../exampleImages/exampletwo.png" class="d-block w-100" alt="image">
+          <div class="carousel-caption d-none d-md-block bg-secondary">
+            <h5 class="text-white">Балл</h5>
+            <p class="text-white">На этой игровой доске есть скрытые слова. <br>За каждое правильное слово вы получаете один балл</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./../exampleImages/exampleone.png" class="d-block w-100" alt="image">
+          <div class="carousel-caption d-none d-md-block bg-secondary">
+            <h5 class="text-white">Удалить слово</h5>
+            <p class="text-white">Если вы выбрали неправильное слово, вы можете удалить его с помощью <i class="fa-solid fa-delete-left"></i> кнопки </p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
 <div id="main">
   <div class="timer">
     <div class="timer__items">
@@ -312,55 +362,7 @@
     </div>
   </div>
   <div class="content">
-    <div class="modalBlock">
-      <div class="buttonsBlock">
-        <button class="StartBtn">Начать Игру</button>
-        
-        <button class="RulesBtn">Правила Игры</button>
-      </div>
-    </div>
-    <div class="modalSlider">
-      <div class="closeBtn">X</div>
-      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="./../exampleImages/exampleone.png" class="d-block w-100" alt="image">
-            <div class="carousel-caption d-none d-md-block bg-secondary">
-              <h5 class="text-white">Таймер</h5>
-              <p class="text-white">После нажатия кнопки "Начать игру" время, отведенное на игру, начинает истекать,
-                На игру дается 10 минут</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="./../exampleImages/exampletwo.png" class="d-block w-100" alt="image">
-            <div class="carousel-caption d-none d-md-block bg-secondary">
-              <h5 class="text-white">Балл</h5>
-              <p class="text-white">На этой игровой доске есть скрытые слова. <br>За каждое правильное слово вы получаете один балл</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="./../exampleImages/exampleone.png" class="d-block w-100" alt="image">
-            <div class="carousel-caption d-none d-md-block bg-secondary">
-              <h5 class="text-white">Удалить слово</h5>
-              <p class="text-white">Если вы выбрали неправильное слово, вы можете удалить его с помощью <i class="fa-solid fa-delete-left"></i> кнопки </p>
-            </div>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    </div>
+
     <div id=""></div>
     <div id="gameplace"></div>
     <div id="result"></div>
