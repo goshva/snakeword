@@ -4,7 +4,7 @@ const clickAudio = document.createElement("audio");
 clickAudio.src = "../sounds/click.mp3"
 letterSoundBtn.forEach((item)=>{
   item.addEventListener("click",()=>{
-    console.log("fff");
+ alert("ssss");
  
     
      if (mutedBoll) {
