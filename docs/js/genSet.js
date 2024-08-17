@@ -4,17 +4,18 @@ const clickAudio = document.createElement("audio");
 clickAudio.src = "../sounds/click.mp3"
 letterSoundBtn.forEach((item)=>{
   item.addEventListener("click",()=>{
-    alert("");
+    console.log("fff");
+ 
     
-    //  if (mutedBoll) {
-    //   item.classList.add("active")
-    //   clickAudio.muted = true;
-    //   mutedBoll = false
-    //   return false
-    //  }else{
-    //   clickAudio.muted = false;
-    //   mutedBoll = true;
-    //  }
+     if (mutedBoll) {
+      item.classList.add("active")
+      clickAudio.muted = true;
+      mutedBoll = false
+      return false
+     }else{
+      clickAudio.muted = false;
+      mutedBoll = true;
+     }
   })
 })
 
