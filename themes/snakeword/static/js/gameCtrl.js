@@ -315,8 +315,6 @@ snd.src = "../sounds/click.mp3"
 letterSoundBtn.forEach((item)=>{
   item.addEventListener("click",()=>{
  alert("ssss");
- 
-    
      if (mutedBoll) {
       item.innerHTML = '<img src="../img/musicTone.png" /> ON'
       item.classList.add("active")
