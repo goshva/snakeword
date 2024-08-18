@@ -1,26 +1,4 @@
-let mutedBoll = true
-const letterSoundBtn = document.querySelectorAll(".letterSoundBtn")
-const clickAudio = document.createElement("audio");
-clickAudio.src = "../sounds/click.mp3"
-letterSoundBtn.forEach((item)=>{
-  item.addEventListener("click",()=>{
- alert("ssss");
- 
-    
-     if (mutedBoll) {
-      item.innerHTML = '<img src="../img/musicTone.png" /> ON'
-      item.classList.add("active")
-      clickAudio.muted = true;
-      mutedBoll = false
-      return false
-     }else{
-      item.innerHTML = '<img src="../img/musicToneSlash.png" /> Off'
-      item.classList.remove("active")
-      clickAudio.muted = false;
-      mutedBoll = true;
-     }
-  })
-})
+
 
 
 var edge = 9;
