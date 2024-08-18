@@ -1,5 +1,3 @@
-
-// toggling sound settings
 let toggleBool = true
 const selectAudio = document.createElement("audio");
 const audio = document.createElement("audio");
@@ -38,8 +36,6 @@ cogToggle.forEach((items,index)=>{
 
 
 
-
-// toggling sound settings end
 const restartBtn = document.querySelector(".restartBtn")
 const closeBtn = document.querySelector(".closeBtn")
 let content = document.querySelector(".content")
@@ -47,9 +43,12 @@ let modalSlider = document.querySelector(".modalSlider");
 const rulesBtn = document.querySelector(".RulesBtn");
 rulesBtn.addEventListener("click",()=>{
 modalSlider.classList.add("active");
+
 selectAudio.src = "/audios/mixkit-select-click-1109.wav";
 selectAudio.play();
-
+setTimeout(()=>{
+  selectAudio.pause()
+},1000);
 modalSlider.appendChild(selectAudio)
 })
 
@@ -128,8 +127,10 @@ document.addEventListener('DOMContentLoaded', function () {
               if (minutes === 0 && seconds === 0) {  
                 popup.classList.add("active")
                 clearInterval(timerId);
-           
+     
+               
                 endAudio.src = "/audios/mixkit-video-game-win-2016.wav";
+                
                 popup.appendChild(endAudio)
                 endAudio.play()
              

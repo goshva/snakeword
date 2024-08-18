@@ -1,3 +1,41 @@
+let toggleBool = true
+const selectAudio = document.createElement("audio");
+const audio = document.createElement("audio");
+const timeAudio = document.createElement("audio");
+const endAudio = document.createElement("audio");
+const cogToggle = document.querySelectorAll(".setting-link") 
+const settingList = document.querySelectorAll(".setting-list");
+const mutedBtn = document.querySelectorAll(".mutedBtn")
+cogToggle.forEach((items,index)=>{
+  items.addEventListener("click",()=>{
+    items.classList.toggle("active")
+    settingList[index].classList.toggle("active")
+  })
+  mutedBtn[index].addEventListener("click",()=>{
+    if (toggleBool) {
+      mutedBtn[index].classList.add("muted");
+      mutedBtn[index].innerHTML = '<i class="fa-solid fa-volume-high"></i> ON' 
+      audio.muted = true;
+      timeAudio.muted = true;
+      endAudio.muted = true;
+      selectAudio.muted = true
+      toggleBool = false
+    }else{
+      mutedBtn[index].classList.remove("muted");
+      mutedBtn[index].innerHTML = '<i class="fa-solid fa-volume-xmark"></i> OFF' 
+      audio.muted = false;
+      timeAudio.muted = false;
+      endAudio.muted = false;
+      selectAudio.muted = false
+      toggleBool = true
+    }
+    })
+})
+
+
+
+
+
 const restartBtn = document.querySelector(".restartBtn")
 const closeBtn = document.querySelector(".closeBtn")
 let content = document.querySelector(".content")
@@ -5,7 +43,7 @@ let modalSlider = document.querySelector(".modalSlider");
 const rulesBtn = document.querySelector(".RulesBtn");
 rulesBtn.addEventListener("click",()=>{
 modalSlider.classList.add("active");
-let selectAudio = document.createElement("audio");
+
 selectAudio.src = "/audios/mixkit-select-click-1109.wav";
 selectAudio.play();
 setTimeout(()=>{
@@ -45,9 +83,9 @@ document.addEventListener('DOMContentLoaded', function () {
    const $minutes = document.querySelector('.timer__minutes');
    const $seconds = document.querySelector('.timer__seconds');
    const popup = document.querySelector('.b-popup');
-   const audio = document.createElement("audio");
-   const timeAudio = document.createElement("audio");
+const main = document.querySelector("#main")
      StartBtn.addEventListener("click",()=>{
+         main.classList.add("active")
        modalBlock.classList.add("active")
        StartBtn.classList.add("active")
        audio.src = "/audios/mixkit-fast-small-sweep-transition-166.wav";
@@ -88,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function () {
               if (minutes === 0 && seconds === 0) {  
                 popup.classList.add("active")
                 clearInterval(timerId);
-                const endAudio = document.createElement("audio");
+     
                
                 endAudio.src = "/audios/mixkit-video-game-win-2016.wav";
                 
@@ -97,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function () {
              
                     }
               
-        },500);
+        },1000);
      }
   
   
