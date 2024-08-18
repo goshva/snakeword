@@ -39,7 +39,8 @@ body{
     background-repeat:no-repeat;
     background-position:50% 0;
     background-size:cover;
-    background-attachment:fixed
+    background-attachment:fixed;
+    overflow: hidden;
 }
 a{
     text-decoration:none
@@ -75,7 +76,7 @@ z-index: 13;
 }
 
 .navigationBar.active{
-    width: 280px;
+    width: 319px;
     left: 0px;
     
 }
