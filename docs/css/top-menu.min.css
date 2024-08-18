@@ -478,3 +478,8 @@ border: 1px solid black;
     visibility: visible;
     transform: translateY(0px);
 }
+
+.top-menu .top-menu-list .top-menu-item .saveButton{
+    border: none;
+    padding: 2px;
+}
