@@ -310,22 +310,24 @@ function createImgDialog(imgUrl) {
 
 let mutedBoll = true
 const letterSoundBtn = document.querySelectorAll(".letterSoundBtn")
-const snd = document.createElement("audio");
-snd.src = "../sounds/click.mp3"
+const snd = new Audio ("../sounds/click.mp3")
 letterSoundBtn.forEach((item)=>{
   item.addEventListener("click",()=>{
  alert("ssss");
+ console.log(1223);
+ 
      if (mutedBoll) {
       item.innerHTML = '<img src="../img/musicTone.png" /> ON'
       item.classList.add("active")
-      clickAudio.muted = true;
+      snd.muted = true;
       mutedBoll = false
       return false
      }else{
       item.innerHTML = '<img src="../img/musicToneSlash.png" /> Off'
       item.classList.remove("active")
-      clickAudio.muted = false;
+      snd.muted = false;
       mutedBoll = true;
+      return true
      }
   })
 })
