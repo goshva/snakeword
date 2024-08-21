@@ -162,11 +162,32 @@ transform: translateX(0px);
     position: absolute;
     left: 5px;
     transition: all 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+}
+.setting-item> .setting-list  .lightDarkBlock .toggleCircle .iconToggle{
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    left: 13px;
+    transition: all 0.5s ease;
+   
 }
 
+.setting-item> .setting-list  .lightDarkBlock .toggleCircle.active .iconToggle{
+    left: -12px;
+}
 .setting-item> .setting-list  .lightDarkBlock .toggleCircle.active{
     left: 40px;
 }
+
 
 
 .navigationBar .headerBlock{
