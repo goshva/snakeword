@@ -308,34 +308,13 @@ function createImgDialog(imgUrl) {
 
 
 
-let mutedBoll = true
-const letterSoundBtn = document.querySelectorAll(".letterSoundBtn")
-const snd = new Audio ("../sounds/click.mp3")
-letterSoundBtn.forEach((item)=>{
-  item.addEventListener("click",()=>{
- alert("ssss");
- console.log(1223);
- 
-     if (mutedBoll) {
-      item.innerHTML = '<img src="../img/musicTone.png" /> ON'
-      item.classList.add("active")
-      snd.muted = true;
-      mutedBoll = false
-      return false
-     }else{
-      item.innerHTML = '<img src="../img/musicToneSlash.png" /> Off'
-      item.classList.remove("active")
-      snd.muted = false;
-      mutedBoll = true;
-      return true
-     }
-  })
-})
 
 
 
 function sound() {
-  snd.play();
+    var snd = new Audio("../sounds/click.mp3")
+snd.play()
+
 }
 
 async function collectWord(Id, id, ...args) {
