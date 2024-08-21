@@ -12,6 +12,8 @@ hamburgerBlockBtn.addEventListener("click",()=>{
 
 const lightBlock = document.querySelector(".lightDarkBlock")
 const toggleCircle = document.querySelector(".toggleCircle");
+const iconToggle = document.querySelector(".iconToggle")
  lightBlock.addEventListener("click",()=>{
-    toggleCircle.classList.toggle("active")
+    toggleCircle.classList.toggle("active");
+  iconToggle.classList.toggle("active")
  })
