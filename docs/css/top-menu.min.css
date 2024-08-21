@@ -105,7 +105,7 @@ background-color: #4c4c4c;
 position: absolute;
 display: flex;
 justify-content: center;
-align-items: flex-start;
+align-items: center;
 flex-direction: column;
 gap: 15px;
 color: #fff;
@@ -133,21 +133,42 @@ transform: translateX(0px);
     letter-spacing: 12px;
     transition: all 0.5s ease;
 }
-.setting-item> .setting-list> .letterSoundBtn{
-    padding: 5px 30px;
-    background: none;
-    cursor: pointer;
-    border: none;
-    color: #fff;
-}
 
-.setting-item> .setting-list>.letterSoundBtn.active{
-    background-color: #d35400;
-}
+
+
 .setting-item> .setting-list>a.muted{
     background-color: #f00;
     color: #fff;
 }
+
+ .setting-item> .setting-list .lightDarkBlock{
+    width: 70px;
+  height: 30px;
+    cursor: pointer;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    z-index: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ .setting-item> .setting-list  .lightDarkBlock .toggleCircle{
+    width: 20px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 50%;
+    position: absolute;
+    left: 5px;
+    transition: all 0.5s ease;
+}
+
+.setting-item> .setting-list  .lightDarkBlock .toggleCircle.active{
+    left: 40px;
+}
+
+
 .navigationBar .headerBlock{
     width: 250px;
     height: auto;
