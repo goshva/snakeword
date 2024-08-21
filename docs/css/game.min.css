@@ -20,7 +20,6 @@ transition: all 0.5s;
 
 
 #main{
-    transition: all 0.5s ease;
     opacity: 0;
     visibility: hidden;
     transition: all 0.5s ease;
