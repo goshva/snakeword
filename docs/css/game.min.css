@@ -17,9 +17,7 @@ transition: all 0.5s;
     transform: scale(0);
 }
 
-.modalBlock.light{
-    
-}
+
 
 #main{
     opacity: 0;
