@@ -39,6 +39,16 @@
                 hreflang="de"
                 href="http://localhost:1313/de/"
                 />
+    <xhtml:link
+                rel="alternate"
+                hreflang="hi"
+                href="http://localhost:1313/hi/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="http://localhost:1313/zh/"
+                />
   </url><url>
     <loc>http://localhost:1313/de/categories/</loc>
     <xhtml:link
@@ -76,6 +86,16 @@
                 hreflang="de"
                 href="http://localhost:1313/de/categories/"
                 />
+    <xhtml:link
+                rel="alternate"
+                hreflang="hi"
+                href="http://localhost:1313/hi/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="http://localhost:1313/zh/categories/"
+                />
   </url><url>
     <loc>http://localhost:1313/de/tags/</loc>
     <xhtml:link
@@ -112,6 +132,16 @@
                 rel="alternate"
                 hreflang="de"
                 href="http://localhost:1313/de/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="hi"
+                href="http://localhost:1313/hi/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="http://localhost:1313/zh/tags/"
                 />
   </url>
 </urlset>
