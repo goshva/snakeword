@@ -136,3 +136,41 @@ publishDir ="docs"
   category = "categories"
   tag = "tags"
 
+
+
+
+  [Languages.Hi]
+  Languagename =  "Hindi"
+  title = "साँप बोलने वाला"
+  weight = 2
+  author = "Егор Ша."
+  Description = "शब्द खेल का मिलान करें"
+  keywords = "Tesla's Awesome Hugo Site"
+  fbAppid = "Tesla's Awesome Hugo Site"
+  Fullurl = "Tesla's Awesome Hugo Site"
+  Points = "0"
+  MyRecord = "0"
+  Game_Mode = "खेल मोड"
+  Random = "यादृच्छिक"
+  Settings = "सेटिंग्स"
+  Save = "बचाना"
+  Language = "भाषा"
+
+
+  [Languages.zh]
+  Languagename =  "Chinese"
+  title = "蛇語者"
+  weight = 2
+  author = "Егор Ша."
+  Description = "比對文字遊戲"
+  keywords = "Tesla's Awesome Hugo Site"
+  fbAppid = "Tesla's Awesome Hugo Site"
+  Fullurl = "Tesla's Awesome Hugo Site"
+  Points = "0"
+  MyRecord = "0"
+  Game_Mode = "遊戲類型"
+  Random = "混亂"
+  Settings = "成套工具"
+  Save = "節省"
+  Language = "語言"
+
