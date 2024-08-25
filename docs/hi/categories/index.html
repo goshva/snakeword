@@ -37,9 +37,9 @@
       </script>
         <div class="b-popup">
           <div class="b-popup-content">
-            <img src="../img/cracker.gif" alt="cracker" class="cracker_gif-left">
-            <img src="../img/victory.png" alt="" class="pop-up_img">
-            <img src="../img/cracker.gif" alt="cracker" class="cracker_gif-right">
+            <img src="../../img/cracker.gif" alt="cracker" class="cracker_gif-left">
+            <img src="../../img/victory.png" alt="" class="pop-up_img">
+            <img src="../../img/cracker.gif" alt="cracker" class="cracker_gif-right">
           </div>
           <button class="restartBtn">पुनः खेल प्रारंभ करें</button>
         </div>
@@ -111,61 +111,69 @@
           </li>
           <li class="top-menu-item">
             <a href="#" class="top-menu-link-language-selected">
-              Язык
+              <div class="imgBlock"><img src="../flag/Flag_of_India_Flat_Round_Corner-64x64.png" alt=""></div>
+              भाषा
               <i class="fa-solid fa-caret-down"></i>
             </a>
             <ul class="top-menu-list for_language">
               <li class="top-menu-item">
                 
-                <li class="top-menu-item">
+                <li class="top-menu-item" style="--i:1">
+                   <div class="imgBlock"><img src="../flag/Flag_of_United_States_Flat_Round_Corner-64x64.png" alt=""></div>
                   <a class="top-menu-link-languages" href="http://localhost:1313/en/"
                     >English</a
                   >
                 </li>
                 
-                <li class="top-menu-item">
+                <li class="top-menu-item" style="--i:2">
+                   <div class="imgBlock"><img src="../flag/Flag_of_Italy_Flat_Round_Corner-64x64.png" alt=""></div>
                   <a class="top-menu-link-languages" href="http://localhost:1313/la/"
                     >Latin</a
                   >
                 </li>
                 
-                <li class="top-menu-item">
+                <li class="top-menu-item" style="--i:3">
+                  <div class="imgBlock"><img src="../flag/Flag_of_United_Arab_Emirates_Flat_Round_Corner-64x64.png" alt=""></div>
                   <a class="top-menu-link-languages" href="http://localhost:1313/ar/"
                     >Arabian</a
                   >
                 </li>
                 
-                <li class="top-menu-item">
+                <li class="top-menu-item" style="--i:4">
+                  <div class="imgBlock"><img src="../flag/Flag_of_France_Flat_Round_Corner-64x64.png" alt=""></div>
                   <a class="top-menu-link-languages" href="http://localhost:1313/fr/"
                     >French</a
                   >
                 </li>
                 
-                <li class="top-menu-item">
+                <li class="top-menu-item" style="--i:5">
+                  <div class="imgBlock"><img src="../flag/Flag_of_Germany_Flat_Round_Corner-64x64.png" alt=""></div>
                   <a class="top-menu-link-languages" href="http://localhost:1313/de/"
                     >Немецкий</a
                   >
                 </li>
                 
-                <li class="top-menu-item">
+                <li class="top-menu-item" style="--i:6">
+                  <div class="imgBlock"><img src="../flag/Flag_of_Russia_Flat_Round_Corner-64x64.png" alt=""></div>
                   <a class="top-menu-link-languages" href="http://localhost:1313/ru/"
                     >Русский</a
                   >
                 </li>
                 
-                <li class="top-menu-item">
+                <li class="top-menu-item" style="--i:7">
+                  <div class="imgBlock"><img src="../flag/Flag_of_Armenia_Flat_Round_Corner-64x64 (1).png" alt=""></div>
                   <a class="top-menu-link-languages" href="http://localhost:1313/hy/"
                     >Հայերեն</a
                   >
                 </li>
-                <li class="top-menu-item" style="--i:7">
-                  
+                <li class="top-menu-item" style="--i:8">
+                  <div class="imgBlock"><img src="../flag/Flag_of_India_Flat_Round_Corner-64x64.png" alt=""></div>
                   <a class="top-menu-link-languages" href="http://localhost:1313/hi/"
                     >भारतीय</a
                   >
                 </li>
-                <li class="top-menu-item" style="--i:7">
-                  
+                <li class="top-menu-item" style="--i:9">
+                  <div class="imgBlock"><img src="../flag/Flag_of_Peoples_Republic_of_China_Flat_Round_Corner-64x64.png" alt=""></div>
                   <a class="top-menu-link-languages" href="http://localhost:1313/zh/"
                     >中国人</a
                   >
@@ -237,8 +245,8 @@
     </li>
     <li class="top-menu-item">
       <a href="#" class="top-menu-link-language-selected">
-        <div class="imgBlock"><img src="../flag/Flag_of_Russia_Flat_Round_Corner-64x64.png" alt=""></div>
-        Язык
+        <div class="imgBlock"><img src="../flag/Flag_of_India_Flat_Round_Corner-64x64.png" alt=""></div>
+        भाषा
         <i class="fa-solid fa-caret-down"></i>
       </a>
       <ul class="top-menu-list for_language">
@@ -314,6 +322,95 @@
   <!-- Navigation bar end -->
 </body>
 <div id="content">
+  <div class="modalBlock">
+    <div class="buttonsBlock">
+        <button class="StartBtn">खेल शुरू</button>
+      
+        <button class="RulesBtn">खेल के नियम</button>
+    </div>
+  </div>
+
+  <div class="modalSlider">
+    <div class="closeBtn">X</div>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./../exampleImages/exampleone.png" class="d-block w-100" alt="image">
+          <div class="carousel-caption d-none d-md-block bg-secondary">
+            <h5 class="text-white">घड़ी</h5>
+            <p class="text-white">"गेम प्रारंभ करें" बटन पर क्लिक करने के बाद, गेम के लिए आवंटित समय समाप्त होने लगता है,
+              आपके पास खेलने के लिए 10 मिनट हैं</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./../exampleImages/exampletwo.png" class="d-block w-100" alt="image">
+          <div class="carousel-caption d-none d-md-block bg-secondary">
+            <h5 class="text-white">बिंदु</h5>
+              <p class="text-white">इस गेम बोर्ड पर छुपे हुए शब्द हैं। <br>प्रत्येक सही शब्द के लिए आपको एक अंक मिलता है</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./../exampleImages/exampleone.png" class="d-block w-100" alt="image">
+          <div class="carousel-caption d-none d-md-block bg-secondary">
+            <h5 class="text-white">एक शब्द हटाएँ</h5>
+            <p class="text-white">यदि आप गलत शब्द का चयन करते हैं तो आप इसका उपयोग करके उसे हटा सकते हैं<i class="fa-solid fa-delete-left"></i> кнопки </p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  <div id="main">
+    <div class="timer">
+      <div class="timer__items">
+        <div class="timer__item timer__minutes">00</div>
+        :
+        <div class="timer__item timer__seconds">00</div>
+      </div>
+    </div>
+    <div class="header">
+      <div class="pure-form" style="display: flex; justify-content: center">
+        <span
+          class="point-button pure-button-active"
+          id="points"
+          title="0"
+          >...
+        </span>
+        <select id="word-input" class="pure-input-3-5">
+          <option></option>
+        </select>
+  
+        <span
+          class="clear-button pure-button-active"
+          id="cut-btn"
+          title=""
+          ><i class="fa-solid fa-delete-left"></i>
+        </span>
+      </div>
+    </div>
+    <div class="content">
+  
+      <div id=""></div>
+      <div id="gameplace"></div>
+      <div id="result"></div>
+    </div>
+  </div>
+  <div
+    class="gallery pure-form"
+    style="position: fixed; top: 50%; left: 50%"
+  ></div>
         </div>      
         <script defer src="/js/toggleBlock.js"></script>
         <script defer src="/js/backgroundChange.js"></script> 

@@ -38,9 +38,9 @@
       </script>
         <div class="b-popup">
           <div class="b-popup-content">
-            <img src="../img/cracker.gif" alt="cracker" class="cracker_gif-left">
-            <img src="../img/victory.png" alt="" class="pop-up_img">
-            <img src="../img/cracker.gif" alt="cracker" class="cracker_gif-right">
+            <img src="../../img/cracker.gif" alt="cracker" class="cracker_gif-left">
+            <img src="../../img/victory.png" alt="" class="pop-up_img">
+            <img src="../../img/cracker.gif" alt="cracker" class="cracker_gif-right">
           </div>
           <button class="restartBtn">sileo ludum</button>
         </div>
@@ -61,7 +61,7 @@
               <i class="fa-solid fa-xmark"></i>
             </div>
               </div>
-        <ul class="top-menu-list for_language">
+        <ul class="top-menu-list">
           <li class="top-menu-item">
             <div
             class="fb-share-button"
@@ -115,8 +115,7 @@
                 <li class="top-menu-item" style="--i:1">
                    <div class="imgBlock"><img src="../flag/Flag_of_United_States_Flat_Round_Corner-64x64.png" alt=""></div>
                   <a class="top-menu-link-languages" href="http://localhost:1313/en/"
-                    >English</a
-                  >
+                    >English</a>
                 </li>
                 
                 <li class="top-menu-item" style="--i:2">
@@ -225,8 +224,8 @@
         <div class="lightDarkBlock">
             <div class="toggleCircle">
               <div class="iconToggle">
-                <img src="../img/sunny.png" alt="">
-                <img src="../img/half-moon.png" alt="">
+                <img src="../../img/half-moon.png" alt="">
+                <img src="../../img/sunny.png" alt="">
               </div>
             </div>
         </div>
@@ -296,13 +295,13 @@
           </li>
           <li class="top-menu-item" style="--i:7">
             <div class="imgBlock"><img src="../flag/Flag_of_India_Flat_Round_Corner-64x64.png" alt=""></div>
-            <a class="top-menu-link-languages" href="http://localhost:1313/hy/"
+            <a class="top-menu-link-languages" href="http://localhost:1313/hi/"
               >भारतीय</a
             >
           </li>
           <li class="top-menu-item" style="--i:7">
             <div class="imgBlock"><img src="../flag/Flag_of_Peoples_Republic_of_China_Flat_Round_Corner-64x64.png" alt=""></div>
-            <a class="top-menu-link-languages" href="http://localhost:1313/hy/"
+            <a class="top-menu-link-languages" href="http://localhost:1313/zh/"
               >中国人</a
             >
           </li>
@@ -332,21 +331,21 @@
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="./../exampleImages/exampleone.png" class="d-block w-100" alt="image">
+          <img src="../../exampleImages/exampleone.png" class="d-block w-100" alt="image">
           <div class="carousel-caption d-none d-md-block bg-secondary">
             <h5 class="text-white">Tempus:</h5>
             <p class="text-white">Post premere puga "Satus ludum", tempus sortitum ludum incipit excurrere.</p>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="./../exampleImages/exampletwo.png" class="d-block w-100" alt="image">
+          <img src="../../exampleImages/exampletwo.png" class="d-block w-100" alt="image">
           <div class="carousel-caption d-none d-md-block bg-secondary">
             <h5 class="text-white">Unitas</h5>
             <p class="text-white">Abscondita sunt verba in hoc ludo tabulae. <br>Nam omne verbum rectam tibi unum punctum adepto</p>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="./../exampleImages/exampleone.png" class="d-block w-100" alt="image">
+          <img src="../../exampleImages/exampleone.png" class="d-block w-100" alt="image">
           <div class="carousel-caption d-none d-md-block bg-secondary">
             <h5 class="text-white">Delere verbum</h5>
             <p class="text-white">Si verbum perversum delegisti, eam cum hac conjunctione delere potes <i class="fa-solid fa-delete-left"></i></p>
@@ -363,6 +362,46 @@
       </button>
     </div>
   </div>
+  <div id="main">
+    <div class="timer">
+      <div class="timer__items">
+        <div class="timer__item timer__minutes">00</div>
+        :
+        <div class="timer__item timer__seconds">00</div>
+      </div>
+    </div>
+    <div class="header">
+      <div class="pure-form" style="display: flex; justify-content: center">
+        <span
+          class="point-button pure-button-active"
+          id="points"
+          title=""
+          >...
+        </span>
+        <select id="word-input" class="pure-input-3-5">
+          <option></option>
+        </select>
+  
+        <span
+          class="clear-button pure-button-active"
+          id="cut-btn"
+          title=""
+          ><i class="fa-solid fa-delete-left"></i>
+        </span>
+      </div>
+    </div>
+    <div class="content">
+  
+      
+      <div id=""></div>
+      <div id="gameplace"></div>
+      <div id="result"></div>
+    </div>
+  </div>
+  <div
+    class="gallery pure-form"
+    style="position: fixed; top: 50%; left: 50%"
+  ></div>
         </div>     
         <script defer src="/js/toggleBlock.js"></script> 
         <script defer src="/js/backgroundChange.js"></script>      

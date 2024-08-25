@@ -37,9 +37,9 @@
       </script>
         <div class="b-popup">
           <div class="b-popup-content">
-            <img src="../img/cracker.gif" alt="cracker" class="cracker_gif-left">
-            <img src="../img/victory.png" alt="" class="pop-up_img">
-            <img src="../img/cracker.gif" alt="cracker" class="cracker_gif-right">
+            <img src="../../img/cracker.gif" alt="cracker" class="cracker_gif-left">
+            <img src="../../img/victory.png" alt="" class="pop-up_img">
+            <img src="../../img/cracker.gif" alt="cracker" class="cracker_gif-right">
           </div>
           <button class="restartBtn">पुनः खेल प्रारंभ करें</button>
         </div>
@@ -303,7 +303,7 @@
             <a class="top-menu-link-languages" href="http://localhost:1313/hi/"
               >भारतीय</a
             >
-          </li>hi
+          </li>
           <li class="top-menu-item" style="--i:7">
             <div class="imgBlock"><img src="../flag/Flag_of_Peoples_Republic_of_China_Flat_Round_Corner-64x64.png" alt=""></div>
             <a class="top-menu-link-languages" href="http://localhost:1313/zh/"
@@ -369,6 +369,45 @@
       </button>
     </div>
   </div>
+  <div id="main">
+    <div class="timer">
+      <div class="timer__items">
+        <div class="timer__item timer__minutes">00</div>
+        :
+        <div class="timer__item timer__seconds">00</div>
+      </div>
+    </div>
+    <div class="header">
+      <div class="pure-form" style="display: flex; justify-content: center">
+        <span
+          class="point-button pure-button-active"
+          id="points"
+          title="0"
+          >...
+        </span>
+        <select id="word-input" class="pure-input-3-5">
+          <option></option>
+        </select>
+  
+        <span
+          class="clear-button pure-button-active"
+          id="cut-btn"
+          title=""
+          ><i class="fa-solid fa-delete-left"></i>
+        </span>
+      </div>
+    </div>
+    <div class="content">
+  
+      <div id=""></div>
+      <div id="gameplace"></div>
+      <div id="result"></div>
+    </div>
+  </div>
+  <div
+    class="gallery pure-form"
+    style="position: fixed; top: 50%; left: 50%"
+  ></div>
         </div>   
         <script defer src="/js/toggleBlock.js"></script>  
         <script defer src="/js/backgroundChange.js"></script> 
