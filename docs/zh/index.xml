@@ -3,11 +3,10 @@
   <channel>
     <title>蛇語者</title>
     <link>http://localhost:1313/zh/</link>
-    <description>Recent content on 蛇语者</description>
+    <description>Recent content on 蛇語者</description>
     <generator>Hugo 0.125.2</generator>
     <language>zh</language>
     <copyright>Everything is mine</copyright>
-    <lastBuildDate></lastBuildDate>
     <atom:link href="http://localhost:1313/zh/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

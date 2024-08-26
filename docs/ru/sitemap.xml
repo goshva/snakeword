@@ -36,18 +36,18 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="ru"
-                href="http://localhost:1313/ru/"
+                hreflang="hi"
+                href="http://localhost:1313/hi/"
                 />
-                  <xhtml:link
+    <xhtml:link
                 rel="alternate"
                 hreflang="zh"
                 href="http://localhost:1313/zh/"
                 />
-                  <xhtml:link
+    <xhtml:link
                 rel="alternate"
-                hreflang="hi"
-                href="http://localhost:1313/hi/"
+                hreflang="ru"
+                href="http://localhost:1313/ru/"
                 />
   </url><url>
     <loc>http://localhost:1313/ru/categories/</loc>
@@ -78,24 +78,23 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="hi"
+                href="http://localhost:1313/hi/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="hy"
                 href="http://localhost:1313/hy/categories/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="ru"
-                href="http://localhost:1313/ru/categories/"
-                />
-
-                 <xhtml:link
-                rel="alternate"
                 hreflang="zh"
                 href="http://localhost:1313/zh/categories/"
                 />
-                 <xhtml:link
+    <xhtml:link
                 rel="alternate"
-                hreflang="hi"
-                href="http://localhost:1313/hi/categories/"
+                hreflang="ru"
+                href="http://localhost:1313/ru/categories/"
                 />
   </url><url>
     <loc>http://localhost:1313/ru/tags/</loc>
@@ -126,24 +125,23 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="hi"
+                href="http://localhost:1313/hi/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="hy"
                 href="http://localhost:1313/hy/tags/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="ru"
-                href="http://localhost:1313/ru/tags/"
-                />
-
-                 <xhtml:link
-                rel="alternate"
                 hreflang="zh"
                 href="http://localhost:1313/zh/tags/"
                 />
-                 <xhtml:link
+    <xhtml:link
                 rel="alternate"
-                hreflang="hi"
-                href="http://localhost:1313/hi/tags/"
+                hreflang="ru"
+                href="http://localhost:1313/ru/tags/"
                 />
   </url>
 </urlset>
