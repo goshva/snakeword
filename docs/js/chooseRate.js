@@ -18,7 +18,7 @@ rateButtons.forEach((button,index)=>{
      ratedText.classList.add("thanks")
      choosen_icon.innerHTML = button.innerHTML
      setTimeout(()=>{
-rateBlock.classList.remove("deleted")
+rateBlock.classList.add("deleted")
      },3000)
     })
 })
