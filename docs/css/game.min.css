@@ -72,11 +72,7 @@ transition: all 0.5s;
     visibility: visible;
 }
 
-.b-popup.active .rateBlock{
-    transform: translateX(0);
-    opacity: 1;
-    visibility: visible;
-}
+
 
  .b-popup .rateBlock{
     width: 300px;
@@ -91,14 +87,12 @@ transition: all 0.5s;
     top: 50px;
     right: 15px;
     transition: all 0.5s ease;
-    transform: translateX(15px);
-    opacity: 0;
-    visibility: hidden;
     text-align: center;
 }
 
 .b-popup .rateBlock .rateHeader{
 transition: all 0.5s ease;
+
 }
 
 .b-popup .rateBlock .rateHeader.deleted{
@@ -111,12 +105,14 @@ transition: all 0.5s ease;
 transform: translateY(15px);
 opacity: 0;
 visibility: hidden;
+position: absolute;
 }
 
 .b-popup .rateBlock .ratedText.thanks{
-    transform: translateY(0);
+    transform: translateY(-25px);
 opacity: 1;
 visibility: visible;
+display: block;
 }
 
 

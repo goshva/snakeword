@@ -100,7 +100,10 @@ z-index: 13;
 
 .setting-item{transition: all 0.5s ease;}
 
-
+.navigationBar .top-menu-list .top-menu-item .saveButton{
+    padding: 2px;
+    border: none;
+}
 
 .setting-item> .setting-list{
     z-index: 3;
