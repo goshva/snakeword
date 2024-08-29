@@ -72,20 +72,58 @@ transition: all 0.5s;
     visibility: visible;
 }
 
+.b-popup.active .rateBlock{
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+}
+
  .b-popup .rateBlock{
     width: 300px;
-    height: 450px;
-    background-color: #fff;
+    height: 250px;
+    background-color: #ccc;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    border-radius: 15px;
+    position: absolute;
+    top: 50px;
+    right: 15px;
+    transition: all 0.5s ease;
+    transform: translateX(15px);
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
 }
-
+.b-popup .rateBlock.deleted{
+    transform: translateX(15px);
+    opacity: 0;
+    visibility: hidden;
+}
 .b-popup .rateBlock .rateBtns{
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.5s ease;
+}
+
+.b-popup .rateBlock .rateBtns.rated{
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+}
+
+.b-popup .choosenBlock{
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+}
+
+.b-popup .choosenBlock.rated{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-15px);
 }
 
 .b-popup .rateBlock .rateBtns > .rateBtn{
@@ -235,5 +273,26 @@ transition: all 0.5s;
             }
             .modalBlock .buttonsBlock>button{
                 padding:10px 25px
+            }
+
+            .b-popup .rateBlock{
+                gap: 15px;
+                width: 200px;
+                height: 150px;
+            }
+            .b-popup .rateBlock .rateBtns > .rateBtn{
+                padding: 2.5px 5px;
+                font-size: 20px;
+                border: none;
+                background: none;
+            }
+
+            .b-popup .rateBlock .rateHeader{
+                font-size: 15px;
+                text-align: center;
+            }
+            .b-popup-content>img{
+                width: 150px;
+                height: 150px;
             }
         }
