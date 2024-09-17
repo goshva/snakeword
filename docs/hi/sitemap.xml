@@ -15,6 +15,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="fr"
+                href="http://localhost:1313/fr/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="la"
                 href="http://localhost:1313/la/categories/"
                 />
@@ -35,11 +40,6 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="fr"
-                href="http://localhost:1313/fr/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
                 hreflang="zh"
                 href="http://localhost:1313/zh/categories/"
                 />
@@ -47,53 +47,6 @@
                 rel="alternate"
                 hreflang="hi"
                 href="http://localhost:1313/hi/categories/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/hi/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="la"
-                href="http://localhost:1313/la/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ar"
-                href="http://localhost:1313/ar/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="http://localhost:1313/de/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ru"
-                href="http://localhost:1313/ru/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="hy"
-                href="http://localhost:1313/hy/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="http://localhost:1313/fr/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="http://localhost:1313/zh/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="http://localhost:1313/zh/"
                 />
   </url><url>
     <loc>http://localhost:1313/hi/tags/</loc>
@@ -106,6 +59,11 @@
                 rel="alternate"
                 hreflang="ar"
                 href="http://localhost:1313/ar/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://localhost:1313/fr/tags/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -129,11 +87,6 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="fr"
-                href="http://localhost:1313/fr/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
                 hreflang="zh"
                 href="http://localhost:1313/zh/tags/"
                 />
@@ -141,6 +94,53 @@
                 rel="alternate"
                 hreflang="hi"
                 href="http://localhost:1313/hi/tags/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/hi/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="la"
+                href="http://localhost:1313/la/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ar"
+                href="http://localhost:1313/ar/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://localhost:1313/fr/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="http://localhost:1313/de/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="http://localhost:1313/ru/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="hy"
+                href="http://localhost:1313/hy/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="http://localhost:1313/zh/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="hi"
+                href="http://localhost:1313/hi/"
                 />
   </url>
 </urlset>
