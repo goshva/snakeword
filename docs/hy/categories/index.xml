@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Օձի Բառ</title>
-    <link>http://localhost:1313/hy/categories/</link>
+    <link>https://snakeword.vit.ooo/hy/categories/</link>
     <description>Recent content in Categories on Օձի Բառ</description>
-    <generator>Hugo 0.125.2</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>hy</language>
     <copyright>Everything is mine</copyright>
-    <atom:link href="http://localhost:1313/hy/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://snakeword.vit.ooo/hy/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

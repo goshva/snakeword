@@ -13,13 +13,14 @@
 @font-face {
   font-family: "Josefin";
   font-weight: 400;
-  src: url("../../public/fonts/rubik/JosefinSans-Regular.ttf");
+  src: url("/fonts/josefin/JosefinSans-Regular.ttf");
+                  
 }
 
 @font-face {
   font-family: "Josefin";
   font-weight: 700;
-  src: url("../../public/fonts/rubik/JosefinSans-Bold.ttf");
+  src: url("/fonts/josefin/JosefinSans-Bold.ttf");
 }
 
 html {

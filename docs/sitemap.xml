@@ -2,53 +2,47 @@
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <sitemap>
-    <loc>http://localhost:1313/en/sitemap.xml</loc>
-    
-      <lastmod>2020-04-17T15:06:40+03:00</lastmod>
+    <loc>https://snakeword.vit.ooo/ar/sitemap.xml</loc>
     
   </sitemap>
   
   <sitemap>
-    <loc>http://localhost:1313/ar/sitemap.xml</loc>
+    <loc>https://snakeword.vit.ooo/en/sitemap.xml</loc>
     
   </sitemap>
   
   <sitemap>
-    <loc>http://localhost:1313/fr/sitemap.xml</loc>
+    <loc>https://snakeword.vit.ooo/fr/sitemap.xml</loc>
     
   </sitemap>
   
   <sitemap>
-    <loc>http://localhost:1313/la/sitemap.xml</loc>
+    <loc>https://snakeword.vit.ooo/la/sitemap.xml</loc>
     
   </sitemap>
   
   <sitemap>
-    <loc>http://localhost:1313/de/sitemap.xml</loc>
-    
-      <lastmod>2020-04-17T15:06:40+03:00</lastmod>
+    <loc>https://snakeword.vit.ooo/de/sitemap.xml</loc>
     
   </sitemap>
   
   <sitemap>
-    <loc>http://localhost:1313/hy/sitemap.xml</loc>
+    <loc>https://snakeword.vit.ooo/hi/sitemap.xml</loc>
     
   </sitemap>
   
   <sitemap>
-    <loc>http://localhost:1313/ru/sitemap.xml</loc>
-    
-      <lastmod>2020-04-17T15:06:40+03:00</lastmod>
+    <loc>https://snakeword.vit.ooo/hy/sitemap.xml</loc>
     
   </sitemap>
   
   <sitemap>
-    <loc>http://localhost:1313/zh/sitemap.xml</loc>
+    <loc>https://snakeword.vit.ooo/ru/sitemap.xml</loc>
     
   </sitemap>
-
-    <sitemap>
-    <loc>http://localhost:1313/hi/sitemap.xml</loc>
+  
+  <sitemap>
+    <loc>https://snakeword.vit.ooo/zh/sitemap.xml</loc>
     
   </sitemap>
   

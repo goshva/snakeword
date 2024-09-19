@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><!DOCTYPE html>
+<html><!DOCTYPE html>
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Prendre un mot à côté des lettres côte à côte" />
     <meta property="og:description" content="Prendre un mot à côté des lettres côte à côte" />
-    <meta property="og:url" content="http://localhost:1313/fr/tags/fr" />
+    <meta property="og:url" content="https://snakeword.vit.ooo/fr/tags/fr" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="0" />
     <meta property="og:image" content="/img/soc.jpg" />
@@ -20,448 +20,173 @@
     ></script>
     
     <link href="/css/top-menu.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
     <link href="/css/game.min.css" rel="stylesheet">
   </head>
 </html>
-<body>   <body>
-    <header>
-      <div id="fb-root"></div>
-      <script>(function(d, s, id) {
-         var js, fjs = d.getElementsByTagName(s)[0];
-         if (d.getElementById(id)) return;
-         js = d.createElement(s); js.id = id;
-         js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.8&appId=215324895555689";
-         fjs.parentNode.insertBefore(js, fjs);
-         }(document, 'script', 'facebook-jssdk'));
-      </script>
-        <div class="b-popup">
-          <div class="rateBlock">
-            <h2 class="rateHeader text-white">Veuillez noter le jeu</h2>
-            <h2 class="ratedText text-white">Merci pour la note</h2>
-            <div class="rateBtns">
-              <button class="rateBtn">😔</button>
-              <button class="rateBtn">🙄</button>
-              <button class="rateBtn">🙂</button>
-              <button class="rateBtn">😁</button>
-              <button class="rateBtn">🤩</button>
-            </div>
-            <div class="choosenBlock">
-              <h2>Vous avez choisi
-                <span class="choosen_icon"></span>
-              </h2>
-              
-            </div>
-            </div>
-          <div class="b-popup-content">
-            <img src="../../img/cracker.gif" alt="cracker" class="cracker_gif-left">
-            <img src="../../img/victory.png" alt="" class="pop-up_img">
-            <img src="../../img/cracker.gif" alt="cracker" class="cracker_gif-right">
-          </div>
-          <button class="restartBtn">relancer le jeu</button>
-        </div>
-        <div class="top-menu">
-          <div class="headerBlock">
-            <a href="#" class="logo">
-              <div class="cell" style="--i:1">m</div>
-              <div class="cell" style="--i:2">o</div>
-              <div class="cell" style="--i:3">t</div>
-              <div class="cell" style="--i:4">-</div>
-              <div class="cell" style="--i:1">d</div>
-              <div class="cell" style="--i:2">e</div>
-              <div class="cell" style="--i:1">-</div>
-              <div class="cell" style="--i:2">s</div>
-              <div class="cell" style="--i:3">e</div>
-              <div class="cell" style="--i:4">r</div>
-              <div class="cell" style="--i:5">p</div>
-              <div class="cell" style="--i:4">e</div>
-              <div class="cell" style="--i:3">n</div>
-              <div class="cell" style="--i:2">t</div>
-            </a>
-          </div>
-
-          <div class="hamburgerBlockBtn">
-            <div class="iconBlock">
-              <i class="fa-sharp fa-solid fa-bars"></i>
-              <i class="fa-solid fa-xmark"></i>
-            </div>
-              </div>
-        <ul class="top-menu-list">
-          <li class="top-menu-item">
-            <div
-            class="fb-share-button"
-            data-href="https://boggle.space/url?edge=9&amp;letters=[%22%D0%BE%22,%22%D1%86%22,%22%D1%82%22,%22%D1%83%22,%22%D0%B6%22,%22%D0%B0%22,%22%D0%B7%22,%22%D0%B0%22,%22%D1%81%22,%22%D0%BC%22,%22%D0%B5%22,%22%D0%BD%22,%22%D0%B4%22,%22%D0%B8%22,%22%D0%B3%22,%22%D1%81%22,%22%D0%BA%22,%22%D0%B2%22,%22%D0%BE%22,%22%D0%BE%22,%22%D0%B2%22,%22%D0%BE%22,%22%D1%8C%22,%22%D0%B0%22,%22%D0%BE%22,%22%D1%8D%22,%22%D0%BE%22,%22%D1%82%22,%22%D1%80%22,%22%D0%BF%22,%22%D0%B5%22,%22%D0%BB%22,%22%D0%BB%22,%22%D0%BA%22,%22%D0%B0%22,%22%D1%85%22,%22%D0%B8%22,%22%D0%BF%22,%22%D0%B0%22,%22%D0%BD%22,%22%D1%8C%22,%22%D0%BF%22,%22%D0%B3%22,%22%D0%BF%22,%22%D1%83%22,%22%D0%BF%22,%22%D0%B8%22,%22%D0%BA%22,%22%D0%B8%22,%22%D1%89%22,%22%D0%B8%22,%22%D0%BC%22,%22%D1%8F%22,%22%D0%B4%22,%22%D0%B0%22,%22%D0%B9%22,%22%D0%B0%22,%22%D0%BA%22,%22%D0%BE%22,%22%D0%BD%22,%22%D0%B0%22,%22%D1%81%22,%22%D0%B7%22,%22%D0%B3%22,%22%D1%8B%22,%22%D0%BD%22,%22%D1%82%22,%22%D0%BE%22,%22%D0%B0%22,%22%D1%82%22,%22%D1%8C%22,%22%D0%B7%22,%22%D0%B8%22,%22%D0%BC%22,%22%D0%B5%22,%22%D0%BB%22,%22%D0%BF%22,%22%D1%82%22,%22%D0%B8%22,%22%D1%87%22,%22%D0%B0%22]&amp;userwordsids=[[32,23,14],[14,23,32,33,34],[15,24,33],[24,33,24]]"
-            data-layout="button_count"
-            data-size="large"
-            data-mobile-iframe="true">
-            <a
-              class="fb-xfbml-parse-ignore top-menu-link"
-              target="_blank"
-              href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fboggle.space%2Furl%3Fedge%3D9%26letters%3D%255B%2522%25D0%25BE%2522%252C%2522%25D1%2586%2522%252C%2522%25D1%2582%2522%252C%2522%25D1%2583%2522%252C%2522%25D0%25B6%2522%252C%2522%25D0%25B0%2522%252C%2522%25D0%25B7%2522%252C%2522%25D0%25B0%2522%252C%2522%25D1%2581%2522%252C%2522%25D0%25BC%2522%252C%2522%25D0%25B5%2522%252C%2522%25D0%25BD%2522%252C%2522%25D0%25B4%2522%252C%2522%25D0%25B8%2522%252C%2522%25D0%25B3%2522%252C%2522%25D1%2581%2522%252C%2522%25D0%25BA%2522%252C%2522%25D0%25B2%2522%252C%2522%25D0%25BE%2522%252C%2522%25D0%25BE%2522%252C%2522%25D0%25B2%2522%252C%2522%25D0%25BE%2522%252C%2522%25D1%258C%2522%252C%2522%25D0%25B0%2522%252C%2522%25D0%25BE%2522%252C%2522%25D1%258D%2522%252C%2522%25D0%25BE%2522%252C%2522%25D1%2582%2522%252C%2522%25D1%2580%2522%252C%2522%25D0%25BF%2522%252C%2522%25D0%25B5%2522%252C%2522%25D0%25BB%2522%252C%2522%25D0%25BB%2522%252C%2522%25D0%25BA%2522%252C%2522%25D0%25B0%2522%252C%2522%25D1%2585%2522%252C%2522%25D0%25B8%2522%252C%2522%25D0%25BF%2522%252C%2522%25D0%25B0%2522%252C%2522%25D0%25BD%2522%252C%2522%25D1%258C%2522%252C%2522%25D0%25BF%2522%252C%2522%25D0%25B3%2522%252C%2522%25D0%25BF%2522%252C%2522%25D1%2583%2522%252C%2522%25D0%25BF%2522%252C%2522%25D0%25B8%2522%252C%2522%25D0%25BA%2522%252C%2522%25D0%25B8%2522%252C%2522%25D1%2589%2522%252C%2522%25D0%25B8%2522%252C%2522%25D0%25BC%2522%252C%2522%25D1%258F%2522%252C%2522%25D0%25B4%2522%252C%2522%25D0%25B0%2522%252C%2522%25D0%25B9%2522%252C%2522%25D0%25B0%2522%252C%2522%25D0%25BA%2522%252C%2522%25D0%25BE%2522%252C%2522%25D0%25BD%2522%252C%2522%25D0%25B0%2522%252C%2522%25D1%2581%2522%252C%2522%25D0%25B7%2522%252C%2522%25D0%25B3%2522%252C%2522%25D1%258B%2522%252C%2522%25D0%25BD%2522%252C%2522%25D1%2582%2522%252C%2522%25D0%25BE%2522%252C%2522%25D0%25B0%2522%252C%2522%25D1%2582%2522%252C%2522%25D1%258C%2522%252C%2522%25D0%25B7%2522%252C%2522%25D0%25B8%2522%252C%2522%25D0%25BC%2522%252C%2522%25D0%25B5%2522%252C%2522%25D0%25BB%2522%252C%2522%25D0%25BF%2522%252C%2522%25D1%2582%2522%252C%2522%25D0%25B8%2522%252C%2522%25D1%2587%2522%252C%2522%25D0%25B0%2522%255D%26userwordsids%3D%255B%255B32%252C23%252C14%255D%252C%255B14%252C23%252C32%252C33%252C34%255D%252C%255B15%252C24%252C33%255D%252C%255B24%252C33%252C24%255D%255D&amp;src=sdkpreparse">
-              <i class="fa-brands fa-facebook"></i>
-              </a>
-            </div>
-          </li>
-          <div class="setting-item">
-            <a href="#" class="setting-link">
-              <i class="fa-solid fa-gear"></i>
-            </a>
-            <div class="setting-list">
-              <a href="#" class="mutedBtn"> <i class="fa-solid fa-volume-xmark"></i> OFF</a>
-              <div class="lightDarkBlock">
-                  <div class="toggleCircle">
-                    <div class="iconToggle">
-                      <img src="../img/half-moon.png" alt="">
-                      <img src="../img/sunny.png" alt="">
-                    </div>
-                    </div>
-                  </div>
-            </div>
-          </div>
-          <li class="top-menu-item">
-            <a href="mailto:sha.egor@gmail.com" class="top-menu-link">
-              <i class="fa-regular fa-envelope" ></i>
-            </a>
-          </li>
-
-          <li class="top-menu-item">
-            <button class="top-menu-link saveButton">
-              <i onclick="SaveGame()" class="far fa-save top-menu-link"></i>
-            </button>
-          </li>
-          <li class="top-menu-item">
-            <a href="#" class="top-menu-link-language-selected">
-              <div class="imgBlock"><img src="../flag/Flag_of_France_Flat_Round_Corner-64x64.png" alt=""></div>
-              Langue
-              <i class="fa-solid fa-caret-down"></i>
-            </a>
-            <ul class="top-menu-list for_language">
-              <li class="top-menu-item">
-                
-                <li class="top-menu-item" style="--i:1">
-                  <div class="imgBlock"><img src="../flag/Flag_of_United_States_Flat_Round_Corner-64x64.png" alt=""></div>
-                  <a class="top-menu-link-languages" href="http://localhost:1313/en/"
-                    >English</a
-                  >
-                </li>
-                
-                <li class="top-menu-item" style="--i:2">
-                  <div class="imgBlock"><img src="../flag/Flag_of_Latina.svg.png" alt=""></div>
-                  <a class="top-menu-link-languages" href="http://localhost:1313/la/"
-                    >Latin</a
-                  >
-                </li>
-                
-                <li class="top-menu-item" style="--i:3">
-                  <div class="imgBlock"><img src="../flag/Flag_of_United_Arab_Emirates_Flat_Round_Corner-64x64.png" alt=""></div>
-                  <a class="top-menu-link-languages" href="http://localhost:1313/ar/"
-                    >Arabian</a
-                  >
-                </li>
-                
-                <li class="top-menu-item" style="--i:4">
-                  <div class="imgBlock"><img src="../flag/Flag_of_France_Flat_Round_Corner-64x64.png" alt=""></div>
-                  <a class="top-menu-link-languages" href="http://localhost:1313/fr/"
-                    >Français</a
-                  >
-                </li>
-                
-                <li class="top-menu-item" style="--i:5">
-                  <div class="imgBlock"><img src="../flag/Flag_of_Germany_Flat_Round_Corner-64x64.png" alt=""></div>
-                  <a class="top-menu-link-languages" href="http://localhost:1313/de/"
-                    >Deutsch</a
-                  >
-                </li>
-                
-                <li class="top-menu-item" style="--i:6">
-                   <div class="imgBlock"><img src="../flag/Flag_of_Russia_Flat_Round_Corner-64x64.png" alt=""></div>
-                  <a class="top-menu-link-languages" href="http://localhost:1313/ru/"
-                    >Русский</a
-                  >
-                </li>
-                
-                <li class="top-menu-item" style="--i:7">
-                  <div class="imgBlock"><img src="../flag/Flag_of_Armenia_Flat_Round-64x64.png" alt=""></div>
-                  <a class="top-menu-link-languages" href="http://localhost:1313/hy/"
-                    >Հայերեն</a
-                  >
-                </li>
-                    <li class="top-menu-item" style="--i:7">
-                <div class="imgBlock"><img src="../flag/Flag_of_India_Flat_Round_Corner-64x64.png" alt=""></div>
-                <a class="top-menu-link-languages" href="http://localhost:1313/hy/"
-                  >भारतीय</a
-                >
-              </li>
-              <li class="top-menu-item" style="--i:7">
-                <div class="imgBlock"><img src="../flag/Flag_of_Peoples_Republic_of_China_Flat_Round_Corner-64x64.png" alt=""></div>
-                <a class="top-menu-link-languages" href="http://localhost:1313/hy/"
-                  >中国人</a
-                >
-              </li>
-
-              </li>
-            </ul>
-          </li>
-        </ul>
+<body><body>
+  <header>
+    <div id="fb-root"></div>
+    <script>(function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.8&appId=215324895555689";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <div class="b-popup">
+      <div class="b-popup-content">
+        <img src="/img/cracker.gif" alt="cracker" class="cracker_gif-left">
+        <img src="/img/victory.png" alt="" class="pop-up_img">
+        <img src="/img/cracker.gif" alt="cracker" class="cracker_gif-right">
       </div>
     </div>
-  </div>
-  </header>
-      
-<!-- navigation block start -->
+    <div class="top-menu">
 
-<div class="navigationBar">
-  <div class="headerBlock">
-    <a href="#" class="logo">
-      <div class="cell" style="--i:1">m</div>
-      <div class="cell" style="--i:2">o</div>
-      <div class="cell" style="--i:3">t</div>
-      <div class="cell" style="--i:4">-</div>
-      <br />
-      <div class="cell" style="--i:1">d</div>
-      <div class="cell" style="--i:2">e</div>
-      <div class="cell" style="--i:1">-</div>
-      <br />
-      <div class="cell" style="--i:2">s</div>
-      <div class="cell" style="--i:3">e</div>
-      <div class="cell" style="--i:4">r</div>
-      <div class="cell" style="--i:5">p</div>
-      <div class="cell" style="--i:4">e</div>
-      <div class="cell" style="--i:3">n</div>
-      <div class="cell" style="--i:2">t</div>
-    </a>
-  </div>
-  <ul class="top-menu-list">
-    <li class="top-menu-item">
-      <div
-      class="fb-share-button"
-      data-href="https://boggle.space/url?edge=9&amp;letters=[%22%D0%BE%22,%22%D1%86%22,%22%D1%82%22,%22%D1%83%22,%22%D0%B6%22,%22%D0%B0%22,%22%D0%B7%22,%22%D0%B0%22,%22%D1%81%22,%22%D0%BC%22,%22%D0%B5%22,%22%D0%BD%22,%22%D0%B4%22,%22%D0%B8%22,%22%D0%B3%22,%22%D1%81%22,%22%D0%BA%22,%22%D0%B2%22,%22%D0%BE%22,%22%D0%BE%22,%22%D0%B2%22,%22%D0%BE%22,%22%D1%8C%22,%22%D0%B0%22,%22%D0%BE%22,%22%D1%8D%22,%22%D0%BE%22,%22%D1%82%22,%22%D1%80%22,%22%D0%BF%22,%22%D0%B5%22,%22%D0%BB%22,%22%D0%BB%22,%22%D0%BA%22,%22%D0%B0%22,%22%D1%85%22,%22%D0%B8%22,%22%D0%BF%22,%22%D0%B0%22,%22%D0%BD%22,%22%D1%8C%22,%22%D0%BF%22,%22%D0%B3%22,%22%D0%BF%22,%22%D1%83%22,%22%D0%BF%22,%22%D0%B8%22,%22%D0%BA%22,%22%D0%B8%22,%22%D1%89%22,%22%D0%B8%22,%22%D0%BC%22,%22%D1%8F%22,%22%D0%B4%22,%22%D0%B0%22,%22%D0%B9%22,%22%D0%B0%22,%22%D0%BA%22,%22%D0%BE%22,%22%D0%BD%22,%22%D0%B0%22,%22%D1%81%22,%22%D0%B7%22,%22%D0%B3%22,%22%D1%8B%22,%22%D0%BD%22,%22%D1%82%22,%22%D0%BE%22,%22%D0%B0%22,%22%D1%82%22,%22%D1%8C%22,%22%D0%B7%22,%22%D0%B8%22,%22%D0%BC%22,%22%D0%B5%22,%22%D0%BB%22,%22%D0%BF%22,%22%D1%82%22,%22%D0%B8%22,%22%D1%87%22,%22%D0%B0%22]&amp;userwordsids=[[32,23,14],[14,23,32,33,34],[15,24,33],[24,33,24]]"
-      data-layout="button_count"
-      data-size="large"
-      data-mobile-iframe="true">
-      <a
-        class="fb-xfbml-parse-ignore top-menu-link"
-        target="_blank"
-        href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fboggle.space%2Furl%3Fedge%3D9%26letters%3D%255B%2522%25D0%25BE%2522%252C%2522%25D1%2586%2522%252C%2522%25D1%2582%2522%252C%2522%25D1%2583%2522%252C%2522%25D0%25B6%2522%252C%2522%25D0%25B0%2522%252C%2522%25D0%25B7%2522%252C%2522%25D0%25B0%2522%252C%2522%25D1%2581%2522%252C%2522%25D0%25BC%2522%252C%2522%25D0%25B5%2522%252C%2522%25D0%25BD%2522%252C%2522%25D0%25B4%2522%252C%2522%25D0%25B8%2522%252C%2522%25D0%25B3%2522%252C%2522%25D1%2581%2522%252C%2522%25D0%25BA%2522%252C%2522%25D0%25B2%2522%252C%2522%25D0%25BE%2522%252C%2522%25D0%25BE%2522%252C%2522%25D0%25B2%2522%252C%2522%25D0%25BE%2522%252C%2522%25D1%258C%2522%252C%2522%25D0%25B0%2522%252C%2522%25D0%25BE%2522%252C%2522%25D1%258D%2522%252C%2522%25D0%25BE%2522%252C%2522%25D1%2582%2522%252C%2522%25D1%2580%2522%252C%2522%25D0%25BF%2522%252C%2522%25D0%25B5%2522%252C%2522%25D0%25BB%2522%252C%2522%25D0%25BB%2522%252C%2522%25D0%25BA%2522%252C%2522%25D0%25B0%2522%252C%2522%25D1%2585%2522%252C%2522%25D0%25B8%2522%252C%2522%25D0%25BF%2522%252C%2522%25D0%25B0%2522%252C%2522%25D0%25BD%2522%252C%2522%25D1%258C%2522%252C%2522%25D0%25BF%2522%252C%2522%25D0%25B3%2522%252C%2522%25D0%25BF%2522%252C%2522%25D1%2583%2522%252C%2522%25D0%25BF%2522%252C%2522%25D0%25B8%2522%252C%2522%25D0%25BA%2522%252C%2522%25D0%25B8%2522%252C%2522%25D1%2589%2522%252C%2522%25D0%25B8%2522%252C%2522%25D0%25BC%2522%252C%2522%25D1%258F%2522%252C%2522%25D0%25B4%2522%252C%2522%25D0%25B0%2522%252C%2522%25D0%25B9%2522%252C%2522%25D0%25B0%2522%252C%2522%25D0%25BA%2522%252C%2522%25D0%25BE%2522%252C%2522%25D0%25BD%2522%252C%2522%25D0%25B0%2522%252C%2522%25D1%2581%2522%252C%2522%25D0%25B7%2522%252C%2522%25D0%25B3%2522%252C%2522%25D1%258B%2522%252C%2522%25D0%25BD%2522%252C%2522%25D1%2582%2522%252C%2522%25D0%25BE%2522%252C%2522%25D0%25B0%2522%252C%2522%25D1%2582%2522%252C%2522%25D1%258C%2522%252C%2522%25D0%25B7%2522%252C%2522%25D0%25B8%2522%252C%2522%25D0%25BC%2522%252C%2522%25D0%25B5%2522%252C%2522%25D0%25BB%2522%252C%2522%25D0%25BF%2522%252C%2522%25D1%2582%2522%252C%2522%25D0%25B8%2522%252C%2522%25D1%2587%2522%252C%2522%25D0%25B0%2522%255D%26userwordsids%3D%255B%255B32%252C23%252C14%255D%252C%255B14%252C23%252C32%252C33%252C34%255D%252C%255B15%252C24%252C33%255D%252C%255B24%252C33%252C24%255D%255D&amp;src=sdkpreparse">
-        <i class="fa-brands fa-facebook"></i>
-        </a>
-      </div>
-    </li>
-    <li class="top-menu-item">
-      <a href="mailto:sha.egor@gmail.com" class="top-menu-link">
-        <i class="fa-regular fa-envelope" ></i>
-      </a>
-    </li>
-    <div class="setting-item">
-      <a href="#" class="setting-link">
-        <i class="fa-solid fa-gear"></i>
-      </a>
-      <div class="setting-list">
-      <a href="#" class="mutedBtn"> <i class="fa-solid fa-music"></i> muted</a>  
-      <div class="lightDarkBlock">
-        <div class="toggleCircle">
-          <div class="toggleCircle">
-            <div class="iconToggle">
-              <img src="../img/half-moon.png" alt="">
-              <img src="../img/sunny.png" alt="">
-            </div>
-          </div>
-        </div>
-      </div>        
-     </div>
-    </div>
-    <li class="top-menu-item">
-      <button class="top-menu-link saveButton">
-        <i onclick="SaveGame()" class="far fa-save top-menu-link"></i>
-      </button>
-    </li>
-    <li class="top-menu-item">
-      <a href="#" class="top-menu-link-language-selected">
-        <div class="imgBlock"><img src="../flag/Flag_of_France_Flat_Round_Corner-64x64.png" alt=""></div>
-        Langue
-        <i class="fa-solid fa-caret-down"></i>
-      </a>
-      <ul class="top-menu-list for_language">
+      <ul class="top-menu-list">
+
         <li class="top-menu-item">
-          
-          <li class="top-menu-item" style="--i:1">
-            <div class="imgBlock"><img src="../flag/Flag_of_United_States_Flat_Round_Corner-64x64.png" alt=""></div>
-            <a class="top-menu-link-languages" href="http://localhost:1313/en/"
-              >English</a
-            >
-          </li>
-          
-          <li class="top-menu-item" style="--i:2">
-            <div class="imgBlock"><img src="../flag/Flag_of_Latina.svg.png" alt=""></div>
-            <a class="top-menu-link-languages" href="http://localhost:1313/la/"
-              >Latin</a
-            >
-          </li>
-          
-          <li class="top-menu-item" style="--i:3">
-            <div class="imgBlock"><img src="../flag/Flag_of_United_Arab_Emirates_Flat_Round_Corner-64x64.png" alt=""></div>
-            <a class="top-menu-link-languages" href="http://localhost:1313/ar/"
-              >Arabian</a
-            >
-          </li>
-          
-          <li class="top-menu-item" style="--i:4">
-            <div class="imgBlock"><img src="../flag/Flag_of_France_Flat_Round_Corner-64x64.png" alt=""></div>
-            <a class="top-menu-link-languages" href="http://localhost:1313/fr/"
-              >Français</a
-            >
-          </li>
-          
-          <li class="top-menu-item" style="--i:5">
-            <div class="imgBlock"><img src="../flag/Flag_of_Germany_Flat_Round_Corner-64x64.png" alt=""></div>
-            <a class="top-menu-link-languages" href="http://localhost:1313/de/"
-              >Deutsch</a
-            >
-          </li>
-          
-          <li class="top-menu-item" style="--i:6">
-             <div class="imgBlock"><img src="../flag/Flag_of_Russia_Flat_Round_Corner-64x64.png" alt=""></div>
-            <a class="top-menu-link-languages" href="http://localhost:1313/ru/"
-              >Русский</a
-            >
-          </li>
-          
-          <li class="top-menu-item" style="--i:7">
-            <div class="imgBlock"><img src="../flag/Flag_of_Armenia_Flat_Round-64x64.png" alt=""></div>
-            <a class="top-menu-link-languages" href="http://localhost:1313/hy/"
-              >Հայերեն</a
-            >
-          </li>
-          
-          <li class="top-menu-item" style="--i:7">
-            <div class="imgBlock"><img src="../flag/Flag_of_India_Flat_Round_Corner-64x64.png" alt=""></div>
-            <a class="top-menu-link-languages" href="http://localhost:1313/hi/"
-              >भारतीय</a
-            >
-          </li>
-          <li class="top-menu-item" style="--i:7">
-            <div class="imgBlock"><img src="../flag//Flag_of_Peoples_Republic_of_China_Flat_Round_Corner-64x64.png" alt=""></div>
-            <a class="top-menu-link-languages" href="http://localhost:1313/zh/"
-              >中国人</a
-            >
-          </li>
+          <a class="fb-xfbml-parse-ignore top-menu-link RulesBtn" target="_blank"
+            href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fboggle.space%2Furl%3Fedge%3D9%26letters%3D%255B%2522%25D0%25BE%2522%252C%2522%25D1%2586%2522%252C%2522%25D1%2582%2522%252C%2522%25D1%2583%2522%252C%2522%25D0%25B6%2522%252C%2522%25D0%25B0%2522%252C%2522%25D0%25B7%2522%252C%2522%25D0%25B0%2522%252C%2522%25D1%2581%2522%252C%2522%25D0%25BC%2522%252C%2522%25D0%25B5%2522%252C%2522%25D0%25BD%2522%252C%2522%25D0%25B4%2522%252C%2522%25D0%25B8%2522%252C%2522%25D0%25B3%2522%252C%2522%25D1%2581%2522%252C%2522%25D0%25BA%2522%252C%2522%25D0%25B2%2522%252C%2522%25D0%25BE%2522%252C%2522%25D0%25BE%2522%252C%2522%25D0%25B2%2522%252C%2522%25D0%25BE%2522%252C%2522%25D1%258C%2522%252C%2522%25D0%25B0%2522%252C%2522%25D0%25BE%2522%252C%2522%25D1%258D%2522%252C%2522%25D0%25BE%2522%252C%2522%25D1%2582%2522%252C%2522%25D1%2580%2522%252C%2522%25D0%25BF%2522%252C%2522%25D0%25B5%2522%252C%2522%25D0%25BB%2522%252C%2522%25D0%25BB%2522%252C%2522%25D0%25BA%2522%252C%2522%25D0%25B0%2522%252C%2522%25D1%2585%2522%252C%2522%25D0%25B8%2522%252C%2522%25D0%25BF%2522%252C%2522%25D0%25B0%2522%252C%2522%25D0%25BD%2522%252C%2522%25D1%258C%2522%252C%2522%25D0%25BF%2522%252C%2522%25D0%25B3%2522%252C%2522%25D0%25BF%2522%252C%2522%25D1%2583%2522%252C%2522%25D0%25BF%2522%252C%2522%25D0%25B8%2522%252C%2522%25D0%25BA%2522%252C%2522%25D0%25B8%2522%252C%2522%25D1%2589%2522%252C%2522%25D0%25B8%2522%252C%2522%25D0%25BC%2522%252C%2522%25D1%258F%2522%252C%2522%25D0%25B4%2522%252C%2522%25D0%25B0%2522%252C%2522%25D0%25B9%2522%252C%2522%25D0%25B0%2522%252C%2522%25D0%25BA%2522%252C%2522%25D0%25BE%2522%252C%2522%25D0%25BD%2522%252C%2522%25D0%25B0%2522%252C%2522%25D1%2581%2522%252C%2522%25D0%25B7%2522%252C%2522%25D0%25B3%2522%252C%2522%25D1%258B%2522%252C%2522%25D0%25BD%2522%252C%2522%25D1%2582%2522%252C%2522%25D0%25BE%2522%252C%2522%25D0%25B0%2522%252C%2522%25D1%2582%2522%252C%2522%25D1%258C%2522%252C%2522%25D0%25B7%2522%252C%2522%25D0%25B8%2522%252C%2522%25D0%25BC%2522%252C%2522%25D0%25B5%2522%252C%2522%25D0%25BB%2522%252C%2522%25D0%25BF%2522%252C%2522%25D1%2582%2522%252C%2522%25D0%25B8%2522%252C%2522%25D1%2587%2522%252C%2522%25D0%25B0%2522%255D%26userwordsids%3D%255B%255B32%252C23%252C14%255D%252C%255B14%252C23%252C32%252C33%252C34%255D%252C%255B15%252C24%252C33%255D%252C%255B24%252C33%252C24%255D%255D&amp;src=sdkpreparse">
+            <i class="fa-solid fa-circle-info"></i> </a>
+        </li>
+        <li class="top-menu-item">
+          <a class="fb-xfbml-parse-ignore top-menu-link restartBtn StartBtn" target="_blank"
+            href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fboggle.space%2Furl%3Fedge%3D9%26letters%3D%255B%2522%25D0%25BE%2522%252C%2522%25D1%2586%2522%252C%2522%25D1%2582%2522%252C%2522%25D1%2583%2522%252C%2522%25D0%25B6%2522%252C%2522%25D0%25B0%2522%252C%2522%25D0%25B7%2522%252C%2522%25D0%25B0%2522%252C%2522%25D1%2581%2522%252C%2522%25D0%25BC%2522%252C%2522%25D0%25B5%2522%252C%2522%25D0%25BD%2522%252C%2522%25D0%25B4%2522%252C%2522%25D0%25B8%2522%252C%2522%25D0%25B3%2522%252C%2522%25D1%2581%2522%252C%2522%25D0%25BA%2522%252C%2522%25D0%25B2%2522%252C%2522%25D0%25BE%2522%252C%2522%25D0%25BE%2522%252C%2522%25D0%25B2%2522%252C%2522%25D0%25BE%2522%252C%2522%25D1%258C%2522%252C%2522%25D0%25B0%2522%252C%2522%25D0%25BE%2522%252C%2522%25D1%258D%2522%252C%2522%25D0%25BE%2522%252C%2522%25D1%2582%2522%252C%2522%25D1%2580%2522%252C%2522%25D0%25BF%2522%252C%2522%25D0%25B5%2522%252C%2522%25D0%25BB%2522%252C%2522%25D0%25BB%2522%252C%2522%25D0%25BA%2522%252C%2522%25D0%25B0%2522%252C%2522%25D1%2585%2522%252C%2522%25D0%25B8%2522%252C%2522%25D0%25BF%2522%252C%2522%25D0%25B0%2522%252C%2522%25D0%25BD%2522%252C%2522%25D1%258C%2522%252C%2522%25D0%25BF%2522%252C%2522%25D0%25B3%2522%252C%2522%25D0%25BF%2522%252C%2522%25D1%2583%2522%252C%2522%25D0%25BF%2522%252C%2522%25D0%25B8%2522%252C%2522%25D0%25BA%2522%252C%2522%25D0%25B8%2522%252C%2522%25D1%2589%2522%252C%2522%25D0%25B8%2522%252C%2522%25D0%25BC%2522%252C%2522%25D1%258F%2522%252C%2522%25D0%25B4%2522%252C%2522%25D0%25B0%2522%252C%2522%25D0%25B9%2522%252C%2522%25D0%25B0%2522%252C%2522%25D0%25BA%2522%252C%2522%25D0%25BE%2522%252C%2522%25D0%25BD%2522%252C%2522%25D0%25B0%2522%252C%2522%25D1%2581%2522%252C%2522%25D0%25B7%2522%252C%2522%25D0%25B3%2522%252C%2522%25D1%258B%2522%252C%2522%25D0%25BD%2522%252C%2522%25D1%2582%2522%252C%2522%25D0%25BE%2522%252C%2522%25D0%25B0%2522%252C%2522%25D1%2582%2522%252C%2522%25D1%258C%2522%252C%2522%25D0%25B7%2522%252C%2522%25D0%25B8%2522%252C%2522%25D0%25BC%2522%252C%2522%25D0%25B5%2522%252C%2522%25D0%25BB%2522%252C%2522%25D0%25BF%2522%252C%2522%25D1%2582%2522%252C%2522%25D0%25B8%2522%252C%2522%25D1%2587%2522%252C%2522%25D0%25B0%2522%255D%26userwordsids%3D%255B%255B32%252C23%252C14%255D%252C%255B14%252C23%252C32%252C33%252C34%255D%252C%255B15%252C24%252C33%255D%252C%255B24%252C33%252C24%255D%255D&amp;src=sdkpreparse">
+            <i class="fa fa-refresh"></i>
+             </a>
+        </li>
+        <li class=" top-menu-item">
+              <div class="fb-share-button"
+                data-href="https://boggle.space/url?edge=9&amp;letters=[%22%D0%BE%22,%22%D1%86%22,%22%D1%82%22,%22%D1%83%22,%22%D0%B6%22,%22%D0%B0%22,%22%D0%B7%22,%22%D0%B0%22,%22%D1%81%22,%22%D0%BC%22,%22%D0%B5%22,%22%D0%BD%22,%22%D0%B4%22,%22%D0%B8%22,%22%D0%B3%22,%22%D1%81%22,%22%D0%BA%22,%22%D0%B2%22,%22%D0%BE%22,%22%D0%BE%22,%22%D0%B2%22,%22%D0%BE%22,%22%D1%8C%22,%22%D0%B0%22,%22%D0%BE%22,%22%D1%8D%22,%22%D0%BE%22,%22%D1%82%22,%22%D1%80%22,%22%D0%BF%22,%22%D0%B5%22,%22%D0%BB%22,%22%D0%BB%22,%22%D0%BA%22,%22%D0%B0%22,%22%D1%85%22,%22%D0%B8%22,%22%D0%BF%22,%22%D0%B0%22,%22%D0%BD%22,%22%D1%8C%22,%22%D0%BF%22,%22%D0%B3%22,%22%D0%BF%22,%22%D1%83%22,%22%D0%BF%22,%22%D0%B8%22,%22%D0%BA%22,%22%D0%B8%22,%22%D1%89%22,%22%D0%B8%22,%22%D0%BC%22,%22%D1%8F%22,%22%D0%B4%22,%22%D0%B0%22,%22%D0%B9%22,%22%D0%B0%22,%22%D0%BA%22,%22%D0%BE%22,%22%D0%BD%22,%22%D0%B0%22,%22%D1%81%22,%22%D0%B7%22,%22%D0%B3%22,%22%D1%8B%22,%22%D0%BD%22,%22%D1%82%22,%22%D0%BE%22,%22%D0%B0%22,%22%D1%82%22,%22%D1%8C%22,%22%D0%B7%22,%22%D0%B8%22,%22%D0%BC%22,%22%D0%B5%22,%22%D0%BB%22,%22%D0%BF%22,%22%D1%82%22,%22%D0%B8%22,%22%D1%87%22,%22%D0%B0%22]&amp;userwordsids=[[32,23,14],[14,23,32,33,34],[15,24,33],[24,33,24]]"
+                data-layout="button_count" data-size="large" data-mobile-iframe="true">
+                <a class="fb-xfbml-parse-ignore top-menu-link" target="_blank"
+                  href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fboggle.space%2Furl%3Fedge%3D9%26letters%3D%255B%2522%25D0%25BE%2522%252C%2522%25D1%2586%2522%252C%2522%25D1%2582%2522%252C%2522%25D1%2583%2522%252C%2522%25D0%25B6%2522%252C%2522%25D0%25B0%2522%252C%2522%25D0%25B7%2522%252C%2522%25D0%25B0%2522%252C%2522%25D1%2581%2522%252C%2522%25D0%25BC%2522%252C%2522%25D0%25B5%2522%252C%2522%25D0%25BD%2522%252C%2522%25D0%25B4%2522%252C%2522%25D0%25B8%2522%252C%2522%25D0%25B3%2522%252C%2522%25D1%2581%2522%252C%2522%25D0%25BA%2522%252C%2522%25D0%25B2%2522%252C%2522%25D0%25BE%2522%252C%2522%25D0%25BE%2522%252C%2522%25D0%25B2%2522%252C%2522%25D0%25BE%2522%252C%2522%25D1%258C%2522%252C%2522%25D0%25B0%2522%252C%2522%25D0%25BE%2522%252C%2522%25D1%258D%2522%252C%2522%25D0%25BE%2522%252C%2522%25D1%2582%2522%252C%2522%25D1%2580%2522%252C%2522%25D0%25BF%2522%252C%2522%25D0%25B5%2522%252C%2522%25D0%25BB%2522%252C%2522%25D0%25BB%2522%252C%2522%25D0%25BA%2522%252C%2522%25D0%25B0%2522%252C%2522%25D1%2585%2522%252C%2522%25D0%25B8%2522%252C%2522%25D0%25BF%2522%252C%2522%25D0%25B0%2522%252C%2522%25D0%25BD%2522%252C%2522%25D1%258C%2522%252C%2522%25D0%25BF%2522%252C%2522%25D0%25B3%2522%252C%2522%25D0%25BF%2522%252C%2522%25D1%2583%2522%252C%2522%25D0%25BF%2522%252C%2522%25D0%25B8%2522%252C%2522%25D0%25BA%2522%252C%2522%25D0%25B8%2522%252C%2522%25D1%2589%2522%252C%2522%25D0%25B8%2522%252C%2522%25D0%25BC%2522%252C%2522%25D1%258F%2522%252C%2522%25D0%25B4%2522%252C%2522%25D0%25B0%2522%252C%2522%25D0%25B9%2522%252C%2522%25D0%25B0%2522%252C%2522%25D0%25BA%2522%252C%2522%25D0%25BE%2522%252C%2522%25D0%25BD%2522%252C%2522%25D0%25B0%2522%252C%2522%25D1%2581%2522%252C%2522%25D0%25B7%2522%252C%2522%25D0%25B3%2522%252C%2522%25D1%258B%2522%252C%2522%25D0%25BD%2522%252C%2522%25D1%2582%2522%252C%2522%25D0%25BE%2522%252C%2522%25D0%25B0%2522%252C%2522%25D1%2582%2522%252C%2522%25D1%258C%2522%252C%2522%25D0%25B7%2522%252C%2522%25D0%25B8%2522%252C%2522%25D0%25BC%2522%252C%2522%25D0%25B5%2522%252C%2522%25D0%25BB%2522%252C%2522%25D0%25BF%2522%252C%2522%25D1%2582%2522%252C%2522%25D0%25B8%2522%252C%2522%25D1%2587%2522%252C%2522%25D0%25B0%2522%255D%26userwordsids%3D%255B%255B32%252C23%252C14%255D%252C%255B14%252C23%252C32%252C33%252C34%255D%252C%255B15%252C24%252C33%255D%252C%255B24%252C33%252C24%255D%255D&amp;src=sdkpreparse">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+              </div>
+        </li>
+        <li class="top-menu-item">
+          <a href="mailto:sha.egor@gmail.com" class="top-menu-link">
+            <i class="fa-regular fa-envelope"></i>
+          </a>
+        </li>
+        <li class="top-menu-item">
+          <button class="top-menu-link">
+            <i onclick="SaveGame()" class="far fa-save top-menu-link"></i>
+          </button>
+        </li>
+        <li class="top-menu-item">
+          <a href="#" class="top-menu-link-language-selected">
+            Langue
+            <i class="fa-solid fa-caret-down"></i>
+          </a>
+          <ul class="top-menu-list">
+            <li class="top-menu-item">
+              
+            <li class="top-menu-item">
+              <a class="top-menu-link-languages" href="https://snakeword.vit.ooo/la/">Latin</a>
+            </li>
+            
+            <li class="top-menu-item">
+              <a class="top-menu-link-languages" href="https://snakeword.vit.ooo/ar/">Arabian</a>
+            </li>
+            
+            <li class="top-menu-item">
+              <a class="top-menu-link-languages" href="https://snakeword.vit.ooo/en/">English</a>
+            </li>
+            
+            <li class="top-menu-item">
+              <a class="top-menu-link-languages" href="https://snakeword.vit.ooo/fr/">French</a>
+            </li>
+            
+            <li class="top-menu-item">
+              <a class="top-menu-link-languages" href="https://snakeword.vit.ooo/de/">Немецкий</a>
+            </li>
+            
+            <li class="top-menu-item">
+              <a class="top-menu-link-languages" href="https://snakeword.vit.ooo/ru/">Русский</a>
+            </li>
+            
+            <li class="top-menu-item">
+              <a class="top-menu-link-languages" href="https://snakeword.vit.ooo/hy/">Հայերեն</a>
+            </li>
+            
+            <li class="top-menu-item">
+              <a class="top-menu-link-languages" href="https://snakeword.vit.ooo/hi/">Hindi</a>
+            </li>
+            
+            <li class="top-menu-item">
+              <a class="top-menu-link-languages" href="https://snakeword.vit.ooo/zh/">Chinese</a>
+            </li>
+            
+
         </li>
       </ul>
-    </li>
-  </ul>
+      </li>
+      </ul>
+    </div>
+    </div>
+    </div>
+  </header>
 
-  </div>
-  <!-- navigation block end -->
-<div id="content">
-  <div class="modalBlock">
-    <div class="buttonsBlock">
-      <button class="StartBtn">Commencer le jeu</button>
-      
-      <button class="RulesBtn">Règles du jeu</button>
+</body><div id="content"><div class="modalSlider">
+  <div class="closeBtn">X</div>
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
     </div>
-  </div>
-
-  <div class="modalSlider">
-    <div class="closeBtn">X</div>
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="../../exampleImages/exampleone.png" class="d-block w-100" alt="image">
-          <div class="carousel-caption d-none d-md-block bg-secondary">
-            <h5 class="text-white">Temps:</h5>
-            <p class="text-white">Après avoir appuyé sur le bouton «Démarrer le jeu», le temps imparti pour le jeu commence à s'écouler.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="../../exampleImages/exampletwo.png" class="d-block w-100" alt="image">
-           <div class="carousel-caption d-none d-md-block bg-secondary">
-            <h5 class="text-white">Unité</h5>
-            <p class="text-white">Il y a des mots cachés dans ce plateau de jeu. <br> Pour chaque mot correct, vous obtenez un point</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="../../exampleImages/exampleone.png" class="d-block w-100" alt="image">
-         <div class="carousel-caption d-none d-md-block bg-secondary">
-            <h5 class="text-white">Supprimer le mot</h5>
-            <p class="text-white">Si vous vous êtes trompé de mot, vous pouvez le supprimer avec le bouton <i class="fa-solid fa-delete-left"></i></p>
-          </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://dummyimage.com/600x400/000/fff.jpg" class="d-block w-100" alt="image">
+        <div class="carousel-caption d-none d-md-block bg-secondary">
+          <h5 class="text-white">计时器</h5>
+          <p class="text-white">点击“开始游戏”按钮后，分配给游戏的时间开始到期，
+            你有 10 分钟的时间玩</p>
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-  </div>
-  <div id="main">
-    <div class="timer">
-      <div class="timer__items">
-        <div class="timer__item timer__minutes">00</div>
-        :
-        <div class="timer__item timer__seconds">00</div>
+      <div class="carousel-item">
+        <img src="https://dummyimage.com/400x300/000/fff.jpg" class="d-block w-100" alt="image">
+        <div class="carousel-caption d-none d-md-block bg-secondary">
+          <h5 class="text-white">观点</h5>
+          <p class="text-white">这个游戏板上有隐藏的单词。对于每个正确的单词，您将获得一分</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://dummyimage.com/300x100/000/fff.jpg" class="d-block w-100" alt="image">
+        <div class="carousel-caption d-none d-md-block bg-secondary">
+          <h5 class="text-white">删除一个字</h5>
+          <p class="text-white">如果您选择了错误的单词，您可以使用以下命令将其删除 <i class="fa-solid fa-delete-left"></i> 按钮 </p>
+        </div>
       </div>
     </div>
-    <div class="header">
-      <div class="pure-form" style="display: flex; justify-content: center">
-        <span
-          class="point-button pure-button-active"
-          id="points"
-          title="0"
-          >...
-        </span>
-        <select id="word-input" class="pure-input-3-5">
-          <option></option>
-        </select>
-  
-        <span
-          class="clear-button pure-button-active"
-          id="cut-btn"
-          title=""
-          ><i class="fa-solid fa-delete-left"></i>
-        </span>
-      </div>
-    </div>
-    <div class="content">
-     
-      <div id=""></div>
-      <div id="gameplace"></div>
-      <div id="result"></div>
-  
-    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
-  <div
-    class="gallery pure-form"
-    style="position: fixed; top: 50%; left: 50%"
-  ></div>
-        </div>     
-        <script defer src="/js/chooseRate.js"></script> 
-        <script defer src="/js/backgroundChange.js"></script>  
-        <script defer src="/js/toggleBlock.js"></script>
+</div>
+        </div>      
       <script defer src="/js/gameCtrl.js"></script>
+
+      
       <script defer src="/js/genSet.js"></script>
+
       <script defer src="/js/dictionary.js"></script>
+
       <script defer src="/js/victory.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-<script>
-        let language_selected = document.querySelectorAll(".top-menu-link-language-selected")
-  let for_language = document.querySelectorAll(".for_language");
-language_selected.forEach((item,index)=>{
-  item.addEventListener("click",()=>{
-    item.classList.toggle("active")
-    for_language[index].classList.toggle("active")
-  })
-})
-</script>
    </body>
 </html>
 </body>
