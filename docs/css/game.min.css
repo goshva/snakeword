@@ -450,10 +450,29 @@ display: block;
 }
 
 .modalblockForSelectImages .alertBlock{
+    width: 250px;
+    height: 150px;
+    background-color: #5b5a37;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.modalblockForSelectImages .alertBlock>.alertMessages{
+    transform: translateY(-15px);
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+}
+
+.modalblockForSelectImages .alertBlock>.alertMessages.active{
+    transform: translateY(0px);
+    opacity: 1;
+    visibility: visible;
 }
 
 
