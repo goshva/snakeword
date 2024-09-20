@@ -43,7 +43,6 @@ function changeDarkToLight(){
     setting_item.classList.add("light");
      modalLight.classList.add("light");
      languageList.classList.add("light")
-     hamburgerBlockBtn.classList.add("light")
   }else{
     lightCheck.classList.remove("light")
     toggleCircle[lightIndex].classList.remove("light")
@@ -55,8 +54,6 @@ function changeDarkToLight(){
     setting_item.classList.remove("light");
     modalLight.classList.remove("light");
     languageList.classList.remove("light");
-    hamburgerBlockBtn.classList.remove("light")
-
   }
 }
 

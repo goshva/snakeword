@@ -3,35 +3,6 @@ const selectAudio = document.createElement("audio");
 const audio = document.createElement("audio");
 const timeAudio = document.createElement("audio");
 const endAudio = document.createElement("audio");
-const cogToggle = document.querySelectorAll(".setting-link") 
-const settingList = document.querySelectorAll(".setting-list");
-const mutedBtn = document.querySelectorAll(".mutedBtn")
-cogToggle.forEach((items,index)=>{
-  items.addEventListener("click",()=>{
-    items.classList.toggle("active")
-    settingList[index].classList.toggle("active")
-  })
-  mutedBtn[index].addEventListener("click",()=>{
-    if (toggleBool) {
-      mutedBtn[index].classList.add("muted");
-      mutedBtn[index].innerHTML = '<i class="fa-solid fa-volume-high"></i> ON' 
-      audio.muted = true;
-      timeAudio.muted = true;
-      endAudio.muted = true;
-      selectAudio.muted = true
-      toggleBool = false
-    }else{
-      mutedBtn[index].classList.remove("muted");
-      mutedBtn[index].innerHTML = '<i class="fa-solid fa-volume-xmark"></i> OFF' 
-      audio.muted = false;
-      timeAudio.muted = false;
-      endAudio.muted = false;
-      selectAudio.muted = false
-      toggleBool = true
-    }
-    })
-})
-
 
 
 
