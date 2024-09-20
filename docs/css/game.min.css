@@ -434,7 +434,7 @@ display: block;
     width: 100%;
     height: 100vh;
     position: absolute; 
-    background-color: #ccc;
+    background-color: #4b4a4a;
     top: 0;
     left: 0;
     display: flex;
@@ -450,7 +450,7 @@ display: block;
 }
 
 .modalblockForSelectImages .alertBlock{
-    width:  450px;
+    width:  600px;
     height: 200px;
     
     display: flex;
@@ -471,6 +471,7 @@ display: block;
     font-size: 45px;
     transition: all 0.5s ease;
     color: #f28282;
+    text-transform: capitalize;
 }
 
 .modalblockForSelectImages .alertBlock>.alertMessages.active{
@@ -503,7 +504,74 @@ display: block;
 .modalblockForSelectImages .imageBlock>img:hover{
     transform: scale(1.1);
 }
+
+.modalBlockForLanguage{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background-color: #5b5;
+    z-index: 200;
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.modalBlockForLanguage.active{
+    height: 20%; 
+}
+
+.modalBlockForLanguage>ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    gap: 15px;
+}
+
+.modalBlockForLanguage>ul>li{
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.modalBlockForLanguage>ul>li>a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;    
+}
      
+.modalBlockForLanguage > ul > li > a > .imgBlock{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    transition: all 0.5s ease;
+}
+
+.modalBlockForLanguage > ul > li > a > .imgBlock:hover{
+transform: scale(1.1);
+}
+
+.modalBlockForLanguage > ul > li > a > .imgBlock>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
 .modalblockForSelectImages.active{
     opacity: 1;
     visibility: visible;
