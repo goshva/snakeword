@@ -307,6 +307,53 @@ display: block;
     gap: 5px;
 }
 
+.timer .iconLeftBlock .lightDarkBlock{
+    width: 60px;
+  height: 30px;
+    cursor: pointer;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    z-index: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer .iconLeftBlock .lightDarkBlock .toggleCircle{
+    width: 20px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 50%;
+    position: absolute;
+    left: 5px;
+    transition: all 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+}
+.timer .iconLeftBlock .lightDarkBlock .toggleCircle .iconToggle{
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    left: 13px;
+    transition: all 0.5s ease;
+   
+}
+
+.timer .iconLeftBlock .lightDarkBlock .toggleCircle.light .iconToggle{
+    left: -12px;
+}
+.timer .iconLeftBlock .lightDarkBlock .toggleCircle.light{
+    left: 30px;
+}
+
 .timer .iconLeftBlock > button{
     background: none;
     border: none;
@@ -322,13 +369,17 @@ display: block;
 .timer .iconRightBlock{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     gap: 5px;
 }
 
 .timer .iconRightBlock > button{
     background: none;
     border: none;
+}
+
+.timer .iconRightBlock .fb-share-button{
+    height: 20px;
 }
 
 .timer .iconRightBlock > button > i{
