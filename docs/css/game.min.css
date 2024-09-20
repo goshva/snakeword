@@ -450,9 +450,9 @@ display: block;
 }
 
 .modalblockForSelectImages .alertBlock{
-    width: 250px;
-    height: 150px;
-    background-color: #5b5a37;
+    width:  450px;
+    height: 200px;
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -460,6 +460,7 @@ display: block;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 4;
 }
 
 .modalblockForSelectImages .alertBlock>.alertMessages{
@@ -467,6 +468,9 @@ display: block;
     opacity: 0;
     visibility: hidden;
     position: absolute;
+    font-size: 45px;
+    transition: all 0.5s ease;
+    color: #f28282;
 }
 
 .modalblockForSelectImages .alertBlock>.alertMessages.active{
