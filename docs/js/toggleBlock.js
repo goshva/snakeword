@@ -1,11 +1,9 @@
-const hamburgerBlockBtn = document.querySelector(".hamburgerBlockBtn");
-const iconBlock = document.querySelector(".iconBlock");
-const navigationBar = document.querySelector(".navigationBar")
-hamburgerBlockBtn.addEventListener("click",()=>{
-    iconBlock.classList.toggle("active")
-    navigationBar.classList.toggle("active")
-})
 
+const languageButton = document.querySelector(".languageButton");
+const modalBlockForLanguage = document.querySelector(".modalBlockForLanguage")
+languageButton.addEventListener("click",()=>{
+modalBlockForLanguage.classList.toggle("active")
+})
 
 // light Dark Toggle
 
@@ -46,7 +44,6 @@ function changeDarkToLight(){
      modalLight.classList.add("light");
      languageList.classList.add("light")
      hamburgerBlockBtn.classList.add("light")
-     navigationBar.classList.add("light")
   }else{
     lightCheck.classList.remove("light")
     toggleCircle[lightIndex].classList.remove("light")
@@ -59,7 +56,7 @@ function changeDarkToLight(){
     modalLight.classList.remove("light");
     languageList.classList.remove("light");
     hamburgerBlockBtn.classList.remove("light")
-    navigationBar.classList.remove("light")
+
   }
 }
 
