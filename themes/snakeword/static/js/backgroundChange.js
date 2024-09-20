@@ -50,7 +50,7 @@ let imagesData = [
 
 let backgoundImage = document.createElement("img");
 backgoundImage.classList.add("backgoundImage");
-backgoundImage.src = "../../img/GeneralImage.png"
+backgoundImage.src = "../img/GeneralImage.png"
 let body = document.querySelector("body")
 
 imagesData.forEach((img)=>{
@@ -58,6 +58,12 @@ imagesData.forEach((img)=>{
     imageBlock.classList.add("imageBlock")
     let ImageTag = document.createElement("img");
     ImageTag.src = img.imageUrl
+
+
+    ImageTag.addEventListener("click",()=>{
+       backgoundImage.src = ImageTag.src
+       modalblockForSelectImages.classList.remove("active")
+    })
    imageBlock.append(ImageTag);
    modalblockForSelectImages.append(imageBlock)
 
