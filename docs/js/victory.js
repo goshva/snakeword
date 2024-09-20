@@ -83,10 +83,9 @@ document.addEventListener('DOMContentLoaded', function () {
    const $minutes = document.querySelector('.timer__minutes');
    const $seconds = document.querySelector('.timer__seconds');
    const popup = document.querySelector('.b-popup');
-  
-   const main = document.querySelector("#main")
+const main = document.querySelector("#main")
      StartBtn.addEventListener("click",()=>{
-      main.classList.add("active")
+         main.classList.add("active")
        modalBlock.classList.add("active")
        StartBtn.classList.add("active")
        audio.src = "/audios/mixkit-fast-small-sweep-transition-166.wav";

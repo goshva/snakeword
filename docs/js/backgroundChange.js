@@ -60,11 +60,6 @@ imagesData.forEach((img)=>{
     ImageTag.src = img.imageUrl
    imageBlock.append(ImageTag);
    modalblockForSelectImages.append(imageBlock)
-
-
-
-
-
 })
 
 
