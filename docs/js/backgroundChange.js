@@ -56,16 +56,26 @@ backgoundImage.classList.add("backgoundImage");
 backgoundImage.src = "../img/GeneralImage.png"
 let body = document.querySelector("body")
 body.appendChild(backgoundImage)
-imagesData.forEach((img,index)=>{
+let clickAudo = new Audio("../audios/mixkit-select-click-1109.wav")
+imagesData.forEach((img)=>{
     let imageBlock = document.createElement("div");
     imageBlock.classList.add("imageBlock")
     let ImageTag = document.createElement("img");
     ImageTag.src = img.imageUrl
 
     ImageTag.addEventListener("click",()=>{
+        clickAudo.play()
         let alertMessages = document.querySelectorAll(".alertMessages")
+        let randomIndex = Math.floor(Math.random() * alertMessages.length) 
+          alertMessages[randomIndex].classList.add("active")
+          setTimeout(()=>{
+            alertMessages[randomIndex].classList.remove("active")
+          },3500)
     backgoundImage.src = ImageTag.src
-       modalblockForSelectImages.classList.remove("active")
+    setTimeout(()=>{
+        modalblockForSelectImages.classList.remove("active")
+    },4500)
+      
     })
    imageBlock.append(ImageTag);
    modalblockForSelectImages.append(imageBlock)
