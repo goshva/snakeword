@@ -1,13 +1,13 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 #gameplace{
-    width:324px;
+    width:500px;
+    height: auto;
     display:flex;
     flex-wrap:wrap;
-    background-image:url(./../img/wood.jpg);
     background-size:cover;
     justify-content:center;
-    border:1px solid #000;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
     font-size:1.6em;
     border-radius:.7em;
     box-shadow:-5px 5px 5px rgb(0 0 0/.2);
@@ -15,6 +15,7 @@
     z-index: 1;
 transition: all 0.5s;
     transform: scale(0);
+
 }
 
 
@@ -35,7 +36,23 @@ transition: all 0.5s;
     transform: scale(1.0);
 }
 
-#gametally{z-index:-1;color:#ccc}#gametally li{font-size:small;line-height:1em}#word{width:9em}.content{display:flex;justify-content:center;align-items:center}.cell{margin:.1ex;text-align:center;text-transform:uppercase;float:left;width:1.2em;padding:2px 0;border:1px solid #ccc;background:#f1e9d3;border-radius:.3em;font-size:1em;border-top:2px solid #fff;border-right:1px solid #fff;border-left:1px solid #cbc2aa;border-bottom:2px solid #cbc2aa;color:#000;box-shadow:-1px 1px 1px rgb(0 0 0/15%)}
+#gametally{z-index:-1;color:#ccc}#gametally li{font-size:small;line-height:1em}#word{width:9em}.content{display:flex;justify-content:center;align-items:center}
+.cell{
+    margin:.1ex;
+    text-align:center;
+    text-transform:uppercase;
+    float:left;
+    width:1.9em;
+    padding:2px 0;
+    border:1px solid #ccc;
+    background:#f1e9d3;
+    border-radius:.3em;font-size:1em;
+    border-top:2px solid #fff;
+    border-right:1px solid #fff;
+    font-family: Inter;
+    border-left:1px solid #cbc2aa;
+    border-bottom:2px solid #cbc2aa;color:#000;
+    box-shadow:-1px 1px 1px rgb(0 0 0/15%)}
 .header{
     margin-bottom: 20px;
     position: relative;
@@ -46,10 +63,7 @@ transition: all 0.5s;
     justify-content: center;
     align-items: center;
 }.wordCell{background-color:#ff8}.activeCell{background-color:#d8d0bd;font-weight:700}@-webkit-keyframes tada{10%{-webkit-transform:scale(1.2)}15%,20%{-webkit-transform:scale(1)rotate(-4deg)}25%,50%,70%,90%{-webkit-transform:scale(1)rotate(3deg)}40%,60%,80%{-webkit-transform:scale(1)rotate(-1deg)}100%{-webkit-transform:scale(1)rotate(0)}}@keyframes tada{10%{transform:scale(1.2)}15%,20%{transform:scale(1)rotate(-10deg)}25%,50%,75%,90%{transform:scale(1)rotate(3deg)}40%,60%,80%{transform:scale(1)rotate(-2deg)}100%{transform:scale(1)rotate(0)}}.tada{-webkit-animation-duration:1s;animation-duration:1 s;-webkit-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-name:tada;animation-name:tada}.notify{position:absolute;z-index:101;top:0;left:0;right:0;text-align:center;line-height:2.7;overflow:hidden;-webkit-box-shadow:0 0 5px black;-moz-box-shadow:0 0 5px black;box-shadow:0 0 5px black;display:none}#note{background:#1f8dd6;color:#fff}#game{background:#e6e6e6;color:#1f8dd6}.point-button{border:1px solid #ccc;background:#f1e9d3;border-radius:.4em;border-top:2px solid #fff;border-right:1px solid #fff;border-left:1px solid #cbc2aa;border-bottom:2px solid #cbc2aa;color:#000;box-shadow:-1px 1px 1px rgb(0 0 0/15%);font-size:100%;font-family:inherit;text-decoration:none;padding:.5em 1em;border:3px solid #5b5a37}.clear-button{font-family:inherit;font-size:100%;padding:.5em 1em;border:1px solid #ccc;background:#f1e9d3;border-radius:.4em;border-top:2px solid #fff;border-right:1px solid #fff;border-left:1px solid #cbc2aa;border-bottom:2px solid #cbc2aa;text-decoration:none;border:3px solid #5b5a37}#word-input{width:11em;height:auto;margin:0 2px;background:#f1e9d3;border-radius:.4em;border-top:2px solid #fff;border-right:1px solid #fff;border-left:1px solid #cbc2aa;border-bottom:2px solid #cbc2aa;border:3px solid #5b5a37}
-@font-face {
-    font-family: Digital;
-    src: url(../Font/TickingTimebombBB.ttf);
-}
+
 .b-popup{
     display:flex;
     justify-content: center; 
@@ -199,15 +213,35 @@ display: block;
 .modalBlock{
     width: 600px;
     height: 450px;
-    background-color: #4c4c4c;
+   
     position: absolute;
     z-index: 12;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     top: 31%;
+    gap: 55px;
     transition: all .5s ease;
     left: 31%;
+}
+
+.modalBlock .headerBlock{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    color: #fff;
+    
+}
+
+.modalBlock .headerBlock>h2{
+    font-family: Inter;
+    font-size: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .modalBlock.light{
@@ -219,19 +253,87 @@ display: block;
     opacity:0;
     visibility:hidden
 }
-.modalBlock .buttonsBlock{display:flex;justify-content:center;align-items:center;width:100%;height:100px;gap:15px}.modalBlock .buttonsBlock>button{padding:15px 30px;background-color:#ccc;cursor:pointer;border:none;position:relative;overflow:hidden}.modalBlock .buttonsBlock>button::before{content:"";position:absolute;top:0;left:-100%;width:10px;height:100%;background-color:#5b5a37;transform:skewX(-45deg);transition:all 1s ease}.modalBlock .buttonsBlock>button:hover::before{left:200px}.modalBlock .buttonsBlock .StartBtn.active{opacity:0;pointer-events:none}
+.modalBlock .buttonsBlock{display:flex;justify-content:center;align-items:center;width:100%;height:100px;gap:15px}
+.modalBlock .buttonsBlock>button{
+    width: 200px;
+    height: 80px;
+   padding:  40px, 80px, 40px, 80px;
+    background-color:#ccc;
+    cursor:pointer;
+    border:none;
+    position:relative;
+    overflow:hidden;
+    font-size: 25px;
+    background-color: rgba(249, 107, 87, 1);
+    border-radius: 15px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.modalBlock .buttonsBlock>button::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:10px;
+    height:100%;background-color:#5b5a37;
+    transform:skewX(-45deg);
+    transition:all 1s ease
+}
+.modalBlock .buttonsBlock>button:hover::before{
+    left:200px
+}
+
+.modalBlock .buttonsBlock .StartBtn.active{
+    opacity:0;
+    pointer-events:none
+}
 .timer{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-left: 0;
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    font-family: Inter;
+    font-weight: bold;
+}
+
+.timer .iconLeftBlock{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 19%;
-    z-index: 1;
-    position: relative;
-    width: 80%;
-    font-family: Digital;
-  
+    gap: 5px;
 }
 
+.timer .iconLeftBlock > button{
+    background: none;
+    border: none;
+}
+
+.timer .iconLeftBlock > button > i{
+    color: #fff;
+}
+
+
+
+
+.timer .iconRightBlock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.timer .iconRightBlock > button{
+    background: none;
+    border: none;
+}
+
+.timer .iconRightBlock > button > i{
+    color: #fff;
+}
 
 .timer .timer__items{
     display: flex;
@@ -239,7 +341,7 @@ display: block;
     align-items: center;
 
     font-size: 30px;
-    background-color: #fff;
+   color: #fff;
     gap: 15px;
     padding: 4px;
 }
@@ -263,6 +365,53 @@ display: block;
         height:450px;
     }.modalSlider .closeBtn{position:absolute;top:10px;right:15px;font-size:24px;font-weight:700;display:flex;justify-content:center;align-items:center;background-color:#e7e3e3;transition:all .5s ease;padding:3px 15px}.modalSlider .closeBtn:hover{background-color:red;color:#fff;cursor:pointer}
     
+
+    .otherBlock{
+        width: 100%;
+     
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+   
+    .otherBlock .topBlock{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #ccc;
+
+    }
+
+
+    .otherBlock .topBlock .PointBlock{
+        font-size: 15px;
+    }
+
+    .otherBlock .topBlock .wordGroup{
+        width: 100%;
+       
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+
+    }
+
+    .otherBlock .topBlock .wordGroup>span {
+        font-size: 15px;
+    }
+
+   #gameplace .otherBlock .topBlock .wordGroup  .words{
+    font-size: 15px;
+        width: auto;
+        
+        height: auto;
+        position: relative;
+
+    }
+
     .dialog{
         width:600px;
         height:450px;
@@ -280,7 +429,46 @@ display: block;
         .dialog.active{opacity:1;visibility:visible}.dialog>img{width:100%;height:100%;object-fit:cover}
         
      
+.modalblockForSelectImages{
+    padding: 15px;
+    width: 100%;
+    height: 100vh;
+    position: absolute; 
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4));
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+    transform: translateY(-25px);
+    z-index: 1;
+}
 
+
+.modalblockForSelectImages .imageBlock { 
+    width: 283px;
+    height: 283px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalblockForSelectImages .imageBlock>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+     
+.modalblockForSelectImages.active{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+}
 
         @media(max-width:535px) {
          
