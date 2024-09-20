@@ -50,7 +50,7 @@ let imagesData = [
 
 let backgoundImage = document.createElement("img");
 backgoundImage.classList.add("backgoundImage");
-backgoundImage.src = "../img/GeneralImage.png"
+backgoundImage.src = "../../img/GeneralImage.png"
 let body = document.querySelector("body")
 
 imagesData.forEach((img)=>{
@@ -60,6 +60,11 @@ imagesData.forEach((img)=>{
     ImageTag.src = img.imageUrl
    imageBlock.append(ImageTag);
    modalblockForSelectImages.append(imageBlock)
+
+
+
+
+
 })
 
 
