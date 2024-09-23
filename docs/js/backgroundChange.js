@@ -52,7 +52,7 @@ changeImageButton.addEventListener("click",()=>{
 
 
 let backgoundImage = document.querySelector(".backgoundImage")
-let clickAudo = new Audio("audios/mixkit-select-click-1109.wav")
+let clickAudo = new Audio("/audios/mixkit-select-click-1109.wav")
 imagesData.forEach((img)=>{
     let imageBlock = document.createElement("div");
     imageBlock.classList.add("imageBlock")
