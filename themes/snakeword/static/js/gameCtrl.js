@@ -117,6 +117,7 @@ function moreletter() {
   }
   // findwordids.push(ids);//////////////////////////////////
   document.getElementById('points').innerText = findwordids.length + 1;
+  document.querySelector(".PointBlock").innerHTML = findwordids.length + 1
 }
 
 function nearCheck(id, findIds) {
@@ -342,8 +343,10 @@ async function collectWord(Id, id, ...args) {
         findwordids.push(ids);
         createImgDialog(constructorSearchUrl(word));
         document.getElementById('word-input').options[0].text = '';
+        const words = document.querySelector(".words");
         const optionEl = document.createElement('option');
         optionEl.text = word;
+        words.textContent = word + ","
         document.getElementById('word-input').append(optionEl);
       }
 
