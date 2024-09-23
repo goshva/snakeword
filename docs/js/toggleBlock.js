@@ -13,7 +13,7 @@ modalBlockForLanguage.classList.toggle("active")
   const toggleCircle = document.querySelectorAll(".toggleCircle");
 const iconToggle = document.querySelectorAll(".iconToggle");
  const modalLight = document.querySelector(".modalBlock");
- const languageList = document.querySelector(".for_language");
+ 
 
 
  lightBlock.forEach((lightCheck,lightIndex)=>{
@@ -34,13 +34,13 @@ function changeDarkToLight(){
     toggleCircle[lightIndex].classList.add("light")
     iconToggle[lightIndex].classList.add("light");
      modalLight.classList.add("light");
-     languageList.classList.add("light")
+    
   }else{
     lightCheck.classList.remove("light")
     toggleCircle[lightIndex].classList.remove("light")
     iconToggle[lightIndex].classList.remove("light")
     modalLight.classList.remove("light");
-    languageList.classList.remove("light");
+   
   }
 }
 
