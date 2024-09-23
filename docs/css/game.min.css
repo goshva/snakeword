@@ -2,7 +2,7 @@
 
 #gameplace{
     width:500px;
-    height: auto;
+    height: 650px;
     display:flex;
     flex-wrap:wrap;
     background-size:cover;
