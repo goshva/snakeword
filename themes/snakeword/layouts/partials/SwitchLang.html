@@ -1,0 +1,21 @@
+<li class="top-menu-item">
+  <a href="#" class="top-menu-link-language-selected">
+    {{.Site.Params.Language}}
+    <i class="fa-solid fa-caret-down"></i>
+  </a>
+  <ul class="top-menu-list">
+    <li class="top-menu-item">
+      {{ range $.Site.Home.AllTranslations }}
+    <li class="top-menu-item">
+      <a class="top-menu-link-languages" href="{{ .Permalink }}">
+        {{ $path := printf "%s/%s.png" "/img/flag" .Language  }}
+        {{ $image := resources.Get $path }}
+        {{ with $image }}
+          {{ $image := $image.Resize "x20" }}
+          <img src="{{ $image.RelPermalink  }}">
+        {{ end }}
+          {{ .Language.LanguageName}}
+        </a>
+        </li>
+    {{ end }}
+</li>

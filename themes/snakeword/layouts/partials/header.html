@@ -51,20 +51,7 @@
             <i onclick="SaveGame()" class="far fa-save top-menu-link"></i>
           </button>
         </li>
-        <li class="top-menu-item">
-          <a href="#" class="top-menu-link-language-selected">
-            {{.Site.Params.Language}}
-            <i class="fa-solid fa-caret-down"></i>
-          </a>
-          <ul class="top-menu-list">
-            <li class="top-menu-item">
-              {{ range $.Site.Home.AllTranslations }}
-            <li class="top-menu-item">
-              <a class="top-menu-link-languages" href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
-            </li>
-            {{ end }}
-
-        </li>
+        {{- partial "SwitchLang.html" . -}}
       </ul>
       </li>
       </ul>
