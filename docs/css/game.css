@@ -1,0 +1,143 @@
+
+#gameplace{
+   width: 324px;
+   margin-left: auto;
+   margin-right: auto;
+   display:flex;
+   flex-wrap:wrap;
+   background:#911e03;
+   border:.2em solid #f96800;
+   font-size:1.6em;
+   border-radius: 0.7em;
+   box-shadow:-5px 5px 5px rgb(0 0 0 / 20%);
+   padding:5px;
+}
+#gametally {z-index:-1; color: #ccc;}
+#gametally li {font-size: small;  line-height: 1em;}
+#word {width: 9em;}
+
+
+.content { padding:0;}
+.cell{
+    margin: 0.1ex;
+    text-align: center;
+    text-transform: uppercase;
+    float: left;
+    width: 1.2em;
+    padding: 5px 0px 0px 0px;
+    border: 1px solid #ccc;
+    background:#f1e9d3;
+    border-radius:.3em;
+    font-size: 1em;
+    border-top: 2px solid #fff;
+    border-right:1px solid #fff;
+    border-left: 1px solid #cbc2aa;
+    border-bottom: 2px solid #cbc2aa;
+    color:#000;
+    box-shadow:-1px 1px 1px rgb(0 0 0 / 15%);
+}
+
+.wordCell { background-color:#FF8;}
+.activeCell { background-color:#d8d0bd; font-weight: bold;}
+
+
+         @-webkit-keyframes tada { 
+            10% {-webkit-transform: scale(1.2);}
+            15%, 20% {-webkit-transform: scale(1) rotate(-4deg);} 
+25% ,50%, 70%, 90% {-webkit-transform: scale(1) rotate(3deg);}
+            40%, 60%, 80% {-webkit-transform: scale(1) rotate(-1deg);} 
+            100% {-webkit-transform: scale(1) rotate(0);} 
+         }
+         
+         @keyframes tada { 
+            10% {transform: scale(1.2);} 
+            15%, 20% {transform: scale(1) rotate(-10deg);} 
+25%,50%, 75%, 90% {transform: scale(1) rotate(3deg);} 
+            40%, 60%, 80%  {transform: scale(1) rotate(-2deg);} 
+            100% {transform: scale(1) rotate(0);}
+         }
+         
+         .tada { 
+            -webkit-animation-duration: 1s;
+            animation-duration: 1	s; 
+            -webkit-animation-fill-mode: both; 
+            animation-fill-mode: both; 
+
+            -webkit-animation-name: tada; 
+            animation-name: tada; 
+         }
+.notify {
+    position: absolute;
+    z-index: 101;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    line-height: 2.7;
+    overflow: hidden; 
+    -webkit-box-shadow: 0 0 5px black;
+    -moz-box-shadow:    0 0 5px black;
+    box-shadow:         0 0 5px black;
+    display:none;
+}
+#note {background: #1f8dd6;    color:#fff;}
+#game {background: #E6E6E6;    color:#1f8dd6;}
+
+.point-button{
+    border: 1px solid #ccc;
+    background:#f1e9d3;
+    border-radius:.4em;
+    border-top: 2px solid #fff;
+    border-right:1px solid #fff;
+    border-left: 1px solid #cbc2aa;
+    border-bottom: 2px solid #cbc2aa;
+    color:#000;
+    box-shadow:-1px 1px 1px rgb(0 0 0 / 15%);
+    font-size: 100%;
+    font-family: inherit;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border:.2em solid #911e03;
+}
+.clear-button{
+   font-family: inherit;
+   font-size: 100%;
+   padding: 0.5em 1em;
+   border: 1px solid #ccc;
+   background:#f1e9d3;
+   border-radius:.4em;
+   border-top: 2px solid #fff;
+   border-right:1px solid #fff;
+   border-left: 1px solid #cbc2aa;
+   border-bottom: 2px solid #cbc2aa;
+   text-decoration: none;
+   border:.2em solid #911e03;
+}
+
+#word-input{
+   width: 11em;
+   height: auto;
+   vertical-align: middle;
+   display: inline-block;
+   margin-left: 1px;
+   margin-right: 1px;
+   background:#f1e9d3;
+   border-radius:.4em;
+   border-top: 2px solid #fff;
+   border-right:1px solid #fff;
+   border-left: 1px solid #cbc2aa;
+   border-bottom: 2px solid #cbc2aa;
+   border:.2em solid #911e03;
+}
+
+
+.modalBlock{
+   width: 600px;
+   height: 450px;
+   background-color: #fff;
+   position: absolute;
+   z-index: 12;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}

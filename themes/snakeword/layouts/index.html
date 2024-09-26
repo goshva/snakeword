@@ -1,11 +1,7 @@
 {{ define "main" }}
 <div id="main">
-  <div class="timer">
-    <div class="timer__items">
-      <div class="timer__item timer__minutes">00</div>
-      <div class="timer__item timer__seconds">00</div>
-    </div>
-  </div>
+{{- partial "modalBlock.html" . -}}
+{{- partial "modalslider.html" . -}}
   <div class="header">
     <div class="pure-form" style="display: flex; justify-content: center">
       <span
@@ -28,7 +24,14 @@
   </div>
   <div class="content">
     <div id=""></div>
-    <div id="gameplace"></div>
+    <div id="gameplace">
+      <div class="timer">
+        <div class="timer__items">
+          <div class="timer__item timer__minutes">00</div>
+          <div class="timer__item timer__seconds">00</div>
+        </div>
+      </div>
+    </div>
     <div id="result"></div>
   </div>
 </div>

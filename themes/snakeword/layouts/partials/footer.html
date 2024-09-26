@@ -2,6 +2,8 @@
       {{  $js := resources.Get "/js/gameCtrl.js"  -}}
       <script defer src="{{  $js.RelPermalink }}"></script>
 
+      {{$js := resources.Get "/js/backgroundChange.js" -}}
+      <script defer src="{{ $js.RelPermalink }}"></script>
       
       {{  $js := resources.Get "/js/genSet.js"  -}}
       <script defer src="{{  $js.RelPermalink }}"></script>

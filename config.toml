@@ -7,10 +7,10 @@ languageCode = "en-us"
 title = "My snakeword game"
 theme = ["snakeword"]
 publishDir ="docs"
+
 [Languages]
 [Languages.en]
   Languagename =  "English"
-
   title = "Snakeword"
   weight = 1
   author = "Sha. Egor"
@@ -25,9 +25,12 @@ publishDir ="docs"
   Settings = "Set"
   Save = "Save"
   Language = "Language"
+  StartGame = "Start Game"
+  RulesGame = "Game Rules"
 
 
 [Languages.ru]
+
   Languagename =  "Русский"
   title = "Змееслов"
   weight = 2
@@ -43,7 +46,8 @@ publishDir ="docs"
   Settings = "Набор"
   Save = "Сохранить"
   Language = "Язык"
-
+  StartGame = "Начать Игра"
+  RulesGame = "Правила Игры"
 
 [Languages.hy]
   Languagename =  "Հայերեն"
@@ -61,9 +65,12 @@ publishDir ="docs"
   Settings = "Набор"
   Save = "Պահպանել"
   Language = "Լեզու"
+  [params]
+  startGame = "Սկսել Խաղը"
+  rulesGame = "Խաղի կանոնները"
 
 [Languages.de]
-  Languagename =  "Немецкий"
+  Languagename =  "Deutsch"
   title = "Змееслов"
   weight = 2
   author = "Егор Ша."
@@ -78,6 +85,8 @@ publishDir ="docs"
   Settings = "Bausatz"
   Save = "Speichern"
   Language = " Sprache"
+  StartGame = "Սկսել Խաղը"
+  RulesGame = "Խաղի կանոնները"
 
 [Languages.fr]
   Languagename =  "French"
@@ -96,7 +105,9 @@ publishDir ="docs"
   Settings = "Set"
   Save = "Sauver"
   Language = "Langue"
-
+  StartGame = "Սկսել Խաղը"
+  RulesGame = "Խաղի կանոնները"
+  
 [Languages.la]  
   Languagename =  "Latin"
 
@@ -139,7 +150,7 @@ publishDir ="docs"
 
 
 
-  [Languages.Hi]
+  [Languages.hi]
   Languagename =  "Hindi"
   title = "साँप बोलने वाला"
   weight = 2
