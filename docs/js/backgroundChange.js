@@ -63,7 +63,7 @@ imagesData.forEach((img)=>{
    imgTag.src = img.imageUrl
 
 imgTag.addEventListener("click",()=>{
-    backgoundImage.src = imgTag.src
+    backgoundImage.style.backgroundImage = `url(${imgTag.src})`
 })
 
    modalBlockForImages.appendChild(imgBlock)

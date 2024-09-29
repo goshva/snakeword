@@ -1,5 +1,6 @@
 
 
+
 let backgoundImage = document.querySelector(".backgroundImage");
 const modalBlockForImages = document.querySelector(".modalBlockForImages");
 const imageOpenButton = document.querySelector(".imagesOpenButton");
@@ -68,7 +69,6 @@ imgTag.addEventListener("click",()=>{
 
    modalBlockForImages.appendChild(imgBlock)
 })
-
 
 
  
