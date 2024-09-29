@@ -1,28 +1,5 @@
-const hamburgerBlockBtn = document.querySelector(".hamburgerBlockBtn");
-const iconBlock = document.querySelector(".iconBlock");
-const navigationBar = document.querySelector(".navigationBar")
-hamburgerBlockBtn.addEventListener("click",()=>{
-    iconBlock.classList.toggle("active")
-    navigationBar.classList.toggle("active")
-})
-
-
-// light Dark Toggle
-
-
-
-  const lightBlock = document.querySelectorAll(".lightDarkBlock");
-  const toggleCircle = document.querySelectorAll(".toggleCircle");
-const iconToggle = document.querySelectorAll(".iconToggle");
- const topMenu = document.querySelector(".top-menu")
- const top_menu_item =document.querySelectorAll(".top-menu-item");
- const setting_item = document.querySelector(".setting-item");
- const modalLight = document.querySelector(".modalBlock");
- const languageList = document.querySelector(".for_language");
-
-
- lightBlock.forEach((lightCheck,lightIndex)=>{
-lightCheck.addEventListener("click",()=>{
+const ThemeButton = document.querySelector(".ThemeButton");
+  ThemeButton.addEventListener("click",()=>{
   if(localStorage.getItem("themes") === "light"){
     localStorage.removeItem("themes")
   }else{
@@ -35,37 +12,17 @@ lightCheck.addEventListener("click",()=>{
 function changeDarkToLight(){
   
   if (localStorage.getItem("themes") === "light") {
-    lightCheck.classList.add("light")
-    toggleCircle[lightIndex].classList.add("light")
-    iconToggle[lightIndex].classList.add("light");
-   topMenu.classList.add("light")
-    top_menu_item.forEach((item)=>{
-      item.classList.add("light")
-    })
-    setting_item.classList.add("light");
-     modalLight.classList.add("light");
-     languageList.classList.add("light")
-     hamburgerBlockBtn.classList.add("light")
-     navigationBar.classList.add("light")
+    ThemeButton.classList.add("light")
+    ThemeButton.innerHTML = '<i class="fa-regular fa-sun"></i>'
   }else{
-    lightCheck.classList.remove("light")
-    toggleCircle[lightIndex].classList.remove("light")
-    iconToggle[lightIndex].classList.remove("light")
-    topMenu.classList.remove("light")
-    top_menu_item.forEach((item)=>{
-      item.classList.remove("light")
-    })
-    setting_item.classList.remove("light");
-    modalLight.classList.remove("light");
-    languageList.classList.remove("light");
-    hamburgerBlockBtn.classList.remove("light")
-    navigationBar.classList.remove("light")
+    ThemeButton.classList.remove("light")
+    ThemeButton.innerHTML = '<i class="fa-regular fa-moon"></i>'
   }
 }
 
 
 changeDarkToLight()
- })
+
 
 
 
