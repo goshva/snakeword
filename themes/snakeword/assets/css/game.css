@@ -59,6 +59,11 @@ transition: all 0.5s ease;
 
 }
 
+.b-popup .restartBtn{
+   padding: 15px;
+   background-color: #F96B57;
+   color: #ccc;
+}
 
 .b-popup.active{
    opacity: 1;
@@ -461,4 +466,27 @@ overflow: hidden;
    .modalBlockForImages .imgBlock >img:hover{
       transform: scale(1.1);
       cursor: pointer;
+   }
+
+   .rateBlock{
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+
+   }
+
+   .rateBlock .rateBtns{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+   }
+
+   .rateBlock .rateBtns .rateBtn{
+      border: none;
+      background: none;
    }
