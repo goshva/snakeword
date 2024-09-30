@@ -6,10 +6,21 @@
    width: 100%;
    height: 100vh;
    background-image: url(../img/backgroundImage.png);
+   background-repeat: no-repeat;
+   background-size: cover;top: 15px;
 }
+
+
+#main{
+   position: relative;
+   bottom: 99px;
+}
+
+
+
 #gameplace
 {
-   width:500px;
+   width:460px;
    display:flex;
    flex-wrap:wrap;
    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4));
@@ -18,7 +29,7 @@
    border-radius:.7em;
    box-shadow:-5px 5px 5px rgb(0 0 0/.2);
    padding:5px;
-   height: 600px;
+   height: 550px;
    transition: all 0.5s ease;
    transform: scale(0);
 }
@@ -33,19 +44,19 @@
 #gametally li{
    font-size:small;line-height:1em}#word{width:9em}.content{display:flex;justify-content:center;align-items:center}
    .cell{
-      margin: 0.2ex;
-    text-align: center;
-    text-transform: uppercase;
-    float: left;
-    width: 1.6em;
-    padding: 2px 0;
-    border: 1px solid #ccc;
-    background: #f1e9d3;
-    border-radius: .3em;
-    font-size: 1.1em;
-    color: #000;
-    box-shadow: -1px 1px 1px rgb(0 0 0 / 15%);
-    font-family: Inter;
+      margin: 0.1ex;
+      text-align: center;
+      text-transform: uppercase;
+      float: left;
+      width: 2.1em;
+      padding: 2px 0;
+      border: 1px solid #ccc;
+      background: #f1e9d3;
+      border-radius: .3em;
+      font-size: 0.8em;
+      color: #000;
+      box-shadow: -1px 1px 1px rgb(0 0 0 / 15%);
+      font-family: Inter;
 }
 
 
@@ -57,6 +68,7 @@
    background-image: linear-gradient(rgba(0, 0, 0,0.9), rgba(0, 0, 0, 0.9));
    justify-content: center;
    align-items: center;
+   flex-direction: column;
    z-index: 26;
 opacity: 0;
 visibility: hidden;
@@ -66,8 +78,15 @@ transition: all 0.5s ease;
 
 .b-popup .restartBtn{
    padding: 15px;
-   background-color: #F96B57;
-   color: #ccc;
+   background-color: #f96b57;
+   /* color: #ccc; */
+   font-family: Inter;
+   border-radius: 15px;
+   text-transform: capitalize;
+   color: #fff;
+   font-size: 25px;
+   border: none;
+   font-weight: bold;
 }
 
 .b-popup.active{
@@ -306,13 +325,66 @@ transition: all 0.5s ease;
       display: flex;
       justify-content: center;
       align-items: center;
+      gap: 15px;
    }
+   .timer .rightBlock{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+   }
+
 
    .timer .leftBlock  .imagesOpenButton{
+      width: 25px;
+height: 25px;
       border: none;
       background: none;
+      color: #000;
+      background-color: #fff;
+      border-radius: 50%;display: flex;
+      justify-content: center;
+      align-items: center;
+    
+   }
+ 
+   .timer .leftBlock  .imagesOpenButton>i{
+      font-size: 15px;
    }
 
+   .timer .leftBlock  .deleteBtn{
+      width: 25px;
+height: 25px;
+      border: none;
+      background: none;
+      color: #f00;
+      background-color: #fff;
+      border-radius: 50%;display: flex;
+      justify-content: center;
+      align-items: center;
+    
+   }
+
+   .timer .leftBlock  .refreshButton{
+      width: 25px;
+      height: 25px;
+            border: none;
+            background: none;
+            color: #000;
+            background-color: #fff;
+            border-radius: 50%;display: flex;
+            justify-content: center;
+            align-items: center;   
+            overflow: hidden;
+   }
+   .timer .leftBlock  .refreshButton>a{
+      color: #000;
+
+   }
+   .timer .leftBlock  .refreshButton>a:hover{
+
+   }
    .timer .leftBlock .ThemeButton{
 width: 25px;
 height: 25px;
@@ -330,7 +402,49 @@ background-color: #03385b;
 color: #fde807;
 
    }
+.timer .rightBlock .facebookBtn,
+.timer .rightBlock .saveButton,
+.timer .rightBlock .infoBtn,
+.timer .rightBlock .messageButton{
+   width: 25px;
+   height: 25px;
+         border: none;
+         background: none;  
+         border-radius: 50%;display: flex;
+         justify-content: center;
+         align-items: center;  
+         overflow: hidden;
+}
+.timer .rightBlock .facebookBtn .fb-share-button{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.timer .rightBlock .facebookBtn .fb-share-button > a{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-decoration: none;
+}
+.timer .rightBlock .infoBtn{
+   color: #fff;
+   background-color: #1f8dd6;
+}
+.timer .rightBlock .facebookBtn{
+   color: #fff;
+   background-color: #045c96;
+}
 
+.timer .rightBlock .saveButton,
+.timer .rightBlock .messageButton
+{
+   background-color: #fff;
+}
+.timer .rightBlock .saveButton>i,
+.timer .rightBlock .messageButton>a
+{
+   color: #000;
+}
    .timer .leftBlock .ThemeButton.light{
       background-color: #000;
       color: #fde807;
@@ -344,7 +458,9 @@ color: #fde807;
       justify-content:center;
       align-items:center;
       gap:15px;
-      font-size:25px
+      font-size:25px;
+      color: #fff;
+      font-weight: bold;
    }
    
    .modalSlider{
@@ -495,3 +611,52 @@ overflow: hidden;
       border: none;
       background: none;
    }
+   .generalBlock{
+      width: 100%;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 5px;
+
+      padding: 6px;
+  
+   }
+
+.generalBlock .wordHeaderandPoint{
+   width: 100%;
+   height: 25px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.generalBlock .wordHeaderandPoint>h4,
+.generalBlock .wordHeaderandPoint .pointBlock{
+   font-size: 14px;
+   color: #fff;
+   display: flex;
+   justify-content: center;
+   align-items: flex-start;   
+   padding: 5px;
+}
+
+.generalBlock .wordHeaderandPoint .pointBlock{
+   width: 25px;
+   height: 25px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.generalBlock  .Words{
+   width: 100%;
+   height: 20px;
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   font-size: 15px;
+   color: #fff;
+   padding-left: 5px;
+}
