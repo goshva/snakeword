@@ -1,4 +1,8 @@
 <body>
+  <div class="modalBlockForImages">
+    <button class="closeButton"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+
   <header>
     <div id="fb-root"></div>
     <script>(function (d, s, id) {
@@ -10,11 +14,14 @@
       }(document, 'script', 'facebook-jssdk'));
     </script>
     <div class="b-popup">
+      {{- partial "rateBlock.html" . -}}
       <div class="b-popup-content">
-        <img src="/img/cracker.gif" alt="cracker" class="cracker_gif-left">
-        <img src="/img/victory.png" alt="" class="pop-up_img">
-        <img src="/img/cracker.gif" alt="cracker" class="cracker_gif-right">
+        <div class="crackerGifLeft"></div>
+        <div class="victoryImage"></div>
+        <div class="crackerGifRight"></div>
+
       </div>
+      <button class="restartBtn">{{ .Param "restartGamebtnLanguage"}}</button>
     </div>
     <div class="top-menu">
 
