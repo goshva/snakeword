@@ -600,6 +600,38 @@ overflow: hidden;
       align-items: center;
       flex-direction: column;
       background-color: #717171;
+      transition: all 0.5s ease;
+   }
+  .rateBlock .rateHeader,
+  .rateBlock .ratedText{
+   color: #fff;
+ font-size: 20px;
+ text-align: center;
+ transition: all 0.5s ease;
+  }
+
+  .rateBlock .ratedText{
+   opacity: 0;
+   visibility: hidden;
+   transform: translateY(15px);
+  }
+
+  .rateBlock .ratedText.thanks{
+   opacity: 1;
+   visibility: visible;
+   transform: translateY(0);
+  }
+
+  .rateBlock .rateHeader.deleted{
+   opacity: 0;
+   visibility: hidden;
+   transform: translateY(-15px);
+  }
+
+   .rateBlock.deleted{
+      opacity: 0;
+      visibility: hidden;
+      transform: translateX(15px);
    }
 
    .rateBlock .rateBtns{
@@ -608,13 +640,33 @@ overflow: hidden;
       align-items: center;
       gap: 15px;
    }
+   .rateBlock .rateBtns.rated{
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-15px);
+   }
 
    .rateBlock .rateBtns .rateBtn{
       border: none;
       background: none;
    }
+    
+  .rateBlock .choosenBlock{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   transition: all 0.5s ease;
+   opacity: 0;
+   visibility: hidden;
+   transform: translateY(15px);
+  }
+
+  .rateBlock .choosenBlock.rated{
+   opacity: 1;
+   visibility: visible;
+   transform: translateY(0);
+  }
    
-   .rateBlock
 
    .generalBlock{
       width: 100%;
@@ -624,9 +676,8 @@ overflow: hidden;
       align-items: center;
       flex-direction: column;
       gap: 5px;
-
       padding: 6px;
-  
+
    }
 
 .generalBlock .wordHeaderandPoint{
