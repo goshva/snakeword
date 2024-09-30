@@ -35,6 +35,9 @@ captionParagraphTwo = "For each word you find, you get 1 Point"
 captionParagraphThree = "If you typed the word incorrectly, you can delete it with the button"
 restartGamebtnLanguage = "Restart the Game"
 wordHeader = "Your Words"
+rateHeader = "Please rate the game"
+ratedHed = "Thank you for your rating"
+choosed = "You have chosen"
 
 [Languages.ru]
   Languagename =  "Русский"
@@ -62,6 +65,9 @@ captionParagraphTwo = "За каждое найденное слово вы по
 captionParagraphThree = "Если вы набрали слово неправильно, его можно удалить кнопкой "
 restartGamebtnLanguage = "Перезапустите игру"
 WordHeader = "Ваши слова"
+rateHeader = "Пожалуйста, оцените игру"
+ratedHed = "Спасибо за оценку"
+choosed = "Вы выбрали"
 
 [Languages.hy]
   Languagename =  "Հայերեն"
@@ -89,6 +95,9 @@ captionParagraphTwo = "Ամեն բառը գտնելու ժամանակ դուք 
 captionParagraphThree = "Եթե Բառը սխալ եք հավաքել կարող եք ջնջել  կոճակով"
 restartGamebtnLanguage = "Վերսկսել Խաղը"
 wordHeader = "Ձեր բառերը"
+rateHeader = "Խնդրում ենք գնահատել խաղը"
+ratedHed = "Շնորհակալություն ձեր գնահատականի համար"
+choosed = "Դուք ընտրել եք"
 
 [Languages.de]
   Languagename =  "Deutsch"
@@ -116,6 +125,9 @@ captionParagraphTwo = "Für jedes gefundene Wort erhalten Sie 1 Punkt"
 captionParagraphThree = "Wenn Sie das Wort falsch eingegeben haben, können Sie es mit der Schaltfläche löschen"
 restartGamebtnLanguage = "Starten Sie das Spiel neu"
 wordHeader = "Deine Worte"
+rateHeader = "Bitte bewerten Sie das Spiel"
+ratedHed = "Vielen Dank für Ihre Bewertung"
+choosed = "Sie haben gewählt"
 
 [Languages.fr]
   Languagename =  "French"
@@ -143,6 +155,9 @@ captionParagraphTwo = "Pour chaque mot que vous trouvez, vous obtenez 1 point"
 captionParagraphThree = "Si vous avez mal tapé le mot, vous pouvez le supprimer avec le bouton "
 restartGamebtnLanguage = "Redémarrez le jeu"
 wordHeader = "Tes mots"
+rateHeader = "Veuillez noter le jeu"
+ratedHed = "Merci pour votre note"
+choosed = "Vous avez choisi"
 
 [Languages.la]  
   Languagename =  "Latin"
@@ -170,6 +185,9 @@ captionParagraphTwo = "Pro unoquoque verbo quod habes, accipis 1 Point"
 captionParagraphThree = "Si verbum non recte figuratum est, illud per bullam delere potes"
 restartGamebtnLanguage = "Sileo ludum"
 wordHeader = "Verba Tua"
+rateHeader = "Quaeso rate ludum"
+ratedHed = "Gratias tibi rating"
+choosed = "Vos elegi"
 
 [Languages.ar]
   Languagename =  "Arabian"
@@ -198,6 +216,9 @@ captionParagraphTwo = "لكل كلمة تجدها، تحصل على نقطة و�
 captionParagraphThree = "إذا كتبت الكلمة بشكل غير صحيح، يمكنك حذفها باستخدام الزر"
 restartGamebtnLanguage = "أعد تشغيل اللعبة"
 wordHeader = "كلماتك"
+rateHeader = "يرجى تقييم اللعبة"
+ratedHed = "شكرا لتقييمك"
+choosed = "لقد اخترت"
 [taxonomies]
   category = "categories"
   tag = "tags"
@@ -231,6 +252,9 @@ captionParagraphTwo = "आपके द्वारा खोजे गए प�
 captionParagraphThree = "यदि आपने शब्द गलत टाइप किया है, तो आप इसे बटन से हटा सकते हैं।"
 restartGamebtnLanguage = "खेल पुनः प्रारंभ करें"
 wordHeader = "आपके शब्द"
+rateHeader = "कृपया गेम को रेटिंग दें"
+ratedHed = "आपकी रेटिंग के लिए धन्यवाद"
+choosed = "आपने चुना है"
 
   [Languages.zh]
   Languagename =  "Chinese"
@@ -258,4 +282,6 @@ captionParagraphTwo = "您找到的每個單詞，您將獲得 1 分"
 captionParagraphThree = "如果您輸入的單字不正確，您可以使用按鈕 將其刪除"
 restartGamebtnLanguage = "重新啟動遊戲"
 wordHeader = "你的話"
-
+rateHeader = "請評價遊戲"
+ratedHed = "感謝您的評價"
+choosed = "你已經選擇了"
