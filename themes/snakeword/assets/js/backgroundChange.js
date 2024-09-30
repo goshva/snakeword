@@ -65,6 +65,9 @@ imagesData.forEach((img)=>{
 
 imgTag.addEventListener("click",()=>{
     backgoundImage.style.backgroundImage = `url(${imgTag.src})`
+   setTimeout(() => {
+    modalBlockForImages.classList.remove("active")
+   }, 3500);
 })
 
    modalBlockForImages.appendChild(imgBlock)
