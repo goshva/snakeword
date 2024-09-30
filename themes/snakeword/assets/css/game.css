@@ -594,7 +594,7 @@ overflow: hidden;
       height: 250px;
       position: absolute;
       top: 15px;
-      left: 15px;
+      right:  15px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -659,6 +659,7 @@ overflow: hidden;
    opacity: 0;
    visibility: hidden;
    transform: translateY(15px);
+   color: #fff;
   }
 
   .rateBlock .choosenBlock.rated{
