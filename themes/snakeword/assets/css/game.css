@@ -590,14 +590,16 @@ overflow: hidden;
    }
 
    .rateBlock{
+      width: 350px;
+      height: 250px;
       position: absolute;
       top: 15px;
       left: 15px;
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: #fff;
-
+      flex-direction: column;
+      background-color: #717171;
    }
 
    .rateBlock .rateBtns{
@@ -611,6 +613,9 @@ overflow: hidden;
       border: none;
       background: none;
    }
+   
+   .rateBlock
+
    .generalBlock{
       width: 100%;
       height: 60px;
