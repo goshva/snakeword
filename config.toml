@@ -34,7 +34,7 @@ captionParagraphTwo = "For each word you find, you get 1 Point"
   captionHeaderThree = "Deleting a word"
 captionParagraphThree = "If you typed the word incorrectly, you can delete it with the button"
 restartGamebtnLanguage = "Restart the Game"
-WordHeader = "Your Words"
+wordHeader = "Your Words"
 
 [Languages.ru]
   Languagename =  "Русский"
@@ -88,7 +88,7 @@ captionParagraphTwo = "Ամեն բառը գտնելու ժամանակ դուք 
   captionHeaderThree = "Բառի ջնջում"
 captionParagraphThree = "Եթե Բառը սխալ եք հավաքել կարող եք ջնջել  կոճակով"
 restartGamebtnLanguage = "Վերսկսել Խաղը"
-WordHeader = "Ձեր բառերը"
+wordHeader = "Ձեր բառերը"
 
 [Languages.de]
   Languagename =  "Deutsch"
@@ -115,7 +115,7 @@ captionParagraphTwo = "Für jedes gefundene Wort erhalten Sie 1 Punkt"
   captionHeaderThree = "Ein Wort löschen"
 captionParagraphThree = "Wenn Sie das Wort falsch eingegeben haben, können Sie es mit der Schaltfläche löschen"
 restartGamebtnLanguage = "Starten Sie das Spiel neu"
-WordHeader = "Deine Worte"
+wordHeader = "Deine Worte"
 
 [Languages.fr]
   Languagename =  "French"
@@ -142,7 +142,7 @@ captionParagraphTwo = "Pour chaque mot que vous trouvez, vous obtenez 1 point"
   captionHeaderThree = "Supprimer un mot"
 captionParagraphThree = "Si vous avez mal tapé le mot, vous pouvez le supprimer avec le bouton "
 restartGamebtnLanguage = "Redémarrez le jeu"
-WordHeader = "Tes mots"
+wordHeader = "Tes mots"
 
 [Languages.la]  
   Languagename =  "Latin"
@@ -169,7 +169,7 @@ captionParagraphTwo = "Pro unoquoque verbo quod habes, accipis 1 Point"
   captionHeaderThree = "Deletis verbum"
 captionParagraphThree = "Si verbum non recte figuratum est, illud per bullam delere potes"
 restartGamebtnLanguage = "Sileo ludum"
-WordHeader = "Verba Tua"
+wordHeader = "Verba Tua"
 
 [Languages.ar]
   Languagename =  "Arabian"
@@ -197,7 +197,7 @@ captionParagraphTwo = "لكل كلمة تجدها، تحصل على نقطة و�
   captionHeaderThree = "حذف كلمة"
 captionParagraphThree = "إذا كتبت الكلمة بشكل غير صحيح، يمكنك حذفها باستخدام الزر"
 restartGamebtnLanguage = "أعد تشغيل اللعبة"
-WordHeader = "كلماتك"
+wordHeader = "كلماتك"
 [taxonomies]
   category = "categories"
   tag = "tags"
@@ -230,7 +230,7 @@ captionParagraphTwo = "आपके द्वारा खोजे गए प�
   captionHeaderThree = "एक शब्द हटाना"
 captionParagraphThree = "यदि आपने शब्द गलत टाइप किया है, तो आप इसे बटन से हटा सकते हैं।"
 restartGamebtnLanguage = "खेल पुनः प्रारंभ करें"
-WordHeader = "आपके शब्द"
+wordHeader = "आपके शब्द"
 
   [Languages.zh]
   Languagename =  "Chinese"
@@ -257,5 +257,5 @@ captionParagraphTwo = "您找到的每個單詞，您將獲得 1 分"
   captionHeaderThree = "刪除一個字"
 captionParagraphThree = "如果您輸入的單字不正確，您可以使用按鈕 將其刪除"
 restartGamebtnLanguage = "重新啟動遊戲"
-WordHeader = "你的話"
+wordHeader = "你的話"
 
