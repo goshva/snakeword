@@ -11,18 +11,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="la"
-                href="http://localhost:1313/la/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ar"
-                href="http://localhost:1313/ar/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="http://localhost:1313/fr/"
+                hreflang="hy"
+                href="http://localhost:1313/hy/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -31,8 +21,18 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="hy"
-                href="http://localhost:1313/hy/"
+                hreflang="fr"
+                href="http://localhost:1313/fr/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="la"
+                href="http://localhost:1313/la/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ar"
+                href="http://localhost:1313/ar/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -58,8 +58,13 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="ar"
-                href="http://localhost:1313/ar/categories/"
+                hreflang="hy"
+                href="http://localhost:1313/hy/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="http://localhost:1313/de/categories/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -73,18 +78,13 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="de"
-                href="http://localhost:1313/de/categories/"
+                hreflang="ar"
+                href="http://localhost:1313/ar/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="hi"
                 href="http://localhost:1313/hi/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="hy"
-                href="http://localhost:1313/hy/categories/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -105,8 +105,13 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="ar"
-                href="http://localhost:1313/ar/tags/"
+                hreflang="hy"
+                href="http://localhost:1313/hy/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="http://localhost:1313/de/tags/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -120,18 +125,13 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="de"
-                href="http://localhost:1313/de/tags/"
+                hreflang="ar"
+                href="http://localhost:1313/ar/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="hi"
                 href="http://localhost:1313/hi/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="hy"
-                href="http://localhost:1313/hy/tags/"
                 />
     <xhtml:link
                 rel="alternate"
