@@ -209,6 +209,7 @@ function listfindedwords() {
 function cutWord() {
   word = '';
   document.getElementById('word-input').options[0].text = word;
+  
   clear();
 }
 
