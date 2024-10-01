@@ -293,6 +293,7 @@ async function collectWord(Id, id, ...args) {
   word += Id;
 
   document.getElementById('word-input').options[0].text = word;
+  document.querySelector(".Words").innerHTML += word 
   document.getElementById('word-input').options[0].selected = true;
 
   nearCheck(id, ids);
