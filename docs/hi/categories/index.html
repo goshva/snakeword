@@ -13,6 +13,7 @@
     <meta property="og:image:width" content="400" />
     <meta property="og:image:height" content="300" />
     <meta property="fb:app_id" content=".Site.Params.FbAppId" />
+
     <title>Categories</title>
     <script
       src="https://kit.fontawesome.com/4e72f7ce5d.js"
@@ -22,9 +23,67 @@
     <link href="/css/top-menu.min.css" rel="stylesheet">
     
     <link href="/css/game.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
 </html>
-<body><body>
+<body>
+        <div class="backgroundImage"> </div><div class="modalBlock">
+  <div class="buttonsBlock">
+   <button class="StartBtn">खेल शुरू करें</button>
+  <button class="RulesBtn">खेल के नियम</button>
+  </div>
+</div>
+<div class="modalSlider">
+  <div class="closeBtn">X</div>
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://dummyimage.com/600x400/000/fff.jpg" class="d-block w-100" alt="image">
+        <div class="carousel-caption d-none d-md-block bg-secondary">
+          <h5 class="text-white">समय:</h5>
+          <p class="text-white">&lt;&lt;गेम प्रारंभ करें&gt;&gt; बटन पर क्लिक करने के बाद आपको 10 मिनट का समय दिया जाएगा</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://dummyimage.com/400x300/000/fff.jpg" class="d-block w-100" alt="image">
+        <div class="carousel-caption d-none d-md-block bg-secondary">
+<h5 class="text-white">इकाई:</h5>
+<p class="text-white">आपके द्वारा खोजे गए प्रत्येक शब्द के लिए, आपको 1 अंक मिलता है</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://dummyimage.com/300x100/000/fff.jpg" class="d-block w-100" alt="image">
+        <div class="carousel-caption d-none d-md-block bg-secondary">
+          <h5 class="text-white">एक शब्द हटाना</h5>
+<p class="text-white">यदि आपने शब्द गलत टाइप किया है, तो आप इसे बटन से हटा सकते हैं।</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div><body>
+  <div class="modalBlockForImages">
+    <button class="closeButton"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+
   <header>
     <div id="fb-root"></div>
     <script>(function (d, s, id) {
@@ -35,12 +94,30 @@
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
     </script>
-    <div class="b-popup">
-      <div class="b-popup-content">
-        <img src="/img/cracker.gif" alt="cracker" class="cracker_gif-left">
-        <img src="/img/victory.png" alt="" class="pop-up_img">
-        <img src="/img/cracker.gif" alt="cracker" class="cracker_gif-right">
+    <div class="b-popup"><div class="rateBlock">
+  <h2 class="rateHeader">कृपया गेम को रेटिंग दें</h2>
+  <h2 class="ratedText">आपकी रेटिंग के लिए धन्यवाद</h2>
+  <div class="rateBtns">
+    <button class="rateBtn">😔</button>
+    <button class="rateBtn">🙄</button>
+    <button class="rateBtn">🙂</button>
+    <button class="rateBtn">😁</button>
+    <button class="rateBtn">🤩</button>
+  </div>
+  <div class="choosenBlock">
+    <h2>
+      आपने चुना है
+      <span class="choosen_icon"></span>
+    </h2>
+  </div>
+</div>
+<div class="b-popup-content">
+        <div class="crackerGifLeft"></div>
+        <div class="victoryImage"></div>
+        <div class="crackerGifRight"></div>
+
       </div>
+      <button class="restartBtn">खेल पुनः प्रारंभ करें</button>
     </div>
     <div class="top-menu">
 
@@ -97,54 +174,6 @@
         </li>
     
     <li class="top-menu-item">
-      <a class="top-menu-link-languages" href="http://localhost:1313/la/">
-        
-        
-        
-          
-          <img src="/img/flag/la_hue085cd871483de819bbaa20cc416b4ea_1722_0x20_resize_box_3.png">
-        
-          Latin
-        </a>
-        </li>
-    
-    <li class="top-menu-item">
-      <a class="top-menu-link-languages" href="http://localhost:1313/ar/">
-        
-        
-        
-          
-          <img src="/img/flag/ar_huf2e57baa073b5095a926e0bbe699d049_655_0x20_resize_box_3.png">
-        
-          Arabian
-        </a>
-        </li>
-    
-    <li class="top-menu-item">
-      <a class="top-menu-link-languages" href="http://localhost:1313/fr/">
-        
-        
-        
-          
-          <img src="/img/flag/fr_hu196baa38bb6f985153dd85254d230406_650_0x20_resize_box_3.png">
-        
-          French
-        </a>
-        </li>
-    
-    <li class="top-menu-item">
-      <a class="top-menu-link-languages" href="http://localhost:1313/de/">
-        
-        
-        
-          
-          <img src="/img/flag/de_hu5d786a72577c45d0ac4d9bb9b43385ed_579_0x20_resize_box_3.png">
-        
-          Deutsch
-        </a>
-        </li>
-    
-    <li class="top-menu-item">
       <a class="top-menu-link-languages" href="http://localhost:1313/ru/">
         
         
@@ -165,6 +194,54 @@
           <img src="/img/flag/hy_hu94a3eeab53d8e0daf135df6139bfaff8_623_0x20_resize_box_3.png">
         
           Հայերեն
+        </a>
+        </li>
+    
+    <li class="top-menu-item">
+      <a class="top-menu-link-languages" href="http://localhost:1313/de/">
+        
+        
+        
+          
+          <img src="/img/flag/de_hu5d786a72577c45d0ac4d9bb9b43385ed_579_0x20_resize_box_3.png">
+        
+          Deutsch
+        </a>
+        </li>
+    
+    <li class="top-menu-item">
+      <a class="top-menu-link-languages" href="http://localhost:1313/fr/">
+        
+        
+        
+          
+          <img src="/img/flag/fr_hu196baa38bb6f985153dd85254d230406_650_0x20_resize_box_3.png">
+        
+          French
+        </a>
+        </li>
+    
+    <li class="top-menu-item">
+      <a class="top-menu-link-languages" href="http://localhost:1313/la/">
+        
+        
+        
+          
+          <img src="/img/flag/la_hue085cd871483de819bbaa20cc416b4ea_1722_0x20_resize_box_3.png">
+        
+          Latin
+        </a>
+        </li>
+    
+    <li class="top-menu-item">
+      <a class="top-menu-link-languages" href="http://localhost:1313/ar/">
+        
+        
+        
+          
+          <img src="/img/flag/ar_huf2e57baa073b5095a926e0bbe699d049_655_0x20_resize_box_3.png">
+        
+          Arabian
         </a>
         </li>
     
@@ -201,55 +278,13 @@
     </div>
   </header>
 
-</body><div id="content"><div class="modalSlider">
-  <div class="closeBtn">X</div>
-  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-        aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-        aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-        aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="https://dummyimage.com/600x400/000/fff.jpg" class="d-block w-100" alt="image">
-        <div class="carousel-caption d-none d-md-block bg-secondary">
-          <h5 class="text-white">计时器</h5>
-          <p class="text-white">点击“开始游戏”按钮后，分配给游戏的时间开始到期，
-            你有 10 分钟的时间玩</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="https://dummyimage.com/400x300/000/fff.jpg" class="d-block w-100" alt="image">
-        <div class="carousel-caption d-none d-md-block bg-secondary">
-          <h5 class="text-white">观点</h5>
-          <p class="text-white">这个游戏板上有隐藏的单词。对于每个正确的单词，您将获得一分</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="https://dummyimage.com/300x100/000/fff.jpg" class="d-block w-100" alt="image">
-        <div class="carousel-caption d-none d-md-block bg-secondary">
-          <h5 class="text-white">删除一个字</h5>
-          <p class="text-white">如果您选择了错误的单词，您可以使用以下命令将其删除 <i class="fa-solid fa-delete-left"></i> 按钮 </p>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-      data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-      data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-</div>
+</body><div id="content">
         </div>      
       <script defer src="/js/gameCtrl.js"></script>
+      
+      <script defer src="/js/toggleBlock.js"></script>
+
+      <script defer src="/js/chooseRate.js"></script>
 
       <script defer src="/js/backgroundChange.js"></script>
       
@@ -260,5 +295,9 @@
       <script defer src="/js/victory.js"></script>
    </body>
 </html>
-</body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  
+
+    </body>
 </html>
