@@ -84,7 +84,6 @@ function moreletter() {
   }
   // findwordids.push(ids);//////////////////////////////////
   document.getElementById('points').innerText = findwordids.length + 1;
-  document.querySelector(".pointBlock").innerHTML = findwordids.length + 1;
 }
 
 function nearCheck(id, findIds) {
@@ -209,11 +208,10 @@ function listfindedwords() {
 function cutWord() {
   word = '';
   document.getElementById('word-input').options[0].text = word;
-  
   clear();
 }
 
-const cutButton = document.getElementById('cut-btn');
+const cutButton = document.querySelector('.deleteBtn');
 cutButton.addEventListener('click', cutWord);
 
 function SaveGame_old() {
@@ -294,7 +292,7 @@ async function collectWord(Id, id, ...args) {
   word += Id;
 
   document.getElementById('word-input').options[0].text = word;
-  document.querySelector(".Words").innerHTML += word 
+
   document.getElementById('word-input').options[0].selected = true;
 
   nearCheck(id, ids);
