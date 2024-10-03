@@ -2,10 +2,21 @@
     <div class="wordHeaderandPoint">
         <h4>{{ .Param  "wordHeader"}} :</h4>
         <div class="pointBlock">
-          0
+            <span
+            class="point-button pure-button-active"
+            id="points"
+            title="{{ .Site.Params.Points}}"
+            >...
+          </span>
+        
         </div>
     </div>
     <div class="Words">
-  
+        <div class="pure-form" style="display: flex; justify-content: center">
+            
+            <select id="word-input" class="pure-input-3-5">
+              <option>{{ .Site.Params.Lets}}</option>
+            </select>
+          </div>
     </div>
 </div>
