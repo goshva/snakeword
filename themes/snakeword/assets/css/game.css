@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+
+*{
+   user-select: none;
+}
 body{
    overflow: hidden;
 }
@@ -10,7 +14,8 @@ body{
    height: 100vh;
    background-image: url(../img/backgroundImage.png);
    background-repeat: no-repeat;
-   background-size: cover;top: 15px;
+   background-size: cover;
+   top: 15px;
 }
 
 
@@ -23,18 +28,20 @@ body{
 
 #gameplace
 {
-   width:460px;
-   display:flex;
-   flex-wrap:wrap;
-   background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4));
-   justify-content:center;
-   font-size:1.6em;
-   border-radius:.7em;
-   box-shadow:-5px 5px 5px rgb(0 0 0/.2);
-   padding:5px;
-   height: 550px;
-   transition: all 0.5s ease;
+   width: 460px;
+   display: flex;
+   flex-wrap: wrap;
+   background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4));
+   justify-content: center;
+   font-size: 1.6em;
+   border-radius: .7em;
+   box-shadow: -5px 5px 5px rgb(0 0 0 / .2);
+   padding: 5px;
+   height: 590px;
+   transition: all .5s ease;
    transform: scale(0);
+   position: absolute;
+   top: 111px;
 }
 
 
@@ -59,7 +66,11 @@ body{
       font-size: 0.8em;
       color: #000;
       box-shadow: -1px 1px 1px rgb(0 0 0 / 15%);
-      font-family: Inter;
+      font-family: Arial, Helvetica, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;   
 }
 
 
@@ -207,10 +218,10 @@ transition: all 0.5s ease;
             border-radius:.4em;
             color:#000;
             box-shadow:-1px 1px 1px rgb(0 0 0/15%);
-            font-size:100%;
+            font-size:20px;
             font-family:inherit;
             text-decoration:none;
-            padding:.5em 1em;
+            padding: 0.2em 0.7em;;
          }
 
          
@@ -631,7 +642,7 @@ overflow: hidden;
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      gap: 5px;
+      gap: 15px;
       padding: 6px;
 
    }
@@ -644,8 +655,7 @@ overflow: hidden;
    align-items: center;
 }
 
-.generalBlock .wordHeaderandPoint>h4,
-.generalBlock .wordHeaderandPoint .pointBlock{
+.generalBlock .wordHeaderandPoint>h4{
    font-size: 14px;
    color: #fff;
    display: flex;
@@ -654,13 +664,7 @@ overflow: hidden;
    padding: 5px;
 }
 
-.generalBlock .wordHeaderandPoint .pointBlock{
-   width: 25px;
-   height: 25px;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-}
+
 
 .generalBlock  .Words{
    width: 100%;
@@ -688,5 +692,33 @@ overflow: hidden;
 
 .generalBlock  .Words .buttonsBlock > button>i,
 .generalBlock  .Words .buttonsBlock > button > a > i{
-   font-size: 10px;
+   font-size: 20px;
+}
+
+.buttonBlock{
+   width: 30px;
+   height: 30px;
+   display: none;
+   justify-content: center;
+   align-items: center;
+   background-color: #fff;
+   font-size: 20px;
+   position: absolute;
+   right: 15px;
+}
+
+@media(max-width:735px){
+  .backgroundImage{
+   top: 0;
+  }
+
+  .buttonBlock{
+   display: flex;
+   z-index: 12;
+   transition: all 0.5s ease; cursor: pointer;
+}
+
+.buttonBlock.active > i{
+transform: rotateX(-360deg);
+}
 }
