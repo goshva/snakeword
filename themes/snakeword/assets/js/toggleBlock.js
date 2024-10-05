@@ -24,6 +24,12 @@ function changeDarkToLight(){
 changeDarkToLight()
 
 
+// if click arrow icon open languages menu
 
 
-
+const buttonBlock = document.querySelector(".buttonBlock");
+const topMenu = document.querySelector(".top-menu");
+buttonBlock.addEventListener("click",()=>{
+  buttonBlock.classList.toggle("active")
+  topMenu.classList.toggle("active")
+})
