@@ -1,9 +1,6 @@
 <li class="top-menu-item">
-  <a href="#" class="top-menu-link-language-selected">
-    {{.Site.Params.Language}}
-    <i class="fa-solid fa-caret-down"></i>
-  </a>
-  <ul class="top-menu-list">
+ 
+  <ul class="top-menu-list for_languageBlock">
     <li class="top-menu-item">
       {{ range $.Site.Home.AllTranslations }}
     <li class="top-menu-item">
@@ -18,4 +15,6 @@
         </a>
         </li>
     {{ end }}
+</li>
+  </ul>
 </li>
