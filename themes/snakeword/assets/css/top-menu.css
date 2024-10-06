@@ -164,6 +164,8 @@ gap: 15px;
     position: absolute;
     height: 100vh;
     transition: all 0.5s ease;
+    justify-content: flex-start;
+    align-items: start;
     z-index: 12;
   }
 
