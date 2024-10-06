@@ -94,7 +94,10 @@ function insertRandomLetters() {
   }
 }
 /// END random generator block
-
+function playSound() {
+  var audio = new Audio("../sounds/click.mp3");
+  audio.play();
+}
 function genArray(testwords) {
   for (var i = 0; i < testwords.length; i++) {
     // console.log(testwords[i], i);
@@ -145,10 +148,7 @@ function genArea() {
     gameplace.appendChild(divbtn);
   }
   
-  function playSound() {
-    var audio = new Audio("../sounds/click.mp3");
-    audio.play();
-  }
+
 
   if (Array.isArray(findwordids) && Array.isArray(findwordids[0])) {
     for (var i = 0; i < findwordids.length; i++) {
