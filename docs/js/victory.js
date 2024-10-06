@@ -1,55 +1,21 @@
-let toggleBool = true
-const selectAudio = document.createElement("audio");
-const audio = document.createElement("audio");
-const timeAudio = document.createElement("audio");
-const endAudio = document.createElement("audio");
-const cogToggle = document.querySelectorAll(".setting-link") 
-const settingList = document.querySelectorAll(".setting-list");
-const mutedBtn = document.querySelectorAll(".mutedBtn")
-cogToggle.forEach((items,index)=>{
-  items.addEventListener("click",()=>{
-    items.classList.toggle("active")
-    settingList[index].classList.toggle("active")
-  })
-  mutedBtn[index].addEventListener("click",()=>{
-    if (toggleBool) {
-      mutedBtn[index].classList.add("muted");
-      mutedBtn[index].innerHTML = '<i class="fa-solid fa-volume-high"></i> ON' 
-      audio.muted = true;
-      timeAudio.muted = true;
-      endAudio.muted = true;
-      selectAudio.muted = true
-      toggleBool = false
-    }else{
-      mutedBtn[index].classList.remove("muted");
-      mutedBtn[index].innerHTML = '<i class="fa-solid fa-volume-xmark"></i> OFF' 
-      audio.muted = false;
-      timeAudio.muted = false;
-      endAudio.muted = false;
-      selectAudio.muted = false
-      toggleBool = true
-    }
-    })
-})
+//"/static/sounds/gamestart.mp3"
+const startAudio = new Audio("../../../../static/sounds/gamestart.mp3")
+const timeSoundAudio = new Audio("../../../../static/sounds/time-passing-sound-effect-fast-clock-108403.mp3")
+const winAudio = new Audio("../../../../static/sounds/goodresult-82807.mp3")
 
 
 
 
-
-const restartBtn = document.querySelector(".restartBtn")
+const restartBtn  = document.querySelector(".restartBtn ")
 const closeBtn = document.querySelector(".closeBtn")
 let content = document.querySelector(".content")
 let modalSlider = document.querySelector(".modalSlider");
 const rulesBtn = document.querySelector(".RulesBtn");
 rulesBtn.addEventListener("click",()=>{
 modalSlider.classList.add("active");
-
-selectAudio.src = "/audios/mixkit-select-click-1109.wav";
-selectAudio.play();
 setTimeout(()=>{
-  selectAudio.pause()
 },1000);
-modalSlider.appendChild(selectAudio)
+
 })
 
 
@@ -87,14 +53,9 @@ const gamePlace = document.querySelector("#gameplace")
      StartBtn.addEventListener("click",()=>{
          gamePlace.classList.add("active")
        modalBlock.classList.add("active")
-       StartBtn.classList.add("active")
-       audio.src = "/audios/mixkit-fast-small-sweep-transition-166.wav";
-               
-               audio.play()
-               document.body.appendChild(audio)
-               setTimeout(()=>{
-                 audio.pause()
-                },1000)
+       StartBtn.classList.add("active") 
+       startAudio.play()
+              
                 countDownTime()
      });
      
@@ -117,22 +78,14 @@ const gamePlace = document.querySelector("#gameplace")
               if (minutes === 0 && seconds <=10) {
                 $minutes.style.color ="red";
                 $seconds.style.color = "red" 
-                timeAudio.src = "/audios/mixkit-classic-alarm-995.wav";
-                document.body.appendChild(timeAudio)
-                timeAudio.play();
+                timeSoundAudio.play();
               
               }
 
               if (minutes === 0 && seconds === 0) {  
                 popup.classList.add("active")
                 clearInterval(timerId);
-     
-               
-                endAudio.src = "/audios/mixkit-video-game-win-2016.wav";
-                
-                popup.appendChild(endAudio)
-                endAudio.play()
-             
+                winAudio.play()
                     }
               
         },1000);
