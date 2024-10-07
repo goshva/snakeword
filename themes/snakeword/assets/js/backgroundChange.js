@@ -5,7 +5,8 @@ let backgoundImage = document.querySelector(".backgroundImage");
 const modalBlockForImages = document.querySelector(".modalBlockForImages");
 const imageOpenButton = document.querySelector(".imagesOpenButton");
 const closeButton = document.querySelector(".closeButton")
-
+const message = document.querySelectorAll(".message");
+const messageBlock = document.querySelector(".messageBlock")
 imageOpenButton.addEventListener("click",()=>{
     modalBlockForImages.classList.add("active");
 })
@@ -65,9 +66,14 @@ imagesData.forEach((img)=>{
 
 imgTag.addEventListener("click",()=>{
     
-    backgoundImage.style.backgroundImage = `url(${imgTag.src})`
+    backgoundImage.style.backgroundImage = `url(${imgTag.src})`;
+    const randomIndex = Math.floor(Math.random() * message.length)
+    message[randomIndex].classList.add("active")
+    messageBlock.classList.add("active")
    setTimeout(() => {
     modalBlockForImages.classList.remove("active")
+    message[randomIndex].classList.remove("active")
+    messageBlock.classList.remove("active")
    }, 3500);
 })
 

@@ -1,7 +1,7 @@
 //"/static/sounds/gamestart.mp3"
-const startAudio = new Audio("../../../../static/sounds/gamestart.mp3")
-const timeSoundAudio = new Audio("../../../../static/sounds/time-passing-sound-effect-fast-clock-108403.mp3")
-const winAudio = new Audio("../../../../static/sounds/goodresult-82807.mp3")
+const startAudio = new Audio("../sounds/gamestart.mp3")
+const timeSoundAudio = new Audio("../time-passing-sound-effect-fast-clock-108403.mp3")
+const winAudio = new Audio("../sounds/goodresult-82807.mp3")
 
 
 
