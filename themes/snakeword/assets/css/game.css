@@ -510,8 +510,35 @@ color: #fde807;
       transform: translateY(-15px);
       transition: all 0.5s ease;
       z-index: 10;
- 
+ position: relative;
       gap: 12px;
+   }
+
+   .modalBlockForImages .messageBlock{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #53515154;
+   }
+
+   .modalBlockForImages .messageBlock .message{
+      position: absolute;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-15px);
+      text-transform: capitalize;
+      font-size:  35px;
+      color: #c1b1b1;
+   }
+
+   .modalBlockForImages .messageBlock .message.active{
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
    }
 
    .modalBlockForImages.active{
