@@ -522,6 +522,7 @@ color: #fde807;
       justify-content: center;
       align-items: center;
       background-color: #53515154;
+      transition: all 0.5s ease;
    }
 
    .modalBlockForImages .messageBlock .message{
@@ -532,6 +533,7 @@ color: #fde807;
       text-transform: capitalize;
       font-size:  35px;
       color: #817979;
+      transition: all 0.5s ease;
    }
 
    .modalBlockForImages .messageBlock .message.active{
