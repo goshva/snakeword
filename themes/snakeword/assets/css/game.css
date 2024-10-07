@@ -510,7 +510,6 @@ color: #fde807;
       transform: translateY(-15px);
       transition: all 0.5s ease;
       z-index: 10;
- position: relative;
       gap: 12px;
    }
 
@@ -532,7 +531,7 @@ color: #fde807;
       transform: translateY(-15px);
       text-transform: capitalize;
       font-size:  35px;
-      color: #c1b1b1;
+      color: #817979;
    }
 
    .modalBlockForImages .messageBlock .message.active{
