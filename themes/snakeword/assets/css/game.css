@@ -52,7 +52,9 @@ body{
    z-index:-1;color:#ccc
 }
 #gametally li{
-   font-size:small;line-height:1em}#word{width:9em}.content{display:flex;justify-content:center;align-items:center}
+   font-size:small;line-height:1em}
+   #word{width:9em}
+   .content{display:flex;justify-content:center;align-items:center}
    .cell{
       margin: 0.1ex;
       text-align: center;
@@ -122,10 +124,6 @@ transition: all 0.5s ease;
    display: flex;
    justify-content: center;
    align-items: center;
-   background-image: url(../img/cracker.gif);
-  
-   background-repeat: no-repeat;
-   background-size: cover;
  }
 
  .b-popup .b-popup-content .victoryImage{
@@ -134,10 +132,17 @@ transition: all 0.5s ease;
    display: flex;
    justify-content: center;
    align-items: center;
-   background-image: url(../img/victory.png);
-   background-repeat: no-repeat;
-   background-size: cover;
  }
+
+ .b-popup .b-popup-content .crackerGifLeft>img,
+ .b-popup .b-popup-content .crackerGifRight>img,
+ .b-popup .b-popup-content .victoryImage>img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+ }
+
+
 
    
    .header{
@@ -521,10 +526,17 @@ color: #fde807;
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: #53515154;
+      background-color: #eb0d0ded;
       transition: all 0.5s ease;
+      width: 350px;
+      height: 250px;
+      opacity: 0;
+      visibility: hidden;
    }
-
+   .modalBlockForImages .messageBlock.active{
+      opacity: 1;
+      visibility: visible;
+   }
    .modalBlockForImages .messageBlock .message{
       position: absolute;
       opacity: 0;
