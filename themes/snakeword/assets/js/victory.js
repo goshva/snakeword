@@ -2,6 +2,7 @@
 const startAudio = new Audio("../sounds/gamestart.mp3")
 const timeSoundAudio = new Audio("../sounds/time-passing-sound-effect-fast-clock-108403.mp3")
 const winAudio = new Audio("../sounds/goodresult-82807.mp3")
+const selectAudio = new Audio("../sounds/menu-button-88360.mp3")
 
 
 
@@ -13,6 +14,7 @@ let modalSlider = document.querySelector(".modalSlider");
 const rulesBtn = document.querySelector(".RulesBtn");
 rulesBtn.addEventListener("click",()=>{
 modalSlider.classList.add("active");
+selectAudio.play()
 setTimeout(()=>{
 },1000);
 

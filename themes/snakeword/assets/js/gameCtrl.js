@@ -3,7 +3,7 @@
 
 
 
-
+const cutButton = document.querySelector('.deleteBtn');
 let word = '';
 let ids = [];
 const findwords = [];
@@ -11,6 +11,9 @@ const translatedwords = [];
 let findwordids = [];
 let socket = null;
 //
+cutButton.style.opacity = "0.5"
+cutButton.style.pointerEvents = "none"
+
 
 function hidenotify() {
   const notifies = document.getElementsByClassName('notify');
@@ -140,6 +143,8 @@ function clear() {
   opt.value = '';
   opt.innerHTML = '';
   opt.selected = true;
+  cutButton.style.opacity = "0.5"
+cutButton.style.pointerEvents = "none"
   // Selectq.appendChild(opt);
   //
 }
@@ -202,16 +207,19 @@ function listfindedwords() {
       WordsSelect.hasChildNodes() ? WordsSelect.childNodes[0] : null
     );
     WordsSelect.selectedIndex = 0;
+
   }
 }
 
 function cutWord() {
   word = '';
+  const deleteAudio = new Audio("../sounds/spacebar-click-keyboard-199448.mp3")
   document.getElementById('word-input').options[0].text = word;
+  deleteAudio.play()
   clear();
 }
 
-const cutButton = document.querySelector('.deleteBtn');
+
 cutButton.addEventListener('click', cutWord);
 
 function SaveGame_old() {
@@ -311,10 +319,11 @@ async function collectWord(Id, id, ...args) {
         createImgDialog(constructorSearchUrl(word));
         document.getElementById('word-input').options[0].text = '';
         const optionEl = document.createElement('option');
-        const wordTag = document.querySelector(".Words")
         optionEl.text = word;
-        wordTag.innerHTML += word + ","
         document.getElementById('word-input').append(optionEl);
+        new Audio("../sounds/correct-choice-43861.mp3").play()
+        cutButton.style.opacity = "0.5"
+cutButton.style.pointerEvents = "none"
       }
 
       const userLang = navigator.language || navigator.userLanguage;

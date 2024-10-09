@@ -8,7 +8,6 @@ var lettersFree = [];
 for (var i = 0; i < edge * edge; i++) {
   letters[i] = i;
 }
-
 var genwords = [];
 
 function getFreePosition() {
@@ -140,8 +139,11 @@ function genArea() {
         collectWord(this.Letter, this.LetterCount);
         this.className += " activeCell";
         playSound(this.Letter);
+        cutButton.style.pointerEvents = "auto";
+cutButton.style.opacity = "1"
       }
       e.target.classList.contains('activeCell') === false ? noClass() : true;
+ 
     };
     var t = document.createTextNode(letters[L]);
     divbtn.appendChild(t);
