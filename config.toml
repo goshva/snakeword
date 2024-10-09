@@ -42,6 +42,7 @@ messageOne = "Very Beautiful"
 messageTwo = "The right choice"
 messageThree = "Wohoo ...!"
 messageFour = "Is it?"
+findedWords = "the words you found"
 
 [Languages.ru]
 Languagename =  "Русский"
@@ -76,6 +77,7 @@ messageOne = "Очень красиво"
 messageTwo = "Правильный выбор"
 messageThree = "Ух ты...!"
 messageFour = "Это так?"
+findedWords = "слова, которые ты нашел"
 
 [Languages.hy]
   Languagename =  "Հայերեն"
@@ -110,6 +112,8 @@ messageOne = "Շատ Գեղեցիկ"
 messageTwo = "Ճիշտ ընտրություն"
 messageThree = "Վայ..."
 messageFour = "Արդյոք դա"
+findedWords = "ձեր գտած բառերը"
+
 
 [Languages.de]
   Languagename =  "Deutsch"
@@ -144,6 +148,7 @@ messageOne = "Sehr schön"
 messageTwo = "Die richtige Wahl"
 messageThree = "Juhuu...!"
 messageFour = "Ist es das?"
+findedWords = "die Wörter, die du gefunden hast"
 
 [Languages.fr]
   Languagename =  "French"
@@ -178,7 +183,7 @@ messageOne = "Très beau"
 messageTwo = "Le bon choix"
 messageThree = "Wohoo...!"
 messageFour = "Vraiment ?"
-
+findedWords = "les mots que tu as trouvés"
 
 [Languages.la]  
   Languagename =  "Latin"
@@ -213,6 +218,7 @@ messageOne = "Pulcherrima"
 messageTwo = "Ius electionis"
 messageThree = "Wohoo...!"
 messageFour = "estne?"
+findedWords = "verba non inveni"
 
 [Languages.ar]
   Languagename =  "Arabian"
@@ -247,6 +253,8 @@ messageOne = "جميل جدا"
 messageTwo = "الاختيار الصحيح"
 messageThree = "وووووو...!"
 messageFour = "هل هو كذلك؟"
+findedWords = "الكلمات التي وجدتها"
+
 [taxonomies]
   category = "categories"
   tag = "tags"
@@ -287,6 +295,8 @@ messageOne = "बहुत सुंदर"
 messageTwo = "सही विकल्प"
 messageThree = "वाह...!"
 messageFour = "क्या यह सही है?"
+findedWords = "जो शब्द आपको मिले"
+
 
   [Languages.zh]
   Languagename =  "Chinese"
@@ -321,3 +331,4 @@ messageOne = "很漂亮"
 messageTwo = "正確的選擇"
 messageThree = "嗚呼……！"
 messageFour = "是嗎？"
+findedWords = "你找到的詞"
