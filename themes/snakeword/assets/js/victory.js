@@ -12,6 +12,7 @@ const closeBtn = document.querySelector(".closeBtn")
 let content = document.querySelector(".content")
 let modalSlider = document.querySelector(".modalSlider");
 const rulesBtn = document.querySelector(".RulesBtn");
+const generation = document.querySelector(".refreshButton")
 rulesBtn.addEventListener("click",()=>{
 modalSlider.classList.add("active");
 selectAudio.play()
@@ -30,14 +31,19 @@ closeBtn.addEventListener("click",()=>{
 const wordsInGame = [];
 //timer
 document.addEventListener('DOMContentLoaded', function () {
-
-
-  restartBtn.addEventListener("click", actionButton)
-  function actionButton(){
+ restartBtn.addEventListener("click", actionButton)
+ function actionButton(){
   window.location.reload()
     popup.classList.remove("active");
     
   }
+
+
+generation.addEventListener("click",()=>{
+  window.location.reload()
+})
+
+
 
 
 
@@ -86,6 +92,9 @@ const gamePlace = document.querySelector("#gameplace")
 
               if (minutes === 0 && seconds === 0) {  
                 popup.classList.add("active")
+                const findWord = document.querySelector(".findWord")
+                const options = document.querySelector("option");
+                findWord.textContent = options.text
                 clearInterval(timerId);
                 winAudio.play()
                     }
