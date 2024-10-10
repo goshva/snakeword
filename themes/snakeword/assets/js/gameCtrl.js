@@ -19,6 +19,7 @@ function hidenotify() {
   const notifies = document.getElementsByClassName('notify');
   for (let i = 0; i < notifies.length; i += 1) {
     notifies[i].style.display = 'none';
+    
   }
 }
 
@@ -134,7 +135,7 @@ function clear() {
   .map((cell) => {
     findwordids.flat()
     .map((id) => `C${id}`)
-    .includes(cell.id) ? cell.className = 'cell activeCell' : cell.className = 'cell';
+    .includes(cell.id) ? cell.className = 'cell DoneCell' : cell.className = 'cell';
   });
   
   word = '';
@@ -207,7 +208,7 @@ function listfindedwords() {
       WordsSelect.hasChildNodes() ? WordsSelect.childNodes[0] : null
     );
     WordsSelect.selectedIndex = 0;
-
+   
   }
 }
 
@@ -267,15 +268,18 @@ function createImgDialog(imgUrl) {
     .then((response) => response.json())
     .then((url) => {
       const dialog = document.querySelector(".dialog");
+      const dialog_for_mobile = document.querySelector(".dialog_for_mobile")
       const image = document.querySelector('.imageGifs');
       const image_for_mobile = document.querySelector('.imageGifForPhone');
+      image_for_mobile.src = "../img/backgroundImage.png"
       image.src = url.data[0].images.fixed_height_small.url;
-      image_for_mobile.src = url.data[0].images.fixed_height_small.url;
+      image_for_mobile.src  = url.data[0].images.fixed_height_small.url;
       dialog.classList.add("active");
-    
+      dialog_for_mobile.classList.add("active");
     
       setTimeout(() => {
         dialog.classList.remove("active");
+        dialog_for_mobile.classList.remove("active");
       }, 3000);
     });
 }

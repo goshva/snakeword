@@ -140,7 +140,8 @@ function genArea() {
         this.className += " activeCell";
         playSound(this.Letter);
         cutButton.style.pointerEvents = "auto";
-cutButton.style.opacity = "1"
+cutButton.style.opacity = "1";
+
       }
       e.target.classList.contains('activeCell') === false ? noClass() : true;
  
