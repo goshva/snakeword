@@ -124,6 +124,12 @@ transition: all 0.5s ease;
    display: flex;
    justify-content: center;
    align-items: center;
+   background-image: url(https://i.gifer.com/VZvx.gif);
+  position: relative;
+  z-index: 3;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-color: none;
  }
 
  .b-popup .b-popup-content .victoryImage{
@@ -132,17 +138,10 @@ transition: all 0.5s ease;
    display: flex;
    justify-content: center;
    align-items: center;
+   background-image: url(https://static.vecteezy.com/system/resources/thumbnails/027/118/584/small_2x/victory-achievement-badges-3d-illustration-png.png);
+   background-repeat: no-repeat;
+   background-size: cover;
  }
-
- .b-popup .b-popup-content .crackerGifLeft>img,
- .b-popup .b-popup-content .crackerGifRight>img,
- .b-popup .b-popup-content .victoryImage>img{
-   width: 100%;
-   height: 100%;
-   object-fit: cover;
- }
-
-
 
    
    .header{
@@ -474,19 +473,28 @@ color: #fde807;
       cursor:pointer
    }
    .dialog{
-      width:600px;
-      height:450px;
+      width: 25%;
+      height: 100%;
       display:flex;
       justify-content:center;
       align-items:center;
-      position:absolute;
-      top:50%;
-      left:50%;
-      transform:translate(-50%,-50%);
+      position:relative;
+    
       opacity:0;
       visibility:hidden;
       transition:all .5s ease;
       z-index:1
+   }
+   .dialog_for_mobile{
+      width: 100%;
+      height: 100%;
+      display:none;
+      justify-content:center;
+      align-items:center;
+      position:relative;
+      transition:all .5s ease;
+      z-index:1;
+      border: 3px solid #fff;
    }
    
    .dialog.active{
@@ -655,6 +663,24 @@ overflow: hidden;
    .rateBlock .rateBtns .rateBtn{
       border: none;
       background: none;
+      font-size: 30px;
+      position: relative;
+      transition: all 0.4s ease;
+   }
+
+   .rateBlock .rateBtns .rateBtn:hover{
+      transform: scale(1.1);
+   }
+
+   .rateBlock .rateBtns .rateBtn .rate{
+      position: absolute;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s ease;
+   }
+
+   .rateBlock .rateBtns .rateBtn .rate:hover{
+      transform: translateY(15px);
    }
     
   .rateBlock .choosenBlock{
@@ -760,5 +786,8 @@ overflow: hidden;
 
 .buttonBlock.active > i{
 transform: rotateX(-360deg);
+}
+.dialog_for_mobile{
+   display: flex;
 }
 }
