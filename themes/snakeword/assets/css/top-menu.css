@@ -125,21 +125,27 @@ gap: 15px;
   color: white;
   text-decoration: none;
   transition: all 0.5s ease;
+  position: relative;
 }
 
 
 .top-menu-link-languages::before{
   content: "";
   position: absolute;
-  top: 0;
-  height: 15px;
-  width: 100%;
+  bottom: 0;
+  height: 4px;
+  width: 0%;
   background-color: #fff;
+  transition: all 0.5s ease;
 }
 
 .top-menu-link-languages:hover {
- background: white;
- color: black;
+ transform: scale(1.1);
+  color: #fff;
+}
+
+.top-menu-link-languages:hover::before{
+  width: 100%;
 }
 
 .top-menu-item > ul > li {
