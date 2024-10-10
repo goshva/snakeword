@@ -491,7 +491,8 @@ color: #fde807;
       display:none;
       justify-content:center;
       align-items:center;
-      position:relative;
+      flex-wrap: wrap;
+      position: absolute;
       transition:all .5s ease;
       z-index:1;
       border: 3px solid #fff;
@@ -508,6 +509,12 @@ color: #fde807;
       object-fit:cover
    }
 
+   .dialog_for_mobile>img{
+      width: 100px;
+
+      height:100px;
+      object-fit:cover
+   }
    .modalBlockForImages{
       width: 100%;
       height: 100%; 
