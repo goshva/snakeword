@@ -40,8 +40,8 @@ body{
    height: 590px;
    transition: all .5s ease;
    transform: scale(0);
-   position: absolute;
-   top: 111px;
+   position: relative;
+   top: 155px;
 }
 
 
@@ -54,7 +54,8 @@ body{
 #gametally li{
    font-size:small;line-height:1em}
    #word{width:9em}
-   .content{display:flex;justify-content:center;align-items:center}
+   .content{display:flex;justify-content:center;align-items:center;
+   gap: 35px;}
    .cell{
       margin: 0.1ex;
       text-align: center;
@@ -473,21 +474,27 @@ color: #fde807;
       cursor:pointer
    }
    .dialog{
-      width: 25%;
-      height: 100%;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      position:relative;
-    
-      opacity:0;
-      visibility:hidden;
-      transition:all .5s ease;
-      z-index:1
+      width: 0%;
+    height: 46vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #fff;
+    /* opacity: 1; */
+    /* visibility: visible; */
+    transition: all .5s ease;
+    z-index: 1;
+
    }
-   .dialog_for_mobile{
+
+   .dialog .imageGifs{
       width: 100%;
       height: 100%;
+      object-fit: cover;
+   }
+   .dialog_for_mobile{
+     
       display:none;
       justify-content:center;
       align-items:center;
@@ -500,8 +507,7 @@ color: #fde807;
    }
    
    .dialog.active{
-      opacity:1;
-      visibility:visible
+  width: 35%;
    }
 
    .dialog>img{
