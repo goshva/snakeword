@@ -266,20 +266,17 @@ function createImgDialog(imgUrl) {
   fetch(imgUrl)
     .then((response) => response.json())
     .then((url) => {
-      const dialog = document.querySelector('.dialog');
+      const dialog = document.querySelector(".dialog");
       const dialog_for_mobile = document.querySelector(".dialog_for_mobile")
-      const image = document.createElement('img');
-      const image_for_mobile = document.createElement('img');
+      const image = document.querySelector('.imageGifs');
+      const image_for_mobile = document.querySelector('.imageGifForPhone');
       image.src = url.data[0].images.fixed_height_small.url;
       image_for_mobile.src = url.data[0].images.fixed_height_small.url;
-      dialog.appendChild(image);
-      dialog_for_mobile.appendChild(image_for_mobile)
       dialog.classList.add("active");
 
       document.body.appendChild(dialog);
       setTimeout(() => {
         dialog.classList.remove("active");
-        document.body.removeChild(dialog);
       }, 3000);
     });
 }
