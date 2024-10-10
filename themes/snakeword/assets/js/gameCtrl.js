@@ -266,11 +266,14 @@ function createImgDialog(imgUrl) {
   fetch(imgUrl)
     .then((response) => response.json())
     .then((url) => {
-      const dialog = document.createElement('div');
+      const dialog = document.querySelector('.dialog');
+      const dialog_for_mobile = document.querySelector(".dialog_for_mobile")
       const image = document.createElement('img');
+      const image_for_mobile = document.createElement('img');
       image.src = url.data[0].images.fixed_height_small.url;
-      dialog.className = "dialog";
+      image_for_mobile.src = url.data[0].images.fixed_height_small.url;
       dialog.appendChild(image);
+      dialog_for_mobile.appendChild(image_for_mobile)
       dialog.classList.add("active");
 
       document.body.appendChild(dialog);
