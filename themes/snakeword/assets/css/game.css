@@ -495,6 +495,7 @@ color: #fde807;
       position: absolute;
       transition:all .5s ease;
       z-index:1;
+      gap: 5px;
       border: 3px solid #fff;
    }
    
@@ -511,7 +512,6 @@ color: #fde807;
 
    .dialog_for_mobile>img{
       width: 100px;
-
       height:100px;
       object-fit:cover
    }
