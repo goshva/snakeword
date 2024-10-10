@@ -803,4 +803,7 @@ transform: rotateX(-360deg);
 .dialog_for_mobile{
    display: flex;
 }
+.dialog{
+   display: none;
+}
 }
