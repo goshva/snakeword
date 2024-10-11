@@ -303,7 +303,7 @@ async function collectWord(Id, id, ...args) {
   word += Id;
 
   document.getElementById('word-input').options[0].text = word;
-
+  const findWord = document.querySelector(".findWord")
   document.getElementById('word-input').options[0].selected = true;
 
   nearCheck(id, ids);
@@ -323,6 +323,7 @@ async function collectWord(Id, id, ...args) {
         document.getElementById('word-input').options[0].text = '';
         const optionEl = document.createElement('option');
         optionEl.text = word;
+        findWord.innerHTML += word
         document.getElementById('word-input').append(optionEl);
         new Audio("../sounds/correct-choice-43861.mp3").play()
         cutButton.style.opacity = "0.5"
