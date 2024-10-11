@@ -92,9 +92,6 @@ const gamePlace = document.querySelector("#gameplace")
 
               if (minutes === 0 && seconds === 0) {  
                 popup.classList.add("active")
-                const findWord = document.querySelector(".findWord")
-                const options = document.querySelector("option");
-                findWord.textContent = options.text
                 clearInterval(timerId);
                 winAudio.play()
                     }
