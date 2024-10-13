@@ -297,7 +297,7 @@ snd.play()
 
 async function collectWord(Id, id, ...args) {
   let translate = '';
-
+  const errorText = document.querySelector(".error")
   clearTimeout(timeout0);
   ids.push(id);
   word += Id;
@@ -322,12 +322,19 @@ async function collectWord(Id, id, ...args) {
         createImgDialog(constructorSearchUrl(word));
         document.getElementById('word-input').options[0].text = '';
         const optionEl = document.createElement('option');
+        
         optionEl.text = word;
-        findWord.innerHTML += word
+        errorText.classList.add("active")
+        errorText.innerHTML = ""
+         findWord.innerHTML += word
+
         document.getElementById('word-input').append(optionEl);
         new Audio("../sounds/correct-choice-43861.mp3").play()
         cutButton.style.opacity = "0.5"
 cutButton.style.pointerEvents = "none"
+      }
+      else{
+        errorText.classList.remove("active")
       }
 
       const userLang = navigator.language || navigator.userLanguage;
