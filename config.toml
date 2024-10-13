@@ -48,6 +48,7 @@ rateTwo = "Bad"
 rateThree = "Normal"
 rateFour = "OK"
 rateFive  = "Wonderful"
+errorWord = "You have not entered any words"
 
 [Languages.ru]
 Languagename =  "Русский"
@@ -88,6 +89,7 @@ rateTwo = " Плохо"
 rateThree = "Нормально"
 rateFour = "Хорошо"
 rateFive  = "Отлично"
+errorWord = "Вы не ввели ни одного слова"
 
 [Languages.hy]
   Languagename =  "Հայերեն"
@@ -128,11 +130,12 @@ rateTwo = "Վատ"
 rateThree = "Նորմալ"
 rateFour = "Լավ"
 rateFive  = "Հրաշալի"
+errorWord = "Ոչ մի բառ չեք գուշակել"
 
 
 [Languages.de]
   Languagename =  "Deutsch"
-  title = "Змееслов"
+  title = "Schlangenwort"
   weight = 4
   author = "Егор Ша."
   Description = "Nehmen Sie ein Wort nebeneinander Buchstaben"
@@ -169,10 +172,11 @@ rateTwo = "schlecht"
 rateThree = "Normal"
 rateFour = "OK"
 rateFive  = "Wunderbar"
+errorWord = "Sie haben keine Wörter eingegeben"
 
 [Languages.fr]
   Languagename =  "French"
-  title = "Snakeword"
+  title = "Mot serpent"
   weight = 5
   author = "Sha. Egor"
   Description = "Prendre un mot à côté des lettres côte à côte"
@@ -209,6 +213,7 @@ rateTwo = "mauvais"
 rateThree = "Normale"
 rateFour = "D'ACCORD"
 rateFive  = "Merveilleux"
+errorWord = "Vous n'avez saisi aucun mot"
 
 [Languages.la]  
   Languagename =  "Latin"
@@ -249,10 +254,11 @@ rateTwo = "bad"
 rateThree = "Normal"
 rateFour = "OK"
 rateFive  = "Mirum"
+errorWord = "Non ingressus es aliqua verba"
 
 [Languages.ar]
   Languagename =  "Arabian"
-  title = "Snakeword"
+  title = "كلمة الثعبان"
   weight = 7
   author = "Sha. Egor"
   Description = "خذ كلمة جنبًا إلى جنب"
@@ -289,6 +295,7 @@ rateTwo = "سيء"
 rateThree = "طبيعي"
 rateFour = "نعم"
 rateFive  = "رائع"
+errorWord = "لم تقم بإدخال أية كلمات"
 
 [taxonomies]
   category = "categories"
@@ -336,6 +343,7 @@ rateTwo = "खराब"
 rateThree = "सामान्य"
 rateFour = "ठीक है"
 rateFive  = "आश्चर्यजनक"
+errorWord = "आपने कोई शब्द दर्ज नहीं किया है"
 
 
   [Languages.zh]
@@ -377,3 +385,4 @@ rateTwo = "壞的"
 rateThree = "普通的"
 rateFour = "好的"
 rateFive  = "精彩的"
+  errorWord = "您還沒有輸入任何字詞"
