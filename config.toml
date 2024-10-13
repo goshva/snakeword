@@ -175,7 +175,7 @@ rateFive  = "Wunderbar"
 errorWord = "Sie haben keine Wörter eingegeben"
 
 [Languages.fr]
-  Languagename =  "French"
+  Languagename =  "Français"
   title = "Mot serpent"
   weight = 5
   author = "Sha. Egor"
@@ -216,7 +216,7 @@ rateFive  = "Merveilleux"
 errorWord = "Vous n'avez saisi aucun mot"
 
 [Languages.la]  
-  Languagename =  "Latin"
+  Languagename =  "Latinus"
   title = "Anguis"
   weight = 6
   author = "Sha. Egor"
@@ -257,7 +257,7 @@ rateFive  = "Mirum"
 errorWord = "Non ingressus es aliqua verba"
 
 [Languages.ar]
-  Languagename =  "Arabian"
+  Languagename =  "عربي"
   title = "كلمة الثعبان"
   weight = 7
   author = "Sha. Egor"
@@ -305,7 +305,7 @@ errorWord = "لم تقم بإدخال أية كلمات"
 
 
   [Languages.hi]
-  Languagename =  "Hindi"
+  Languagename =  "हिंदी में"
   title = "साँप बोलने वाला"
   weight = 8
   author = "Егор Ша."
@@ -347,7 +347,7 @@ errorWord = "आपने कोई शब्द दर्ज नहीं क�
 
 
   [Languages.zh]
-  Languagename =  "Chinese"
+  Languagename =  "中國人"
   title = "蛇語者"
   weight = 9
   author = "Егор Ша."
