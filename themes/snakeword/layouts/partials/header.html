@@ -36,7 +36,9 @@
       </div>
       <div class="findedWordsBlock">
         <span>{{.Param "findedWords"}}</span>
-       <div class="findWord"></div>
+       <div class="findWord">
+        <span class="error">{{ .Param "errorWord"}}</span>
+       </div>
       </div>
       <button class="restartBtn">{{ .Param "restartGamebtnLanguage"}}</button>
     </div>
