@@ -410,7 +410,7 @@ color: #fde807;
    text-decoration: none;
    color: #fff;
 }
-.timer .rightBlock .infoBtn{
+.timer .rightBlock .infoBtn >a{
    color: #fff;
 }
 .timer .rightBlock .facebookBtn{
@@ -419,7 +419,7 @@ color: #fde807;
 }
 
 .timer .rightBlock .saveButton,
-.timer .rightBlock .messageButton
+.timer .rightBlock .messageButton > a
 {
    color: #fff;
 }
@@ -651,6 +651,12 @@ overflow: hidden;
       background-color: #717171;
       transition: all 0.5s ease;
    }
+
+   .rateBlock.light{
+      background-color: #ccc;
+   }
+
+
   .rateBlock .rateHeader,
   .rateBlock .ratedText{
    color: #fff;
@@ -658,11 +664,19 @@ overflow: hidden;
  text-align: center;
  transition: all 0.5s ease;
   }
+  .rateBlock.light .rateHeader,
+  .rateBlock.light .ratedText{
+   color: #000;
+  }
 
   .rateBlock .ratedText{
+   color: #fff;
    opacity: 0;
    visibility: hidden;
    transform: translateY(15px);
+  }
+  .rateBlock.light .ratedText{
+   color: #000;
   }
 
   .rateBlock .ratedText.thanks{
@@ -731,13 +745,21 @@ overflow: hidden;
      width: auto;
      height: auto;
      position: absolute;
-     top: 15px;
+     bottom: 15px;
      left: 15px;
      background-color: #717171;
+     transition: all 0.5s ease;
+    }
+
+    .findedWordsBlock.light{
+      background-color: #ccc;
     }
 
     .findedWordsBlock>span{
       color: #fff;
+    }
+    .findedWordsBlock.light>span{
+      color: #000;
     }
 
     .findedWordsBlock .findWord{
@@ -777,6 +799,9 @@ overflow: hidden;
    opacity: 1;
    visibility: visible;
    transform: translateY(0);
+  }
+  .rateBlock.light .choosenBlock > h2{
+ color: #000;
   }
    
 
@@ -841,15 +866,43 @@ overflow: hidden;
 }
 
 .buttonBlock{
-   width: 30px;
-   height: 30px;
-   display: none;
+   width: 50px;
+   height: 50px;
+ display: none;
    justify-content: center;
    align-items: center;
-   background-color: #fff;
+   background-color: #4c4c4c;
    font-size: 20px;
    position: absolute;
+   color: #ccc;
    right: 15px;
+   transition: all 0.5s ease;
+flex-wrap: wrap;
+   padding: 5px;
+}
+
+.buttonBlock .line{
+   width: 38px;
+   height: 5px;
+   background-color: #ccc;
+   z-index: 1;
+   transition: all 0.5s ease;
+}
+
+.buttonBlock.active .line:nth-child(2){
+  visibility: hidden;
+  opacity: 0;
+}
+.buttonBlock.active .line:nth-child(1){
+   transform: translateY(13px) rotate(45deg);
+}
+.buttonBlock.active .line:nth-child(3){
+   transform: translateY(-13px) rotate(-45deg);
+}
+
+.buttonBlock.light{
+background-color: #ccc;
+color: #000;
 }
 
 @media(max-width:735px){
@@ -860,7 +913,7 @@ overflow: hidden;
   .buttonBlock{
    display: flex;
    z-index: 12;
-   transition: all 0.5s ease; cursor: pointer;
+  cursor: pointer;
 }
 
 .buttonBlock.active > i{
