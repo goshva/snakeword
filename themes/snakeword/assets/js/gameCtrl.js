@@ -326,7 +326,7 @@ async function collectWord(Id, id, ...args) {
         optionEl.text = word;
         errorText.classList.add("active")
         errorText.innerHTML = ""
-         findWord.innerHTML += word
+         findWord.innerHTML +=`<span class="wordSpan">${word}</span>`
 
         document.getElementById('word-input').append(optionEl);
         new Audio("../sounds/correct-choice-43861.mp3").play()
