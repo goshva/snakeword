@@ -31,7 +31,7 @@ function changeDarkToLight(){
     findedWordsBlock.classList.remove("light")
     lightRateBlock.classList.remove("light")
     buttonBlock.classList.remove("light")
-    wordSpan.classList.add("light")
+    wordSpan.classList.remove("light")
   }
 }
 

@@ -322,11 +322,13 @@ async function collectWord(Id, id, ...args) {
         createImgDialog(constructorSearchUrl(word));
         document.getElementById('word-input').options[0].text = '';
         const optionEl = document.createElement('option');
-        
+        const wordSPan = document.createElement("span")
+        wordSPan.classList.add("wordSpan")
+        wordSPan.innerHTML += word
         optionEl.text = word;
         errorText.classList.add("active")
         errorText.innerHTML = ""
-         findWord.innerHTML +=`<span class="wordSpan">${word}</span>`
+         findWord.append(wordSPan)
 
         document.getElementById('word-input').append(optionEl);
         new Audio("../sounds/correct-choice-43861.mp3").play()
