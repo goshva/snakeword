@@ -98,7 +98,8 @@ transition: all 0.5s ease;
    padding: 15px;
    background-color: #f96b57;
    /* color: #ccc; */
-   font-family:  "Inter", sans-serif;;
+   font-family:  "Inter", sans-serif;
+   font-weight: bold;
    border-radius: 15px;
    text-transform: capitalize;
    color: #fff;
@@ -835,6 +836,7 @@ overflow: hidden;
    display: flex;
    justify-content: center;
    align-items: flex-start;   
+   font-family: "Inter" sans-serif;
    padding: 5px;
 }
 

@@ -73,6 +73,7 @@ button.top-menu-link {
 }
 .top-menu.light .top-menu-list .for_languageBlock  > .top-menu-item >.top-menu-link-languages{
   color: #000;
+
 }
 
 .top-menu.light .top-menu-list .for_languageBlock > .top-menu-item > .top-menu-link-languages::before{
@@ -134,11 +135,12 @@ gap: 15px;
 .top-menu-link-languages {
   display: block;
   padding: 10px;
-  color: white;
+  color: #fff;
   text-decoration: none;
-  transition: all 0.5s ease;
+  transition: all .5s ease;
   position: relative;
-
+  font-family: "Inter", sans-serif;
+  font-weight: bolder;
 }
 
 
