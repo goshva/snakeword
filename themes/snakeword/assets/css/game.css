@@ -1,10 +1,7 @@
- 
-@font-face {
-   font-family: "Inter";
-   font-weight: 400;
-   src: url("../../static/fonts/Inter/Inter-VariableFont_opsz\,wght.ttf");
-                   
- }
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 *{
    user-select: none;
 }
@@ -101,7 +98,7 @@ transition: all 0.5s ease;
    padding: 15px;
    background-color: #f96b57;
    /* color: #ccc; */
-   font-family: Inter;
+   font-family:  "Inter", sans-serif;;
    border-radius: 15px;
    text-transform: capitalize;
    color: #fff;
@@ -322,7 +319,7 @@ transition: all 0.5s ease;
       display:flex;
       justify-content:center;
       align-items:center;
-      font-family: Inter;
+      font-family: inter;
    }
 
    .timer .leftBlock{
