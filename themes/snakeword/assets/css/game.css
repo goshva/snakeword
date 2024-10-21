@@ -363,23 +363,56 @@ height: 25px;
 
   
 
-   .timer .leftBlock .ThemeButton{
-width: 25px;
-height: 25px;
-display: flex;
-justify-content: center;
-align-items: center;
-
-border-radius: 15px;
-position: relative;
-padding-left: 3px;
-padding-right: 3px;
-cursor: pointer;
-border: none;
-background-color: #03385b;
-color: #fde807;
-
+   .timer .leftBlock .themesBlock{
+       width: 30px;
+       height: 30px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       position: relative;
+       overflow: hidden;
+       border-radius: 50%;
+       cursor: pointer;
+      
    }
+
+   .timer .leftBlock .themesBlock .iconBlock{
+      width: 80px;
+  
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      position: absolute;
+      transition: all 0.5s ease;
+      left: -4px;
+   }
+
+   .timer .leftBlock .themesBlock .iconBlock> i{
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;border-radius: 50%;
+     
+   }
+   .timer .leftBlock .themesBlock .iconBlock> i:nth-child(1){
+      background-color: #04131d;
+      color: #fde807;
+   }
+   .timer .leftBlock .themesBlock .iconBlock> i:nth-child(2){
+      background-color:  #35a9f7;
+      color: #fde807;
+   }
+   
+
+   .timer .leftBlock .themesBlock .iconBlock.light{
+      left: -25px
+   }
+
+
+
 .timer .rightBlock .facebookBtn,
 .timer .rightBlock .saveButton,
 .timer .rightBlock .infoBtn,
