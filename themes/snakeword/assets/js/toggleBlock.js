@@ -1,10 +1,11 @@
-const ThemeButton = document.querySelector(".ThemeButton");
+const themesBlock = document.querySelector(".themesBlock");
+const iconBlock = document.querySelector(".iconBlock");
 const topMenu = document.querySelector(".top-menu");
 const findedWordsBlock = document.querySelector(".findedWordsBlock")
 const lightRateBlock = document.querySelector(".rateBlock")
 const buttonBlock = document.querySelector(".buttonBlock");
 
-  ThemeButton.addEventListener("click",()=>{
+themesBlock.addEventListener("click",()=>{
   if(localStorage.getItem("themes") === "light"){
     localStorage.removeItem("themes")
   }else{
@@ -17,16 +18,14 @@ const buttonBlock = document.querySelector(".buttonBlock");
 function changeDarkToLight(){
   
   if (localStorage.getItem("themes") === "light") {
-    ThemeButton.classList.add("light")
-    ThemeButton.innerHTML = '<i class="fa-regular fa-sun"></i>'
+    iconBlock.classList.add("light")    
     topMenu.classList.add("light")
     findedWordsBlock.classList.add("light")
     lightRateBlock.classList.add("light")
     buttonBlock.classList.add("light")
 
   }else{
-    ThemeButton.classList.remove("light")
-    ThemeButton.innerHTML = '<i class="fa-regular fa-moon"></i>'
+    iconBlock.classList.remove("light") 
     topMenu.classList.remove("light")
     findedWordsBlock.classList.remove("light")
     lightRateBlock.classList.remove("light")
