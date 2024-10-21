@@ -836,7 +836,7 @@ overflow: hidden;
    display: flex;
    justify-content: center;
    align-items: flex-start;   
-   font-family: "Inter" sans-serif;
+   font-family: "Inter", sans-serif;
    padding: 5px;
 }
 
