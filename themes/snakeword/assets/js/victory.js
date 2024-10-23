@@ -167,23 +167,13 @@ function checkLetter(cell, dictionary, edge, wordsInGame) {
   
   function getWordsinGame() {
     const cells = document.querySelectorAll('.cell');
-  
-    cells.forEach((cell) => {
-      checkLetter(cell, Dict, edge, wordsInGame);
-    }
 
-  
-  )
+    cells.forEach((cell,item,index) => {
+      checkLetter(cell, Dict, edge, wordsInGame); 
+        wordsInGame.indexOf(item) === index
+    })
+    
     console.log(wordsInGame)
   }
-
-  function GetDuplicateWord(wordsInGame) {
-    return wordsInGame.filter((item,index)=>{
-      wordsInGame.indexOf(item) === index
-    })
-  }
-
-  console.log(GetDuplicateWord(wordsInGame))
-
   setTimeout(getWordsinGame, 1000);
   
