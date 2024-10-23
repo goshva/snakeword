@@ -117,6 +117,12 @@ function checkLetter(cell, dictionary, edge, wordsInGame) {
         const nearLetter = document.getElementById(`C${id - edge}`).textContent;
         const newWord = word + nearLetter;
         const newDictionary = dictionary.filter((word) => word.startsWith(newWord));
+
+     wordsInGame.filter((item,index)=>{
+     return wordsInGame.indexOf(item) === index
+        })
+      
+        
         if (newDictionary.includes(newWord)) {
           wordsInGame.push(newWord);
         }
@@ -168,9 +174,8 @@ function checkLetter(cell, dictionary, edge, wordsInGame) {
   function getWordsinGame() {
     const cells = document.querySelectorAll('.cell');
 
-    cells.forEach((cell,item,index) => {
+    cells.forEach((cell) => {
       checkLetter(cell, Dict, edge, wordsInGame); 
-        wordsInGame.indexOf(item) === index
     })
     
     console.log(wordsInGame)
