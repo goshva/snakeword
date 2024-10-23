@@ -29,6 +29,10 @@ closeBtn.addEventListener("click",()=>{
 
 
 const wordsInGame = [];
+
+
+
+
 //timer
 document.addEventListener('DOMContentLoaded', function () {
  restartBtn.addEventListener("click", actionButton)
@@ -166,9 +170,20 @@ function checkLetter(cell, dictionary, edge, wordsInGame) {
   
     cells.forEach((cell) => {
       checkLetter(cell, Dict, edge, wordsInGame);
-    })
+    }
+
+  
+  )
     console.log(wordsInGame)
   }
+
+  function GetDuplicateWord(wordsInGame) {
+    return wordsInGame.filter((item,index)=>{
+      wordsInGame.indexOf(item) === index
+    })
+  }
+
+  console.log(GetDuplicateWord(wordsInGame))
 
   setTimeout(getWordsinGame, 1000);
   
