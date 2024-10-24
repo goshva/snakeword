@@ -3,7 +3,7 @@ const iconBlock = document.querySelector(".iconBlock");
 const topMenu = document.querySelector(".top-menu");
 const findedWordsBlock = document.querySelector(".findedWordsBlock")
 const lightRateBlock = document.querySelector(".rateBlock")
-const buttonBlock = document.querySelector(".buttonBlock");
+const toggleBtn = document.querySelector(".toggleBtn");
 
 themesBlock.addEventListener("click",()=>{
   if(localStorage.getItem("themes") === "light"){
@@ -22,14 +22,14 @@ function changeDarkToLight(){
     topMenu.classList.add("light")
     findedWordsBlock.classList.add("light")
     lightRateBlock.classList.add("light")
-    buttonBlock.classList.add("light")
+    toggleBtn.classList.add("light")
 
   }else{
     iconBlock.classList.remove("light") 
     topMenu.classList.remove("light")
     findedWordsBlock.classList.remove("light")
     lightRateBlock.classList.remove("light")
-    buttonBlock.classList.remove("light")
+    toggleBtn.classList.remove("light")
   
   }
 }

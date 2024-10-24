@@ -33,6 +33,7 @@ const wordsInGame = [];
 
 
 
+
 //timer
 document.addEventListener('DOMContentLoaded', function () {
  restartBtn.addEventListener("click", actionButton)
@@ -111,6 +112,10 @@ function checkLetter(cell, dictionary, edge, wordsInGame) {
     const idStr = cell.id
     const id = Number(idStr.slice(1));
     const word = cell.textContent;
+
+
+   
+
     function inner(word, id, dictionary) {
       //top
       if ((id - edge) >= 0) {
@@ -118,9 +123,7 @@ function checkLetter(cell, dictionary, edge, wordsInGame) {
         const newWord = word + nearLetter;
         const newDictionary = dictionary.filter((word) => word.startsWith(newWord));
 
-     wordsInGame.filter((item,index)=>{
-     return wordsInGame.indexOf(item) === index
-        })
+ 
       
         
         if (newDictionary.includes(newWord)) {
@@ -178,7 +181,7 @@ function checkLetter(cell, dictionary, edge, wordsInGame) {
       checkLetter(cell, Dict, edge, wordsInGame); 
     })
     
-    console.log(wordsInGame)
+    console.log(new Set(wordsInGame))
   }
   setTimeout(getWordsinGame, 1000);
   
