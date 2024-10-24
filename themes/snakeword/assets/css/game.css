@@ -343,12 +343,12 @@ transition: all 0.5s ease;
 
    .timer .leftBlock  .imagesOpenButton{
       width: 25px;
-height: 25px;
+      height: 25px;
       border: none;
       background: none;
       color: #fff;
-    
-      border-radius: 50%;display: flex;
+      border-radius: 50%;
+      display: flex;
       justify-content: center;
       align-items: center;
     
@@ -357,11 +357,6 @@ height: 25px;
    .timer .leftBlock  .imagesOpenButton>i{
       font-size: 15px;
    }
-
-
-
-
-  
 
    .timer .leftBlock .themesBlock{
        width: 30px;
@@ -386,7 +381,7 @@ height: 25px;
       gap: 15px;
       position: absolute;
       transition: all 0.5s ease;
-      left: -4px;
+      left: -2px;
    }
 
    .timer .leftBlock .themesBlock .iconBlock> i{
@@ -408,7 +403,7 @@ height: 25px;
    
 
    .timer .leftBlock .themesBlock .iconBlock.light{
-      left: -25px
+      left: -47px
    }
 
 
@@ -472,7 +467,7 @@ height: 25px;
    }
    
    .modalSlider{
-      width: 650px;
+      width: 75%;
       height: 450px;
       display: flex;
       justify-content: center;
@@ -756,7 +751,8 @@ overflow: hidden;
       visibility: hidden;
       transition: all 0.4s ease;
       font-size: 15px;
-      color: #ccc;
+      color: #ccc; 
+      font-family: "Inter", sans-serif;
    }
 
    .rateBlock.light .rateBtns .rateBtn .rate{
@@ -904,7 +900,7 @@ overflow: hidden;
    font-size: 20px;
 }
 
-.buttonBlock{
+.toggleBtn{
    width: 50px;
    height: 50px;
  display: none;
@@ -920,7 +916,7 @@ flex-wrap: wrap;
    padding: 5px;
 }
 
-.buttonBlock .line{
+.toggleBtn .line{
    width: 38px;
    height: 5px;
    background-color: #ccc;
@@ -928,18 +924,18 @@ flex-wrap: wrap;
    transition: all 0.5s ease;
 }
 
-.buttonBlock.active .line:nth-child(2){
+.toggleBtn.active .line:nth-child(2){
   visibility: hidden;
   opacity: 0;
 }
-.buttonBlock.active .line:nth-child(1){
+.toggleBtn.active .line:nth-child(1){
    transform: translateY(13px) rotate(45deg);
 }
-.buttonBlock.active .line:nth-child(3){
+.toggleBtn.active .line:nth-child(3){
    transform: translateY(-13px) rotate(-45deg);
 }
 
-.buttonBlock.light{
+.toggleBtn.light{
 background-color: #ccc;
 color: #000;
 }
@@ -949,15 +945,12 @@ color: #000;
    top: 0;
   }
 
-  .buttonBlock{
+  .toggleBtn{
    display: flex;
    z-index: 12;
   cursor: pointer;
 }
 
-.buttonBlock.active > i{
-transform: rotateX(-360deg);
-}
 .dialog_for_mobile{
    display: flex;
 }
