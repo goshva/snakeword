@@ -940,6 +940,10 @@ background-color: #ccc;
 color: #000;
 }
 
+.toggleBtn.light .line{
+   background-color: #000;
+}
+
 @media(max-width:735px){
   .backgroundImage{
    top: 0;
@@ -956,5 +960,9 @@ color: #000;
 }
 .dialog{
    display: none;
+}
+
+.modalBlock{
+   width: 50%;
 }
 }
