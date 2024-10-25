@@ -963,6 +963,13 @@ color: #000;
 }
 
 .modalBlock{
-   width: 50%;
+   width: 70%;
+}
+.modalBlock .buttonsBlock > button{
+   font-size: 25px;
+}
+#gameplace{
+   font-size: 1.3em;
+   height: 500px;
 }
 }
