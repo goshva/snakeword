@@ -42,7 +42,7 @@ changeDarkToLight()
 
 
 
-buttonBlock.addEventListener("click",()=>{
-  buttonBlock.classList.toggle("active")
+toggleBtn.addEventListener("click",()=>{
+  toggleBtn.classList.toggle("active")
   topMenu.classList.toggle("active")
 })
