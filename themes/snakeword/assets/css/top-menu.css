@@ -133,8 +133,10 @@ gap: 15px;
  color: black;
 }
 .top-menu-link-languages {
-  display: block;
-  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ gap: 8px;
   color: #fff;
   text-decoration: none;
   transition: all .5s ease;
@@ -231,9 +233,25 @@ flex-direction: column;
   object-fit: cover;
 }
 
+
+@media(max-width: 840px){
+  .top-menu-list .top-menu-item .top-menu-link-languages{
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+      }
+      }  
+
 @media(max-width:735px){
-  .top-menu-link-languages{
-      display:block;padding:5px;color:#fff}
+.top-menu-list .top-menu-item .top-menu-link-languages{
+      display:block;
+      padding:5px;
+      color:#fff;
+      font-size: 12px;
+    }
    
       .headerBlock{
           display: none;

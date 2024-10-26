@@ -944,6 +944,38 @@ color: #000;
    background-color: #000;
 }
 
+
+/* 
+    width: 399px;
+    display: flex;
+    flex-wrap: wrap;
+    background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4));
+    justify-content: center;
+    font-size: 1.4em;
+    border-radius: .7em;
+    box-shadow: -5px 5px 5px rgb(0 0 0 / .2);
+    padding: 6px;
+    height: 503px;
+    transition: all .5s ease;
+    transform: scale(0);
+    position: relative;
+    top: 155px;
+ */
+
+
+ 
+@media(max-width:1500px){
+   #gameplace{
+      width: 399px;
+      height: 503px;
+      padding: 6px;
+      font-size: 1.4em;
+   }
+   .timer .rightBlock{
+      gap: 6px;
+   }
+}
+
 @media(max-width:735px){
   .backgroundImage{
    top: 0;
@@ -971,5 +1003,11 @@ color: #000;
 #gameplace{
    font-size: 1.3em;
    height: 500px;
+   width: 371px;
+
+}
+
+.timer .rightBlock {
+   gap: 6px
 }
 }
