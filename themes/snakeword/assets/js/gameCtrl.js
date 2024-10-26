@@ -97,7 +97,6 @@ function nearCheck(id, findIds) {
   id = parseInt(id, 10);
   iTem = findIds[findIds.length - 2];
   if (iTem === id) {
-
     near = false;
     console.info(id, iTem);
   }
@@ -122,7 +121,7 @@ function nearCheck(id, findIds) {
     console.info(id, iTem);
   }
   if (iTem % edge === 0 && (id + 1) % edge === 0) {
-    let cell =  document.querySelectorAll(".cell")
+    const cell =  document.querySelectorAll(".cell")
     cell[id].classList.add("gold")
     near = false;
     console.info(id, iTem);
