@@ -98,44 +98,48 @@ function nearCheck(id, findIds) {
   id = parseInt(id, 10);
   iTem = findIds[findIds.length - 2];
   if (iTem === id) {
-    cell[id].classList.add("gold")
+    
     near = false;
     console.info(id, iTem);
   }
   if (iTem + 1 === id) {
-    cell[id].classList.add("gold")
+
     near = true;
     console.info(id, iTem);
   }
   if (iTem - 1 === id) {
-    cell[id].classList.add("gold")
+ 
     near = true;
     console.info(id, iTem);
   }
   if (iTem + edge === id) {
-    cell[id].classList.add("gold")
+     
     near = true;
     console.info(id, iTem);
   }
   if (iTem - edge === id) {
-    cell[id].classList.add("gold")
+    
     near = true;
     console.info(id, iTem);
   }
   if ((iTem + 1) % edge === 0 && id % edge === 0) {
-    cell[id].classList.add("gold")
+      
     near = false;
     console.info(id, iTem);
   }
   if (iTem % edge === 0 && (id + 1) % edge === 0) {
     
-    cell[id].classList.add("gold")
+ 
     near = false;
     console.info(id, iTem);
   }
+
+  
   if (ids.length === 2) {
     console.log(2); // TODO: case for 2 to letters words
   }
+
+
   return near;
 }
 
