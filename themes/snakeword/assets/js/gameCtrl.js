@@ -91,37 +91,44 @@ function moreletter() {
 }
 
 function nearCheck(id, findIds) {
+  const cell =  document.querySelectorAll(".cell")
   let near = false;
   edge = parseInt(edge, 10);
 
   id = parseInt(id, 10);
   iTem = findIds[findIds.length - 2];
   if (iTem === id) {
+    cell[id].classList.add("gold")
     near = false;
     console.info(id, iTem);
   }
   if (iTem + 1 === id) {
+    cell[id].classList.add("gold")
     near = true;
     console.info(id, iTem);
   }
   if (iTem - 1 === id) {
+    cell[id].classList.add("gold")
     near = true;
     console.info(id, iTem);
   }
   if (iTem + edge === id) {
+    cell[id].classList.add("gold")
     near = true;
     console.info(id, iTem);
   }
   if (iTem - edge === id) {
+    cell[id].classList.add("gold")
     near = true;
     console.info(id, iTem);
   }
   if ((iTem + 1) % edge === 0 && id % edge === 0) {
+    cell[id].classList.add("gold")
     near = false;
     console.info(id, iTem);
   }
   if (iTem % edge === 0 && (id + 1) % edge === 0) {
-    const cell =  document.querySelectorAll(".cell")
+    
     cell[id].classList.add("gold")
     near = false;
     console.info(id, iTem);
