@@ -87,7 +87,6 @@ function moreletter() {
   findwordids.forEach((previousWordIds) => {
     previousWordIds.forEach((cellId) => {
       if (currentWordIds.has(cellId)) {
-
         document.getElementById(`C${cellId}`).classList.add('IntersectionCell');
       }
     });
@@ -340,13 +339,17 @@ async function collectWord(Id, id, ...args) {
         createImgDialog(constructorSearchUrl(word));
         document.getElementById('word-input').options[0].text = '';
         const optionEl = document.createElement('option');
-        const wordSPan = document.createElement("span")
-        wordSPan.classList.add("wordSpan")
-        wordSPan.innerHTML += word + " " +  word.length
+       const wordsTr = document.querySelector(".wordsTr")
+       wordsTr.innerHTML += `
+        <td>${word}</td>
+        <td>${word.length}
+        </td>`
+       
+        
         optionEl.text = word;
         errorText.classList.add("active")
         errorText.innerHTML = ""
-         findWord.append(wordSPan)
+        
 
         document.getElementById('word-input').append(optionEl);
         new Audio("../sounds/correct-choice-43861.mp3").play()
@@ -373,5 +376,5 @@ cutButton.style.pointerEvents = "none"
     }
 
     listfindedwords(word, isFinded(word));
-  } else setTimeout(clear, 7500);
+  } else setTimeout(clear, 2500);
 }
