@@ -35,9 +35,18 @@
         </div>
       </div>
       <div class="findedWordsBlock">
-        <span>{{.Param "findedWords"}}</span>
+        <span>{{ .Param "findedWords"}}</span>
        <div class="findWord">
         <span class="error">{{ .Param "errorWord"}}</span>
+        <table>
+          <tr>
+            <th>{{ .Param "word"}}</th>
+            <th>{{ .Param "letterLength"}}</th>
+          </tr>
+           <tr class="wordsTr">
+
+           </tr>
+        </table>
        </div>
       </div>
       <button class="restartBtn">{{ .Param "restartGamebtnLanguage"}}</button>
@@ -50,6 +59,7 @@
       </ul>
     </div>
     </div>
+   
     </div>
   </header>
 
