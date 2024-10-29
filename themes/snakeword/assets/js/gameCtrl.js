@@ -78,79 +78,84 @@ function isFinded(findedWord) {
 
 function moreletter() {
   findwords.push(word);
-  // show modal if we get all the words on playfield
+
   const set = new Set(wordsInGame);
   const uniqueWords = Array.from(set);
+
+
+  const currentWordIds = new Set(ids);
+  findwordids.forEach((previousWordIds) => {
+    previousWordIds.forEach((cellId) => {
+      if (currentWordIds.has(cellId)) {
+
+        document.getElementById(`C${cellId}`).classList.add('IntersectionCell');
+      }
+    });
+  });
+
+  findwordids.push([...ids]);
+
+
   if (findwords.length === uniqueWords) {
     const popup = document.querySelector('.b-popup');
     popup.style.visibility = 'visible';
     popup.style.opacity = 1;
   }
   // findwordids.push(ids);//////////////////////////////////
-  document.getElementById('points').innerText = findwordids.length + 1;
+  document.getElementById('points').innerText = findwordids.length;
 }
 
 function nearCheck(id, findIds) {
-  const cell =  document.querySelectorAll(".cell")
   let near = false;
   edge = parseInt(edge, 10);
 
   id = parseInt(id, 10);
   iTem = findIds[findIds.length - 2];
   if (iTem === id) {
-    
     near = false;
     console.info(id, iTem);
   }
   if (iTem + 1 === id) {
-
     near = true;
     console.info(id, iTem);
   }
   if (iTem - 1 === id) {
- 
     near = true;
     console.info(id, iTem);
   }
   if (iTem + edge === id) {
-     
     near = true;
     console.info(id, iTem);
   }
   if (iTem - edge === id) {
-    
     near = true;
     console.info(id, iTem);
   }
   if ((iTem + 1) % edge === 0 && id % edge === 0) {
-      
     near = false;
     console.info(id, iTem);
   }
   if (iTem % edge === 0 && (id + 1) % edge === 0) {
-    
- 
     near = false;
     console.info(id, iTem);
   }
-
-  
   if (ids.length === 2) {
     console.log(2); // TODO: case for 2 to letters words
   }
-
-
   return near;
 }
 
 function clear() {
-  Array.from(document.getElementsByClassName('cell'))
-  .map((cell) => {
-    findwordids.flat()
-    .map((id) => `C${id}`)
-    .includes(cell.id) ? cell.className = 'cell DoneCell' : cell.className = 'cell';
+  Array.from(document.getElementsByClassName('cell')).forEach((cell) => {
+    const cellId = parseInt(cell.id.substring(1), 10); 
+    const isIntersecting = findwordids.flat().filter((id) => id === cellId).length > 1;
+
+    if (isIntersecting) {
+      cell.className = 'cell  DoneCell'; 
+    } else {
+      cell.className = 'cell'; 
+    }
   });
-  
   word = '';
   ids = [];
   const opt = document.createElement('option');
@@ -163,7 +168,7 @@ cutButton.style.pointerEvents = "none"
   //
 }
 
-const timeout0 = setTimeout(clear, 2500);
+const timeout0 = setTimeout(clear, 7500);
 async function getTranslate(lang, toLang, newWord) {
   const url = 'https://google-translate1.p.rapidapi.com/language/translate/v2';
   const options = {
@@ -337,7 +342,7 @@ async function collectWord(Id, id, ...args) {
         const optionEl = document.createElement('option');
         const wordSPan = document.createElement("span")
         wordSPan.classList.add("wordSpan")
-        wordSPan.innerHTML += word
+        wordSPan.innerHTML += word + " " +  word.length
         optionEl.text = word;
         errorText.classList.add("active")
         errorText.innerHTML = ""
@@ -368,5 +373,5 @@ cutButton.style.pointerEvents = "none"
     }
 
     listfindedwords(word, isFinded(word));
-  } else setTimeout(clear, 2500);
+  } else setTimeout(clear, 7500);
 }

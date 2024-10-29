@@ -183,5 +183,5 @@ function checkLetter(cell, dictionary, edge, wordsInGame) {
     
     console.log(new Set(wordsInGame))
   }
-  setTimeout(getWordsinGame, 1000);
+  setTimeout(getWordsinGame, 1900);
   

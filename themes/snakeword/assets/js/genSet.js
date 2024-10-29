@@ -74,7 +74,7 @@ function snakeWord(position, i, word, track) {
 }
 
 function GetRandomLetter() {
-  var letter = getRandomInt(0, Allletters);
+  var letter = getRandomInt(0, letters);
   var Alphabetcount = 0;
   for (var j = 0; j < Rangs.length; j++) {
     if (letter - Rangs[j] >= 0) {

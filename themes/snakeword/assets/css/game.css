@@ -162,7 +162,7 @@ transition: all 0.5s ease;
    .DoneCell{
       background-color:#FFEB6E;font-weight:700
    }
-   .cell.gold{
+   .cell.IntersectionCell{
       background-color: gold;
    }
    @-webkit-keyframes tada{
@@ -513,8 +513,8 @@ transition: all 0.5s ease;
       cursor:pointer
    }
    .dialog{
-      width: 0%;
-    height: 46vh;
+      width: 30%;
+    height: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -524,7 +524,7 @@ transition: all 0.5s ease;
     /* visibility: visible; */
     transition: all .5s ease;
     z-index: 1;
-
+    top: 114px;
    }
 
    .dialog .imageGifs{
@@ -551,7 +551,7 @@ transition: all 0.5s ease;
    }
    
    .dialog.active{
-  width: 35%;
+  height: 460px;
    }
 
    .dialog_for_mobile.active{
