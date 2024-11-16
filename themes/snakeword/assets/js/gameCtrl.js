@@ -10,9 +10,11 @@ const findwords = [];
 const translatedwords = [];
 let findwordids = [];
 let socket = null;
+let sum = 0
 //
 cutButton.style.opacity = "0.5"
 cutButton.style.pointerEvents = "none"
+
 
 
 function hidenotify() {
@@ -81,14 +83,17 @@ function moreletter() {
 
   const set = new Set(wordsInGame);
   const uniqueWords = Array.from(set);
+  
 
 
   const currentWordIds = new Set(ids);
   findwordids.forEach((previousWordIds) => {
+   
     previousWordIds.forEach((cellId) => {
       if (currentWordIds.has(cellId)) {
         document.getElementById(`C${cellId}`).classList.add('IntersectionCell');
       }
+   
     });
   });
 
@@ -100,8 +105,11 @@ function moreletter() {
     popup.style.visibility = 'visible';
     popup.style.opacity = 1;
   }
-  // findwordids.push(ids);//////////////////////////////////
-  document.getElementById('points').innerText = findwordids.length;
+
+sum += word.length
+document.getElementById('points').innerHTML = sum
+
+
 }
 
 function nearCheck(id, findIds) {
@@ -163,11 +171,10 @@ function clear() {
   opt.selected = true;
   cutButton.style.opacity = "0.5"
 cutButton.style.pointerEvents = "none"
-  // Selectq.appendChild(opt);
-  //
+
 }
 
-const timeout0 = setTimeout(clear, 7500);
+const timeout0 = setTimeout(clear, 9500);
 async function getTranslate(lang, toLang, newWord) {
   const url = 'https://google-translate1.p.rapidapi.com/language/translate/v2';
   const options = {
@@ -339,11 +346,11 @@ async function collectWord(Id, id, ...args) {
         createImgDialog(constructorSearchUrl(word));
         document.getElementById('word-input').options[0].text = '';
         const optionEl = document.createElement('option');
-       const wordsTr = document.querySelector(".wordsTr")
-       wordsTr.innerHTML += `
-        <td>${word}</td>
-        <td>${word.length}
-        </td>`
+       const wordBlock = document.querySelector(".leftBlock")
+       const lengthLetterBlock = document.querySelector(".rightBlock")
+       wordBlock.innerHTML +=`<span>${word}</span>`
+       lengthLetterBlock.innerHTML +=`<span>${word.length}</span>`
+        
        
         
         optionEl.text = word;
@@ -376,5 +383,5 @@ cutButton.style.pointerEvents = "none"
     }
 
     listfindedwords(word, isFinded(word));
-  } else setTimeout(clear, 2500);
+  } else setTimeout(clear, 4500);
 }
