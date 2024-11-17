@@ -38,15 +38,22 @@
         <span>{{ .Param "findedWords"}}</span>
        <div class="findWord">
         <span class="error">{{ .Param "errorWord"}}</span>
-        <table>
-          <tr>
-            <th>{{ .Param "word"}}</th>
-            <th>{{ .Param "letterLength"}}</th>
-          </tr>
-           <tr class="wordsTr">
-
-           </tr>
-        </table>
+       
+         <div class="wordBlock">
+          <div class="header">
+            <p> {{ .Param "word"}}</p>
+            <p>{{ .Param "letterLength"}}</p>
+          </div>
+          <div class="general">
+            <div class="leftBlock"></div>
+            <div class="rightBlock"></div>
+          </div>
+    
+         </div>
+           
+            
+         
+    
        </div>
       </div>
       <button class="restartBtn">{{ .Param "restartGamebtnLanguage"}}</button>
