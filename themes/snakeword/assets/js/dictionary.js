@@ -10560,7 +10560,7 @@ if (language == "zh" || language == "zh-ZH" || language == "zh-zh") {
 	language = "zh";
 	namedict = "Chinese";
 }
-if (language == "ge" || language == "ka-GE" || language == "ka-ge") {
+if (language == "ka" || language == "ka-GE" || language == "ka-ge") {
 	language = "ka";
 	namedict = "Georgian";
 }
