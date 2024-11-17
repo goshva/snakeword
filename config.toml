@@ -408,7 +408,7 @@ letterLength = "長度字母"
 [Languages.ka]
 Languagename = "ქართული"
 title = "გველის სიტყვები"
-weight = 2
+weight = 10
 author = "ეგორ შა."
 Description = "თამაში, შექმენი სიტყვა"
 keywords = "Tesla-ს საოცარი Hugo საიტი"
