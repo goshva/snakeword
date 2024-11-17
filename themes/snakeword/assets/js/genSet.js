@@ -80,11 +80,15 @@ function GetRandomLetter() {
     if (letter - Rangs[j] >= 0) {
       letter = letter - Rangs[j];
       Alphabetcount++;
+      console.log(Alphabetcount);
+      
     } else {
       return Alphabet[Alphabetcount];
     }
   }
 }
+
+
 function insertRandomLetters() {
   for (var i = 0; i < letters.length; i++) {
     if (!isNaN(letters[i])) {
@@ -127,8 +131,10 @@ function genArea() {
     var divbtn = document.createElement("DIV");
     var language = getCookie("lang") || document.documentElement.lang;
     if (language == "ar" || language == "ar-AR" || language == "ar-ar") {
-      divbtn.style.lineHeight = "0.8";
+      divbtn.style.lineHeight = "0.9";
     }
+
+  
     divbtn.className = "cell";
     divbtn.id = "C" + L;
     divbtn.style.zIndex = "10";
@@ -141,10 +147,8 @@ function genArea() {
         playSound(this.Letter);
         cutButton.style.pointerEvents = "auto";
 cutButton.style.opacity = "1";
-
       }
       e.target.classList.contains('activeCell') === false ? noClass() : true;
- 
     };
     var t = document.createTextNode(letters[L]);
     divbtn.appendChild(t);
