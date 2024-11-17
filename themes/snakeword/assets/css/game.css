@@ -160,10 +160,11 @@ transition: all 0.5s ease;
    
    .activeCell{background-color:#F96B57;font-weight:700}
    .DoneCell{
-      background-color:#FFEB6E;font-weight:700
+      background-color:gold;
+      font-weight:700
    }
    .cell.IntersectionCell{
-      background-color: gold;
+      background-color: #FFEB6E ;
    }
    @-webkit-keyframes tada{
       10%{-webkit-transform:scale(1.2)}
@@ -527,7 +528,7 @@ transition: all 0.5s ease;
     top: 114px;
    }
 
-   table tr td{
+   table, th, td{
       border: 2px solid #fff;
    }
 
@@ -845,7 +846,37 @@ overflow: hidden;
  color: #000;
   }
    
+  .findedWordsBlock .findWord .wordBlock{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
 
+  }
+  .findedWordsBlock .findWord .wordBlock .header{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 15px;
+}
+
+.findedWordsBlock .findWord .wordBlock .general{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+}
+
+.findedWordsBlock .findWord .wordBlock .general .leftBlock,
+.findedWordsBlock .findWord .wordBlock .general .rightBlock{
+   display: flex;
+   width: 50%;
+   height: auto;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   border: 1px solid #fff;
+}
    .generalBlock{
       width: 100%;
       height: 60px;
@@ -981,6 +1012,7 @@ color: #000;
    .timer .rightBlock{
       gap: 6px;
    }
+   
 }
 
 @media(max-width:735px){
@@ -1017,4 +1049,10 @@ color: #000;
 .timer .rightBlock {
    gap: 6px
 }
+
+.modalBlock .headerBlock>h1{
+   font-size: 45px;
+
+}
+
 }

@@ -252,10 +252,7 @@ flex-direction: column;
       color:#fff;
       font-size: 12px;
     }
-   
-      .headerBlock{
-          display: none;
-      }
+ 
       .navigationBar{
           display: flex;
           z-index: 13;
