@@ -96,7 +96,14 @@ const gamePlace = document.querySelector("#gameplace")
               }
 
               if (minutes === 0 && seconds === 0) {  
-                popup.classList.add("active")
+                popup.classList.add("active");
+                const findedWordBlock = document.querySelector(".findedWordsBlock")
+               setInterval(() => {
+                rateBlock.classList.add("activated")
+               }, 3500);
+                setInterval(() => {
+                  findedWordBlock.classList.add("activated")
+                }, 2500);
                 clearInterval(timerId);
                 winAudio.play()
                     }
