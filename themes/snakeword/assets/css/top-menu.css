@@ -232,11 +232,20 @@ flex-direction: column;
   height: 100%;
   object-fit: cover;
 }
+@media(max-width: 950px){
+  .top-menu-list .top-menu-item .top-menu-link-languages{
+    font-size: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
 
+      }
+      } 
 
 @media(max-width: 840px){
   .top-menu-list .top-menu-item .top-menu-link-languages{
-    font-size: 13px;
+    font-size: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -250,7 +259,7 @@ flex-direction: column;
       display:block;
       padding:5px;
       color:#fff;
-      font-size: 12px;
+      font-size: 8px;
     }
  
       .navigationBar{

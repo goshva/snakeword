@@ -528,17 +528,14 @@ transition: all 0.5s ease;
     top: 114px;
    }
 
-   table, th, td{
-      border: 2px solid #fff;
-   }
-
+ 
    .dialog .imageGifs{
       width: 100%;
       height: 100%;
       object-fit: cover;
    }
    .dialog_for_mobile{
-      display: none;
+      display: flex;
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
@@ -648,8 +645,8 @@ transition: all 0.5s ease;
    }
 
    .modalBlockForImages .imgBlock{
-width: 280px;
-height: 280px;
+width: 210px;
+height: 210px;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -674,13 +671,21 @@ overflow: hidden;
       height: 250px;
       position: absolute;
       top: 15px;
-      right:  15px;
+      right:  20px;
+      opacity: 0;
+      visibility: hidden;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
       background-color: #100f0f;
       transition: all 0.5s ease;
+   }
+
+   .rateBlock.activated{
+      right:  15px;
+      opacity: 1;
+      visibility: visible;
    }
 
    .rateBlock.light{
@@ -782,11 +787,17 @@ overflow: hidden;
      height: auto;
      position: absolute;
      bottom: 15px;
-     left: 15px;
+     left: 20px;
+     opacity: 0;
+     visibility: hidden;
      background-color: #100f0f;
      transition: all 0.5s ease;
     }
-
+    .findedWordsBlock.activated{
+      left: 15px;
+      opacity: 1;
+      visibility: visible;
+    }
     .findedWordsBlock.light{
       background-color: #ccc;
     }
@@ -876,6 +887,19 @@ flex-direction: column;
    align-items: center;
    flex-direction: column;
    border: 1px solid #fff;
+}
+.findedWordsBlock .findWord .wordBlock .general .centerBlock{
+   width: 15px;
+   height: 15px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.findedWordsBlock .findWord .wordBlock .general .centerBlock>img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
 }
    .generalBlock{
       width: 100%;
@@ -983,6 +1007,8 @@ color: #000;
 }
 
 
+
+
 /* 
     width: 399px;
     display: flex;
@@ -1012,7 +1038,19 @@ color: #000;
    .timer .rightBlock{
       gap: 6px;
    }
-   
+   .modalBlockForImages .imgBlock{
+      width: 199px;
+      height: 193px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+         }
+         .dialog{
+            width: 25%;
+  
+         }
+      
 }
 
 @media(max-width:735px){
@@ -1040,6 +1078,7 @@ color: #000;
    font-size: 25px;
 }
 #gameplace{
+   left: -18%;
    font-size: 1.3em;
    height: 500px;
    width: 371px;
@@ -1054,5 +1093,34 @@ color: #000;
    font-size: 45px;
 
 }
+.modalBlockForImages .imgBlock{
+   width: 150px;
+   height: 150px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   overflow: hidden;
+      }
 
+      .dialog_for_mobile{
+    z-index: 1;
+    width: 17%;
+    height: 35%;
+    bottom: 4%;
+    right: 10%;
+      }
+
+      .rateBlock{
+ 
+    height: 160px;
+     left: 15%;
+    top: 15px;
+
+      }
+      .b-popup .b-popup-content .crackerGifLeft,
+.b-popup .b-popup-content .crackerGifRight,
+ .b-popup .b-popup-content .victoryImage{
+   width: 150px;
+   height: 150px;
+ }
 }
