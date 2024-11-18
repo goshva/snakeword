@@ -51,6 +51,7 @@ rateFive  = "Wonderful"
 errorWord = "You have not entered any words"
 word = "Word"
 letterLength = "Length Letter"
+gifLanguage = "Gif Image"
 
 [Languages.ru]
 Languagename =  "Русский"
@@ -94,6 +95,8 @@ rateFive  = "Отлично"
 errorWord = "Вы не ввели ни одного слова"
 word = "Слово"
 letterLength = "длина буквы"
+gifLanguage = "GIF-изображение"
+
 
 [Languages.hy]
   Languagename =  "Հայերեն"
@@ -137,6 +140,8 @@ rateFive  = "Հրաշալի"
 errorWord = "Ոչ մի բառ չեք գուշակել"
 word = "Բառ"
 letterLength = "Տառերի քանակ"
+gifLanguage = "GIF-Պատկեր"
+
 
 [Languages.de]
   Languagename =  "Deutsch"
@@ -180,6 +185,7 @@ rateFive  = "Wunderbar"
 errorWord = "Sie haben keine Wörter eingegeben"
 word = "Wort"
 letterLength = "Länge Buchstabe"
+ gifLanguage = "GIF-Bild"
 
 [Languages.fr]
   Languagename =  "Français"
@@ -223,6 +229,7 @@ rateFive  = "Merveilleux"
 errorWord = "Vous n'avez saisi aucun mot"
 word = "Mot"
 letterLength = "longueur de la lettre"
+gifLanguage = "Image-GIF"
 
 [Languages.la]  
   Languagename =  "Latinus"
@@ -266,7 +273,7 @@ rateFive  = "Mirum"
 errorWord = "Non ingressus es aliqua verba"
 word = "Verbum"
 letterLength = "longitudo litterae"
-
+gifLanguage = "Gif- image"
 
 [Languages.ar]
   Languagename =  "عربي"
@@ -310,7 +317,7 @@ rateFive  = "رائع"
 errorWord = "لم تقم بإدخال أية كلمات"
 word = "حرف طول"
 letterLength = "كلمة"
-
+gifLanguage = "صورة متحركة"
 
 [taxonomies]
   category = "categories"
@@ -361,6 +368,7 @@ rateFive  = "आश्चर्यजनक"
 errorWord = "आपने कोई शब्द दर्ज नहीं किया है"
 word = "शब्द"
 letterLength = "अक्षर की लंबाई"
+gifLanguage = "Gif- छवि"
 
   [Languages.zh]
   Languagename =  "中國人"
@@ -404,6 +412,7 @@ rateFive  = "精彩的"
   errorWord = "您還沒有輸入任何字詞"
 word = "單字"
 letterLength = "長度字母"
+gifLanguage = "Gif-影像"
 
 [Languages.ka]
 Languagename = "ქართული"
@@ -447,3 +456,4 @@ rateFive = "შესანიშნავი"
 errorWord = "თქვენ სიტყვა არ შეიყვანეთ"
 word = "სიტყვა"
 letterLength = "ასოების სიგრძე"
+gifLanguage = "Gif- გამოსახულება"
