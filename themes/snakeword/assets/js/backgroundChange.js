@@ -55,6 +55,14 @@ imageUrl: "https://www.pixelstalk.net/wp-content/uploads/image10/Nature-wallpape
 id: 10,
 imageUrl: "https://getwallpapers.com/wallpaper/full/b/2/e/394131.jpg",
 },
+{
+id: 11,
+imageUrl: "https://plus.unsplash.com/premium_photo-1669295395766-bfa4f6b347a9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+},
+{
+id: 12,
+imageUrl: "https://images.unsplash.com/photo-1518699086072-d567cb15b483?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+},
 ]
 
 imagesData.forEach((img)=>{
