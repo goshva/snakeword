@@ -14,7 +14,7 @@ let sum = 0
 //
 cutButton.style.opacity = "0.5"
 cutButton.style.pointerEvents = "none"
-
+const resultImg = document.querySelector(".resultImage")
 
 
 function hidenotify() {
@@ -295,9 +295,9 @@ function createImgDialog(imgUrl) {
       const dialog_for_mobile = document.querySelector(".dialog_for_mobile")
       const image = document.querySelector('.imageGifs');
       const image_for_mobile = document.querySelector('.imageGifForPhone');
-      image_for_mobile.src = "../img/backgroundImage.png"
       image.src = url.data[0].images.fixed_height_small.url;
       image_for_mobile.src  = url.data[0].images.fixed_height_small.url;
+      resultImg.src = url.data[0].images.fixed_height_small.url;
       dialog.classList.add("active");
       dialog_for_mobile.classList.add("active");
     
