@@ -535,7 +535,7 @@ transition: all 0.5s ease;
       object-fit: cover;
    }
    .dialog_for_mobile{
-      display: flex;
+      display: none;
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
