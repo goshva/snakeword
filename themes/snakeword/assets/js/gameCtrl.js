@@ -14,7 +14,7 @@ let sum = 0
 //
 cutButton.style.opacity = "0.5"
 cutButton.style.pointerEvents = "none"
-
+const resultImg = document.querySelector(".resultImage")
 
 
 function hidenotify() {
