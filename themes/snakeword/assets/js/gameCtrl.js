@@ -11,10 +11,14 @@ const translatedwords = [];
 let findwordids = [];
 let socket = null;
 let sum = 0
-//
+const imgBlock = document.createElement("div");
+const gifBlock = document.querySelector(".centerBlock")
+imgBlock.classList.add("gifBlock");
+
 cutButton.style.opacity = "0.5"
 cutButton.style.pointerEvents = "none"
-const resultImg = document.querySelector(".resultImage")
+
+
 
 
 function hidenotify() {
@@ -291,6 +295,7 @@ function createImgDialog(imgUrl) {
   fetch(imgUrl)
     .then((response) => response.json())
     .then((url) => {
+      const resultImg = document.createElement("img")
       const dialog = document.querySelector(".dialog");
       const dialog_for_mobile = document.querySelector(".dialog_for_mobile")
       const image = document.querySelector('.imageGifs');
@@ -300,7 +305,7 @@ function createImgDialog(imgUrl) {
       resultImg.src = url.data[0].images.fixed_height_small.url;
       dialog.classList.add("active");
       dialog_for_mobile.classList.add("active");
-    
+      imgBlock.appendChild(resultImg)
       setTimeout(() => {
         dialog.classList.remove("active");
         dialog_for_mobile.classList.remove("active");
@@ -348,10 +353,10 @@ async function collectWord(Id, id, ...args) {
         const optionEl = document.createElement('option');
        const wordBlock = document.querySelector(".leftBlock")
        const lengthLetterBlock = document.querySelector(".rightBlock")
-       const gifBlock = document.querySelector(".centerBlock")
+      
        wordBlock.innerHTML +=`<span>${word}</span>`
        lengthLetterBlock.innerHTML +=`<span>${word.length}</span>`
-        gifBlock.innerHTML += `<img src=${resultImg} class = "resultImage" />`
+      
        
         
         optionEl.text = word;
