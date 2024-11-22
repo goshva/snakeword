@@ -11,9 +11,9 @@ const translatedwords = [];
 let findwordids = [];
 let socket = null;
 let sum = 0
-const imgBlock = document.createElement("div");
+
 const gifBlock = document.querySelector(".centerBlock")
-imgBlock.classList.add("gifBlock");
+
 
 cutButton.style.opacity = "0.5"
 cutButton.style.pointerEvents = "none"
@@ -305,7 +305,8 @@ function createImgDialog(imgUrl) {
       resultImg.src = url.data[0].images.fixed_height_small.url;
       dialog.classList.add("active");
       dialog_for_mobile.classList.add("active");
-      imgBlock.appendChild(resultImg)
+      
+      gifBlock.appendChild(resultImg)
       setTimeout(() => {
         dialog.classList.remove("active");
         dialog_for_mobile.classList.remove("active");
