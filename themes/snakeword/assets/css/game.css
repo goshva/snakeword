@@ -1007,7 +1007,20 @@ color: #000;
 }
 
 
-
+.gifBlock{
+   width: 50%;
+   height: auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   gap: 2px;
+}
+.gifBlock>img{
+   width: 25px;
+   height: 25px;
+   object-fit: cover;
+}
 
 /* 
     width: 399px;
