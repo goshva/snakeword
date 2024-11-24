@@ -889,16 +889,17 @@ flex-direction: column;
    border: 1px solid #fff;
 }
 .findedWordsBlock .findWord .wordBlock .general .centerBlock{
-   width: 15px;
-   height: 15px;
+   width: 50%;
+   height: auto;
    display: flex;
    justify-content: center;
    align-items: center;
+   flex-direction: column;
 }
 
 .findedWordsBlock .findWord .wordBlock .general .centerBlock>img{
-   width: 100%;
-   height: 100%;
+   width: 25px;
+   height: 25px;
    object-fit: cover;
 }
    .generalBlock{
@@ -1007,20 +1008,7 @@ color: #000;
 }
 
 
-.gifBlock{
-   width: 50%;
-   height: auto;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-   gap: 2px;
-}
-.gifBlock>img{
-   width: 25px;
-   height: 25px;
-   object-fit: cover;
-}
+
 
 /* 
     width: 399px;
