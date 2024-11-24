@@ -305,7 +305,7 @@ function createImgDialog(imgUrl) {
       resultImg.src = url.data[0].images.fixed_height_small.url;
       dialog.classList.add("active");
       dialog_for_mobile.classList.add("active");
-      
+      console.log(url.data[0].images.fixed_height_small.url);
       gifBlock.appendChild(resultImg)
       setTimeout(() => {
         dialog.classList.remove("active");
