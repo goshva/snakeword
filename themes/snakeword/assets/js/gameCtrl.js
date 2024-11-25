@@ -308,6 +308,8 @@ function createImgDialog(imgUrl) {
       console.log(url.data[0].images.fixed_height_small.url);
       gifBlock.appendChild(resultImg)
       setTimeout(() => {
+         image.src = null
+         image_for_mobile.src = null
         dialog.classList.remove("active");
         dialog_for_mobile.classList.remove("active");
       }, 3000);
@@ -333,7 +335,7 @@ async function collectWord(Id, id, ...args) {
   word += Id;
 
   document.getElementById('word-input').options[0].text = word;
-  const findWord = document.querySelector(".findWord")
+
   document.getElementById('word-input').options[0].selected = true;
 
   nearCheck(id, ids);

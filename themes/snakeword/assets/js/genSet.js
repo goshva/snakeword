@@ -10,6 +10,33 @@ for (var i = 0; i < edge * edge; i++) {
 }
 var genwords = [];
 
+
+const hintBtn = document.querySelector(".hintBtn");
+const badge = document.querySelector(".badge");
+let badgeNum = 3
+badge.innerHTML = badgeNum
+hintBtn.addEventListener("click",hintWords)
+
+function hintWords(ids){
+ badge.innerHTML = badgeNum -1
+  badgeNum--
+console.log(ids);
+
+   
+
+  if (badgeNum === 0) {
+    badge.innerHTML = 0
+    hintBtn.setAttribute("disabled" , true)
+    hintBtn.classList.add("disabledBtn")
+  }
+
+}
+ 
+
+
+
+
+
 function getFreePosition() {
   for (var i = 0; i < letters.length; i++) {
     if (!isNaN(letters[i]) && lettersFree.indexOf(letters[i]) == -1) {
@@ -81,7 +108,6 @@ function GetRandomLetter() {
       letter = letter - Rangs[j];
       Alphabetcount++;
       console.log(Alphabetcount);
-      
     } else {
       return Alphabet[Alphabetcount];
     }
@@ -90,9 +116,12 @@ function GetRandomLetter() {
 
 
 function insertRandomLetters() {
+
+  
   for (var i = 0; i < letters.length; i++) {
     if (!isNaN(letters[i])) {
       letters[i] = GetRandomLetter();
+      letters[i] = hintWords()
     }
   }
 }
