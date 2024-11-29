@@ -149,7 +149,7 @@ gap: 15px;
 .top-menu-link-languages::before{
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -5px;
   height: 4px;
   width: 0%;
   background-color: #fff;
