@@ -21,6 +21,14 @@ cutButton.style.pointerEvents = "none"
 
 
 
+
+
+
+
+
+
+
+
 function hidenotify() {
   const notifies = document.getElementsByClassName('notify');
   for (let i = 0; i < notifies.length; i += 1) {
@@ -75,6 +83,7 @@ function checkCookie(key) {
 function BorderfromFindWord(arr) {
   for (let i = 0; i < arr.length; i += 1) {
     document.getElementById(`C${arr[i]}`).style.border = 'thin solid #1f8dd6';
+
   }
 }
 
@@ -84,7 +93,7 @@ function isFinded(findedWord) {
 
 function moreletter() {
   findwords.push(word);
-
+   
   const set = new Set(wordsInGame);
   const uniqueWords = Array.from(set);
   
@@ -97,17 +106,22 @@ function moreletter() {
       if (currentWordIds.has(cellId)) {
         document.getElementById(`C${cellId}`).classList.add('IntersectionCell');
       }
-   
+   else if ( 
+    lastWord === currentWordIds.has(cellId)) {
+        document.getElementById(`C${cellId}`).classList.add('hintWords'); 
+      }
+
     });
   });
 
   findwordids.push([...ids]);
-
+ 
 
   if (findwords.length === uniqueWords) {
     const popup = document.querySelector('.b-popup');
     popup.style.visibility = 'visible';
     popup.style.opacity = 1;
+    
   }
 
 sum += word.length
@@ -125,33 +139,41 @@ function nearCheck(id, findIds) {
   if (iTem === id) {
     near = false;
     console.info(id, iTem);
+   
   }
   if (iTem + 1 === id) {
     near = true;
     console.info(id, iTem);
+   
   }
   if (iTem - 1 === id) {
     near = true;
     console.info(id, iTem);
+   
   }
   if (iTem + edge === id) {
     near = true;
     console.info(id, iTem);
+    
   }
   if (iTem - edge === id) {
     near = true;
     console.info(id, iTem);
+  
   }
   if ((iTem + 1) % edge === 0 && id % edge === 0) {
     near = false;
     console.info(id, iTem);
+  
   }
   if (iTem % edge === 0 && (id + 1) % edge === 0) {
     near = false;
     console.info(id, iTem);
+  
   }
   if (ids.length === 2) {
     console.log(2); // TODO: case for 2 to letters words
+    
   }
   return near;
 }
@@ -160,10 +182,16 @@ function clear() {
   Array.from(document.getElementsByClassName('cell')).forEach((cell) => {
     const cellId = parseInt(cell.id.substring(1), 10); 
     const isIntersecting = findwordids.flat().filter((id) => id === cellId).length > 1;
-
+   
     if (isIntersecting) {
       cell.className = 'cell  DoneCell'; 
-    } else {
+    }
+   
+else if (isIntersecting === lastWord) {
+  cell.className = 'cell  hintWords';
+}
+
+    else {
       cell.className = 'cell'; 
     }
   });
@@ -334,6 +362,7 @@ async function collectWord(Id, id, ...args) {
   ids.push(id);
   word += Id;
 
+
   document.getElementById('word-input').options[0].text = word;
 
   document.getElementById('word-input').options[0].selected = true;
@@ -346,6 +375,7 @@ async function collectWord(Id, id, ...args) {
       findwords.splice(findwords.indexOf(word), 1);
       findwords.push(word);
     }
+
     // stop dubles
     if (isFinded(word) < 0) {
       moreletter();
@@ -360,7 +390,10 @@ async function collectWord(Id, id, ...args) {
        wordBlock.innerHTML +=`<span>${word}</span>`
        lengthLetterBlock.innerHTML +=`<span>${word.length}</span>`
       
+
+      
        
+
         
         optionEl.text = word;
         errorText.classList.add("active")
@@ -370,8 +403,11 @@ async function collectWord(Id, id, ...args) {
         document.getElementById('word-input').append(optionEl);
         new Audio("../sounds/correct-choice-43861.mp3").play()
         cutButton.style.opacity = "0.5"
-cutButton.style.pointerEvents = "none"
+cutButton.style.pointerEvents = "none";
       }
+   if (lastWord === word) {
+    console.log("hinted Word")
+   }
       else{
         errorText.classList.remove("active")
       }
@@ -389,6 +425,7 @@ cutButton.style.pointerEvents = "none"
       // eslint-disable-next-line max-len
       //        s.send(JSON.stringify({"field":letters.join(''), "word": ids,"user": getCookie("username")}));
       ids = [];
+    
     }
 
     listfindedwords(word, isFinded(word));

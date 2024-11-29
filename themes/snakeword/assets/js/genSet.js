@@ -11,26 +11,7 @@ for (var i = 0; i < edge * edge; i++) {
 var genwords = [];
 
 
-const hintBtn = document.querySelector(".hintBtn");
-const badge = document.querySelector(".badge");
-let badgeNum = 3
-badge.innerHTML = badgeNum
-hintBtn.addEventListener("click",hintWords)
 
-function hintWords(ids){
- badge.innerHTML = badgeNum -1
-  badgeNum--
-console.log(ids);
-
-   
-
-  if (badgeNum === 0) {
-    badge.innerHTML = 0
-    hintBtn.setAttribute("disabled" , true)
-    hintBtn.classList.add("disabledBtn")
-  }
-
-}
  
 
 
@@ -41,12 +22,14 @@ function getFreePosition() {
   for (var i = 0; i < letters.length; i++) {
     if (!isNaN(letters[i]) && lettersFree.indexOf(letters[i]) == -1) {
       lettersFree.push(letters[i]);
+
     }
   }
   freepositionindex = getRandomInt(0, lettersFree.length);
   position = lettersFree[freepositionindex];
   //  console.log(lettersFree.length +" FREE");
   lettersFree = [];
+
   return position;
 }
 function getNear(i) {
@@ -91,6 +74,7 @@ function snakeWord(position, i, word, track) {
     }
     if (i == word.length) {
       genwords.push(word);
+
     }
   } else {
     //letters[position] = track[i];
@@ -98,6 +82,7 @@ function snakeWord(position, i, word, track) {
       letters[track[i]] = track[i]; //this trash TODO: need rewite getNear() function
     }
   }
+  
 }
 
 function GetRandomLetter() {
@@ -112,6 +97,7 @@ function GetRandomLetter() {
       return Alphabet[Alphabetcount];
     }
   }
+
 }
 
 
@@ -120,8 +106,7 @@ function insertRandomLetters() {
   
   for (var i = 0; i < letters.length; i++) {
     if (!isNaN(letters[i])) {
-      letters[i] = GetRandomLetter();
-      letters[i] = hintWords()
+      letters[i] = GetRandomLetter(); 
     }
   }
 }
@@ -137,11 +122,15 @@ function genArray(testwords) {
     track[0] = getFreePosition();
     if (testwords[i]) {
       snakeWord(track[0], 0, testwords[i], track);
+
     }
   }
-  console.log(genwords);
+console.log(genwords)
+  
+ lastWord = genwords
   insertRandomLetters();
   genArea();
+  
 }
 
 var gameplace = document.getElementById("gameplace");
@@ -190,6 +179,7 @@ cutButton.style.opacity = "1";
     for (var i = 0; i < findwordids.length; i++) {
       for (var j = 0; j < findwordids[i].length; j++) {
         collectWord(letters[findwordids[i][j]], findwordids[i][j], true);
+     
       }
       clear();
     }

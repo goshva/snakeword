@@ -2,7 +2,43 @@
 const startAudio = new Audio("../sounds/gamestart.mp3")
 const timeSoundAudio = new Audio("../sounds/time-passing-sound-effect-fast-clock-108403.mp3")
 const winAudio = new Audio("../sounds/goodresult-82807.mp3")
-const selectAudio = new Audio("../sounds/menu-button-88360.mp3")
+const selectAudio = new Audio("../sounds/menu-button-88360.mp3");
+const hintVoice = new Audio("../sounds/menu-button-88360.mp3");
+
+
+const hintBtn = document.querySelector(".hintBtn");
+const badge = document.querySelector(".badge");
+ const hintBlock = document.querySelector(".hintBlock")
+let badgeNum = 3
+badge.innerHTML = badgeNum
+let getWord;
+let lastWord;
+hintBtn.addEventListener("click",()=>{
+ hintBlock.classList.add("hint");
+ setTimeout(()=>{
+  hintBlock.classList.remove("hint")
+ },1800)
+
+  hintVoice.play()
+ let randomWord = Math.floor(Math.random() * getWord.length)
+ let randomLastWord = getWord[randomWord]
+ lastWord = randomLastWord
+ hintBlock.textContent = lastWord
+  console.log(lastWord);
+  badge.innerHTML = badgeNum -1
+   if (badgeNum === 1) {
+    badge.innerHTML = 0
+setTimeout(()=>{
+  hintBtn.classList.add("disabledBtn") 
+},500)
+   }else{      
+   --badgeNum
+   }
+ 
+})
+
+
+
 
 
 
@@ -119,9 +155,7 @@ function checkLetter(cell, dictionary, edge, wordsInGame) {
     const idStr = cell.id
     const id = Number(idStr.slice(1));
     const word = cell.textContent;
-
-
-   
+     
 
     function inner(word, id, dictionary) {
       //top
@@ -129,15 +163,15 @@ function checkLetter(cell, dictionary, edge, wordsInGame) {
         const nearLetter = document.getElementById(`C${id - edge}`).textContent;
         const newWord = word + nearLetter;
         const newDictionary = dictionary.filter((word) => word.startsWith(newWord));
-
- 
+     
       
-        
         if (newDictionary.includes(newWord)) {
           wordsInGame.push(newWord);
+          
         }
         if (newDictionary.length > 0) {
           inner(newWord, id - edge, newDictionary)
+       
         }
         
       }
@@ -148,9 +182,11 @@ function checkLetter(cell, dictionary, edge, wordsInGame) {
         const newDictionary = dictionary.filter((word) => word.startsWith(newWord));
         if (newDictionary.includes(newWord)) {
           wordsInGame.push(newWord);
+     
         }
         if (newDictionary.length > 0) {
           inner(newWord, id + 1, newDictionary)
+
         }
       }
       //bottom
@@ -160,10 +196,13 @@ function checkLetter(cell, dictionary, edge, wordsInGame) {
         const newDictionary = dictionary.filter((word) => word.startsWith(newWord));
         if (newDictionary.includes(newWord)) {
           wordsInGame.push(newWord);
+     
         }
         if (newDictionary.length > 0) {
           inner(newWord, id + edge, newDictionary)
+          
         }
+        
       }
       //left
       if (id  % edge !== 0 && id - 1 >= 0) {
@@ -172,13 +211,17 @@ function checkLetter(cell, dictionary, edge, wordsInGame) {
         const newDictionary = dictionary.filter((word) => word.startsWith(newWord));
         if (newDictionary.includes(newWord)) {
           wordsInGame.push(newWord);
+       
+         
         }
         if (newDictionary.length > 0) {
           inner(newWord, id - 1, newDictionary)
+        
         }
       }
     }
     inner(word, id, dictionary);
+   
   }
   
   function getWordsinGame() {
@@ -186,6 +229,8 @@ function checkLetter(cell, dictionary, edge, wordsInGame) {
 
     cells.forEach((cell) => {
       checkLetter(cell, Dict, edge, wordsInGame); 
+      getWord = wordsInGame;
+
     })
     
     console.log(new Set(wordsInGame))
