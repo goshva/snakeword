@@ -29,7 +29,8 @@ function hintFunction (){
   let randomLastWord = getWord[randomWord]
   lastWord = randomLastWord
   hintBlock.innerText = lastWord
-  hintBlock.append(hintImage)
+  
+  hintBlock.appendChild(hintImage)
    console.log(lastWord);
    badge.innerHTML = badgeNum -1
     if (badgeNum === 1) {

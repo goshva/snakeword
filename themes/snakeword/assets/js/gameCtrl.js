@@ -333,7 +333,7 @@ function createImgDialog(imgUrl) {
       image.src = url.data[0].images.fixed_height_small.url;
       image_for_mobile.src  = url.data[0].images.fixed_height_small.url;
       resultImg.src = url.data[0].images.fixed_height_small.url;
-hintImage.src = url.data[0].images.fixed_height_small.url;
+      hintImage.src = url.data[0].images.fixed_height_small.url;
     
 
         
@@ -388,7 +388,7 @@ async function collectWord(Id, id, ...args) {
       if (args.length === 0) {
         findwordids.push(ids);
         createImgDialog(constructorSearchUrl(word));
-        createImgDialog(hintFunction(lastWord))
+     
         document.getElementById('word-input').options[0].text = '';
         const optionEl = document.createElement('option');
        const wordBlock = document.querySelector(".leftBlock")
