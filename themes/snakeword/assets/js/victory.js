@@ -3,42 +3,47 @@ const startAudio = new Audio("../sounds/gamestart.mp3")
 const timeSoundAudio = new Audio("../sounds/time-passing-sound-effect-fast-clock-108403.mp3")
 const winAudio = new Audio("../sounds/goodresult-82807.mp3")
 const selectAudio = new Audio("../sounds/menu-button-88360.mp3");
-const hintVoice = new Audio("../sounds/menu-button-88360.mp3");
-
+const hintVoice = new Audio("../sounds/mixkit-game-magic-hint-962.mp3");
+const hintEnd = new Audio("../sounds/end-call-120633.mp3")
 
 const hintBtn = document.querySelector(".hintBtn");
 const badge = document.querySelector(".badge");
  const hintBlock = document.querySelector(".hintBlock")
+
 let badgeNum = 3
 badge.innerHTML = badgeNum
 let getWord;
 let lastWord;
-hintBtn.addEventListener("click",()=>{
- hintBlock.classList.add("hint");
+
+hintBtn.addEventListener("click",hintFunction)
+
+
+function hintFunction (){
+
+  hintBlock.classList.add("hint");
+  setTimeout(()=>{
+   hintBlock.classList.remove("hint")
+  },1800)
+   hintVoice.play()
+  let randomWord = Math.floor(Math.random() * getWord.length)
+  let randomLastWord = getWord[randomWord]
+  lastWord = randomLastWord
+  hintBlock.innerText = lastWord
+  hintBlock.append(hintImage)
+   console.log(lastWord);
+   badge.innerHTML = badgeNum -1
+    if (badgeNum === 1) {
+     hintVoice.pause()
+     hintEnd.play()
+     badge.innerHTML = 0
  setTimeout(()=>{
-  hintBlock.classList.remove("hint")
- },1800)
-
-  hintVoice.play()
- let randomWord = Math.floor(Math.random() * getWord.length)
- let randomLastWord = getWord[randomWord]
- lastWord = randomLastWord
- hintBlock.textContent = lastWord
-  console.log(lastWord);
-  badge.innerHTML = badgeNum -1
-   if (badgeNum === 1) {
-    badge.innerHTML = 0
-setTimeout(()=>{
-  hintBtn.classList.add("disabledBtn") 
-},500)
-   }else{      
-   --badgeNum
-   }
+   hintBtn.classList.add("disabledBtn") 
+ },500)
+    }else{      
+    --badgeNum
+    }
  
-})
-
-
-
+}
 
 
 
