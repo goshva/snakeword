@@ -16,7 +16,7 @@ let getWord;
 let lastWord;
 
 function constructorHintUrl(imgWord) {
-  const giphyApiKey = 'y3Zyc2M9Wgks54unRGbVJxzWoaIR0Vs8';
+  const giphyApiKey = 'eODxKHmylw0gwCSq2E3IEzuOEttu249E';
   const giphyApiURI = 'https://api.giphy.com/v1/gifs/search';
   const giphyApiQuery = {
     api_key: giphyApiKey,
