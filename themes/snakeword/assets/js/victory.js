@@ -9,28 +9,57 @@ const hintEnd = new Audio("../sounds/end-call-120633.mp3")
 const hintBtn = document.querySelector(".hintBtn");
 const badge = document.querySelector(".badge");
  const hintBlock = document.querySelector(".hintBlock")
-
+ const hintImg = document.getElementById("hintImg")
 let badgeNum = 3
 badge.innerHTML = badgeNum
 let getWord;
 let lastWord;
 
+function constructorHintUrl(imgWord) {
+  const giphyApiKey = 'y3Zyc2M9Wgks54unRGbVJxzWoaIR0Vs8';
+  const giphyApiURI = 'https://api.giphy.com/v1/gifs/search';
+  const giphyApiQuery = {
+    api_key: giphyApiKey,
+    type: "gif",
+    q: imgWord[0],
+    limit: 2,
+    offset: 0,
+    rating: 'g',
+    lang: language,
+    bundle: 'messaging_non_clips',
+  };
+  const searchParams = new URLSearchParams(giphyApiQuery);
+  return `${giphyApiURI}?${searchParams.toString()}`;
+}
+
+function createImgForHint(imgUrl) {
+  fetch(imgUrl)
+    .then((response) => response.json())
+    .then((url) => {
+     console.log(url);
+      hintImg.src = url.data[0].images.fixed_height_small.url;
+     setTimeout(() => {
+      hintImg.src = "https://media.tenor.com/GXMu0NRMHQgAAAAM/question-mark.gif";
+     },3000);
+    });
+}
+
 hintBtn.addEventListener("click",hintFunction)
 
 
 function hintFunction (){
-
+  createImgForHint(constructorHintUrl(lastWord))
   hintBlock.classList.add("hint");
   setTimeout(()=>{
    hintBlock.classList.remove("hint")
-  },1800)
+  },5000)
    hintVoice.play()
   let randomWord = Math.floor(Math.random() * getWord.length)
   let randomLastWord = getWord[randomWord]
   lastWord = randomLastWord
-  hintBlock.innerText = lastWord
-  
-  hintBlock.appendChild(hintImage)
+document.querySelector(".hintWord").textContent = lastWord
+
+
    console.log(lastWord);
    badge.innerHTML = badgeNum -1
     if (badgeNum === 1) {
@@ -39,7 +68,7 @@ function hintFunction (){
      badge.innerHTML = 0
  setTimeout(()=>{
    hintBtn.classList.add("disabledBtn") 
- },500)
+ },2500)
     }else{      
     --badgeNum
     }
