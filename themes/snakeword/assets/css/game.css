@@ -485,7 +485,14 @@ transition: all 0.5s ease;
    color: #fff;
 }
 
-
+.timer .rightBlock .saveButton > img,
+.timer .rightBlock .messageButton > a>img,
+.timer .rightBlock .infoBtn > a>img,
+.timer .rightBlock .facebookBtn .fb-share-button > a > img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
    .timer .leftBlock .ThemeButton.light{
       background-color: #000;
       color: #fde807;
@@ -992,10 +999,14 @@ flex-direction: column;
    
 }
 
-.generalBlock  .Words .buttonsBlock > button>i,
-.generalBlock  .Words .buttonsBlock > button > a > i{
+.generalBlock  .Words .buttonsBlock > button>i{
    font-size: 20px;
 }
+
+.generalBlock  .Words .buttonsBlock > .deleteBtn{
+   color: rgb(255, 0, 0);
+}
+
 .generalBlock  .Words .buttonsBlock .hintBtnBlock{
    display: flex;
    justify-content: center;
