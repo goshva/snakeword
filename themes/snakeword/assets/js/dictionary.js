@@ -10483,11 +10483,13 @@ var namedict;
 
 if (language == "la" || language == "la-LA" || language == "la-la") {
 	language = "la";
+	languageGif = "la";
 	namedict = "Latin";
 }
 
 if (language == "en" || language == "en-US" || language == "en-us") {
 	language = "en";
+	languageGif = "en";
 	namedict = "English";
 }
 
@@ -10497,14 +10499,17 @@ if (language == "es" || language == "es-ES" || language == "es-es") {
 }
 if (language == "ar" || language == "ar-AR" || language == "ar-ar") {
 	language = "ar";
+	languageGif = "ar";
 	namedict = "Arabic";
 }
 if (language == "hi" || language == "hi-HI" || language == "hi-hi") {
 	language = "hi";
+	languageGif = "hi";
 	namedict = "Hindi";
 }
 if (language == "ru" || language == "ru-RU" || language == "ru-ru") {
 	language = "ru";
+	languageGif = "ru";
 	namedict = "Russian";
 }
 if (language == "bn" || language == "bn-BN" || language == "bn-bn") {
@@ -10521,10 +10526,12 @@ if (language == "ms" || language == "ms-MS" || language == "ms-ms") {
 }
 if (language == "fr" || language == "fr-FR" || language == "fr-fr") {
 	language = "fr";
+	languageGif = "fr";
 	namedict = "French";
 }
 if (language == "de" || language == "de-DE" || language == "de-de") {
 	language = "de";
+	languageGif = "de";
 	namedict = "German";
 }
 if (language == "ur" || language == "ur-UR" || language == "ur-ur") {
@@ -10553,15 +10560,18 @@ if (language == "it" || language == "it-IT" || language == "it-it") {
 }
 if (language == "hy" || language == "hy-HY" || language == "hy-hy") {
 	language = "hy";
+	languageGif = "hy";
 	namedict = "Armenian";
 }
 
 if (language == "zh" || language == "zh-ZH" || language == "zh-zh") {
 	language = "zh";
+	languageGif = "zh";
 	namedict = "Chinese";
 }
 if (language == "ka" || language == "ka-GE" || language == "ka-ge") {
 	language = "ka";
+	languageGif = "ka";
 	namedict = "Georgian";
 }
 //else { language ="en"; namedict = "English"}

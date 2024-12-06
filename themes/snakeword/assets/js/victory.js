@@ -14,7 +14,6 @@ let badgeNum = 3
 badge.innerHTML = badgeNum
 let getWord;
 let lastWord;
-
 function constructorHintUrl(imgWord) {
   const giphyApiKey = 'eODxKHmylw0gwCSq2E3IEzuOEttu249E';
   const giphyApiURI = 'https://api.giphy.com/v1/gifs/search';
@@ -37,10 +36,12 @@ function createImgForHint(imgUrl) {
     .then((response) => response.json())
     .then((url) => {
      console.log(url);
-      hintImg.src = url.data[0].images.fixed_height_small.url;
-     setTimeout(() => {
-      hintImg.src = "https://media.tenor.com/GXMu0NRMHQgAAAAM/question-mark.gif";
-     },3000);
+if (!url.data[0].images.fixed_height_small.url) {
+  hintImg.src = "https://media.tenor.com/GXMu0NRMHQgAAAAM/question-mark.gif" ;
+}
+else{
+  hintImg.src = url.data[0].images.fixed_height_small.url;
+}
     });
 }
 
@@ -48,16 +49,18 @@ hintBtn.addEventListener("click",hintFunction)
 
 
 function hintFunction (){
-  createImgForHint(constructorHintUrl(lastWord))
-  hintBlock.classList.add("hint");
-  setTimeout(()=>{
-   hintBlock.classList.remove("hint")
-  },5000)
-   hintVoice.play()
   let randomWord = Math.floor(Math.random() * getWord.length)
   let randomLastWord = getWord[randomWord]
   lastWord = randomLastWord
 document.querySelector(".hintWord").textContent = lastWord
+  createImgForHint(constructorHintUrl(lastWord))
+  hintBlock.classList.add("hint");
+  setTimeout(()=>{
+    document.querySelector(".hintWord").textContent = ""
+   hintBlock.classList.remove("hint")
+  },1500)
+   hintVoice.play()
+
 
 
    console.log(lastWord);
