@@ -37,10 +37,11 @@ function createImgForHint(imgUrl) {
     .then((url) => {
      console.log(url);
 if (!url.data[0].images.fixed_height_small.url) {
-  hintImg.src = "https://media.tenor.com/GXMu0NRMHQgAAAAM/question-mark.gif" ;
+  document.querySelector(".hintWord").textContent = lastWord
 }
 else{
   hintImg.src = url.data[0].images.fixed_height_small.url;
+  document.querySelector(".hintWord").textContent = lastWord
 }
     });
 }
@@ -52,7 +53,7 @@ function hintFunction (){
   let randomWord = Math.floor(Math.random() * getWord.length)
   let randomLastWord = getWord[randomWord]
   lastWord = randomLastWord
-document.querySelector(".hintWord").textContent = lastWord
+
   createImgForHint(constructorHintUrl(lastWord))
   hintBlock.classList.add("hint");
   setTimeout(()=>{

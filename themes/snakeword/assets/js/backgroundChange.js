@@ -78,8 +78,8 @@ imgTag.addEventListener("click",()=>{
     const randomIndex = Math.floor(Math.random() * message.length)
     message[randomIndex].classList.add("active")
     messageBlock.classList.add("active")
-   setTimeout(() => {
     modalBlockForImages.classList.remove("active")
+   setTimeout(() => {
     message[randomIndex].classList.remove("active")
     messageBlock.classList.remove("active")
    }, 3500);
