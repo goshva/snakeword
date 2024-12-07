@@ -555,9 +555,7 @@ transition: all 0.5s ease;
       display:flex;
       justify-content:center;
       align-items:center;
-      background-color:#e7e3e3;
       transition:all .5s ease;
-      padding:3px 15px;
       width: 24px;
       height: 24px;
       cursor: pointer;
@@ -643,7 +641,7 @@ transition: all 0.5s ease;
       gap: 12px;
    }
 
-   .modalBlockForImages .messageBlock{
+.messageBlock{
       position: absolute;
       top: 50%;
       left: 50%;
@@ -657,12 +655,15 @@ transition: all 0.5s ease;
       height: 250px;
       opacity: 0;
       visibility: hidden;
+      z-index: 3
    }
-   .modalBlockForImages .messageBlock.active{
+
+
+  .messageBlock.active{
       opacity: 1;
       visibility: visible;
    }
-   .modalBlockForImages .messageBlock .message{
+ .messageBlock .message{
       position: absolute;
       opacity: 0;
       visibility: hidden;
@@ -673,7 +674,7 @@ transition: all 0.5s ease;
       transition: all 0.5s ease;
    }
 
-   .modalBlockForImages .messageBlock .message.active{
+ .messageBlock .message.active{
       opacity: 1;
       visibility: visible;
       transform: translateY(0);
