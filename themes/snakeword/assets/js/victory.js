@@ -20,8 +20,8 @@ function constructorHintUrl(imgWord) {
   const giphyApiQuery = {
     api_key: giphyApiKey,
     type: "gif",
-    q: imgWord[0],
-    limit: 2,
+    q: imgWord,
+    limit: 1,
     offset: 0,
     rating: 'g',
     lang: language,
@@ -36,11 +36,12 @@ function createImgForHint(imgUrl) {
     .then((response) => response.json())
     .then((url) => {
      console.log(url);
-if (!url.data[0].images.fixed_height_small.url) {
+if (url.data[0].images.fixed_height_small.url) {
+  hintImg.src = url.data[0].images.fixed_height_small.url;
   document.querySelector(".hintWord").textContent = lastWord
 }
 else{
-  hintImg.src = url.data[0].images.fixed_height_small.url;
+  hintImg.src = "https://www.svgrepo.com/show/446695/empty-blank.svg";
   document.querySelector(".hintWord").textContent = lastWord
 }
     });

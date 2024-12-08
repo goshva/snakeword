@@ -127,7 +127,7 @@ function genArray(testwords) {
   }
 console.log(genwords)
   
- lastWord = genwords 
+//  lastWord = genwords 
   insertRandomLetters();
   genArea();
   
