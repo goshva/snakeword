@@ -8,34 +8,55 @@
         aria-label="Slide 2"></button>
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
         aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+        aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+        aria-label="Slide 5"></button>
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="https://dummyimage.com/600x400/000/fff.jpg" class="d-block w-100" alt="image">
+      <video  autoplay loop muted >
+      <source src="/ShortVideos/Начало игры.webm" >
+        </video>
         <div class="carousel-caption d-none d-md-block bg-secondary">
           <h5 class="text-white">{{ .Param "captionHeaderOne"}}</h5>
           <p class="text-white">{{ .Param "captionParagraphOne"}}</p>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="https://dummyimage.com/400x300/000/fff.jpg" class="d-block w-100" alt="image">
+        <video  autoplay loop muted>
+          <source src="/ShortVideos/Найти слово.webm">
+          </video>
         <div class="carousel-caption d-none d-md-block bg-secondary">
 <h5 class="text-white">{{ .Param "captionHeaderTwo"}}</h5>
 <p class="text-white">{{ .Param "captionParagraphTwo"}}</p>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="https://dummyimage.com/300x100/000/fff.jpg" class="d-block w-100" alt="image">
+        <video  autoplay loop muted>
+          <source src="/ShortVideos/удаления .webm">
+          </video>
         <div class="carousel-caption d-none d-md-block bg-secondary">
           <h5 class="text-white">{{ .Param "captionHeaderThree"}}</h5>
 <p class="text-white">{{ .Param "captionParagraphThree"}}</p>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="https://dummyimage.com/300x100/000/fff.jpg" class="d-block w-100" alt="image">
+        <video  autoplay loop muted>
+          <source src="/ShortVideos/подсказка(1).webm">
+          </video>
         <div class="carousel-caption d-none d-md-block bg-secondary">
           <h5 class="text-white">{{ .Param "captionHeaderFour"}}</h5>
 <p class="text-white">{{ .Param "captionParagraphFour"}}</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <video  autoplay loop muted>
+          <source src="/ShortVideos/Изменение фонового изображения.webm">
+          </video>
+        <div class="carousel-caption d-none d-md-block bg-secondary">
+          <h5 class="text-white">{{ .Param "captionHeaderFive"}}</h5>
+<p class="text-white">{{ .Param "captionParagraphFive"}}</p>
         </div>
       </div>
     </div>
