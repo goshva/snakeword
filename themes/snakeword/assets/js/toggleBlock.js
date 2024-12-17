@@ -23,14 +23,20 @@ function changeDarkToLight(){
     findedWordsBlock.classList.add("light")
     lightRateBlock.classList.add("light")
     toggleBtn.classList.add("light")
-
+    modalSlider.classList.add("light")
+    document.querySelectorAll(".carousel-caption").forEach((item)=>{
+      item.classList.add("light")
+    })
   }else{
     iconBlock.classList.remove("light") 
     topMenu.classList.remove("light")
     findedWordsBlock.classList.remove("light")
     lightRateBlock.classList.remove("light")
     toggleBtn.classList.remove("light")
-  
+    modalSlider.classList.remove("light")
+    document.querySelectorAll(".carousel-caption").forEach((item)=>{
+      item.classList.remove("light")
+    })
   }
 }
 
