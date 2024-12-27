@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Օձի Բառ</title>
-    <link>https://goshva.github.io/snakeword/hy/</link>
+    <link>http://snakeword.ru/hy/</link>
     <description>Recent content on Օձի Բառ</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>hy</language>
     <copyright>Everything is mine</copyright>
-    <atom:link href="https://goshva.github.io/snakeword/hy/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://snakeword.ru/hy/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
