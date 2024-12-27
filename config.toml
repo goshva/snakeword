@@ -1,7 +1,7 @@
 DefaultContentLanguage = "en"
 DefaultContentLanguageInSubdir = true
 copyright = "Everything is mine"
-baseURL = "https://snakeword.vit.ooo/"
+baseURL = "http://snakeword.ru"
 #baseURL = "https://goshva.github.io/snakeword/"
 languageCode = "en-us"
 title = "My snakeword game"

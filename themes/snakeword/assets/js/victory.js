@@ -60,7 +60,7 @@ function hintFunction (){
   setTimeout(()=>{
     document.querySelector(".hintWord").textContent = ""
    hintBlock.classList.remove("hint")
-  },1500)
+  },5000)
    hintVoice.play()
 
 
