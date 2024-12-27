@@ -1240,3 +1240,29 @@ color: #000;
    height: 150px;
  }
 }
+
+@media(max-width:400px){
+   #gameplace{
+      left: 0px;
+      width: 310px;
+      height: 573px;
+   }
+   .cell{
+      margin: 1.9px;
+      width: 28px;
+      padding: 1px 13px;
+   }
+   .dialog_for_mobile {
+      width: 230px;
+      position: absolute;
+      left: 18%;
+      z-index: 17;
+  }
+  .hintBlock{
+   width: 250px;
+   height: 200px;
+   top: 62%;
+   left: 19%;
+   z-index: 18;
+}
+}
