@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on გველის სიტყვები</title>
-    <link>https://snakeword.vit.ooo/ka/tags/</link>
+    <link>https://goshva.github.io/snakeword/ka/tags/</link>
     <description>Recent content in Tags on გველის სიტყვები</description>
     <generator>Hugo</generator>
     <language>ka</language>
     <copyright>Everything is mine</copyright>
-    <atom:link href="https://snakeword.vit.ooo/ka/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://goshva.github.io/snakeword/ka/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on كلمة الثعبان</title>
-    <link>https://snakeword.vit.ooo/ar/categories/</link>
+    <link>https://goshva.github.io/snakeword/ar/categories/</link>
     <description>Recent content in Categories on كلمة الثعبان</description>
     <generator>Hugo</generator>
     <language>ar</language>
     <copyright>Everything is mine</copyright>
-    <atom:link href="https://snakeword.vit.ooo/ar/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://goshva.github.io/snakeword/ar/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
