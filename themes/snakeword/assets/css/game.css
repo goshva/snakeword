@@ -1272,4 +1272,7 @@ color: #000;
    width: 95%;
     height: 278px;
 }
+.timer__items{
+   gap: 5px;
+}
 }
