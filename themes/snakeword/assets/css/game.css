@@ -1273,6 +1273,7 @@ color: #000;
     height: 278px;
 }
 .timer__items{
+   font-size: 20px;
    gap: 5px;
 }
 }
