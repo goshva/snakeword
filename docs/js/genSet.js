@@ -152,21 +152,37 @@ function genArea() {
       divbtn.style.lineHeight = "0.9";
     }
 
-  
+     
     divbtn.className = "cell";
     divbtn.id = "C" + L;
     divbtn.style.zIndex = "10";
     divbtn.Letter = letters[L];
     divbtn.LetterCount = L;
     divbtn.onclick = function (e) {
+      const toggleCellOpacity = () => {
+  
+        document.querySelectorAll(".cell").forEach(cell => {
+          cell.style.opacity = "0.5";
+          setTimeout(() => {
+            cell.style.opacity = "1";  
+          }, 3000);
+        });
+        const currentIndex = parseInt(this.id.replace("C", ""), 10);
+        const neighbors = getNear(currentIndex);
+        [currentIndex, ...neighbors].forEach(idx => {
+          document.getElementById("C" + idx).style.opacity = "1";
+        });
+      };
       const noClass = () => {
         collectWord(this.Letter, this.LetterCount);
         this.className += " activeCell";
         playSound(this.Letter);
         cutButton.style.pointerEvents = "auto";
 cutButton.style.opacity = "1";
+   
       }
       e.target.classList.contains('activeCell') === false ? noClass() : true;
+      toggleCellOpacity()
     };
     var t = document.createTextNode(letters[L]);
     divbtn.appendChild(t);

@@ -188,7 +188,6 @@ function clear() {
 else if (isIntersecting === lastWord) {
   cell.className = 'cell  hintWords';
 }
-
     else {
       cell.className = 'cell'; 
     }
@@ -414,6 +413,7 @@ cutButton.style.pointerEvents = "none";
    }
       else{
         errorText.classList.remove("active")
+
       }
 
       const userLang = navigator.language || navigator.userLanguage;
