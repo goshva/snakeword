@@ -195,7 +195,7 @@ gap: 15px;
     width: 0%;
     overflow: hidden;
     flex-direction: column;
-    margin-top: -20px;
+    margin-top: 0px;
     position: absolute;
     height: 100vh;
     transition: all 0.5s ease;
