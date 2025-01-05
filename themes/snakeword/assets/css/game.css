@@ -1316,9 +1316,9 @@ color: #000;
    opacity: 0;
  }
  .toggleBtn.active .line:nth-child(1){
-    transform: translateY(13px) rotate(45deg);
+    transform: translateY(7px) rotate(45deg);
  }
  .toggleBtn.active .line:nth-child(3){
-    transform: translateY(-13px) rotate(-45deg);
+    transform: translateY(-7px) rotate(-45deg);
  }
 }
