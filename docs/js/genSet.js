@@ -12,7 +12,7 @@ var genwords = [];
 
 
 
- 
+
 
 
 
@@ -82,7 +82,7 @@ function snakeWord(position, i, word, track) {
       letters[track[i]] = track[i]; //this trash TODO: need rewite getNear() function
     }
   }
-  
+
 }
 
 function GetRandomLetter() {
@@ -103,10 +103,10 @@ function GetRandomLetter() {
 
 function insertRandomLetters() {
 
-  
+
   for (var i = 0; i < letters.length; i++) {
     if (!isNaN(letters[i])) {
-      letters[i] = GetRandomLetter(); 
+      letters[i] = GetRandomLetter();
     }
   }
 }
@@ -125,12 +125,12 @@ function genArray(testwords) {
 
     }
   }
-console.log(genwords)
-  
-//  lastWord = genwords 
+  console.log(genwords)
+
+  //  lastWord = genwords 
   insertRandomLetters();
   genArea();
-  
+
 }
 
 var gameplace = document.getElementById("gameplace");
@@ -144,7 +144,7 @@ function genArea() {
 
   findwordids = userwordids ? JSON.parse(userwordids.split("=")[1]) : [];
 
- 
+
   for (var L = 0; L < letters.length; L++) {
     var divbtn = document.createElement("DIV");
     var language = getCookie("lang") || document.documentElement.lang;
@@ -152,7 +152,7 @@ function genArea() {
       divbtn.style.lineHeight = "0.9";
     }
 
-     
+
     divbtn.className = "cell";
     divbtn.id = "C" + L;
     divbtn.style.zIndex = "10";
@@ -160,17 +160,44 @@ function genArea() {
     divbtn.LetterCount = L;
     divbtn.onclick = function (e) {
       const toggleCellOpacity = () => {
-  
+
         document.querySelectorAll(".cell").forEach(cell => {
           cell.style.opacity = "0.5";
           setTimeout(() => {
-            cell.style.opacity = "1";  
+            cell.style.opacity = "1";
           }, 3000);
         });
         const currentIndex = parseInt(this.id.replace("C", ""), 10);
-        const neighbors = getNear(currentIndex);
+        //
+        function getNextAvalible(idx) {
+          console.log(idx, edge)
+          listNextLettersAvalible = [];
+          if (idx > edge) {
+            listNextLettersAvalible.push(idx - edge)
+          }
+          if (idx + 1 % edge !== 0) {
+            listNextLettersAvalible.push(idx + 1)
+          }
+          if (idx < edge * edge - edge) {
+            listNextLettersAvalible.push(idx + edge)
+          }
+          if (idx - 1 % edge !== 0) {
+            listNextLettersAvalible.push(idx - 1)
+          }
+          return listNextLettersAvalible;
+        };
+        //
+        const neighbors = getNextAvalible(currentIndex);
+        
+
         [currentIndex, ...neighbors].forEach(idx => {
-          document.getElementById("C" + idx).style.opacity = "1";
+          console.log(currentIndex)
+
+          elIdx = document.getElementById("C" + idx)
+
+          crossAvalible = getNextAvalible(idx);
+          console.log(crossAvalible)
+          elIdx.style.opacity = "1";
         });
       };
       const noClass = () => {
@@ -178,8 +205,8 @@ function genArea() {
         this.className += " activeCell";
         playSound(this.Letter);
         cutButton.style.pointerEvents = "auto";
-cutButton.style.opacity = "1";
-   
+        cutButton.style.opacity = "1";
+
       }
       e.target.classList.contains('activeCell') === false ? noClass() : true;
       toggleCellOpacity()
@@ -188,14 +215,14 @@ cutButton.style.opacity = "1";
     divbtn.appendChild(t);
     gameplace.appendChild(divbtn);
   }
-  
+
 
 
   if (Array.isArray(findwordids) && Array.isArray(findwordids[0])) {
     for (var i = 0; i < findwordids.length; i++) {
       for (var j = 0; j < findwordids[i].length; j++) {
         collectWord(letters[findwordids[i][j]], findwordids[i][j], true);
-     
+
       }
       clear();
     }
