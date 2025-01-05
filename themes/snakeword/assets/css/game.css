@@ -1246,13 +1246,14 @@ color: #000;
 @media(max-width:400px){
    #gameplace{
       left: 0px;
-      width: 310px;
+      width: 333px;
       height: 573px;
    }
    .cell{
-      margin: 1.9px;
+      margin: 0.9px;
       width: 28px;
-      padding: 1px 13px;
+      height: 36px;
+      padding: 1px 16px;
    }
    .dialog_for_mobile {
       width: 230px;
@@ -1291,5 +1292,13 @@ color: #000;
  }
  .modalBlock .buttonsBlock > button{
    font-size: 19px;
+}
+.modalBlockForImages .imgBlock {
+   width: 95px;
+   height: 95px;
+}
+.rateBlock{
+   width: 250px;
+   height: 250px;
 }
 }
