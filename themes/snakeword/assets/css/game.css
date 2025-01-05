@@ -1299,6 +1299,26 @@ color: #000;
 }
 .rateBlock{
    width: 250px;
-   height: 250px;
+   height: 170px;
 }
+.rateBlock .rateBtns .rateBtn {
+   font-size: 20px; 
+}
+.rateBlock .choosenBlock >h2{
+   font-size: 15px;
+}
+.toggleBtn {
+   width: 30px;
+   height: 30px;
+}
+.toggleBtn.active .line:nth-child(2){
+   visibility: hidden;
+   opacity: 0;
+ }
+ .toggleBtn.active .line:nth-child(1){
+    transform: translateY(13px) rotate(45deg);
+ }
+ .toggleBtn.active .line:nth-child(3){
+    transform: translateY(-13px) rotate(-45deg);
+ }
 }
