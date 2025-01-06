@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Змееслов</title>
-    <link>http://localhost:1313/ru/</link>
+    <link>http://snakeword.ru/ru/</link>
     <description>Recent content on Змееслов</description>
-    <generator>Hugo 0.125.2</generator>
+    <generator>Hugo</generator>
     <language>ru</language>
     <copyright>Everything is mine</copyright>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="http://localhost:1313/ru/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://snakeword.ru/ru/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
