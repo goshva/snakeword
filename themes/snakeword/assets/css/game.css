@@ -1246,7 +1246,7 @@ color: #000;
 @media(max-width:400px){
    #gameplace{
       left: 0px;
-      width: 333px;
+      width: 90%;
       height: 573px;
    }
    .cell{
