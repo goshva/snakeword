@@ -1322,3 +1322,11 @@ color: #000;
     transform: translateY(-7px) rotate(-45deg);
  }
 }
+
+@media(max-width:320px){
+   .cell{
+      width: 21px;
+      height: 34px;
+      font-size: 15px;
+   }
+}
