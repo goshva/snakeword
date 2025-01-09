@@ -1324,9 +1324,15 @@ color: #000;
 }
 
 @media(max-width:320px){
+   #gameplace{
+      
+      gap: 1px;
+   }
    .cell{
       width: 21px;
-      height: 34px;
+      height: 32px;
       font-size: 15px;
+      padding: 2px 13px;
+      margin-top: -12%;
    }
 }
