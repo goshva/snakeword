@@ -2,160 +2,160 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://snakeword.ru/hi/categories/</loc>
+    <loc>https://snakeword.ru/hi/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://snakeword.ru/en/categories/"
+                href="https://snakeword.ru/en/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="http://snakeword.ru/ru/categories/"
+                href="https://snakeword.ru/ru/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="hy"
-                href="http://snakeword.ru/hy/categories/"
+                href="https://snakeword.ru/hy/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
-                href="http://snakeword.ru/de/categories/"
+                href="https://snakeword.ru/de/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://snakeword.ru/fr/categories/"
+                href="https://snakeword.ru/fr/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="la"
-                href="http://snakeword.ru/la/categories/"
+                href="https://snakeword.ru/la/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="http://snakeword.ru/ar/categories/"
+                href="https://snakeword.ru/ar/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://snakeword.ru/zh/categories/"
+                href="https://snakeword.ru/zh/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ka"
-                href="http://snakeword.ru/ka/categories/"
+                href="https://snakeword.ru/ka/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="hi"
-                href="http://snakeword.ru/hi/categories/"
+                href="https://snakeword.ru/hi/categories/"
                 />
   </url><url>
-    <loc>http://snakeword.ru/hi/tags/</loc>
+    <loc>https://snakeword.ru/hi/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://snakeword.ru/en/tags/"
+                href="https://snakeword.ru/en/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="http://snakeword.ru/ru/tags/"
+                href="https://snakeword.ru/ru/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="hy"
-                href="http://snakeword.ru/hy/tags/"
+                href="https://snakeword.ru/hy/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
-                href="http://snakeword.ru/de/tags/"
+                href="https://snakeword.ru/de/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://snakeword.ru/fr/tags/"
+                href="https://snakeword.ru/fr/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="la"
-                href="http://snakeword.ru/la/tags/"
+                href="https://snakeword.ru/la/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="http://snakeword.ru/ar/tags/"
+                href="https://snakeword.ru/ar/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://snakeword.ru/zh/tags/"
+                href="https://snakeword.ru/zh/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ka"
-                href="http://snakeword.ru/ka/tags/"
+                href="https://snakeword.ru/ka/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="hi"
-                href="http://snakeword.ru/hi/tags/"
+                href="https://snakeword.ru/hi/tags/"
                 />
   </url><url>
-    <loc>http://snakeword.ru/hi/</loc>
+    <loc>https://snakeword.ru/hi/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://snakeword.ru/en/"
+                href="https://snakeword.ru/en/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="http://snakeword.ru/ru/"
+                href="https://snakeword.ru/ru/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="hy"
-                href="http://snakeword.ru/hy/"
+                href="https://snakeword.ru/hy/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
-                href="http://snakeword.ru/de/"
+                href="https://snakeword.ru/de/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://snakeword.ru/fr/"
+                href="https://snakeword.ru/fr/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="la"
-                href="http://snakeword.ru/la/"
+                href="https://snakeword.ru/la/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="http://snakeword.ru/ar/"
+                href="https://snakeword.ru/ar/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://snakeword.ru/zh/"
+                href="https://snakeword.ru/zh/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ka"
-                href="http://snakeword.ru/ka/"
+                href="https://snakeword.ru/ka/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="hi"
-                href="http://snakeword.ru/hi/"
+                href="https://snakeword.ru/hi/"
                 />
   </url>
 </urlset>

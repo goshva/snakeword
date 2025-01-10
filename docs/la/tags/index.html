@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Accipe verbum iuxta litteras iuxta" />
   <meta property="og:description" content="Accipe verbum iuxta litteras iuxta" />
-  <meta property="og:url" content="http://snakeword.ru/la/tags/la" />
+  <meta property="og:url" content="https://snakeword.ru/la/tags/la" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="0" />
   <meta property="og:image" content="/img/soc.jpg" />
@@ -29,12 +29,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<script>
-  var WebApp = window.Telegram.WebApp;
 
-  WebApp.showAlert(`Добро пожаловать, @${WebApp.initDataUnsafe.user.id}.`);
-  console.log(`img ${WebApp.initDataUnsafe.user.photo_url}.`);
-</script>
 
 </html><body><div class="toggleBtn">
     <div class="line"></div>
@@ -49,6 +44,12 @@
    <button  class="StartBtn">Satus ludum</button>
   <button  class="RulesBtn">Praecepta ludi</button>
   </div>
+  <div class="buttonsBlock">
+
+  <button  class="TelegBtn" style="background-color: white;"><img  id="avatar" style="margin: auto; width: 50% " src="https://gravitalik.ru/tg.svg"></button>
+  <button  class="RulesBtn" >0 : <span id="points">0</span></button>
+</div>
+</div>
 </div>
 <div class="modalSlider">
   <div class="closeBtn"><img src="/img/close.png" alt=""></div>
@@ -222,7 +223,7 @@
     <li class="top-menu-item">
       
     <li class="top-menu-item">
-      <a class="top-menu-link-languages" href="http://snakeword.ru/en/">
+      <a class="top-menu-link-languages" href="https://snakeword.ru/en/">
         
         
         
@@ -234,7 +235,7 @@
         </li>
     
     <li class="top-menu-item">
-      <a class="top-menu-link-languages" href="http://snakeword.ru/ru/">
+      <a class="top-menu-link-languages" href="https://snakeword.ru/ru/">
         
         
         
@@ -246,7 +247,7 @@
         </li>
     
     <li class="top-menu-item">
-      <a class="top-menu-link-languages" href="http://snakeword.ru/hy/">
+      <a class="top-menu-link-languages" href="https://snakeword.ru/hy/">
         
         
         
@@ -258,7 +259,7 @@
         </li>
     
     <li class="top-menu-item">
-      <a class="top-menu-link-languages" href="http://snakeword.ru/de/">
+      <a class="top-menu-link-languages" href="https://snakeword.ru/de/">
         
         
         
@@ -270,7 +271,7 @@
         </li>
     
     <li class="top-menu-item">
-      <a class="top-menu-link-languages" href="http://snakeword.ru/fr/">
+      <a class="top-menu-link-languages" href="https://snakeword.ru/fr/">
         
         
         
@@ -282,7 +283,7 @@
         </li>
     
     <li class="top-menu-item">
-      <a class="top-menu-link-languages" href="http://snakeword.ru/la/">
+      <a class="top-menu-link-languages" href="https://snakeword.ru/la/">
         
         
         
@@ -294,7 +295,7 @@
         </li>
     
     <li class="top-menu-item">
-      <a class="top-menu-link-languages" href="http://snakeword.ru/ar/">
+      <a class="top-menu-link-languages" href="https://snakeword.ru/ar/">
         
         
         
@@ -306,7 +307,7 @@
         </li>
     
     <li class="top-menu-item">
-      <a class="top-menu-link-languages" href="http://snakeword.ru/hi/">
+      <a class="top-menu-link-languages" href="https://snakeword.ru/hi/">
         
         
         
@@ -318,7 +319,7 @@
         </li>
     
     <li class="top-menu-item">
-      <a class="top-menu-link-languages" href="http://snakeword.ru/zh/">
+      <a class="top-menu-link-languages" href="https://snakeword.ru/zh/">
         
         
         
@@ -330,7 +331,7 @@
         </li>
     
     <li class="top-menu-item">
-      <a class="top-menu-link-languages" href="http://snakeword.ru/ka/">
+      <a class="top-menu-link-languages" href="https://snakeword.ru/ka/">
         
         
         
@@ -368,6 +369,7 @@
       <script defer src="/js/dictionary.js"></script>
 
       <script defer src="/js/victory.js"></script>
+      <script defer src="/js/teleMiniApp.js"></script>
    </body>
 </html>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>

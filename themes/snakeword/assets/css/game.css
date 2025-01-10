@@ -1243,7 +1243,7 @@ color: #000;
  }
 }
 
-@media(max-width:400px){
+@media(max-width:430px){
    #gameplace{
       left: 0px;
       width: 90%;
