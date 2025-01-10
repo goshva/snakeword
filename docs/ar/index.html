@@ -3,7 +3,7 @@
 <html lang="ar">
 
 <head>
-	<meta name="generator" content="Hugo 0.140.2">
+	<meta name="generator" content="Hugo 0.136.1">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="خذ كلمة جنبًا إلى جنب" />
@@ -33,7 +33,8 @@
 <script>
   var WebApp = window.Telegram.WebApp;
 
-  WebApp.showAlert(`Добро пожаловать, @${WebApp.WebAppUser.username}.`);
+  WebApp.showAlert(`Добро пожаловать, @${WebApp.initDataUnsafe.user.id}.`);
+  console.log(`img ${WebApp.initDataUnsafe.user.photo_url}.`);
 </script>
 
 </html><body><div class="toggleBtn">
