@@ -1,19 +1,48 @@
 const wsService = {
     searchUser: (userId) => {
-        // Mock implementation of searchUser
         return new Promise((resolve, reject) => {
-            // Simulate user not found
-            if (userId === '12345') {
-                resolve({ id: userId, points: 100 }); // Mock user data
-            } else {
-                reject(new Error('User not found'));
-            }
+            const ws = new WebSocket('wss://snakeword.ru:9696/ws');
+
+            ws.onopen = () => {
+                ws.send(JSON.stringify({ action: 'searchUser', userId: userId }));
+            };
+
+            ws.onmessage = (event) => {
+                const user = JSON.parse(event.data);
+                resolve(user);
+                ws.close();
+            };
+
+            ws.onerror = (error) => {
+                reject(new Error('WebSocket error: ' + error.message));
+            };
+
+            ws.onclose = () => {
+                reject(new Error('WebSocket closed'));
+            };
         });
     },
     createUser: (userId) => {
-        // Mock implementation of createUser
-        return new Promise((resolve) => {
-            resolve({ id: userId, points: 0 }); // Mock user data with initial points
+        return new Promise((resolve, reject) => {
+            const ws = new WebSocket('wss://snakeword.ru:9696/ws');
+
+            ws.onopen = () => {
+                ws.send(JSON.stringify({ action: 'createUser', userId: userId }));
+            };
+
+            ws.onmessage = (event) => {
+                const user = JSON.parse(event.data);
+                resolve(user);
+                ws.close();
+            };
+
+            ws.onerror = (error) => {
+                reject(new Error('WebSocket error: ' + error.message));
+            };
+
+            ws.onclose = () => {
+                reject(new Error('WebSocket closed'));
+            };
         });
     }
 };
@@ -21,17 +50,17 @@ const wsService = {
 let WebApp = window.Telegram.WebApp;
 
 function AddAvatar() {
-    if (WebApp.initDataUnsafe.user.photo_url) {
-        document.getElementById("avatar").src = WebApp.initDataUnsafe.user.photo_url;
+    if (WebApp?.initDataUnsafe?.user?.photo_url) {
+        document.getElementById("avatar").src = WebApp?.initDataUnsafe?.user?.photo_url;
     }
 }
 
 function updatePoints() {
-    const userId = WebApp.initDataUnsafe.user.id;
+    const userId = WebApp?.initDataUnsafe?.user?.id || 190404167;
 
     wsService.searchUser(userId).then((user) => {
         if (user) {
-            document.getElementById("points").innerHTML = user.points;
+            document.getElementById("points").innerHTML = user.score;
         }
     }).catch((error) => {
         if (error.message === 'User not found') {
@@ -41,7 +70,7 @@ function updatePoints() {
         }
     }).then((user) => {
         if (user) {
-            document.getElementById("points").innerHTML = user.points;
+            document.getElementById("points").innerHTML = user.score;
         }
     }).catch((error) => {
         console.error('Error:', error);
