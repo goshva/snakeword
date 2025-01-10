@@ -1,7 +1,7 @@
 const wsService = {
     searchUser: (userId) => {
         return new Promise((resolve, reject) => {
-            const ws = new WebSocket('wss://snakeword.ru:9696/ws');
+            const ws = new WebSocket('wss://snakeword.ru:6969/ws');
 
             ws.onopen = () => {
                 ws.send(JSON.stringify({ action: 'searchUser', userId: userId }));
@@ -24,7 +24,7 @@ const wsService = {
     },
     createUser: (userId) => {
         return new Promise((resolve, reject) => {
-            const ws = new WebSocket('wss://snakeword.ru:9696/ws');
+            const ws = new WebSocket('wss://snakeword.ru:6969/ws');
 
             ws.onopen = () => {
                 ws.send(JSON.stringify({ action: 'createUser', userId: userId }));
