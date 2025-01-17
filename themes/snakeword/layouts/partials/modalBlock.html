@@ -4,12 +4,12 @@
   </div>
   <div class="buttonsBlock">
    <button  class="StartBtn">{{ .Param "StartGame"}}</button>
-  <button  class="RulesBtn">{{ .Param "RulesGame"}}</button>
+  <a href="{{ .Permalink }}/rules"  class="RulesBtn">{{ .Param "RulesGame"}}</a>
   </div>
   <div class="buttonsBlock">
 
   <button  class="TelegBtn" style="background-color: white;"><img  id="avatar" style="margin: auto; width: 50% " src="https://gravitalik.ru/tg.svg"></button>
-  <button  class="RulesBtn" >{{ .Param "Points"}} : <span id="points">0</span></button>
+  <button  class="PointsBtn" >{{ .Param "Points"}} : <span id="points">0</span></button>
     <iframe
   id="telegram-login-snakewordBot"
   src="https://oauth.telegram.org/embed/snakewordBot?origin=https%3A%2F%2Fsnakeword.ru&amp;return_to=https%3A%2F%2Fsnakeword.ru%2F&amp;size=medium&amp;userpic=false&amp;request_access=write"

@@ -1,5 +1,5 @@
 DefaultContentLanguage = "en"
-DefaultContentLanguageInSubdir = true
+#DefaultContentLanguageInSubdir = true
 copyright = "Everything is mine"
 baseURL = "https://snakeword.ru"
 #baseURL = "https://goshva.github.io/snakeword/"

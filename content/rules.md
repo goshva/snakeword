@@ -1,7 +1,7 @@
 ---
-title: "Snakeword"
+title: "Game rules"
 date: 2020-04-17T15:06:40+03:00
-draft: true
+draft: false
 author: "sha.egor"
 Description: "Tesla's Awesome Hugo Site"
 keywords: "Tesla's Awesome Hugo Site"
@@ -15,3 +15,5 @@ Save: "Save"
 Set: "Set"
 Language: "Language"
 ---
+
+## tewstw
