@@ -1297,9 +1297,7 @@ color: #000;
    font-size: 19px;
 }
 
-.modalBlock .buttonsBlock #telegram-login-snakewordBot{
-   display: none;
-}
+
 .modalBlockForImages .imgBlock {
    width: 95px;
    height: 95px;
