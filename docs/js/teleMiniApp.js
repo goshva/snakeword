@@ -50,8 +50,10 @@ const wsService = {
 let WebApp = window.Telegram.WebApp;
 
 function AddAvatar() {
+    const TelegBtn = document.querySelector(".TelegBtn")
     if (WebApp?.initDataUnsafe?.user?.photo_url) {
-        document.getElementById("avatar").src = WebApp?.initDataUnsafe?.user?.photo_url;
+       const createAvatar = document.createElement("img").src = WebApp?.initDataUnsafe?.user?.photo_url;
+        TelegBtn.appendChild(createAvatar)
     }
 }
 
