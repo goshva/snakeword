@@ -255,7 +255,7 @@ errorWord = "Vous n'avez saisi aucun mot"
 word = "Mot"
 letterLength = "longueur de la lettre"
 gifLanguage = "Image-GIF"
-RulesGame = "Règles du jeu"
+
 
 [Languages.la]
 Languagename = "Latinus"
