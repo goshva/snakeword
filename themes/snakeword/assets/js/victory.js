@@ -84,7 +84,7 @@ function hintFunction (){
 
 
 const restartBtn  = document.querySelector(".restartBtn ")
-const closeBtn = document.querySelector(".closeBtn")
+
 let content = document.querySelector(".content")
 let modalSlider = document.querySelector(".modalSlider");
 const rulesBtn = document.querySelector(".RulesBtn");
@@ -98,9 +98,6 @@ setTimeout(()=>{
 })
 
 
-closeBtn.addEventListener("click",()=>{
-  modalSlider.classList.remove("active")
-})
  
 
 
