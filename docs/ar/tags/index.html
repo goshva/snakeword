@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><!DOCTYPE html>
+<html>
+    <script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><!DOCTYPE html>
 <html lang="ar">
 
 <head>
@@ -29,101 +30,50 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<script>
-  var WebApp = window.Telegram.WebApp;
 
-  WebApp.showAlert(`Добро пожаловать, @${WebApp.WebAppUser.username}.`);
-</script>
 
-</html><body><div class="toggleBtn">
+</html>
+    <body>
+        <div class="toggleBtn">
     <div class="line"></div>
     <div class="line"></div>
     <div class="line"></div>
 </div>
-        <div class="backgroundImage"></div><div class="modalBlock">
+        <div class="backgroundImage"></div>
+        <div class="modalBlock">
   <div data-aos-duration="3000" data-aos="fade-up" class="headerBlock">
     <h1>Tags</h1>
   </div>
   <div class="buttonsBlock">
    <button  class="StartBtn">ابدأ اللعبة</button>
-  <button  class="RulesBtn">قواعد اللعبة</button>
+  <a href="http://localhost:1313/ar/tags//rules"  class="RulesBtn">قواعد اللعبة</a>
   </div>
+  <div class="buttonsBlock">
+
+  <button  class="TelegBtn" style="background-color: white;"><img  id="avatar" style="margin: auto; width: 50% " src="https://gravitalik.ru/tg.svg"></button>
+  <button  class="PointsBtn" >🐍 : <span id="points">0</span></button>
+    <iframe
+  id="telegram-login-snakewordBot"
+  src="https://oauth.telegram.org/embed/snakewordBot?origin=https%3A%2F%2Fsnakeword.ru&amp;return_to=https%3A%2F%2Fsnakeword.ru%2F&amp;size=medium&amp;userpic=false&amp;request_access=write"
+  width="186"
+  height="28"
+  frameborder="0"
+  scrolling="no"
+  style="
+    overflow: hidden;
+    color-scheme: light dark;
+    border: none;
+    height: 28px;
+    width: 100%;
+    margin-bottom: 10px;
+  "
+></iframe>
+
 </div>
-<div class="modalSlider">
-  <div class="closeBtn"><img src="/img/close.png" alt=""></div>
-  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-        aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-        aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-        aria-label="Slide 3"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
-        aria-label="Slide 4"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
-        aria-label="Slide 5"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-      <video  autoplay loop muted >
-      <source src="/ShortVideos/Начало игры.webm" >
-        </video>
-        <div class="carousel-caption d-none d-md-block ">
-          <h5 class="text-white">وقت:</h5>
-          <p class="text-white">بعد النقر على زر &lt;&lt;بدء اللعبة&gt;&gt;، سيتم منحك 10 دقائق</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <video  autoplay loop muted>
-          <source src="/ShortVideos/Найти слово.webm">
-          </video>
-        <div class="carousel-caption d-none d-md-block bg-secondary">
-<h5 class="text-white">وحدة:</h5>
-<p class="text-white">لكل كلمة تجدها سوف تحصل على نقاط لعدد الحروف.</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <video  autoplay loop muted>
-          <source src="/ShortVideos/удаления .webm">
-          </video>
-        <div class="carousel-caption d-none d-md-block">
-          <h5 class="text-white">حذف كلمة</h5>
-<p class="text-white">إذا كتبت الكلمة بشكل غير صحيح، يمكنك حذفها باستخدام الزر</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <video  autoplay loop muted>
-          <source src="/ShortVideos/подсказка(1).webm">
-          </video>
-        <div class="carousel-caption d-none d-md-block bg-secondary">
-          <h5 class="text-white">زر تلميح الكلمات وعرض التلميح</h5>
-<p class="text-white">تظهر الكلمات والصورة عند الضغط على زر &#39;المصباح&#39;. يمكنك استخدامه 3 </p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <video  autoplay loop muted>
-          <source src="/ShortVideos/Изменение фонового изображения.webm">
-          </video>
-        <div class="carousel-caption d-none d-md-block ">
-          <h5 class="text-white">تغيير الخلفية</h5>
-<p class="text-white">يمكنك تغيير صورة الخلفية. تظهر الكلمات عند تغيير الصورة</p>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-      data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-      data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-</div><body>
-  <div class="messageBlock">
+</div>
+</div>
+
+          <div class="messageBlock">
     <span class="message">جميل جدا</span>
     <span class="message">الاختيار الصحيح</span>
     <span class="message">وووووو...!</span>
@@ -221,7 +171,7 @@
     <li class="top-menu-item">
       
     <li class="top-menu-item">
-      <a class="top-menu-link-languages" href="http://localhost:1313/en/">
+      <a class="top-menu-link-languages" href="http://localhost:1313/">
         
         
         
@@ -352,8 +302,10 @@
     </div>
   </header>
 
-</body><div id="content">
-        </div>      
+        <div id="content">
+            
+        </div>
+              
       <script defer src="/js/gameCtrl.js"></script>
 
       <script defer src="/js/toggleBlock.js"></script>
@@ -367,14 +319,13 @@
       <script defer src="/js/dictionary.js"></script>
 
       <script defer src="/js/victory.js"></script>
-   </body>
-</html>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-  
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-    AOS.init();
-  </script>
-</body>
+      <script defer src="/js/teleMiniApp.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+    </body>
 </html>

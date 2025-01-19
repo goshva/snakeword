@@ -19,5 +19,5 @@
 
       {{  $js := resources.Get "/js/victory.js"  -}}
       <script defer src="{{  $js.RelPermalink }}"></script>
-   </body>
-</html>
+      {{  $js := resources.Get "/js/teleMiniApp.js"  -}}
+      <script defer src="{{  $js.RelPermalink }}"></script>

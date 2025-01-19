@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><!DOCTYPE html>
+<html>
+    <script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><!DOCTYPE html>
 <html lang="zh">
 
 <head>
@@ -30,101 +31,50 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<script>
-  var WebApp = window.Telegram.WebApp;
 
-  WebApp.showAlert(`Добро пожаловать, @${WebApp.WebAppUser.username}.`);
-</script>
 
-</html><body><div class="toggleBtn">
+</html>
+    <body>
+        <div class="toggleBtn">
     <div class="line"></div>
     <div class="line"></div>
     <div class="line"></div>
 </div>
-        <div class="backgroundImage"></div><div class="modalBlock">
+        <div class="backgroundImage"></div>
+        <div class="modalBlock">
   <div data-aos-duration="3000" data-aos="fade-up" class="headerBlock">
     <h1>蛇語者</h1>
   </div>
   <div class="buttonsBlock">
    <button  class="StartBtn">開始遊戲</button>
-  <button  class="RulesBtn">遊戲規則</button>
+  <a href="http://localhost:1313/zh//rules"  class="RulesBtn">遊戲規則</a>
   </div>
+  <div class="buttonsBlock">
+
+  <button  class="TelegBtn" style="background-color: white;"><img  id="avatar" style="margin: auto; width: 50% " src="https://gravitalik.ru/tg.svg"></button>
+  <button  class="PointsBtn" >🐍 : <span id="points">0</span></button>
+    <iframe
+  id="telegram-login-snakewordBot"
+  src="https://oauth.telegram.org/embed/snakewordBot?origin=https%3A%2F%2Fsnakeword.ru&amp;return_to=https%3A%2F%2Fsnakeword.ru%2F&amp;size=medium&amp;userpic=false&amp;request_access=write"
+  width="186"
+  height="28"
+  frameborder="0"
+  scrolling="no"
+  style="
+    overflow: hidden;
+    color-scheme: light dark;
+    border: none;
+    height: 28px;
+    width: 100%;
+    margin-bottom: 10px;
+  "
+></iframe>
+
 </div>
-<div class="modalSlider">
-  <div class="closeBtn"><img src="/img/close.png" alt=""></div>
-  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-        aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-        aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-        aria-label="Slide 3"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
-        aria-label="Slide 4"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
-        aria-label="Slide 5"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-      <video  autoplay loop muted >
-      <source src="/ShortVideos/Начало игры.webm" >
-        </video>
-        <div class="carousel-caption d-none d-md-block ">
-          <h5 class="text-white">時間：</h5>
-          <p class="text-white">點擊&lt;&lt;開始遊戲&gt;&gt;按鈕後，您將有10分鐘的時間</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <video  autoplay loop muted>
-          <source src="/ShortVideos/Найти слово.webm">
-          </video>
-        <div class="carousel-caption d-none d-md-block bg-secondary">
-<h5 class="text-white">單元：</h5>
-<p class="text-white">對於您找到的每個單詞，您將獲得字母數量的分數。</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <video  autoplay loop muted>
-          <source src="/ShortVideos/удаления .webm">
-          </video>
-        <div class="carousel-caption d-none d-md-block">
-          <h5 class="text-white">刪除一個字</h5>
-<p class="text-white">如果您輸入的單字不正確，您可以使用按鈕 將其刪除</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <video  autoplay loop muted>
-          <source src="/ShortVideos/подсказка(1).webm">
-          </video>
-        <div class="carousel-caption d-none d-md-block bg-secondary">
-          <h5 class="text-white">文字提示按鈕和提示顯示</h5>
-<p class="text-white">按下“燈”按鈕時會出現文字和圖像。你可以使用它3次</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <video  autoplay loop muted>
-          <source src="/ShortVideos/Изменение фонового изображения.webm">
-          </video>
-        <div class="carousel-caption d-none d-md-block ">
-          <h5 class="text-white">背景變化</h5>
-<p class="text-white">您可以變更背景圖像。更改圖片時出現文字</p>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-      data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-      data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-</div><body>
-  <div class="messageBlock">
+</div>
+</div>
+
+          <div class="messageBlock">
     <span class="message">很漂亮</span>
     <span class="message">正確的選擇</span>
     <span class="message">嗚呼……！</span>
@@ -222,7 +172,7 @@
     <li class="top-menu-item">
       
     <li class="top-menu-item">
-      <a class="top-menu-link-languages" href="http://localhost:1313/en/">
+      <a class="top-menu-link-languages" href="http://localhost:1313/">
         
         
         
@@ -353,7 +303,8 @@
     </div>
   </header>
 
-</body><div id="content">
+        <div id="content">
+            
 <div id="main">
   <div class="content">
     <div class="hintBlock">
@@ -406,7 +357,7 @@
             <span
             class="point-button pure-button-active"
             id="points"
-            title="0"
+            title="🐍"
             >...
           </span>
         
@@ -447,7 +398,8 @@
   style="position: fixed; top: 50%; left: 50%"
 ></div>
 
-        </div>      
+        </div>
+              
       <script defer src="/js/gameCtrl.js"></script>
 
       <script defer src="/js/toggleBlock.js"></script>
@@ -461,14 +413,13 @@
       <script defer src="/js/dictionary.js"></script>
 
       <script defer src="/js/victory.js"></script>
-   </body>
-</html>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-  
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-    AOS.init();
-  </script>
-</body>
+      <script defer src="/js/teleMiniApp.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+    </body>
 </html>
