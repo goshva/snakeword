@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Змееслов</title>
-    <link>http://snakeword.ru/ru/categories/</link>
+    <link>http://localhost:1313/ru/categories/</link>
     <description>Recent content in Categories on Змееслов</description>
-    <generator>Hugo</generator>
+    <generator>Hugo 0.125.2</generator>
     <language>ru</language>
     <copyright>Everything is mine</copyright>
-    <atom:link href="http://snakeword.ru/ru/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/ru/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
