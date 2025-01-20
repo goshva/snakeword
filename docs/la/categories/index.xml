@@ -4,7 +4,7 @@
     <title>Categories on Anguis</title>
     <link>http://localhost:1313/la/categories/</link>
     <description>Recent content in Categories on Anguis</description>
-    <generator>Hugo 0.125.2</generator>
+    <generator>Hugo</generator>
     <language>la</language>
     <copyright>Everything is mine</copyright>
     <atom:link href="http://localhost:1313/la/categories/index.xml" rel="self" type="application/rss+xml" />

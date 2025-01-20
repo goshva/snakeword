@@ -51,6 +51,8 @@ let WebApp = window.Telegram.WebApp;
 
 function AddAvatar() {
     const TelegBtn = document.querySelector(".TelegBtn")
+    console.log(TelegBtn)
+    console.log(WebApp?.initDataUnsafe?.user?.photo_url)
     if (WebApp?.initDataUnsafe?.user?.photo_url) {
        const createAvatar = document.createElement("img").src = WebApp?.initDataUnsafe?.user?.photo_url;
         TelegBtn.appendChild(createAvatar)
@@ -66,7 +68,7 @@ function updatePoints() {
         }
     }).catch((error) => {
         if (error.message === 'User not found') {
-            return wsService.createUser(userId);
+            return // wsService.createUser(userId);
         } else {
             throw error;
         }
