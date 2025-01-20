@@ -1404,3 +1404,11 @@ font-size: 14px;
         color: red;
 }
 }
+
+@media(max-width:390){
+   .cell{
+ margin: -18px 0.9px;
+        height: 34px; 
+   }
+}
+
