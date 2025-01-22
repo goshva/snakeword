@@ -1331,6 +1331,13 @@ color: #000;
  }
 }
 
+@media(max-width:390px){
+   .cell{
+ margin: -18px 1.3px;
+        height: 34px; 
+   }
+}
+
 @media(max-width:320px){
    #gameplace{
       
@@ -1408,10 +1415,5 @@ font-size: 14px;
 }
 }
 
-@media(max-width:390px){
-   .cell{
- margin: -18px 1.3px;
-        height: 34px; 
-   }
-}
+
 
