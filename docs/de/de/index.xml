@@ -4,9 +4,10 @@
     <title>Des on Schlangenwort</title>
     <link>http://localhost:1313/de/de/</link>
     <description>Recent content in Des on Schlangenwort</description>
-    <generator>Hugo</generator>
+    <generator>Hugo 0.125.2</generator>
     <language>de</language>
     <copyright>Everything is mine</copyright>
+    <lastBuildDate></lastBuildDate>
     <atom:link href="http://localhost:1313/de/de/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

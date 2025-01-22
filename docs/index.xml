@@ -4,7 +4,7 @@
     <title>Snakeword</title>
     <link>http://localhost:1313/</link>
     <description>Recent content on Snakeword</description>
-    <generator>Hugo</generator>
+    <generator>Hugo 0.125.2</generator>
     <language>en</language>
     <copyright>Everything is mine</copyright>
     <lastBuildDate>Fri, 17 Apr 2020 15:06:40 +0300</lastBuildDate>
@@ -14,21 +14,21 @@
       <link>http://localhost:1313/auth/</link>
       <pubDate>Fri, 17 Apr 2020 15:06:40 +0300</pubDate>
       <guid>http://localhost:1313/auth/</guid>
-      <description>&lt;h2 id=&#34;tewstw&#34;&gt;tewstw&lt;/h2&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;p&gt;id=&amp;ldquo;telegram-login-snakewordBot&amp;rdquo;&#xA;src=&amp;ldquo;&lt;a href=&#34;https://oauth.telegram.org/embed/snakewordBot?origin=https%3A%2F%2Fsnakeword.ru&amp;amp;return_to=https%3A%2F%2Fsnakeword.ru%2F&amp;amp;size=medium&amp;amp;userpic=false&amp;amp;request_access=write\&#34;&#34;&gt;https://oauth.telegram.org/embed/snakewordBot?origin=https%3A%2F%2Fsnakeword.ru&amp;amp;return_to=https%3A%2F%2Fsnakeword.ru%2F&amp;amp;size=medium&amp;amp;userpic=false&amp;amp;request_access=write&#34;&lt;/a&gt;&#xA;width=&amp;ldquo;186&amp;rdquo;&#xA;height=&amp;ldquo;28&amp;rdquo;&#xA;frameborder=&amp;ldquo;0&amp;rdquo;&#xA;scrolling=&amp;ldquo;no&amp;rdquo;&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;/blockquote&gt;</description>
+      <description>tewstw id=&amp;ldquo;telegram-login-snakewordBot&amp;rdquo; src=&amp;ldquo;</description>
     </item>
     <item>
       <title>Game rules</title>
       <link>http://localhost:1313/rules/</link>
       <pubDate>Fri, 17 Apr 2020 15:06:40 +0300</pubDate>
       <guid>http://localhost:1313/rules/</guid>
-      <description>&lt;h2 id=&#34;tewstw&#34;&gt;tewstw&lt;/h2&gt;</description>
+      <description>tewstw </description>
     </item>
     <item>
       <title>Правила игры</title>
       <link>http://localhost:1313/ru/rules/</link>
       <pubDate>Fri, 17 Apr 2020 15:06:40 +0300</pubDate>
       <guid>http://localhost:1313/ru/rules/</guid>
-      <description>&lt;h2 id=&#34;test234523&#34;&gt;test234523&lt;/h2&gt;</description>
+      <description>test234523 </description>
     </item>
   </channel>
 </rss>
