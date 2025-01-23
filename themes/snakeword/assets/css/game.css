@@ -1043,8 +1043,8 @@ flex-direction: column;
    color: #fff;
 }
 
-.generalBlock  .Words .buttonsBlock > .RulesBtn>a{
-   font-size: 15px;
+.generalBlock  .Words .buttonsBlock  .RulesBtn{
+   font-size: 30px;
 }
 
 .generalBlock  .Words .buttonsBlock > button>i{
@@ -1331,7 +1331,7 @@ color: #000;
  }
 }
 
-@media(max-width:390px){
+@media(max-width: 390px){
    .cell{
  margin: -18px 1.3px;
         height: 34px; 
