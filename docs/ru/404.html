@@ -5,11 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 Page not found</title>
     <link rel="stylesheet" href="http://localhost:1313/css/style.css">
+    <style>
+       
+            body{
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-image: url(/img/backgroundImage.png);
+                flex-direction: column;
+                overflow: hidden;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+                text-transform: uppercase;
+                user-select: none;
+            } 
+            h1{
+                width: auto;
+        font-size: 55px;
+        text-align: center;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        color: transparent;
+    
+        background-image: url(https://w7.pngwing.com/pngs/582/707/png-transparent-old-wood-texture-old-wood-texture-old-wood-wood-texture.png);
+        background-clip: text;
+        -webkit-box-reflect: below -17px linear-gradient(#001, transparent, transparent);
+            }
+    
+            p{
+                font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+                color: transparent;
+    
+        background-image: url(https://w7.pngwing.com/pngs/582/707/png-transparent-old-wood-texture-old-wood-texture-old-wood-wood-texture.png);
+        background-clip: text;
+        -webkit-box-reflect: below -17px linear-gradient(#001, transparent, transparent);
+            }
+        
+    </style>
 </head>
 
-<body class="body_404">
+<body >
     <header>
-        <h1>404 Page not found</h1>
+        <h1 data-aos-duration="3000" data-aos="fade-up">404 Page not found</h1>
     </header>
     <main>
         <article style="text-align:center">
@@ -19,5 +58,9 @@
     <footer>
         <p>&copy; 2025 Змееслов</p>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
