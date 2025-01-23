@@ -172,18 +172,24 @@ function genArea() {
         function getNextAvalible(idx) {
           console.log(idx, edge)
           listNextLettersAvalible = [];
-          if (idx > edge) {
+          if (idx >= edge) {
             listNextLettersAvalible.push(idx - edge)
+            
           }
-          if (idx + 1 % edge !== 0) {
+        
+          if ((idx + 1) % edge !== 0) {
             listNextLettersAvalible.push(idx + 1)
+      
           }
           if (idx < edge * edge - edge) {
             listNextLettersAvalible.push(idx + edge)
+     
           }
-          if (idx - 1 % edge !== 0) {
+          if (idx % edge !== 0) {
             listNextLettersAvalible.push(idx - 1)
+        
           }
+         
           return listNextLettersAvalible;
         };
         //
