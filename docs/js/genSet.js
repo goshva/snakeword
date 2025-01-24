@@ -163,8 +163,10 @@ function genArea() {
 
         document.querySelectorAll(".cell").forEach(cell => {
           cell.style.opacity = "0.5";
+          cell.style.pointerEvents = "none"
           setTimeout(() => {
             cell.style.opacity = "1";
+            cell.style.pointerEvents = "auto"
           }, 3000);
         });
         const currentIndex = parseInt(this.id.replace("C", ""), 10);
@@ -204,6 +206,7 @@ function genArea() {
           crossAvalible = getNextAvalible(idx);
           console.log(crossAvalible)
           elIdx.style.opacity = "1";
+          elIdx.style.pointerEvents = "auto"
         });
       };
       const noClass = () => {
