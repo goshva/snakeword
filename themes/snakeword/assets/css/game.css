@@ -1045,6 +1045,11 @@ flex-direction: column;
 
 .generalBlock  .Words .buttonsBlock  .RulesBtn{
    font-size: 30px;
+   transition: all 0.5s ease;
+}
+
+.generalBlock  .Words .buttonsBlock  .RulesBtn:hover{
+   letter-spacing: 3px;
 }
 
 .generalBlock  .Words .buttonsBlock > button>i{
