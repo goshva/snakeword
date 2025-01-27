@@ -333,7 +333,7 @@ transition: all 0.5s ease;
       gap:15px
    }
    
-   .modalBlock .buttonsBlock>button, .modalBlock .buttonsBlock>a{
+   .modalBlock .buttonsBlock>button, .modalBlock .buttonsBlock .RulesBtn{
       width: 250px;
       height: 100px;
       background-color: #F96B57;
@@ -341,7 +341,6 @@ transition: all 0.5s ease;
       border:none;
       position:relative;
       overflow:hidden;
-      font-size: 30px;
       font-weight: bold;
       color: #fff;
       font-family:  "Inter", sans-serif;
@@ -352,6 +351,14 @@ transition: all 0.5s ease;
       justify-content: center;
       align-items: center;
       gap: 10px
+   }
+   .generalBlock  .Words .buttonsBlock  .RulesBtn{
+      font-size: 30px;
+      transition: all 0.5s ease;
+   }
+   
+   .generalBlock  .Words .buttonsBlock  .RulesBtn:hover{
+      letter-spacing: 3px;
    }
    .modalBlock .buttonsBlock>button:hover{
       letter-spacing: 3px;
@@ -1043,14 +1050,7 @@ flex-direction: column;
    color: #fff;
 }
 
-.generalBlock  .Words .buttonsBlock  .RulesBtn{
-   font-size: 30px;
-   transition: all 0.5s ease;
-}
 
-.generalBlock  .Words .buttonsBlock  .RulesBtn:hover{
-   letter-spacing: 3px;
-}
 
 .generalBlock  .Words .buttonsBlock > button>i{
    font-size: 20px;
@@ -1184,6 +1184,21 @@ color: #000;
       
 }
 
+@media(max-width:1024px){
+   #gameplace {
+      left: 0;
+      top: 131px;
+      width: 47%;
+      height: 471px;
+  }
+  .cell{
+   margin: -12px 5.6px;
+   height: 39px;
+   width: 37px;
+}
+}
+
+
 @media(max-width:735px){
   .backgroundImage{
    top: 0;
@@ -1256,15 +1271,29 @@ color: #000;
  }
 }
 
-@media(max-width:430px){
+
+@media(max-width:541px){
    #gameplace{
       left: 0px;
       width: 90%;
       height: 573px;
    }
    .cell{
-      margin: -18px -1.1px;
-      height: 34px;
+      margin: -15px 6.3px;
+      height: 41.2px;
+      width: 36.7px;
+   }
+}
+
+@media(max-width:431px){
+   #gameplace{
+      left: 0px;
+      width: 90%;
+      height: 573px;
+   }
+   .cell{
+      margin: -13px 1.4px;
+        height: 41.2px;
    }
    .dialog_for_mobile {
       width: 230px;
@@ -1336,10 +1365,39 @@ color: #000;
  }
 }
 
+@media(max-width: 415px){
+   .cell{
+      margin: -21px 1.1px;
+      height: 38px;
+   }
+}
+
+@media(max-width: 401px){
+   .cell{
+      margin: -23px 0.3px;
+      height: 40px;
+   }
+}
+
 @media(max-width: 390px){
    .cell{
  margin: -18px 1.3px;
         height: 34px; 
+   }
+}
+
+@media(max-width: 376px){
+   .cell{
+      margin: -16px 0.6px;
+      height: 39px; 
+   }
+}
+
+@media(max-width: 361px){
+   .cell{
+      margin: -22.8px -0.2px;
+      height: 37px;
+      width: 32px; 
    }
 }
 
@@ -1419,6 +1477,8 @@ font-size: 14px;
         color: red;
 }
 }
+
+
 
 
 

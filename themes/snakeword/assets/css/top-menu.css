@@ -264,3 +264,13 @@ i {
     z-index: 13;
   }
 }
+
+
+@media (max-width:1024px){
+  .top-menu{
+    padding: 3px;
+  }
+  .top-menu-link-languages{
+    font-size: 15px;
+  }
+}
