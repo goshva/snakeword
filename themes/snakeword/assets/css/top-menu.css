@@ -192,7 +192,7 @@ i {
 
 @media (max-width: 735px) {
   .top-menu {
-    width: 0%;
+    width: 25%;
     overflow: hidden;
     flex-direction: column;
     margin-top: 0px;
@@ -202,10 +202,11 @@ i {
     justify-content: flex-start;
     align-items: start;
     z-index: 12;
+    left: -250px;
   }
 
   .top-menu.active {
-    width: 25%;
+    left: 0px;
   }
 
   .top-menu-link-languages {
@@ -268,7 +269,7 @@ i {
 
 @media (max-width:1024px){
   .top-menu{
-    padding: 3px;
+    padding: 3%;
   }
   .top-menu-link-languages{
     font-size: 15px;
