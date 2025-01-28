@@ -10,8 +10,11 @@ const hintBtn = document.querySelector(".hintBtn");
 const badge = document.querySelector(".badge");
  const hintBlock = document.querySelector(".hintBlock")
  const hintImg = document.getElementById("hintImg")
+
+
 let badgeNum = 3
 badge.innerHTML = badgeNum
+
 let getWord;
 let lastWord;
 function constructorHintUrl(imgWord) {
@@ -63,6 +66,14 @@ function hintFunction (){
   },5000)
    hintVoice.play()
 
+    hintBtn.classList.add("disabledBtn") 
+setTimeout(()=>{
+  hintBtn.classList.remove("disabledBtn") 
+},4000)
+
+
+
+ 
 
 
    console.log(lastWord);
