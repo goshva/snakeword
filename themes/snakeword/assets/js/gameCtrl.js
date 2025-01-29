@@ -283,19 +283,16 @@ function SaveGame_old() {
       edge
     }&letters=${
       letters.join('')
-    }&userwordsids=${
-      JSON.stringify(findwordids)}`;
+    }`;
   location = link;
 }
 function SaveGame() {
   localStorage.setItem('edge', edge);
   localStorage.setItem('letters', letters.join(''));
-  localStorage.setItem('userwordsids', JSON.stringify(findwordids));
   const link = '?'
     + `letters=${
       encodeURIComponent(letters.join(''))
-    }&userwordsids=${
-      JSON.stringify(findwordids)}`;
+    }`;
   location = link;
 }
 
