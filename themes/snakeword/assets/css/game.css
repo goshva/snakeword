@@ -1510,6 +1510,12 @@ color: #000;
       margin: -10px -0.3px;
       height: 41px;
    }
+   .carousel-caption > h5{
+         font-size: 15px;
+   }
+   .carousel-caption > p{
+         font-size: 15px;
+   }
 }
 
 @media(max-width: 361px){
@@ -1518,6 +1524,12 @@ color: #000;
       height: 37px;
       width: 32px; 
    }
+   .carousel-caption > h5{
+      font-size: 15px;
+}
+.carousel-caption > p{
+      font-size: 15px;
+}
 }
 
 @media(max-width:320px){
@@ -1594,6 +1606,12 @@ font-size: 14px;
         background: 0 0;
         border: none;
         color: red;
+}
+.carousel-caption > h5{
+   font-size: 15px;
+}
+.carousel-caption > p{
+   font-size: 15px;
 }
 }
 
