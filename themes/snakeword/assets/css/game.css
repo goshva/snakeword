@@ -1489,6 +1489,12 @@ color: #000;
       margin: -21px 1.1px;
       height: 38px;
    }
+   .carousel-caption > h5{
+      font-size: 10px;
+   }
+   .carousel-caption > p{
+      font-size: 10px;
+   }
 }
 
 @media(max-width: 401px){
@@ -1496,12 +1502,24 @@ color: #000;
       margin: -23px 0.3px;
       height: 40px;
    }
+   .carousel-caption > h5{
+      font-size: 10px;
+   }
+   .carousel-caption > p{
+      font-size: 10px;
+   }
 }
 
 @media(max-width: 390px){
    .cell{
  margin: -18px 1.3px;
         height: 34px; 
+   }
+   .carousel-caption > h5{
+      font-size: 10px;
+   }
+   .carousel-caption > p{
+      font-size: 10px;
    }
 }
 
@@ -1511,10 +1529,10 @@ color: #000;
       height: 41px;
    }
    .carousel-caption > h5{
-         font-size: 15px;
+      font-size: 10px;
    }
    .carousel-caption > p{
-         font-size: 15px;
+      font-size: 10px;
    }
 }
 
@@ -1525,11 +1543,12 @@ color: #000;
       width: 32px; 
    }
    .carousel-caption > h5{
-      font-size: 15px;
-}
-.carousel-caption > p{
-      font-size: 15px;
-}
+      font-size: 10px;
+   }
+   .carousel-caption > p{
+      font-size: 10px;
+   }
+
 }
 
 @media(max-width:320px){
@@ -1607,12 +1626,20 @@ font-size: 14px;
         border: none;
         color: red;
 }
+
+.carousel-caption{
+   top: 15px;
+}
 .carousel-caption > h5{
-   font-size: 15px;
+   font-size: 10px;
 }
 .carousel-caption > p{
-   font-size: 15px;
+   font-size: 10px;
 }
+
+
+
+
 }
 
 
