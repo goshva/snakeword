@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on साँप बोलने वाला</title>
-    <link>http://localhost:1313/hi/tags/</link>
+    <link>https://snakeword.ru/hi/tags/</link>
     <description>Recent content in Tags on साँप बोलने वाला</description>
-    <generator>Hugo 0.125.2</generator>
+    <generator>Hugo</generator>
     <language>hi</language>
     <copyright>Everything is mine</copyright>
-    <atom:link href="http://localhost:1313/hi/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://snakeword.ru/hi/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
