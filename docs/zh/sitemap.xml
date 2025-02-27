@@ -2,160 +2,160 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://snakeword.ru/zh/categories/</loc>
+    <loc>http://localhost:1313/zh/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://snakeword.ru/categories/"
+                href="http://localhost:1313/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="https://snakeword.ru/ru/categories/"
+                href="http://localhost:1313/ru/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="hy"
-                href="https://snakeword.ru/hy/categories/"
+                href="http://localhost:1313/hy/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
-                href="https://snakeword.ru/de/categories/"
+                href="http://localhost:1313/de/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://snakeword.ru/fr/categories/"
+                href="http://localhost:1313/fr/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="la"
-                href="https://snakeword.ru/la/categories/"
+                href="http://localhost:1313/la/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://snakeword.ru/ar/categories/"
+                href="http://localhost:1313/ar/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="hi"
-                href="https://snakeword.ru/hi/categories/"
+                href="http://localhost:1313/hi/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ka"
-                href="https://snakeword.ru/ka/categories/"
+                href="http://localhost:1313/ka/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://snakeword.ru/zh/categories/"
+                href="http://localhost:1313/zh/categories/"
                 />
   </url><url>
-    <loc>https://snakeword.ru/zh/tags/</loc>
+    <loc>http://localhost:1313/zh/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://snakeword.ru/tags/"
+                href="http://localhost:1313/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="https://snakeword.ru/ru/tags/"
+                href="http://localhost:1313/ru/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="hy"
-                href="https://snakeword.ru/hy/tags/"
+                href="http://localhost:1313/hy/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
-                href="https://snakeword.ru/de/tags/"
+                href="http://localhost:1313/de/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://snakeword.ru/fr/tags/"
+                href="http://localhost:1313/fr/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="la"
-                href="https://snakeword.ru/la/tags/"
+                href="http://localhost:1313/la/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://snakeword.ru/ar/tags/"
+                href="http://localhost:1313/ar/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="hi"
-                href="https://snakeword.ru/hi/tags/"
+                href="http://localhost:1313/hi/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ka"
-                href="https://snakeword.ru/ka/tags/"
+                href="http://localhost:1313/ka/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://snakeword.ru/zh/tags/"
+                href="http://localhost:1313/zh/tags/"
                 />
   </url><url>
-    <loc>https://snakeword.ru/zh/</loc>
+    <loc>http://localhost:1313/zh/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://snakeword.ru/"
+                href="http://localhost:1313/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="https://snakeword.ru/ru/"
+                href="http://localhost:1313/ru/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="hy"
-                href="https://snakeword.ru/hy/"
+                href="http://localhost:1313/hy/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
-                href="https://snakeword.ru/de/"
+                href="http://localhost:1313/de/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://snakeword.ru/fr/"
+                href="http://localhost:1313/fr/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="la"
-                href="https://snakeword.ru/la/"
+                href="http://localhost:1313/la/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://snakeword.ru/ar/"
+                href="http://localhost:1313/ar/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="hi"
-                href="https://snakeword.ru/hi/"
+                href="http://localhost:1313/hi/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ka"
-                href="https://snakeword.ru/ka/"
+                href="http://localhost:1313/ka/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://snakeword.ru/zh/"
+                href="http://localhost:1313/zh/"
                 />
   </url>
 </urlset>
