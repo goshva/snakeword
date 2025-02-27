@@ -1177,7 +1177,11 @@ color: #000;
     position: relative;
     top: 155px;
  */
-
+ .backBtn{
+   position: absolute;
+   top: 64px;
+   right: 15px;
+}
 
  
 @media(max-width:1500px){
@@ -1390,7 +1394,7 @@ color: #000;
 @media(max-width:541px){
    .backBtn{
 
-      top: 44px;
+      top: 24px;
    
    }
    .modalBlock{
@@ -1417,7 +1421,7 @@ color: #000;
 @media(max-width:431px){
 
    .backBtn{
-      top: 44px
+      top: 14px
    }
    #gameplace{
       left: 0px;
@@ -1501,7 +1505,7 @@ color: #000;
 @media(max-width: 415px){
    .backBtn{
 
-      top: 44px;
+      top: 14px;
    
    }
    .cell{
@@ -1524,7 +1528,7 @@ color: #000;
 @media(max-width: 401px){
    .backBtn{
 
-      top: 44px;
+      top: 14px;
    
    }
    .cell{
@@ -1545,7 +1549,7 @@ color: #000;
 @media(max-width: 390px){
    .backBtn{
 
-      top: 44px;
+      top: 14px;
    
    }
    .cell{
@@ -1566,7 +1570,7 @@ color: #000;
 @media(max-width: 376px){
    .backBtn{
 
-      top: 44px;
+      top: 14px;
    
    }
    .cell{
@@ -1701,14 +1705,7 @@ font-size: 14px;
 }
 
 
-.backBtn{
-   position: absolute;
-   top: 74px;
-   right: 15px;
 
-   padding: 5px;
-   text-decoration: none;
-}
 
 
 
