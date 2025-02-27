@@ -1288,7 +1288,11 @@ color: #000;
 
 
 @media(max-width:768px){
+   .backBtn{
 
+      top: 44px;
+   
+   }
    .modalBlock{
       top:  33%;
    }
@@ -1384,6 +1388,11 @@ color: #000;
 
 
 @media(max-width:541px){
+   .backBtn{
+
+      top: 44px;
+   
+   }
    .modalBlock{
       top: 49%;
    }
@@ -1406,6 +1415,10 @@ color: #000;
 }
 
 @media(max-width:431px){
+
+   .backBtn{
+      top: 44px
+   }
    #gameplace{
       left: 0px;
       width: 90%;
@@ -1486,6 +1499,11 @@ color: #000;
 }
 
 @media(max-width: 415px){
+   .backBtn{
+
+      top: 44px;
+   
+   }
    .cell{
       margin: -21px 1.1px;
       height: 38px;
@@ -1504,6 +1522,11 @@ color: #000;
 }
 
 @media(max-width: 401px){
+   .backBtn{
+
+      top: 44px;
+   
+   }
    .cell{
       margin: -23px 0.3px;
       height: 40px;
@@ -1520,6 +1543,11 @@ color: #000;
 }
 
 @media(max-width: 390px){
+   .backBtn{
+
+      top: 44px;
+   
+   }
    .cell{
  margin: -18px 1.3px;
         height: 34px; 
@@ -1536,6 +1564,11 @@ color: #000;
 }
 
 @media(max-width: 376px){
+   .backBtn{
+
+      top: 44px;
+   
+   }
    .cell{
       margin: -10px -0.3px;
       height: 41px;
@@ -1552,6 +1585,11 @@ color: #000;
 }
 
 @media(max-width: 361px){
+   .backBtn{
+
+      top: 44px;
+   
+   }
    .cell{
       margin: -22.8px -0.2px;
       height: 37px;
@@ -1571,6 +1609,9 @@ color: #000;
 }
 
 @media(max-width:320px){
+   .backBtn{
+      top: 44px;
+   }
    #gameplace{
       
       gap: 1px;
@@ -1657,10 +1698,16 @@ font-size: 14px;
    font-size: 10px;
    color: #000;
 }
+}
 
 
+.backBtn{
+   position: absolute;
+   top: 74px;
+   right: 15px;
 
-
+   padding: 5px;
+   text-decoration: none;
 }
 
 
