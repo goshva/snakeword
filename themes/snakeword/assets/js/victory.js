@@ -191,6 +191,7 @@ const gamePlace = document.querySelector("#gameplace")
                   popup.classList.add("active");
                   popupContent.classList.remove("gameOver")
                   const findedWordBlock = document.querySelector(".findedWordsBlock")
+                  restartBtn.classList.add("deactivation")
                  setInterval(() => {
                   rateBlock.classList.add("activated")
                  }, 3500);
