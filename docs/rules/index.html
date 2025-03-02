@@ -34,15 +34,29 @@
 
 </html>
     <body>
-  
+        <div class="toggleBtn">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+</div>
         <div class="backgroundImage"></div>
         <div class="modalBlock">
-  
-
- 
+  <div data-aos-duration="3000" data-aos="fade-up" class="headerBlock">
+    <h1>Game rules</h1>
   </div>
 
- 
+  <div class="buttonsBlock">
+    <button class="StartBtn">Start Game</button>
+    <a href="http://localhost:1313/rules//rules" class="RulesBtn"
+      >Game Rules</a
+    >
+  </div>
+  <div class="buttonsBlock telegaAuth" >
+    <button class="TelegBtn" style="background-color: white"></button>
+    <button class="PointsBtn">
+      0 : <span id="points">0</span>
+    </button>
+  </div>
 </div>
 
           <div class="messageBlock">
@@ -281,7 +295,7 @@
   </header>
 
         <div id="content">
-          <a class="backBtn btn btn-dark" role="button" href="http://localhost:1313/en/">Go Back</a> 
+            
 <article>
     <header>
         <h1>Game rules</h1>
@@ -305,39 +319,55 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <video  src="/ShortVideos/Начало игры.webm" autoplay="true"  muted="true" loop="true"></video>
+      <video  preload="none" src="/video.mp4" 
+      autoplay="false" poster="poster.jpg"
+      muted="false" loop="false" >
+      <source src="/ShortVideos/Начало игры.webm" >
+        </video>
         <div class="carousel-caption d-none d-md-block ">
           <h5 class="text-white">Time</h5>
           <p class="text-white">After clicking the &lt;&lt;Start Game&gt;&gt; button, you will be given 10 minutes</p>
         </div>
       </div>
       <div class="carousel-item">
-        <video src="/ShortVideos/Найти слово.webm" autoplay="true"  muted="true" loop="true"></video>
-  
+        <video  preload="none" src="video.mp4" 
+        autoplay="false" poster="poster.jpg"
+        muted="false" loop="false">
+          <source src="/ShortVideos/Найти слово.webm">
+          </video>
         <div class="carousel-caption d-none d-md-block bg-secondary">
 <h5 class="text-white">Unit</h5>
 <p class="text-white">For each word you find, you will receive points for the number of letters.</p>
         </div>
       </div>
       <div class="carousel-item">
-        <video src="/ShortVideos/удаления .webm" autoplay="true"  muted="true" loop="true"></video>
-       
+        <video preload="none" src="video.mp4" 
+        autoplay="false" poster="poster.jpg"
+        muted="false" loop="false">
+          <source src="/ShortVideos/удаления .webm">
+          </video>
         <div class="carousel-caption d-none d-md-block">
           <h5 class="text-white">Deleting a word</h5>
 <p class="text-white">If you typed the word incorrectly, you can delete it with the button</p>
         </div>
       </div>
       <div class="carousel-item">
-        <video src="/ShortVideos/подсказка(1).webm" autoplay="true"  muted="true" loop="true"></video>
-       
+        <video  preload="none" src="video.mp4" 
+        autoplay="false" poster="poster.jpg"
+        muted="false" loop="false">
+          <source src="/ShortVideos/подсказка(1).webm">
+          </video>
         <div class="carousel-caption d-none d-md-block bg-secondary">
           <h5 class="text-white">Word Hint button and hint display</h5>
 <p class="text-white">When you click on the &lt;&lt;Light&gt;&gt; button, words and an image appear. You can use it 3 times.</p>
         </div>
       </div>
       <div class="carousel-item">
-        <video src="/ShortVideos/Изменение фонового изображения.webm" autoplay="true"  muted="true" loop="true"></video>
-        
+        <video  preload="none" src="video.mp4" 
+        autoplay="false" poster="poster.jpg"
+        muted="false" loop="false">
+          <source src="/ShortVideos/Изменение фонового изображения.webm">
+          </video>
         <div class="carousel-caption d-none d-md-block ">
           <h5 class="text-white">Background Change</h5>
 <p class="text-white">You can change the background. When you change the picture, words appear</p>

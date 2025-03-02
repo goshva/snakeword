@@ -125,7 +125,8 @@ document.addEventListener('DOMContentLoaded', function () {
  function actionButton(){
   window.location.reload()
     popup.classList.remove("active");
-    
+   let savedNum =  LocalSrorage.getItem("LetterLengthNum");
+   document.querySelector("#points").textContent = savedNum?savedNum:""
   }
 
 

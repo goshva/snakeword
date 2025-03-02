@@ -15,8 +15,9 @@ let sum = 0
 const gifBlock = document.querySelector(".centerBlock")
 cutButton.style.opacity = "0.5"
 cutButton.style.pointerEvents = "none"
+const savedPointBtn = document.querySelector(".savePointBtn");
 
-
+savedPointBtn.addEventListener("click",savePoints)
 
 
 
@@ -294,6 +295,13 @@ function SaveGame() {
       encodeURIComponent(letters.join(''))
     }`;
   location = link;
+}
+
+
+function savePoints(){
+  const savedPoint = sum
+  localStorage.setItem("LetterLengthNum",savedPoint)
+  alert("points Saved" + savedPoint)
 }
 
 // вывод слов

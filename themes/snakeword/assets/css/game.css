@@ -97,31 +97,38 @@ transition: all 0.5s ease;
 
 }
 
-.b-popup .restartBtn{
+.b-popup .buttons{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.b-popup .buttons  .restartBtn,
+.b-popup .buttons  .savePointBtn {
    padding: 15px;
    background-color: #f96b57;
-   /* color: #ccc; */
-   font-family:  "Inter", sans-serif;
-   font-weight: bold;
+   font-family: inter, sans-serif;
+   font-weight: 700;
    border-radius: 15px;
    text-transform: capitalize;
    color: #fff;
    font-size: 25px;
    border: none;
-   transition: all 0.5s ease;
+   transition: all .5s ease;  
    top: 34px;
    opacity: 0;
    visibility: hidden;
 }
 
-.b-popup .restartBtn.deactivation{
-   top: 34px;
-   opacity: 0;
-   visibility: hidden;
+.b-popup .buttons  .restartBtn.deactivation{
+   top: 0px;
+   opacity: 1;
+   visibility: visible;
 }
 
-.b-popup .restartBtn:hover{
-   letter-spacing: 2px;
+.b-popup  .buttons .restartBtn:hover,
+.b-popup  .buttons .savePointBtn:hover {
+   letter-spacing: 2px
 }
 
 .b-popup.active{
