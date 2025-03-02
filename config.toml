@@ -57,6 +57,7 @@ errorWord = "You have not entered any words"
 word = "Word"
 letterLength = "Length Letter"
 gifLanguage = "Gif Image"
+SavePoint = "Save Point"
 
 [Languages.ru]
 Languagename = "Русский"
@@ -106,7 +107,7 @@ errorWord = "Вы не ввели ни одного слова"
 word = "Слово"
 letterLength = "длина буквы"
 gifLanguage = "GIF-изображение"
-
+SavePoint = "Сохранить Очки"
 
 
 [Languages.hy]
@@ -157,7 +158,7 @@ errorWord = "Ոչ մի բառ չեք գուշակել"
 word = "Բառ"
 letterLength = "Տառերի քանակ"
 gifLanguage = "GIF-Պատկեր"
-
+SavePoint = "Պահպանել Միավորները"
 
 [Languages.de]
 Languagename = "Deutsch"
@@ -207,6 +208,8 @@ errorWord = "Sie haben keine Wörter eingegeben"
 word = "Wort"
 letterLength = "Länge Buchstabe"
 gifLanguage = "GIF-Bild"
+SavePoint = "Einheit speichern"
+
 
 [Languages.fr]
 Languagename = "Français"
@@ -256,7 +259,7 @@ errorWord = "Vous n'avez saisi aucun mot"
 word = "Mot"
 letterLength = "longueur de la lettre"
 gifLanguage = "Image-GIF"
-
+SavePoint = "Sauvegarder l'unité"
 
 [Languages.la]
 Languagename = "Latinus"
@@ -306,6 +309,8 @@ errorWord = "Non ingressus es aliqua verba"
 word = "Verbum"
 letterLength = "longitudo litterae"
 gifLanguage = "Gif- image"
+SavePoint = "Salvum Unit"
+
 
 [Languages.ar]
 Languagename = "عربي"
@@ -355,7 +360,7 @@ errorWord = "لم تقم بإدخال أية كلمات"
 word = "حرف طول"
 letterLength = "كلمة"
 gifLanguage = "صورة متحركة"
-
+SavePoint = "حفظ الوحدة"
 
 
 
@@ -407,6 +412,7 @@ errorWord = "आपने कोई शब्द दर्ज नहीं क�
 word = "शब्द"
 letterLength = "अक्षर की लंबाई"
 gifLanguage = "Gif- छवि"
+SavePoint = "यूनिट सहेजें"
 
 [Languages.zh]
 Languagename = "中國人"
@@ -456,6 +462,8 @@ errorWord = "您還沒有輸入任何字詞"
 word = "單字"
 letterLength = "長度字母"
 gifLanguage = "Gif-影像"
+SavePoint = "保存單位"
+
 
 [Languages.ka]
 Languagename = "ქართული"
@@ -505,7 +513,7 @@ errorWord = "თქვენ სიტყვა არ შეიყვანე�
 word = "სიტყვა"
 letterLength = "ასოების სიგრძე"
 gifLanguage = "Gif- გამოსახულება"
-
+SavePoint = "ერთეულის შენახვა"
 
 
 [taxonomies]
