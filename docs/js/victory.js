@@ -5,7 +5,7 @@ const winAudio = new Audio("../sounds/goodresult-82807.mp3")
 const selectAudio = new Audio("../sounds/menu-button-88360.mp3");
 const hintVoice = new Audio("../sounds/mixkit-game-magic-hint-962.mp3");
 const hintEnd = new Audio("../sounds/end-call-120633.mp3")
-
+const gameOverSound = new Audio("../sounds/mixkit-arcade-retro-game-over-213 (1).wav")
 const hintBtn = document.querySelector(".hintBtn");
 const badge = document.querySelector(".badge");
  const hintBlock = document.querySelector(".hintBlock")
@@ -100,6 +100,7 @@ let content = document.querySelector(".content")
 let modalSlider = document.querySelector(".modalSlider");
 const rulesBtn = document.querySelector(".RulesBtn");
 const generation = document.querySelector(".refreshButton")
+const popupContent = document.querySelector(".b-popup-content")
 rulesBtn.addEventListener("click",()=>{
 modalSlider.classList.add("active");
 selectAudio.play()
@@ -152,8 +153,7 @@ const gamePlace = document.querySelector("#gameplace")
        modalBlock.classList.add("active")
        StartBtn.classList.add("active") 
        startAudio.play()
-              
-                countDownTime()
+       countDownTime()
      });
      
      function countDownTime(){
@@ -179,18 +179,33 @@ const gamePlace = document.querySelector("#gameplace")
               
               }
 
-              if (minutes === 0 && seconds === 0) {  
-                popup.classList.add("active");
-                const findedWordBlock = document.querySelector(".findedWordsBlock")
-               setInterval(() => {
-                rateBlock.classList.add("activated")
-               }, 3500);
-                setInterval(() => {
-                  findedWordBlock.classList.add("activated")
-                }, 2500);
-                clearInterval(timerId);
-                winAudio.play()
+              if (minutes === 0 && seconds === 0  ) { 
+                if (findwords.length === 0) {
+                  popup.classList.add("active");
+                  restartBtn.classList.add("deactivation")
+                  popupContent.classList.add("gameOver")
+                  clearInterval(timerId);
+                  gameOverSound.play()
+              
+                }else{
+                  popup.classList.add("active");
+                  popupContent.classList.remove("gameOver")
+                  const findedWordBlock = document.querySelector(".findedWordsBlock")
+                 setInterval(() => {
+                  rateBlock.classList.add("activated")
+                 }, 3500);
+                  setInterval(() => {
+                    findedWordBlock.classList.add("activated")
+                  }, 2500);
+                  clearInterval(timerId);
+                  winAudio.play()
+                
                     }
+
+
+
+                  
+                }
               
         },1000);
      }
