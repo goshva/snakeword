@@ -33,12 +33,29 @@
 
 </html>
     <body>
-    
+        <div class="toggleBtn">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+</div>
         <div class="backgroundImage"></div>
         <div class="modalBlock">
- 
+  <div data-aos-duration="3000" data-aos="fade-up" class="headerBlock">
+    <h1>Правила игры</h1>
+  </div>
 
- 
+  <div class="buttonsBlock">
+    <button class="StartBtn">Start Game</button>
+    <a href="http://localhost:1313/ru/rules//rules" class="RulesBtn"
+      >Game Rules</a
+    >
+  </div>
+  <div class="buttonsBlock telegaAuth" >
+    <button class="TelegBtn" style="background-color: white"></button>
+    <button class="PointsBtn">
+      0 : <span id="points">0</span>
+    </button>
+  </div>
 </div>
 
           <div class="messageBlock">
@@ -104,6 +121,8 @@
         <div class="victoryImage"></div>
         <div class="crackerGifRight"></div>
       </div>
+
+   
       <div class="findedWordsBlock">
         <span>the words you found</span>
        <div class="findWord">

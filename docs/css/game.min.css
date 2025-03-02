@@ -114,8 +114,17 @@ body {
     color: #fff;
     font-size: 25px;
     border: none;
-    transition: all .5s ease
+    transition: all .5s ease;  
+    top: 34px;
+    opacity: 0;
+    visibility: hidden;
 }
+
+.b-popup .restartBtn.deactivation{
+    top: 0px;
+    opacity: 1;
+    visibility: visible;
+ }
 
 .b-popup .restartBtn:hover {
     letter-spacing: 2px
@@ -130,7 +139,16 @@ body {
 .b-popup .b-popup-content {
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
+    transition: all 0.5s ease;
+position: relative;
+}
+
+
+.b-popup .b-popup-content.gameOver{
+opacity: 0;
+visibility: hidden;
+top: 25px;
 }
 
 .b-popup .b-popup-content .crackerGifLeft,

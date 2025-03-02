@@ -109,6 +109,15 @@ transition: all 0.5s ease;
    font-size: 25px;
    border: none;
    transition: all 0.5s ease;
+   top: 34px;
+   opacity: 0;
+   visibility: hidden;
+}
+
+.b-popup .restartBtn.deactivation{
+   top: 34px;
+   opacity: 0;
+   visibility: hidden;
 }
 
 .b-popup .restartBtn:hover{
@@ -126,6 +135,9 @@ transition: all 0.5s ease;
    justify-content: center;
    align-items: center;
  }
+
+
+
 
  .b-popup .b-popup-content .crackerGifLeft,
  .b-popup .b-popup-content .crackerGifRight{
