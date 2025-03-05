@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ens on Snakeword</title>
-    <link>http://localhost:1313/en/en/</link>
+    <link>https://snakeword.ru/en/en/</link>
     <description>Recent content in Ens on Snakeword</description>
     <generator>Hugo</generator>
     <language>en</language>
@@ -11,9 +11,9 @@
     <atom:link href="http://localhost:1313/en/en/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Snakeword</title>
-      <link>http://localhost:1313/en/en/rules/</link>
+      <link>https://snakeword.ru/en/en/rules/</link>
       <pubDate>Fri, 17 Apr 2020 15:06:40 +0300</pubDate>
-      <guid>http://localhost:1313/en/en/rules/</guid>
+      <guid>https://snakeword.ru/en/en/rules/</guid>
       <description></description>
     </item>
   </channel>

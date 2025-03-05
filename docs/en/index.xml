@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-<<<<<<< HEAD
+
     <title>Snakeword</title>
-    <link>http://localhost:1313/en/</link>
+    <link>https://snakeword.ru/en/</link>
     <description>Recent content on Snakeword</description>
     <generator>Hugo 0.125.2</generator>
     <language>en</language>
     <copyright>Everything is mine</copyright>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="http://localhost:1313/en/index.xml" rel="self" type="application/rss+xml" />
-=======
+    <atom:link href="https://snakeword.ru/en/index.xml" rel="self" type="application/rss+xml" />
+
     <title>Ens on Snakeword</title>
-    <link>http://localhost:1313/en/</link>
+    <link>https://snakeword.ru/en/</link>
     <description>Recent content in Ens on Snakeword</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Everything is mine</copyright>
     <lastBuildDate>Fri, 17 Apr 2020 15:06:40 +0300</lastBuildDate>
-    <atom:link href="http://localhost:1313/en/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://snakeword.ru/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>rules4</title>
-      <link>http://localhost:1313/en/rules/</link>
+      <link>https://snakeword.ru/en/rules/</link>
       <pubDate>Fri, 17 Apr 2020 15:06:40 +0300</pubDate>
-      <guid>http://localhost:1313/en/rules/</guid>
+      <guid>https://snakeword.ru/en/rules/</guid>
       <description></description>
     </item>
->>>>>>> 4c18afcf6725c3a39ca81044d42566626c971485
+
   </channel>
 </rss>

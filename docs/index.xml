@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Snakeword</title>
-    <link>http://localhost:1313/</link>
+    <link>https://snakeword.ru/</link>
     <description>Recent content on Snakeword</description>
     <generator>Hugo 0.125.2</generator>
     <language>en</language>
     <copyright>Everything is mine</copyright>
     <lastBuildDate>Fri, 17 Apr 2020 15:06:40 +0300</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://snakeword.ru/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Game rules</title>
-      <link>http://localhost:1313/auth/</link>
+      <link>https://snakeword.ru/auth/</link>
       <pubDate>Fri, 17 Apr 2020 15:06:40 +0300</pubDate>
-      <guid>http://localhost:1313/auth/</guid>
+      <guid>https://snakeword.ru/auth/</guid>
       <description>tewstw id=&amp;ldquo;telegram-login-snakewordBot&amp;rdquo; src=&amp;ldquo;</description>
     </item>
     <item>
       <title>Game rules</title>
-      <link>http://localhost:1313/rules/</link>
+      <link>https://snakeword.ru/rules/</link>
       <pubDate>Fri, 17 Apr 2020 15:06:40 +0300</pubDate>
-      <guid>http://localhost:1313/rules/</guid>
+      <guid>https://snakeword.ru/rules/</guid>
       <description>tewstw </description>
     </item>
     <item>
       <title>Правила игры</title>
-      <link>http://localhost:1313/ru/rules/</link>
+      <link>https://snakeword.ru/ru/rules/</link>
       <pubDate>Fri, 17 Apr 2020 15:06:40 +0300</pubDate>
-      <guid>http://localhost:1313/ru/rules/</guid>
+      <guid>https://snakeword.ru/ru/rules/</guid>
       <description>test234523 </description>
     </item>
   </channel>
