@@ -309,7 +309,25 @@ transition: all 0.5s ease;
             outline: none;
             padding: 6px;
          }
-       
+         .PointBlock{
+            width: 250px;
+            height: 100px;
+            background-color: #f96b57;
+            cursor: pointer;
+            border: none;
+            position: relative;
+            overflow: hidden;
+            font-weight: 700;
+            color: #fff;
+            font-family: inter, sans-serif;
+            transition: all .5s ease;
+            border-radius: 15px;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px
+        }
 
       .modalBlock{
          width:600px;
