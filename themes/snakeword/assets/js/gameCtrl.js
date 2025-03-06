@@ -297,11 +297,19 @@ function SaveGame() {
   location = link;
 }
 
+window.onload = function(){
+  let savedNumber = localStorage.getItem("savedNumber");
+  if (savedNumber !== null) {
+      document.getElementById("points").innerText = savedNumber;
+  }
+
+}
 
 function savePoints(){
-  const savedPoint = sum
-  localStorage.setItem("LetterLengthNum",savedPoint)
-  alert("points Saved" + savedPoint)
+  let savedPoint = sum
+  localStorage.setItem("LetterLengthNum",savedPoint);
+  document.querySelector(".points").innerHt = savedPoint;
+ 
 }
 
 // вывод слов

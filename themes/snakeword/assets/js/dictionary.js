@@ -10601,7 +10601,7 @@ function init() {
 		localStorage.setItem('dict', response);
 		Dict = JSON.parse(response);
 
-		document.getElementById("points").innerText = 0;
+
 
 		if (typeof generator == "function") {
 			generator();

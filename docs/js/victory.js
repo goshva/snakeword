@@ -125,8 +125,7 @@ document.addEventListener('DOMContentLoaded', function () {
  function actionButton(){
   window.location.reload()
     popup.classList.remove("active");
-   let savedNum =  LocalSrorage.getItem("LetterLengthNum");
-   document.querySelector("#points").textContent = savedNum?savedNum:""
+   
   }
 
 
@@ -191,7 +190,8 @@ const gamePlace = document.querySelector("#gameplace")
                 }else{
                   popup.classList.add("active");
                   popupContent.classList.remove("gameOver")
-                  const findedWordBlock = document.querySelector(".findedWordsBlock")
+                  const findedWordBlock = document.querySelector(".findedWordsBlock");
+                  savedPointBtn.classList.add("deactivation")
                   restartBtn.classList.add("deactivation")
                  setInterval(() => {
                   rateBlock.classList.add("activated")
