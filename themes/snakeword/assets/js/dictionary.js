@@ -10600,7 +10600,7 @@ function init() {
 	loadJSON(function (response) {
 		localStorage.setItem('dict', response);
 		Dict = JSON.parse(response);
-
+	
 
 
 		if (typeof generator == "function") {
