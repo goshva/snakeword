@@ -8,7 +8,7 @@
     <language>en</language>
     <copyright>Everything is mine</copyright>
     <lastBuildDate>Fri, 17 Apr 2020 15:06:40 +0300</lastBuildDate>
-    <atom:link href="http://localhost:1313/en/en/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://snakeword.ru/en/en/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Snakeword</title>
       <link>https://snakeword.ru/en/en/rules/</link>
