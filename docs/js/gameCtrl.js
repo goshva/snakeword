@@ -300,7 +300,7 @@ function SaveGame() {
 window.onload = function(){
   let savedNumber = localStorage.getItem("savedNumber");
   if (savedNumber !== null) {
-      document.querySelector(".points").innerText = savedNumber;
+      document.getElementById("points").innerText = savedNumber;
   }
 
 }
