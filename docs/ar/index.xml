@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>كلمة الثعبان</title>
-    <link>http://localhost:1313/ar/</link>
+    <link>https://snakeword.ru/ar/</link>
     <description>Recent content on كلمة الثعبان</description>
     <generator>Hugo</generator>
     <language>ar</language>
     <copyright>Everything is mine</copyright>
-    <atom:link href="http://localhost:1313/ar/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://snakeword.ru/ar/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
