@@ -370,63 +370,59 @@ snd.play()
 
 }
 
+let currentWord = '';
+let currentIds = [];
+let timeout;
+
 async function collectWord(Id, id, ...args) {
   let translate = '';
-  const errorText = document.querySelector(".error")
-  clearTimeout(timeout0);
-  ids.push(id);
-  word += Id;
+  const errorText = document.querySelector(".error");
 
+  clearTimeout(timeout);
 
-  document.getElementById('word-input').options[0].text = word;
+  currentWord += Id;
+  currentIds.push(id);
 
+  document.getElementById('word-input').options[0].text = currentWord;
   document.getElementById('word-input').options[0].selected = true;
 
-  nearCheck(id, ids);
+  nearCheck(id, currentIds);
 
-  if (isDict(word) > 0 && word.length >= 3 && nearCheck(id, ids)) {
+  if (isDict(currentWord) > 0 && currentWord.length >= 3 && nearCheck(id, currentIds)) {
     //    getTranslate('en','ru',word);
-    if (isFinded(word) >= 0 && findwords.indexOf(word)) {
-      findwords.splice(findwords.indexOf(word), 1);
-      findwords.push(word);
+    if (isFinded(currentWord) >= 0 && findwords.indexOf(currentWord) !== -1) {
+      findwords.splice(findwords.indexOf(currentWord), 1);
+      findwords.push(currentWord);
     }
 
-    // stop dubles
-    if (isFinded(word) < 0) {
+    // stop duplicates
+    if (isFinded(currentWord) < 0) {
       moreletter();
       if (args.length === 0) {
-        findwordids.push(ids);
-        createImgDialog(constructorSearchUrl(word));
+        findwordids.push(currentIds);
+        createImgDialog(constructorSearchUrl(currentWord));
 
         document.getElementById('word-input').options[0].text = '';
         const optionEl = document.createElement('option');
-       const wordBlock = document.querySelector(".leftBlock")
-       const lengthLetterBlock = document.querySelector(".rightBlock")
-      
-       wordBlock.innerHTML +=`<span>${word}</span>`
-       lengthLetterBlock.innerHTML +=`<span>${word.length}</span>`
-      
+        const wordBlock = document.querySelector(".leftBlock");
+        const lengthLetterBlock = document.querySelector(".rightBlock");
 
-      
-       
+        wordBlock.innerHTML += `<span>${currentWord}</span>`;
+        lengthLetterBlock.innerHTML += `<span>${currentWord.length}</span>`;
 
-        
-        optionEl.text = word;
-        errorText.classList.add("active")
-        errorText.innerHTML = ""
-        
+        optionEl.text = currentWord;
+        errorText.classList.add("active");
+        errorText.innerHTML = "";
 
         document.getElementById('word-input').append(optionEl);
-        new Audio("../sounds/correct-choice-43861.mp3").play()
-        cutButton.style.opacity = "0.5"
-cutButton.style.pointerEvents = "none";
+        new Audio("../sounds/correct-choice-43861.mp3").play();
+        cutButton.style.opacity = "0.5";
+        cutButton.style.pointerEvents = "none";
       }
-   if (lastWord === word) {
-    console.log("hinted Word")
-   }
-      else{
-        errorText.classList.remove("active")
-
+      if (lastWord === currentWord) {
+        console.log("hinted Word");
+      } else {
+        errorText.classList.remove("active");
       }
 
       const userLang = navigator.language || navigator.userLanguage;
@@ -437,14 +433,15 @@ cutButton.style.pointerEvents = "none";
           findwordids,
         }),
       );
-      translate = await getTranslate(language, userLang, word);
+      translate = await getTranslate(language, userLang, currentWord);
       translatedwords.push(translate);
       // eslint-disable-next-line max-len
       //        s.send(JSON.stringify({"field":letters.join(''), "word": ids,"user": getCookie("username")}));
-      ids = [];
-    
+      currentIds = [];
     }
 
-    listfindedwords(word, isFinded(word));
-  } else setTimeout(clear, 4500);
+    listfindedwords(currentWord, isFinded(currentWord));
+  } else {
+    timeout = setTimeout(clear, 4000);
+  }
 }
