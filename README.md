@@ -19,25 +19,17 @@ for linux: 1. `sudo snap install hugo`
 
 ## for websocket server
 
-in windows working in wsl ( in PowerShell in ADMIN: wsl --install)
-
+chat-server/
+├── main.go
+├── static/    (for any frontend files)
+│   └── index.html
+├── cert.pem   (SSL certificate)
+└── key.pem    (SSL key)
 ```
-python3 -m venv env
-source env/bin/activate
-pip  install -r requirements.txt
-chmod +x ws.py
-./ws.py
-```
-
-if adding modules plz run:
-
-```
-  pip3 freeze > requirements.txt
+go mod init chat-server
+go get github.com/gorilla/websocket
+go run main.go
 ```
 
-if OSError: [Errno 98] error while attempting to bind on address ('localhost', 8765): address already in use
-
-```
-sudo kill -9 `sudo lsof -t -i:8765`
 
 ```
