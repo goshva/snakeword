@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Snakeword Chat</title>
+</head>
+<body>
+    <div id="points">0</div>
+    <div class="TelegBtn"></div>
+    <input id="message" type="text">
+    <button onclick="sendMessage()">Send</button>
+    <div id="chat"></div>
+
+    <script>
+        const ws = new WebSocket('wss://localhost:6969/ws');
+        const gameUrl = 'https://snakeword.ru/?letters=agirtapreagiirasupagnotismsdonresrapradoihaepmbuayniraoblelgaekbaowylnicorraassaa';
+        let userId = '190404167'; // Default user ID
+
+        ws.onopen = () => {
+            // Join room based on game URL
+            ws.send(JSON.stringify({
+                action: 'joinRoom',
+                roomId: gameUrl,
+                userId: userId
+            }));
+        };
+
+        ws.onmessage = (event) => {
+            const data = JSON.parse(event.data);
+            if (data.content) {
+                const chat = document.getElementById('chat');
+                chat.innerHTML += `<p>${data.userId}: ${data.content}</p>`;
+            }
+        };
+
+        function sendMessage() {
+            const input = document.getElementById('message');
+            ws.send(JSON.stringify({
+                action: 'message',
+                roomId: gameUrl,
+                userId: userId,
+                content: input.value
+            }));
+            input.value = '';
+        }
+
+        // Initial user check/creation
+        ws.onopen = () => {
+            ws.send(JSON.stringify({ action: 'searchUser', userId: userId }));
+        };
+    </script>
+</body>
+</html>
