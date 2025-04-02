@@ -107,7 +107,8 @@ body {
 .b-popup .buttons {
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
+    gap: 15px;
 }
 
 .b-popup .buttons .restartBtn,
