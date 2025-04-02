@@ -148,6 +148,7 @@ generation.addEventListener("click",()=>{
    const $seconds = document.querySelector('.timer__seconds');
    const popup = document.querySelector('.b-popup');
 const gamePlace = document.querySelector("#gameplace")
+const savedPointBtn = document.querySelector(".savedPointBtn")
      StartBtn.addEventListener("click",()=>{
          gamePlace.classList.add("active")
        modalBlock.classList.add("active")
