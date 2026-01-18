@@ -13,10 +13,6 @@ closeButton.addEventListener("click", () => {
 
 let imagesData = [
     {
-        id: 1,
-        imageUrl: "https://baldezh.top/uploads/posts/2021-04/1617477896_2-p-oboi-nezhnii-zakat-2.jpg"
-    },
-    {
         id: 2,
         imageUrl: "https://kartin.papik.pro/uploads/posts/2023-06/thumbs/1687869064_kartin-papik-pro-p-kartinki-vertikalnie-na-telefon-more-zakat-15.jpg",
     },

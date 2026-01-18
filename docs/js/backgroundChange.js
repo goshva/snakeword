@@ -13,16 +13,8 @@ closeButton.addEventListener("click", () => {
 
 let imagesData = [
     {
-        id: 1,
-        imageUrl: "https://baldezh.top/uploads/posts/2021-04/1617477896_2-p-oboi-nezhnii-zakat-2.jpg"
-    },
-    {
         id: 2,
         imageUrl: "https://kartin.papik.pro/uploads/posts/2023-06/thumbs/1687869064_kartin-papik-pro-p-kartinki-vertikalnie-na-telefon-more-zakat-15.jpg",
-    },
-    {
-        id: 3,
-        imageUrl: "https://images.unsplash.com/photo-1518699086072-d567cb15b483?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
         id: 4,

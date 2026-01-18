@@ -1,0 +1,65 @@
+{
+  "generated_at": "2026-01-18T12:58:30+03:00",
+  "languages": [
+    {
+      "code": "ar",
+      "file": "Arabic.json",
+      "name": "Arabic",
+      "table": "dict_ar"
+    },
+    {
+      "code": "hy",
+      "file": "Armenian.json",
+      "name": "Armenian",
+      "table": "dict_hy"
+    },
+    {
+      "code": "zh",
+      "file": "Chinese.json",
+      "name": "Chinese",
+      "table": "dict_zh"
+    },
+    {
+      "code": "en",
+      "file": "English.json",
+      "name": "English",
+      "table": "dict_en"
+    },
+    {
+      "code": "fr",
+      "file": "French.json",
+      "name": "French",
+      "table": "dict_fr"
+    },
+    {
+      "code": "ka",
+      "file": "Georgian.json",
+      "name": "Georgian",
+      "table": "dict_ka"
+    },
+    {
+      "code": "de",
+      "file": "German.json",
+      "name": "German",
+      "table": "dict_de"
+    },
+    {
+      "code": "hi",
+      "file": "Hindi.json",
+      "name": "Hindi",
+      "table": "dict_hi"
+    },
+    {
+      "code": "la",
+      "file": "Latin.json",
+      "name": "Latin",
+      "table": "dict_la"
+    },
+    {
+      "code": "ru",
+      "file": "Russian.json",
+      "name": "Russian",
+      "table": "dict_ru"
+    }
+  ]
+}

@@ -1,8 +1,5 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
-
-
-
 const cutButton = document.querySelector('.deleteBtn');
 let word = '';
 let ids = [];
@@ -18,14 +15,6 @@ cutButton.style.pointerEvents = "none"
 const savedPointBtn = document.querySelector(".savePointBtn");
 
 savedPointBtn.addEventListener("click",savePoints)
-
-
-
-
-
-
-
-
 
 
 function hidenotify() {
@@ -322,7 +311,7 @@ function constructorSearchUrl(newWord) {
     limit: 1,
     offset: 0,
     rating: 'g',
-    lang: language,
+    lang: getCookie("lang"),
     bundle: 'messaging_non_clips',
   };
   const searchParams = new URLSearchParams(giphyApiQuery);
